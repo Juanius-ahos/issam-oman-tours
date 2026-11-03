@@ -40,6 +40,20 @@ npm run preview
 
 Then open http://localhost:4173/en/
 
+### Live preview (GitHub Pages)
+
+**https://juanius-ahos.github.io/issam-oman-tours/en/**
+
+It's served from the `gh-pages` branch. To update it after changes:
+
+```bash
+npm run build:pages
+```
+
+Then push the contents of `dist/site` to the `gh-pages` branch. `build:pages` is the
+normal build with the base path set to `/issam-oman-tours/`. On a real domain,
+use `npm run build` instead.
+
 Other scripts:
 
 | Command | What it does |
