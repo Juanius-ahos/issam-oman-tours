@@ -1,5 +1,10 @@
 import { locales, tourSlugs, defaultLocale, type Locale, type TourSlug } from './config';
 
+/** Deploy base path, always ending in "/". "/" on a real domain, "/issam-oman-tours/"
+ *  on GitHub Pages. Set at build time (vite.config.ts reads VITE_BASE). Every
+ *  path below already includes it. */
+export const BASE: string = import.meta.env.BASE_URL || '/';
+
 export type Route =
   | { locale: Locale; page: 'home' }
   | { locale: Locale; page: 'tour'; slug: TourSlug };
@@ -12,16 +17,16 @@ export function allRoutes(): Route[] {
   ]);
 }
 
-export function pathFor(route: Route): string {
-  return route.page === 'home' ? `/${route.locale}/` : `/${route.locale}/tours/${route.slug}/`;
-}
-
 export function homePath(locale: Locale) {
-  return `/${locale}/`;
+  return `${BASE}${locale}/`;
 }
 
 export function tourPath(locale: Locale, slug: TourSlug) {
-  return `/${locale}/tours/${slug}/`;
+  return `${BASE}${locale}/tours/${slug}/`;
+}
+
+export function pathFor(route: Route): string {
+  return route.page === 'home' ? homePath(route.locale) : tourPath(route.locale, route.slug);
 }
 
 /** Same page in another locale, for the language switcher and hreflang. */
@@ -30,7 +35,8 @@ export function swapLocale(route: Route, locale: Locale): Route {
 }
 
 export function parsePath(pathname: string): Route {
-  const [first, second, third] = pathname.split('/').filter(Boolean);
+  const rest = pathname.startsWith(BASE) ? pathname.slice(BASE.length) : pathname;
+  const [first, second, third] = rest.split('/').filter(Boolean);
   const locale = (locales.find((l) => l.code === first)?.code ?? defaultLocale) as Locale;
   if (second === 'tours' && tourSlugs.includes(third as TourSlug)) {
     return { locale, page: 'tour', slug: third as TourSlug };

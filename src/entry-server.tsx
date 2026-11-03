@@ -2,7 +2,7 @@
 import { renderToString } from 'react-dom/server';
 import { App } from './App';
 import { localeInfo, type Messages } from './i18n';
-import { allRoutes, pathFor, type Route } from './routes';
+import { BASE, allRoutes, pathFor, type Route } from './routes';
 import { buildHead, isIndexable } from './lib/seo';
 import { config, locales, tourSlugs, type Locale } from './config';
 
@@ -23,4 +23,4 @@ export function render(route: Route) {
   };
 }
 
-export { allRoutes, config, locales, tourSlugs, isIndexable };
+export { BASE, allRoutes, pathFor, config, locales, tourSlugs, isIndexable };

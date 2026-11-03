@@ -3,7 +3,7 @@
    Runs at build time only (scripts/prerender.mjs via entry-server). */
 import { config, locales, tourSlugs, type Locale } from '../config';
 import type { Messages } from '../i18n';
-import { pathFor, swapLocale, homePath, tourPath, type Route } from '../routes';
+import { BASE, pathFor, swapLocale, homePath, tourPath, type Route } from '../routes';
 import { tourGeo } from '../data/tours';
 
 type AllMessages = Record<Locale, Messages>;
@@ -11,6 +11,7 @@ type AllMessages = Record<Locale, Messages>;
 const esc = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+// Paths already carry the deploy base (routes.ts), so siteUrl is the bare origin.
 const abs = (path: string) => config.siteUrl + path;
 
 /** A locale is indexable once translated, or always if the config says so. */
@@ -44,7 +45,7 @@ export function buildHead(route: Route, all: AllMessages): string {
     `<meta property="og:description" content="${esc(description)}">`,
     `<meta property="og:url" content="${url}">`,
     `<meta property="og:locale" content="${ogLocale}">`,
-    `<meta property="og:image" content="${abs('/og/og-card.png')}">`,
+    `<meta property="og:image" content="${abs(BASE + 'og/og-card.png')}">`,
     `<meta property="og:image:width" content="1200">`,
     `<meta property="og:image:height" content="630">`,
     `<meta property="og:image:alt" content="${esc(m.meta.ogAlt)}">`,
@@ -69,14 +70,14 @@ export function buildHead(route: Route, all: AllMessages): string {
 function person(m: Messages) {
   return {
     '@type': 'Person',
-    '@id': abs('/#issam'),
+    '@id': abs(BASE + '#issam'),
     name: config.brand.person,
     alternateName: config.brand.nickname,
     jobTitle: 'Private tour guide and interpreter',
     description: m.meta.homeDescription,
     knowsLanguage: locales.map((l) => l.hreflang),
     homeLocation: { '@type': 'Place', name: `${config.business.city}, Oman` },
-    url: abs('/'),
+    url: abs(BASE + ''),
     sameAs: Object.values(config.socials).map((s) => s.url),
   };
 }
@@ -84,11 +85,11 @@ function person(m: Messages) {
 function business(m: Messages) {
   return {
     '@type': ['LocalBusiness', 'TravelAgency'],
-    '@id': abs('/#business'),
+    '@id': abs(BASE + '#business'),
     name: m.meta.siteName,
     description: m.meta.homeDescription,
-    url: abs('/'),
-    image: abs('/og/og-card.png'),
+    url: abs(BASE + ''),
+    image: abs(BASE + 'og/og-card.png'),
     telephone: `+${config.whatsapp.number}`,
     email: config.email,
     priceRange: config.business.priceRange,
@@ -100,7 +101,7 @@ function business(m: Messages) {
     },
     geo: { '@type': 'GeoCoordinates', latitude: config.business.geo.lat, longitude: config.business.geo.lng },
     areaServed: { '@type': 'Country', name: 'Oman' },
-    founder: { '@id': abs('/#issam') },
+    founder: { '@id': abs(BASE + '#issam') },
     knowsLanguage: locales.map((l) => l.hreflang),
     sameAs: [...Object.values(config.socials).map((s) => s.url), config.googleBusinessProfile].filter(Boolean),
   };
@@ -117,7 +118,7 @@ function trip(route: Route & { page: 'tour' }, m: Messages) {
     url: abs(pathFor(route)),
     inLanguage: route.locale,
     touristType: ['Private travelers', 'Families', 'Couples'],
-    provider: { '@id': abs('/#business') },
+    provider: { '@id': abs(BASE + '#business') },
     itinerary: {
       '@type': 'ItemList',
       itemListElement: t.stops.map((s, i) => ({
@@ -144,8 +145,8 @@ function jsonLd(route: Route, m: Messages): object[] {
           business(m),
           {
             '@type': 'WebSite',
-            '@id': abs('/#website'),
-            url: abs('/'),
+            '@id': abs(BASE + '#website'),
+            url: abs(BASE + ''),
             name: m.meta.siteName,
             inLanguage: route.locale,
           },

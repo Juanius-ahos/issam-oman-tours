@@ -11,7 +11,8 @@ const clientDir = join(root, 'dist/client');
 const outDir = join(root, 'dist/site');
 
 const server = await import(pathToFileURL(join(root, 'dist/server/entry-server.js')).href);
-const { render, allRoutes, config, locales, tourSlugs, messages, isIndexable } = server;
+const { render, allRoutes, config, locales, tourSlugs, messages, isIndexable, BASE } = server;
+// Every route path starts with BASE ("/" or "/issam-oman-tours/"); files are written without it.
 
 const template = readFileSync(join(clientDir, 'index.html'), 'utf8');
 const manifest = JSON.parse(readFileSync(join(clientDir, '.vite/manifest.json'), 'utf8'));
@@ -22,12 +23,12 @@ cpSync(clientDir, outDir, { recursive: true, filter: (src) => !src.endsWith(`${j
 // Preload the Latin Archivo face so text paints in the right font first time.
 const assets = readdirSync(join(clientDir, 'assets'));
 const latinFont = assets.find((f) => /^archivo-latin-wdth-normal-.*\.woff2$/.test(f));
-const fontPreload = latinFont ? `<link rel="preload" href="/assets/${latinFont}" as="font" type="font/woff2" crossorigin>` : '';
+const fontPreload = latinFont ? `<link rel="preload" href="${BASE}assets/${latinFont}" as="font" type="font/woff2" crossorigin>` : '';
 
 const localeChunk = (code) => manifest[`src/locales/${code}.json`]?.file;
 
 const write = (path, html) => {
-  const file = join(outDir, path, 'index.html');
+  const file = join(outDir, path.slice(BASE.length), 'index.html');
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, html);
 };
@@ -36,7 +37,7 @@ let count = 0;
 for (const route of allRoutes()) {
   const page = render(route);
   const chunk = localeChunk(route.locale);
-  const preloads = [fontPreload, chunk ? `<link rel="modulepreload" href="/${chunk}">` : ''].filter(Boolean).join('\n    ');
+  const preloads = [fontPreload, chunk ? `<link rel="modulepreload" href="${BASE}${chunk}">` : ''].filter(Boolean).join('\n    ');
   const html = template
     .replace('<html lang="en" dir="ltr">', `<html lang="${page.lang}" dir="${page.dir}">`)
     .replace('<!--app-head-->', `${page.head}\n    ${preloads}`)
@@ -47,7 +48,7 @@ for (const route of allRoutes()) {
 
 const site = config.siteUrl;
 const indexable = locales.filter((l) => isIndexable(messages[l.code]));
-const pathFor = (code, slug) => (slug ? `/${code}/tours/${slug}/` : `/${code}/`);
+const pathFor = (code, slug) => (slug ? `${BASE}${code}/tours/${slug}/` : `${BASE}${code}/`);
 
 // Root: send visitors to their browser language when that locale is live, else English.
 const live = JSON.stringify(indexable.map((l) => l.code));
@@ -56,10 +57,10 @@ writeFileSync(
   `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <title>${messages.en.meta.homeTitle}</title>
 <meta name="robots" content="noindex,follow">
-<link rel="canonical" href="${site}/en/">
-<meta http-equiv="refresh" content="0; url=/en/">
-<script>(function(){var live=${live};var l=(navigator.language||'en').slice(0,2);location.replace('/'+(live.indexOf(l)>-1?l:'en')+'/');})();</script>
-</head><body><a href="/en/">${messages.en.meta.siteName}</a></body></html>\n`,
+<link rel="canonical" href="${site}${BASE}en/">
+<meta http-equiv="refresh" content="0; url=${BASE}en/">
+<script>(function(){var live=${live};var l=(navigator.language||'en').slice(0,2);location.replace('${BASE}'+(live.indexOf(l)>-1?l:'en')+'/');})();</script>
+</head><body><a href="${BASE}en/">${messages.en.meta.siteName}</a></body></html>\n`,
 );
 
 // 404
@@ -68,7 +69,7 @@ writeFileSync(
   `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Page not found | ${messages.en.meta.siteName}</title><meta name="robots" content="noindex">
 <style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#F3EADF;color:#1B1A18;font:16px system-ui,sans-serif;text-align:center}a{color:#0B7A73;font-weight:700}</style>
-</head><body><main><h1>Page not found</h1><p><a href="/en/">Back to the tours</a></p></main></body></html>\n`,
+</head><body><main><h1>Page not found</h1><p><a href="${BASE}en/">Back to the tours</a></p></main></body></html>\n`,
 );
 
 // Sitemap with hreflang alternates, indexable locales only.
@@ -89,7 +90,7 @@ writeFileSync(
 
 writeFileSync(
   join(outDir, 'robots.txt'),
-  `User-agent: *\nAllow: /\n\n# AI search and answer engines are welcome to read and cite this site.\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`,
+  `User-agent: *\nAllow: /\n\n# AI search and answer engines are welcome to read and cite this site.\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: ${site}${BASE}sitemap.xml\n`,
 );
 
 // llms.txt: a plain summary for AI assistants (https://llmstxt.org).
@@ -115,8 +116,8 @@ ${tourLines}
 
 ## Key pages
 
-- [Home](${site}/en/): overview, tours, reviews, FAQ and booking.
-- [Sitemap](${site}/sitemap.xml)
+- [Home](${site}${BASE}en/): overview, tours, reviews, FAQ and booking.
+- [Sitemap](${site}${BASE}sitemap.xml)
 
 ## FAQ
 
@@ -126,3 +127,6 @@ ${faqLines}
 
 console.log(`Pre-rendered ${count} pages (${indexable.length} indexable locale(s): ${indexable.map((l) => l.code).join(', ')}) into dist/site`);
 if (!existsSync(join(outDir, 'og/og-card.png'))) console.warn('Warning: public/og/og-card.png is missing');
+
+// GitHub Pages: serve files as they are (no Jekyll processing).
+writeFileSync(join(outDir, '.nojekyll'), '');

@@ -13,7 +13,8 @@
     "preview": "vite preview --outDir dist/site --port 4173",
     "typecheck": "tsc --noEmit",
     "check:copy": "node scripts/check-copy.mjs",
-    "locales:sync": "node scripts/sync-locales.mjs"
+    "locales:sync": "node scripts/sync-locales.mjs",
+    "build:pages": "node scripts/build-pages.mjs"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "5.1.1",
