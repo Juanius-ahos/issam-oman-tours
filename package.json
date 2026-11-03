@@ -1,0 +1,40 @@
+{
+  "name": "issam-oman-tours",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Private tours of Oman with Issam Baloushi, The Languages Ninja. Static, pre-rendered, 13 locales.",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run check:copy && npm run build:client && npm run build:server && npm run prerender",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
+    "prerender": "node scripts/prerender.mjs",
+    "preview": "vite preview --outDir dist/site --port 4173",
+    "typecheck": "tsc --noEmit",
+    "check:copy": "node scripts/check-copy.mjs",
+    "locales:sync": "node scripts/sync-locales.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "5.1.1",
+    "@fontsource/ibm-plex-sans-arabic": "5.1.1",
+    "@react-three/fiber": "8.17.10",
+    "gsap": "3.12.7",
+    "lenis": "1.1.18",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "three": "0.171.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "@types/three": "0.171.0",
+    "@vitejs/plugin-react": "4.3.4",
+    "autoprefixer": "10.4.20",
+    "postcss": "8.4.49",
+    "tailwindcss": "3.4.17",
+    "typescript": "5.7.2",
+    "vite": "6.0.6"
+  }
+}

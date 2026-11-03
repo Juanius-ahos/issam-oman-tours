@@ -1,0 +1,9 @@
+# Reference captures of merheb.xyz (someone else's site). Kept local only.
+research/
+
+node_modules/
+dist/
+.env
+.env.local
+*.log
+.DS_Store

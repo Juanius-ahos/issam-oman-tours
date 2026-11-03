@@ -1,0 +1,145 @@
+/* ══════════════════════════════════════════════════════════════════════
+   GHOST COLLAPSE (desktop only). DESIGN-NOTES 6 and 11.
+
+   The hero's big elements are not copies: they ARE the sidebar's nodes.
+   Each sidebar node marked [data-ghost="id"] has a twin in the hero marked
+   [data-ghost-target="id"] that only reserves the hero-sized box. We measure
+   both, then tween the real node FROM the hero box back TO its sidebar slot,
+   scrubbed against a pinned hero, so the hero physically pours into the nav.
+
+   Two strategies:
+     text  absolute + tween font-size, so the wordmark stays crisp at 30x.
+     box   uniform scale from top-left, for cards and buttons (scale under 2x).
+
+   Measure everything first, mutate after: a write mid-pass invalidates every
+   rect read after it.
+   ══════════════════════════════════════════════════════════════════════ */
+import { gsap, ScrollTrigger } from './gsap';
+import { isMobile, prefersReducedMotion } from '../lib/viewport';
+
+const COLLAPSE_PX = 1150;
+
+type Measured = {
+  real: HTMLElement;
+  type: 'text' | 'box';
+  r: DOMRect;
+  g: DOMRect;
+  parent: DOMRect;
+  realFont: number;
+  ghostFont: number;
+  realColor: string;
+  ghostColor: string;
+};
+
+export function ghostEnabled() {
+  return !isMobile() && !prefersReducedMotion();
+}
+
+export function createGhost(hero: HTMLElement): () => void {
+  const html = document.documentElement;
+  if (!ghostEnabled()) {
+    html.classList.add('no-ghost', 'is-collapsed');
+    return () => html.classList.remove('no-ghost', 'is-collapsed');
+  }
+  html.classList.remove('no-ghost');
+
+  const ctx = gsap.context(() => {
+    const reals = [...document.querySelectorAll<HTMLElement>('[data-ghost]')];
+    const rtl = document.dir === 'rtl';
+
+    // Phase 1: read only.
+    const measured: Measured[] = [];
+    for (const real of reals) {
+      const id = real.dataset.ghost!;
+      const ghost = hero.querySelector<HTMLElement>(`[data-ghost-target="${id}"]`);
+      if (!ghost) continue;
+      const rs = getComputedStyle(real);
+      const gs = getComputedStyle(ghost);
+      measured.push({
+        real,
+        type: (real.dataset.ghostType as 'text' | 'box') || 'box',
+        r: real.getBoundingClientRect(),
+        g: ghost.getBoundingClientRect(),
+        parent: real.parentElement!.getBoundingClientRect(),
+        realFont: parseFloat(rs.fontSize),
+        ghostFont: parseFloat(gs.fontSize),
+        realColor: rs.color,
+        ghostColor: gs.color,
+      });
+    }
+
+    // Phase 2: write.
+    html.classList.add('is-ghosting');
+    // A fresh config per tween: ScrollTrigger keeps state on the object it is given.
+    const st = () => ({ trigger: hero, start: 'top top', end: `+=${COLLAPSE_PX}`, scrub: 1 });
+
+    for (const m of measured) {
+      const { real, r, g, parent } = m;
+      if (m.type === 'text') {
+        const p = real.parentElement!;
+        p.style.position = 'relative';
+        p.style.minWidth = `${r.width}px`;
+        p.style.minHeight = `${r.height}px`;
+        const edge = rtl ? { right: 0 } : { left: 0 };
+        const dx = rtl ? g.right - parent.right : g.left - parent.left;
+        gsap.fromTo(
+          real,
+          { position: 'absolute', top: 0, ...edge, x: dx, y: g.top - parent.top, fontSize: m.ghostFont, color: m.ghostColor },
+          { position: 'absolute', top: 0, ...edge, x: 0, y: 0, fontSize: m.realFont, color: m.realColor, ease: 'power1.inOut', scrollTrigger: st() },
+        );
+      } else {
+        const s = g.width / r.width;
+        const dx = rtl ? g.right - r.right : g.left - r.left;
+        gsap.fromTo(
+          real,
+          { x: dx, y: g.top - r.top, scale: s, transformOrigin: rtl ? 'top right' : 'top left' },
+          { x: 0, y: 0, scale: 1, ease: 'power1.inOut', scrollTrigger: st() },
+        );
+      }
+    }
+
+    // Hero-only content leaves; the portrait blurs into the background figure.
+    gsap.to(hero.querySelectorAll('[data-hero-fade]'), {
+      opacity: 0, y: -40, ease: 'none',
+      scrollTrigger: { trigger: hero, start: 'top top', end: `+=${COLLAPSE_PX * 0.45}`, scrub: 1 },
+    });
+    const portrait = hero.querySelector('.hero-portrait');
+    if (portrait) {
+      gsap.to(portrait, {
+        filter: 'blur(18px)', opacity: 0, ease: 'none',
+        scrollTrigger: { trigger: hero, start: 'top top', end: `+=${COLLAPSE_PX}`, scrub: 1 },
+      });
+    }
+    // Sidebar panel backgrounds appear just as the labels arrive.
+    gsap.fromTo('.side-panel-bg', { opacity: 0 }, {
+      opacity: 1, ease: 'none',
+      scrollTrigger: { trigger: hero, start: `top+=${COLLAPSE_PX * 0.38} top`, end: `top+=${COLLAPSE_PX * 0.5} top`, scrub: 1 },
+    });
+    gsap.fromTo('.side-nav, .side-tagline, .side-press, .side-lang', { autoAlpha: 0 }, {
+      autoAlpha: 1, ease: 'none',
+      scrollTrigger: { trigger: hero, start: `top+=${COLLAPSE_PX * 0.55} top`, end: `top+=${COLLAPSE_PX * 0.8} top`, scrub: 1 },
+    });
+
+    ScrollTrigger.create({
+      trigger: hero,
+      start: `top+=${COLLAPSE_PX - 30} top`,
+      end: 'max',
+      onEnter: () => html.classList.add('is-collapsed'),
+      onLeaveBack: () => html.classList.remove('is-collapsed'),
+    });
+
+    // Pin last. Any hero trigger created after the pin would have its start
+    // pushed past the pin's spacer (begin at 1150px instead of 0).
+    ScrollTrigger.create({ trigger: hero, start: 'top top', end: `+=${COLLAPSE_PX}`, pin: true, pinSpacing: true });
+  });
+
+  return () => {
+    ctx.revert();
+    html.classList.remove('is-ghosting', 'is-collapsed');
+    document.querySelectorAll<HTMLElement>('[data-ghost]').forEach((el) => {
+      el.parentElement?.style.removeProperty('position');
+      el.parentElement?.style.removeProperty('min-width');
+      el.parentElement?.style.removeProperty('min-height');
+    });
+  };
+}

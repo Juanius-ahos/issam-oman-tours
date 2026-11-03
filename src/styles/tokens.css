@@ -1,0 +1,36 @@
+/* Design tokens. Same roles as the merheb study (DESIGN-NOTES.md section 4),
+   new values for Oman. Colors are space-separated RGB so Tailwind can add alpha. */
+:root {
+  --sand: 243 234 223;        /* page background, desert sand */
+  --ink: 27 26 24;            /* text and dark surfaces */
+  --accent: 18 163 154;       /* wadi turquoise: buttons, active pills, routes */
+  --accent-deep: 7 104 98;   /* turquoise dark enough for text on sand (4.9:1) */
+  --amber: 226 163 59;        /* frankincense amber, decoration only */
+  --paper: 255 255 255;
+
+  --nav-w: 260px;
+  --gutter: 44px;
+  --radius: 18px;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+
+  --font-sans: 'Archivo Variable', 'Archivo', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --track-tight: -0.04em;
+  --track-wide: 0.18em;
+  --upper: uppercase;
+}
+
+@media (max-width: 900px), (max-height: 560px) and (pointer: coarse) {
+  :root { --gutter: 20px; }
+}
+
+/* Scripts without Archivo glyphs: their own fonts, no negative tracking, no uppercase. */
+:lang(ar) {
+  --font-sans: 'IBM Plex Sans Arabic', 'Archivo Variable', system-ui, sans-serif;
+  --track-tight: 0;
+  --track-wide: 0;
+  --upper: none;
+}
+:lang(zh) { --font-sans: 'Archivo Variable', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif; --track-tight: 0; --track-wide: 0.04em; }
+:lang(ja) { --font-sans: 'Archivo Variable', 'Hiragino Sans', 'Yu Gothic', 'Noto Sans JP', sans-serif; --track-tight: 0; --track-wide: 0.04em; }
+:lang(ko) { --font-sans: 'Archivo Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif; --track-tight: 0; --track-wide: 0.04em; }
+:lang(hi) { --font-sans: 'Archivo Variable', 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; --track-tight: 0; --track-wide: 0.04em; --upper: none; }
