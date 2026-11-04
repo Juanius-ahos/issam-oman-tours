@@ -44,15 +44,17 @@ Then open http://localhost:4173/en/
 
 **https://juanius-ahos.github.io/issam-oman-tours/en/**
 
-It's served from the `gh-pages` branch. To update it after changes:
+It's served from the `gh-pages` branch. To rebuild and republish it after changes:
 
 ```bash
-npm run build:pages
+npm run deploy:pages
 ```
 
-Then push the contents of `dist/site` to the `gh-pages` branch. `build:pages` is the
-normal build with the base path set to `/issam-oman-tours/`. On a real domain,
-use `npm run build` instead.
+That runs `build:pages` (the normal build with the base path set to
+`/issam-oman-tours/`) and force-pushes `dist/site` to `gh-pages`. On a real
+domain, use `npm run build` instead.
+
+Project memory (decisions, status, gotchas, next steps) is in [CLAUDE.md](CLAUDE.md).
 
 Other scripts:
 
