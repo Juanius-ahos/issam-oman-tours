@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://juanius-ahos.github.io/issam-oman-tours/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanius-ahos.github.io/issam-oman-tours/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanius-ahos.github.io/issam-oman-tours/en/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://juanius-ahos.github.io/issam-oman-tours/en/tours/muscat-city/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanius-ahos.github.io/issam-oman-tours/en/tours/muscat-city/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanius-ahos.github.io/issam-oman-tours/en/tours/muscat-city/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanius-ahos.github.io/issam-oman-tours/en/tours/nizwa-mountains/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanius-ahos.github.io/issam-oman-tours/en/tours/nizwa-mountains/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanius-ahos.github.io/issam-oman-tours/en/tours/nizwa-mountains/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanius-ahos.github.io/issam-oman-tours/en/tours/wahiba-desert/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanius-ahos.github.io/issam-oman-tours/en/tours/wahiba-desert/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanius-ahos.github.io/issam-oman-tours/en/tours/wahiba-desert/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juanius-ahos.github.io/issam-oman-tours/en/tours/wadi-shab-coast/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juanius-ahos.github.io/issam-oman-tours/en/tours/wadi-shab-coast/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://juanius-ahos.github.io/issam-oman-tours/en/tours/wadi-shab-coast/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
