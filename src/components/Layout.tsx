@@ -98,14 +98,14 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
 
       {/* Mobile top bar */}
       <header className="fixed inset-x-0 top-0 z-[80] flex h-[68px] items-center justify-between border-b border-ink/10 bg-sand/90 px-5 backdrop-blur-md desk:hidden">
-        <a href={homePath(locale)} className="wordmark rounded-[10px] bg-accent px-3 py-2 text-[22px] text-ink" aria-label={config.brand.person}>
+        <a href={homePath(locale)} className="wordmark rounded-[10px] bg-accent px-3 py-2 text-[22px] text-white" aria-label={config.brand.person}>
           {config.brand.wordmark}
         </a>
         <div className="flex items-center gap-2">
           <LanguageSwitcher route={route} variant="dark" />
           <button
             type="button"
-            className={`grid h-12 w-12 place-items-center rounded-xl transition-colors ${menuOpen ? 'bg-accent text-ink' : 'bg-ink text-sand'}`}
+            className={`grid h-12 w-12 place-items-center rounded-xl transition-colors ${menuOpen ? 'bg-accent text-white' : 'bg-ink text-sand'}`}
             aria-expanded={menuOpen}
             aria-controls="site-nav"
             aria-label={menuOpen ? m.nav.close : m.nav.menu}
@@ -123,7 +123,7 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
           <div className="flex items-start justify-between gap-2">
             <a href={homePath(locale)} className="relative isolate inline-flex rounded-[10px] px-2.5 py-1.5" aria-label={config.brand.person}>
               <span className="side-panel-bg rounded-[10px] bg-accent" />
-              <span data-ghost="wordmark" data-ghost-type="text" className="wordmark block text-[30px] text-ink">
+              <span data-ghost="wordmark" data-ghost-type="text" className="wordmark block text-[30px] text-white">
                 {config.brand.wordmark}
               </span>
             </a>
@@ -173,7 +173,7 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
         >
           <div className="side-panel-bg glass-ink" />
           <span className="flex items-center gap-2">
-            <Icon name="whatsapp" size={15} className="text-accent" />
+            <Icon name="whatsapp" size={15} className="text-accent-light" />
             {config.whatsapp.display}
           </span>
           <Icon name="arrow" size={14} className="opacity-60" />
@@ -185,7 +185,7 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
       </aside>
 
       <div className="bg-figure" aria-hidden="true">
-        <img src={`${BASE}media/issam-portrait.webp`} width={606} height={992} alt="" loading="lazy" decoding="async" />
+        <img src={`${BASE}media/issam-portrait.webp`} width={867} height={1376} alt="" loading="lazy" decoding="async" />
       </div>
 
       {/* The home hero spans the full width; everything else sits beside the sidebar (.content). */}
@@ -201,7 +201,7 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
       {/* Floating WhatsApp, mobile only: always one tap away */}
       <WaLink
         location="float"
-        className="fixed bottom-4 end-4 z-[75] grid h-14 w-14 place-items-center rounded-full bg-accent text-ink shadow-[0_10px_30px_rgb(27_26_24/.3)] desk:hidden"
+        className="fixed bottom-4 end-4 z-[75] grid h-14 w-14 place-items-center rounded-full bg-accent text-white shadow-[0_10px_30px_rgb(27_26_24/.3)] desk:hidden"
         aria-label={m.hero.ctaWhatsapp}
       >
         <Icon name="whatsapp" size={26} />

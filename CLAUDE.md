@@ -37,7 +37,7 @@ text, brand name or videos are used.
 
 - **Section order (home):** Hero, Counters, Press marquee, Story timeline, The Tours, Where to follow, Reviews, FAQ, Plan your tour, Also available. This is the user's order; merheb puts the timeline before the counters and marquee.
 - **Motion:** GSAP + ScrollTrigger + Lenis, **not** Framer Motion (scroll-scrubbed and pinned effects, one library).
-- **Palette:** sand `#F3EADF`, ink `#1B1A18`, wadi turquoise `#12A39A` (buttons, routes), deep turquoise `#076862` (text on sand, 4.9:1), amber `#E2A33B` (decoration only). Tokens in `src/styles/tokens.css`.
+- **Palette:** sand `#F3EADF`, ink `#1B1A18`, turban purple `#9859C5` (buttons, routes, white text, sampled from Issam's portrait), light purple `#CDA8EE` (text and icons on dark panels), deep purple `#7B499F` (small text on sand, 5.3:1), amber `#E2A33B` (decoration only). Tokens in `src/styles/tokens.css`.
 - **Wordmark:** "ISSAM" in condensed Archivo 900, with "The Languages Ninja" as the tagline.
 - **Hero effect:** a simplified port of merheb's ghost collapse. The wordmark, socials, 2 stat cards and the WhatsApp CTA fly from the hero into the sidebar.
 - **3D:** an interactive relief map of northern Oman with the 4 routes drawing themselves on scroll (React Three Fiber), lazy-loaded on capable desktops only. Everyone else gets a static SVG map.

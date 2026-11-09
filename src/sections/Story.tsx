@@ -166,10 +166,10 @@ export function Story() {
       <Modal open={!!open} onClose={() => setOpenIdx(null)} labelledBy={titleId} closeLabel={m.story.close} from={fromEl}>
         {open && (
           <>
-            <p className="text-[clamp(64px,8vw,120px)] font-black leading-none tracking-[-0.02em] text-accent" data-stagger>{open.year}</p>
+            <p className="text-[clamp(64px,8vw,120px)] font-black leading-none tracking-[-0.02em] text-accent-light" data-stagger>{open.year}</p>
             <h3 id={titleId} className="mt-3 text-[clamp(24px,2.6vw,38px)] font-extrabold tracking-[-0.02em]" data-stagger>{open.title}</h3>
             <p className="mt-4 text-[clamp(15px,1.3vw,18px)] text-sand/80" data-stagger>{open.full}</p>
-            <p className="mt-6 text-[17px] font-bold italic text-accent" data-stagger>“{open.quote}”</p>
+            <p className="mt-6 text-[17px] font-bold italic text-accent-light" data-stagger>“{open.quote}”</p>
           </>
         )}
       </Modal>

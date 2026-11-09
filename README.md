@@ -161,7 +161,7 @@ Mobile gets the same content without pinning.
 ## TODO before launch
 
 **Media**
-- [x] Cutout portrait of Issam for the hero (`public/media/issam-portrait.webp`, 606 x 992, from a color-corrected 864 x 1296 photo). A higher-resolution original would look sharper on large screens.
+- [x] Cutout portrait of Issam for the hero (`public/media/issam-portrait.webp`, 867 x 1376, cut out of the 1024 x 1536 photo on black).
 - [ ] Hero and card video loops for the four tours (WebM + MP4, 8 to 15 s, with WebP posters), added in `src/data/tours.ts`
 - [ ] Avatar photo for the story cards and the chat
 - [ ] Press logos (Arriyadiyah, Al Shabiba FM, SBC) as SVG or WebP, with permission

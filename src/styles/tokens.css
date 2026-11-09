@@ -3,8 +3,9 @@
 :root {
   --sand: 243 234 223;        /* page background, desert sand */
   --ink: 27 26 24;            /* text and dark surfaces */
-  --accent: 18 163 154;       /* wadi turquoise: buttons, active pills, routes */
-  --accent-deep: 7 104 98;   /* turquoise dark enough for text on sand (4.9:1) */
+  --accent: 152 89 197;       /* Issam's turban purple: buttons, active pills, routes. White text, 4.6:1 */
+  --accent-light: 205 168 238; /* the same purple, light enough for text and icons on dark panels */
+  --accent-deep: 123 73 159;  /* the same purple, dark enough for small text on sand (5.3:1) */
   --amber: 226 163 59;        /* frankincense amber, decoration only */
   --paper: 255 255 255;
 

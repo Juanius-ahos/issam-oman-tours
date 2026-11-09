@@ -103,7 +103,7 @@ function RequestModal({ open, onClose, initialTour }: { open: boolean; onClose: 
 
       {done ? (
         <div className="mt-8 flex items-start gap-3 rounded-2xl bg-white/5 p-5" role="status">
-          <span className="grid h-9 w-9 flex-none place-items-center rounded-full bg-accent text-ink">
+          <span className="grid h-9 w-9 flex-none place-items-center rounded-full bg-accent text-white">
             <Icon name="check" />
           </span>
           <div className="pt-1.5">

@@ -40,7 +40,7 @@ for (const route of allRoutes()) {
   // The hero portrait is the home page's largest paint.
   const portraitPreload = page.path.includes('/tours/')
     ? ''
-    : `<link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="${BASE}media/issam-portrait-640.webp 391w, ${BASE}media/issam-portrait.webp 606w" imagesizes="(max-width: 900px) 82vw, 58vh">`;
+    : `<link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="${BASE}media/issam-portrait-640.webp 640w, ${BASE}media/issam-portrait.webp 867w" imagesizes="(max-width: 900px) 82vw, 60vh">`;
   const preloads = [fontPreload, portraitPreload, chunk ? `<link rel="modulepreload" href="${BASE}${chunk}">` : ''].filter(Boolean).join('\n    ');
   const html = template
     .replace('<html lang="en" dir="ltr">', `<html lang="${page.lang}" dir="${page.dir}">`)
@@ -72,7 +72,7 @@ writeFileSync(
   join(outDir, '404.html'),
   `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Page not found | ${messages.en.meta.siteName}</title><meta name="robots" content="noindex">
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#F3EADF;color:#1B1A18;font:16px system-ui,sans-serif;text-align:center}a{color:#0B7A73;font-weight:700}</style>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#F3EADF;color:#1B1A18;font:16px system-ui,sans-serif;text-align:center}a{color:#7B499F;font-weight:700}</style>
 </head><body><main><h1>Page not found</h1><p><a href="${BASE}en/">Back to the tours</a></p></main></body></html>\n`,
 );
 

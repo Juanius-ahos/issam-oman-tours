@@ -26,7 +26,7 @@ export function TourCard({ slug, className = '' }: { slug: TourSlug; className?:
       <div className="p-[22px]">
         <h3 className="text-[clamp(26px,2.4vw,38px)] font-black leading-none tracking-[-0.04em]">{t.name}</h3>
         <p className="mt-2 max-w-[34ch] text-[13px] text-white/80">{t.short}</p>
-        <span className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-[0.14em] text-accent">
+        <span className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-[0.14em] text-accent-light">
           {m.tours.view}
           <Icon name="arrowRight" size={14} className="transition-transform duration-300 ease-out group-hover:translate-x-1 rtl:-scale-x-100 rtl:group-hover:-translate-x-1" />
         </span>

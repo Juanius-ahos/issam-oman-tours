@@ -54,7 +54,7 @@ export function LanguageSwitcher({ route, variant = 'light' }: { route: Route; v
                 lang={l.code}
                 aria-current={l.code === locale ? 'true' : undefined}
                 className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold hover:bg-white/10 ${
-                  l.code === locale ? 'bg-accent text-ink hover:bg-accent' : ''
+                  l.code === locale ? 'bg-accent text-white hover:bg-accent' : ''
                 }`}
               >
                 <span>{l.name}</span>

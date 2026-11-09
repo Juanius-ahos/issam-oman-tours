@@ -52,10 +52,10 @@ export function Hero() {
         <img
           className="hero-portrait"
           src={`${BASE}media/issam-portrait.webp`}
-          srcSet={`${BASE}media/issam-portrait-640.webp 391w, ${BASE}media/issam-portrait.webp 606w`}
-          sizes="(max-width: 900px) 82vw, 58vh"
-          width={606}
-          height={992}
+          srcSet={`${BASE}media/issam-portrait-640.webp 640w, ${BASE}media/issam-portrait.webp 867w`}
+          sizes="(max-width: 900px) 82vw, 60vh"
+          width={867}
+          height={1376}
           alt={m.hero.portraitLabel}
           decoding="async"
         />
@@ -87,7 +87,7 @@ export function Hero() {
         <ul className="hero-traits glass-ink" data-hero-fade>
           {m.hero.traits.map((t) => (
             <li key={t} className="flex items-center gap-2.5">
-              <Icon name="check" size={16} className="flex-none text-accent" />
+              <Icon name="check" size={16} className="flex-none text-accent-light" />
               {t}
             </li>
           ))}

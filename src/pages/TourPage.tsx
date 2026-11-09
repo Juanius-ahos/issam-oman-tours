@@ -66,7 +66,7 @@ export function TourPage({ slug }: { slug: TourSlug }) {
             {p.back}
           </a>
         </nav>
-        <p className="mt-6 text-[11px] font-extrabold tracking-[0.2em] text-accent" data-rise>
+        <p className="mt-6 text-[11px] font-extrabold tracking-[0.2em] text-accent-light" data-rise>
           {String(index + 1).padStart(2, '0')}
         </p>
         <h1 className="mt-2 max-w-[16ch] text-[clamp(44px,7vw,108px)] font-black leading-[0.92] tracking-[-0.045em] [text-wrap:balance]" data-rise>
@@ -89,7 +89,7 @@ export function TourPage({ slug }: { slug: TourSlug }) {
       <section className="grid grid-cols-2 gap-2.5 px-[var(--gutter)] py-8 lg:grid-cols-4">
         {facts.map((f) => (
           <div key={f.label} className="glass-ink rounded-[var(--radius)] p-5">
-            <Icon name={f.icon} size={18} className="text-accent" />
+            <Icon name={f.icon} size={18} className="text-accent-light" />
             <p className="label-xs mt-6 text-white/75">{f.label}</p>
             <p className="mt-1.5 text-[clamp(15px,1.4vw,19px)] font-extrabold leading-snug">{f.value}</p>
           </div>
@@ -103,7 +103,7 @@ export function TourPage({ slug }: { slug: TourSlug }) {
           <ol className="route-list relative mt-6 border-s-2 border-dashed border-ink/20 ps-8">
             {t.stops.map((s, i) => (
               <li key={s.name} className="route-step relative pb-9 last:pb-0">
-                <span className="absolute -start-[45px] top-0 grid h-[26px] w-[26px] place-items-center rounded-full bg-accent text-[11px] font-black text-ink">
+                <span className="absolute -start-[45px] top-0 grid h-[26px] w-[26px] place-items-center rounded-full bg-accent text-[11px] font-black text-white">
                   {i + 1}
                 </span>
                 <h3 className="text-[clamp(18px,1.7vw,24px)] font-extrabold tracking-[-0.02em]">{s.name}</h3>
@@ -125,7 +125,7 @@ export function TourPage({ slug }: { slug: TourSlug }) {
       {/* Included */}
       <section className="section grid gap-10 pt-0 md:grid-cols-2">
         {[
-          { title: p.included, items: t.included, icon: 'check' as const, tone: 'bg-accent text-ink' },
+          { title: p.included, items: t.included, icon: 'check' as const, tone: 'bg-accent text-white' },
           { title: p.notIncluded, items: t.notIncluded, icon: 'minus' as const, tone: 'bg-ink/10 text-ink' },
         ].map((col) => (
           <div key={col.title}>

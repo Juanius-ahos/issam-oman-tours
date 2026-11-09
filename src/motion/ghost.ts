@@ -92,8 +92,9 @@ export function createGhost(hero: HTMLElement): () => void {
         clipPath: `inset(0 0 ${portraitBox.height - seam}px 0)`,
       });
       document.body.appendChild(front);
-      // Two halves that meet at the seam: overlapping them would double up while they fade.
-      portrait.style.clipPath = `inset(${seam}px 0 0 0)`;
+      // Two halves that meet at the seam, so they don't double up while they fade.
+      // One shared pixel row hides the hairline the browser antialiases between them.
+      portrait.style.clipPath = `inset(${Math.max(0, seam - 1)}px 0 0 0)`;
     }
     // A fresh config per tween: ScrollTrigger keeps state on the object it is given.
     const st = () => ({ trigger: hero, start: 'top top', end: `+=${COLLAPSE_PX}`, scrub: 1 });

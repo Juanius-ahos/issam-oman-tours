@@ -11,6 +11,7 @@ export default {
         ink: 'rgb(var(--ink) / <alpha-value>)',
         accent: 'rgb(var(--accent) / <alpha-value>)',
         'accent-deep': 'rgb(var(--accent-deep) / <alpha-value>)',
+        'accent-light': 'rgb(var(--accent-light) / <alpha-value>)',
         amber: 'rgb(var(--amber) / <alpha-value>)',
         paper: 'rgb(var(--paper) / <alpha-value>)',
       },
