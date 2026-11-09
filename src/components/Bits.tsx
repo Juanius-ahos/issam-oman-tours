@@ -67,7 +67,7 @@ export function StatCard({ value, suffix = '', label, icon }: { value: number; s
   return (
     <div className="glass-ink relative flex h-[96px] w-[101px] flex-col justify-end rounded-[14px] p-3">
       <Icon name={icon} size={14} className="absolute end-3 top-3 text-accent-light" />
-      <span className="text-[26px] font-black leading-none tracking-[-0.045em] text-accent-light">
+      <span className="text-[23px] font-black leading-none tracking-[-0.045em] text-accent-light">
         {value.toLocaleString('en-US')}
         {suffix}
       </span>

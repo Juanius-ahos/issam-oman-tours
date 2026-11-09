@@ -68,6 +68,7 @@ export function Hero() {
           decoding="async"
         />
 
+        <div className="hero-left">
         <div className="hero-copy" data-hero-fade>
           <p className="eyebrow">{m.hero.eyebrow}</p>
           <h1 id="hero-title" className="mt-3 text-[clamp(30px,3.2vw,52px)] font-black leading-[1.02] tracking-[var(--track-tight)] [text-wrap:balance]">
@@ -82,12 +83,14 @@ export function Hero() {
             <SocialRow />
           </div>
         </div>
+        </div>
 
+        <div className="hero-side">
         <div className="hero-stats">
           <div data-ghost-target="stat-a" className="hero-scale">
             <StatCard value={s.languages} label={m.counters.languages} icon="translate" />
           </div>
-          <div data-ghost-target="stat-b" className="hero-scale hero-stat-b">
+          <div data-ghost-target="stat-b" className="hero-scale">
             <StatCard value={s.travelersHosted} suffix="+" label={m.counters.travelers} icon="users" />
           </div>
         </div>
@@ -100,6 +103,7 @@ export function Hero() {
             </li>
           ))}
         </ul>
+        </div>
 
         <div className="hero-ctas">
           <div data-ghost-target="cta" className="hero-scale">

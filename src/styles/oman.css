@@ -40,6 +40,23 @@
   .hero-portrait { position: absolute; }
 }
 
+/* Tighter stat column on short or narrow desktop windows. */
+@media (min-width: 901px) and (max-height: 820px), (min-width: 901px) and (max-width: 1180px) {
+  .hero-stage .hero-side { --stat: 1.3; }
+  .hero-side .hero-traits { padding: 14px 16px; gap: 6px; font-size: 13px; }
+  .hero-stage .hero-left { gap: 8px; }
+  .hero-left h1 { font-size: clamp(26px, 5vh, 42px); }
+  .hero-left h1 + p { font-size: 13.5px; }
+}
+@media (min-width: 901px) and (max-width: 1180px) {
+  .hero-ctas .hero-tours-btn { display: none; }
+}
+@media (min-width: 901px) and (max-height: 680px) {
+  .hero-stage .hero-side { --stat: 1.1; }
+  .hero-side .hero-traits { display: none; }
+  .hero-left h1 + p { display: none; }
+}
+
 .hero-bubble {
   position: absolute; z-index: 60; top: 112px; right: 14px; padding: 9px 16px; border-radius: 18px 18px 18px 4px; pointer-events: none; white-space: nowrap;
   background: #fff; color: rgb(var(--ink)); font-size: 17px; font-weight: 800; letter-spacing: -.01em;
