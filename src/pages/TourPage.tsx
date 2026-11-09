@@ -1,22 +1,20 @@
 /* Tour page: hero video, quick facts, the route as a mini timeline beside a
    focused map, what is included, and a request button. Same visual language
    as the home page. */
-import { Suspense, lazy, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { tourSlugs, type TourSlug } from '../config';
 import { useI18n } from '../i18n';
 import { homePath } from '../routes';
 import { tourMedia } from '../data/tours';
 import { gsap } from '../motion/gsap';
-import { canRender3D, isMobile, prefersReducedMotion } from '../lib/viewport';
+import { prefersReducedMotion } from '../lib/viewport';
 import { LazyVideo } from '../components/Media';
 import { Icon, type IconName } from '../components/Icon';
 import { WaLink, RollText } from '../components/Bits';
 import { useRequest } from '../components/TourRequest';
-import { RoutesMapSvg } from '../map/RoutesMapSvg';
+import { SatelliteRouteMap } from '../map/SatelliteRouteMap';
 import { TourCard } from '../sections/Tours';
 import { Faq } from '../sections/Faq';
-
-const RoutesMap3D = lazy(() => import('../map/RoutesMap3D'));
 
 export function TourPage({ slug }: { slug: TourSlug }) {
   const { m, locale } = useI18n();
@@ -24,14 +22,9 @@ export function TourPage({ slug }: { slug: TourSlug }) {
   const p = m.tourPage;
   const { openRequest } = useRequest();
   const root = useRef<HTMLDivElement>(null);
-  const progress = useRef(1);
-  const [show3D, setShow3D] = useState(false);
   const index = tourSlugs.indexOf(slug);
 
   useEffect(() => {
-    // The 3D map focuses this tour by holding progress at its slot.
-    progress.current = (index + 0.99) / 4;
-    if (!isMobile() && canRender3D()) setShow3D(true);
     if (prefersReducedMotion()) return;
     const ctx = gsap.context(() => {
       gsap.from('[data-rise]', { y: 30, opacity: 0, duration: 0.8, stagger: 0.07, ease: 'power3.out' });
@@ -57,8 +50,8 @@ export function TourPage({ slug }: { slug: TourSlug }) {
   return (
     <div ref={root} className="desk:ps-[var(--nav-w)]">
       {/* Hero */}
-      <section className="relative flex min-h-[88svh] flex-col justify-end overflow-hidden px-[var(--gutter)] pb-[7vh] pt-[120px] text-white desk:pt-[10vh]">
-        <LazyVideo src={tourMedia[slug]} poster={tourMedia[slug].poster} label={p.heroVideoLabel} className="absolute inset-0 -z-10 h-full w-full" />
+      <section className="relative isolate flex min-h-[88svh] flex-col justify-end overflow-hidden px-[var(--gutter)] pb-[7vh] pt-[120px] text-white desk:pt-[10vh]">
+        <LazyVideo src={tourMedia[slug]} poster={tourMedia[slug].poster} label={t.name} className="!absolute inset-0 -z-10 h-full w-full" />
         <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
         <nav aria-label="Breadcrumb" data-rise>
           <a href={`${homePath(locale)}#tours`} className="label-xs inline-flex items-center gap-1.5 text-white/75 hover:text-white">
@@ -113,12 +106,7 @@ export function TourPage({ slug }: { slug: TourSlug }) {
           </ol>
         </div>
         <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius)] border border-ink/10 lg:sticky lg:top-8">
-          <RoutesMapSvg focus={slug} slice className={`absolute inset-0 h-full w-full transition-opacity duration-700 ${show3D ? 'opacity-0' : ''}`} />
-          {show3D && (
-            <Suspense fallback={null}>
-              <RoutesMap3D progress={progress} className="!absolute inset-0" />
-            </Suspense>
-          )}
+          <SatelliteRouteMap focus={slug} className="absolute inset-0 h-full w-full" />
         </div>
       </section>
 

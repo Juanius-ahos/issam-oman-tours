@@ -13,12 +13,8 @@ export default defineConfig({
     cssCodeSplit: true,
     rollupOptions: {
       output: {
-        // three.js and the 3D map stay in their own chunk, loaded on demand.
-        // React gets its own chunk first, or Rollup hoists it into the three
-        // chunk (R3F imports React) and every page would pay for three.js.
         manualChunks(id) {
           if (/node_modules\/(react|react-dom|scheduler)\//.test(id)) return 'react';
-          if (id.includes('node_modules/three') || id.includes('@react-three')) return 'three';
           if (id.includes('node_modules/gsap') || id.includes('node_modules/lenis')) return 'motion';
         },
       },

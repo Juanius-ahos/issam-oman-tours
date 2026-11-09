@@ -23,7 +23,7 @@ export function Placeholder({
 /**
  * Lazy video: preload="none", no autoplay attribute. Plays only while on screen,
  * pauses when it leaves, never plays under reduced motion. With no src yet it
- * renders the labelled placeholder instead.
+ * shows the poster photo if there is one, otherwise the labelled placeholder.
  */
 export function LazyVideo({
   src,
@@ -31,12 +31,14 @@ export function LazyVideo({
   label,
   className = '',
   dark = true,
+  sizes = '100vw',
 }: {
   src?: { webm?: string; mp4?: string };
   poster?: string;
   label: string;
   className?: string;
   dark?: boolean;
+  sizes?: string;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
   const hasSrc = !!(src?.webm || src?.mp4);
@@ -56,6 +58,9 @@ export function LazyVideo({
     return () => io.disconnect();
   }, [hasSrc]);
 
+  if (!hasSrc && poster) {
+    return <img src={poster} srcSet={`${poster.replace('-1920.', '-960.')} 960w, ${poster} 1920w`} sizes={sizes} alt={label} loading="lazy" decoding="async" className={`tour-photo ${className}`} />;
+  }
   if (!hasSrc) return <Placeholder label={label} dark={dark} className={className} />;
   return (
     <video ref={ref} className={`object-cover ${className}`} muted loop playsInline preload="none" poster={poster} aria-label={label}>

@@ -41,7 +41,10 @@ for (const route of allRoutes()) {
   const portraitPreload = page.path.includes('/tours/')
     ? ''
     : `<link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="${BASE}media/issam-portrait-640.webp 640w, ${BASE}media/issam-portrait.webp 867w" imagesizes="(max-width: 900px) 82vw, 60vh">`;
-  const preloads = [fontPreload, portraitPreload, chunk ? `<link rel="modulepreload" href="${BASE}${chunk}">` : ''].filter(Boolean).join('\n    ');
+  const dunesPreload = page.path.includes('/tours/')
+    ? ''
+    : `<link rel="preload" as="image" type="image/webp" imagesrcset="${BASE}media/places/wahiba-soft-dunes-960.webp 960w, ${BASE}media/places/wahiba-soft-dunes-1920.webp 1920w" imagesizes="100vw">`;
+  const preloads = [fontPreload, portraitPreload, dunesPreload, chunk ? `<link rel="modulepreload" href="${BASE}${chunk}">` : ''].filter(Boolean).join('\n    ');
   const html = template
     .replace('<html lang="en" dir="ltr">', `<html lang="${page.lang}" dir="${page.dir}">`)
     .replace('<!--app-head-->', `${page.head}\n    ${preloads}`)

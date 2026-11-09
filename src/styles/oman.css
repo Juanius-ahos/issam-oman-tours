@@ -1,0 +1,88 @@
+/* Real photography sections, the hero backdrop and the greeting bubble. */
+
+.tour-photo { object-fit: cover; transition: transform .9s cubic-bezier(.22, 1, .36, 1); }
+@media (hover: hover) and (pointer: fine) {
+  .tour-card:hover .tour-photo { transform: scale(1.06); }
+}
+
+/* One day in Oman */
+.day { position: relative; height: 420svh; }
+.day-frame { position: sticky; top: 0; height: 100svh; overflow: hidden; color: #fff; background: rgb(var(--ink)); }
+.day-photo { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; will-change: transform, clip-path; }
+.day-scrim { position: absolute; inset: 0; background: linear-gradient(rgb(14 12 24 / .62), rgb(14 12 24 / .12) 52%, rgb(14 12 24 / .4)); }
+.day-caps { position: absolute; inset-inline: var(--gutter); top: clamp(92px, 11vh, 130px); max-width: min(760px, 100%); }
+.day-cap { position: absolute; inset-inline-start: 0; top: 0; width: 100%; }
+.day-time { font-size: 13px; font-weight: 800; letter-spacing: var(--track-wide); text-transform: var(--upper); }
+.day-title { margin-top: 10px; font-size: clamp(42px, 6.4vw, 96px); font-weight: 900; line-height: .98; letter-spacing: var(--track-tight); text-wrap: balance; }
+.day-text { margin-top: 14px; max-width: 44ch; font-size: clamp(15px, 1.25vw, 19px); font-weight: 500; }
+.day-title, .day-time, .day-text { text-shadow: 0 2px 20px rgb(14 12 24 / .5); }
+.day-rail { position: absolute; inset-inline: var(--gutter); bottom: 26px; height: 3px; border-radius: 3px; background: rgb(255 255 255 / .3); overflow: hidden; }
+.day-progress { display: block; height: 100%; background: #fff; transform: scaleX(0); transform-origin: left; }
+[dir='rtl'] .day-progress { transform-origin: right; }
+
+/* Geometric star band, the kind carved on Omani doors and plaster. */
+.pattern-band {
+  height: 64px; background-color: rgb(var(--accent-deep)); background-position: 0 0; background-size: 64px 64px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='none' stroke='%23CDA8EE' stroke-width='1.6'%3E%3Crect x='16' y='16' width='32' height='32'/%3E%3Crect x='16' y='16' width='32' height='32' transform='rotate(45 32 32)'/%3E%3Cpath d='M0 32H9.4M54.6 32H64M32 0V9.4M32 54.6V64'/%3E%3C/svg%3E");
+}
+
+/* Hero: real dunes behind Issam, melting into the sand of the page. */
+.hero-backdrop { position: absolute; z-index: 0; top: -92px; inset-inline: calc(var(--gutter) * -1); height: calc(92px + 62svh + 2px); overflow: hidden; }
+.hero-backdrop img { width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 100%; }
+.hero-backdrop::after { content: ''; position: absolute; inset: 0; background: linear-gradient(rgb(var(--sand)) 0%, rgb(var(--sand) / 0) 46%); }
+.hero-portrait { position: relative; z-index: 1; }
+
+@media (min-width: 901px) and (min-height: 561px), (min-width: 901px) and (pointer: fine) {
+  .hero-backdrop { inset: 0; height: 100%; z-index: 1; }
+  /* A veil of sand under the headline so the small text stays readable. */
+  .hero-backdrop::before { content: ''; position: absolute; z-index: 1; inset: 28% auto 0 0; width: 44%; background: linear-gradient(90deg, rgb(var(--sand) / .9) 55%, rgb(var(--sand) / 0)); }
+  [dir='rtl'] .hero-backdrop::before { left: auto; right: 0; background: linear-gradient(270deg, rgb(var(--sand) / .9) 55%, rgb(var(--sand) / 0)); }
+  .hero-portrait { position: absolute; }
+}
+
+.hero-bubble {
+  position: absolute; z-index: 60; top: 112px; right: 14px; padding: 9px 16px; border-radius: 18px 18px 18px 4px; pointer-events: none; white-space: nowrap;
+  background: #fff; color: rgb(var(--ink)); font-size: 17px; font-weight: 800; letter-spacing: -.01em;
+  box-shadow: 0 12px 30px -8px rgb(27 26 24 / .38);
+}
+.hero-bubble-word { display: inline-block; animation: bubble-word .42s cubic-bezier(.16, 1, .3, 1) both; }
+@keyframes bubble-word { from { transform: translateY(70%); opacity: 0; filter: blur(4px); } }
+@media (min-width: 901px) and (min-height: 561px), (min-width: 901px) and (pointer: fine) {
+  .hero-bubble { position: fixed; z-index: 72; top: 15vh; left: calc(50% + 15vh); right: auto; padding: 13px 22px; font-size: clamp(20px, 2vw, 30px); border-radius: 24px 24px 24px 6px; }
+}
+
+/* Real satellite route map */
+.sat-map { position: relative; overflow: hidden; container-type: size; background: #1b1a18; }
+.sat-cam { --cam: 1; position: absolute; left: 50%; top: 50%; width: max(100%, calc(100cqh * 1.3532)); aspect-ratio: 1000 / 739; transform: translate(-50%, -50%); transform-origin: center; }
+.sat-cam img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; }
+.sat-cam svg { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.sat-line-base { stroke: #fff; stroke-width: calc(1.2px / var(--cam)); opacity: .42; transition: opacity .5s; }
+.sat-line { stroke: rgb(var(--accent-light)); stroke-width: calc(2.6px / var(--cam)); stroke-dasharray: 1; stroke-dashoffset: 1; filter: drop-shadow(0 0 2px rgb(27 26 24 / .8)); transition: stroke-dashoffset 1.8s cubic-bezier(.45, 0, .2, 1); }
+.is-on .sat-line { stroke-dashoffset: 0; }
+.is-on .sat-line-base { opacity: .9; }
+.sat-pin { position: absolute; display: flex; align-items: center; gap: 7px; white-space: nowrap; transform: translate(-13px, -50%) scale(calc(1 / var(--cam))); transform-origin: 13px 50%; color: #fff; font-size: 13px; font-weight: 800; text-shadow: 0 1px 6px rgb(0 0 0 / .85); animation: sat-pin .5s .5s cubic-bezier(.16, 1, .3, 1) both; }
+.sat-pin b { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: rgb(var(--accent)); box-shadow: 0 0 0 2px #fff, 0 4px 12px rgb(0 0 0 / .5); font-size: 12px; font-weight: 900; text-shadow: none; }
+.sat-pin em { font-style: normal; }
+.sat-pin-flip { flex-direction: row-reverse; transform: translate(calc(-100% + 13px), -50%) scale(calc(1 / var(--cam))); transform-origin: calc(100% - 13px) 50%; }
+.sat-pin-end { padding: 3px 8px; border-radius: 8px; background: rgb(var(--ink)); font-size: 12px; font-weight: 900; text-shadow: none; transform: translate(-50%, -130%) scale(calc(1 / var(--cam))); transform-origin: 50% 100%; }
+.sat-pin-city i { width: 14px; height: 14px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 4px rgb(var(--accent)); margin-inline-start: 6px; }
+@keyframes sat-pin { from { opacity: 0; } }
+.sat-scrim { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(100deg, rgb(14 12 24 / .82) 0%, rgb(14 12 24 / .32) 44%, rgb(14 12 24 / 0) 66%), linear-gradient(transparent 58%, rgb(14 12 24 / .55)); }
+.sat-credit { position: absolute; inset-inline-end: 8px; top: 6px; z-index: 1; max-width: calc(100% - 16px); padding: 2px 7px; border-radius: 5px; background: rgb(14 12 24 / .55); color: #fff; font-size: 9.5px; line-height: 1.35; }
+.sat-credit a { text-decoration: underline; text-underline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .sat-line { transition: none; }
+  .sat-pin { animation: none !important; }
+}
+
+.hero-stage { position: relative; }
+
+/* Words of a section title rise out of a mask (motion/reveals.ts). */
+.title-word { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .12em; margin-bottom: -.12em; }
+.title-word > span { display: inline-block; will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bubble-word { animation: none !important; }
+  .day { height: auto; }
+  .day-frame { position: relative; }
+}

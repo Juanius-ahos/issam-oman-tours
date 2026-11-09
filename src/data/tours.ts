@@ -1,4 +1,5 @@
 import type { TourSlug } from '../config';
+import { photoSrc } from './photos';
 
 /* Language-neutral tour data: route geometry for the map and JSON-LD.
    Names and descriptions live in the locale JSON under tours.items.<slug>.
@@ -70,13 +71,12 @@ export const tourGeo: Record<TourSlug, TourGeo> = {
   },
 };
 
-/** Video loops per tour. Empty until real footage exists; the cards then show
- *  labelled placeholders. TODO: drop files in public/media/ and fill these in. */
+/** Per tour: a real photo now. Add webm and mp4 from Issam's footage and the video takes over. */
 export const tourMedia: Record<TourSlug, { webm?: string; mp4?: string; poster?: string }> = {
-  'muscat-city': {},
-  'nizwa-mountains': {},
-  'wahiba-desert': {},
-  'wadi-shab-coast': {},
+  'muscat-city': { poster: photoSrc('muscat-grand-mosque') },
+  'nizwa-mountains': { poster: photoSrc('nizwa-fort') },
+  'wahiba-desert': { poster: photoSrc('wahiba-dune-drive') },
+  'wadi-shab-coast': { poster: photoSrc('wadi-shab') },
 };
 
 /** Map extent (northern Oman) used by both the SVG fallback and the 3D terrain. */

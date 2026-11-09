@@ -49,6 +49,31 @@
     "eyebrow": "As heard and seen on",
     "logoLabel": "Logo"
   },
+  "day": {
+    "label": "One day in Oman",
+    "items": [
+      {
+        "time": "Morning",
+        "title": "Nizwa under the Hajar",
+        "text": "Date palms and mud-brick forts below the mountains."
+      },
+      {
+        "time": "Noon",
+        "title": "The pools of Wadi Shab",
+        "text": "Green water, canyon walls and a swim to cool off."
+      },
+      {
+        "time": "Sunset",
+        "title": "The Wahiba turns red",
+        "text": "The wind drops, the dunes glow and the whole desert goes quiet."
+      },
+      {
+        "time": "Night",
+        "title": "Muttrah lights up",
+        "text": "The Corniche glows along the old harbour of Muscat."
+      }
+    ]
+  },
   "story": {
     "eyebrow": "The story",
     "title": "From one language to twelve",
@@ -385,6 +410,8 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "madeIn": "Private tours of Oman from Muscat."
+    "madeIn": "Private tours of Oman from Muscat.",
+    "photoCredits": "Photo credits",
+    "photoEdited": "Resized."
   }
 }

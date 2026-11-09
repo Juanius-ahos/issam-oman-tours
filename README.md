@@ -10,7 +10,7 @@ text or video is used. Every image and video is a **labelled gray placeholder**,
 and nothing is AI-generated.
 
 - React 18 + Vite + TypeScript, Tailwind CSS
-- GSAP + ScrollTrigger and Lenis for motion; three.js + React Three Fiber for the 3D routes map
+- GSAP + ScrollTrigger and Lenis for motion; real satellite imagery and road data for the routes map
 - Pre-rendered static HTML for every page and locale (65 pages), no CMS, no server
 - 13 locales with URL prefixes (`/en/`, `/ar/` ...), Arabic in full RTL
 
@@ -118,15 +118,13 @@ Mark both as key events in GA4 > Admin > Events.
 **Performance.** Lighthouse mobile on the preview build: Performance 96 to 97,
 Accessibility 96 to 100, Best Practices 100, SEO 100 (home and tour pages,
 English). For comparison, merheb.xyz scored 55 on Performance with an 18.8 s
-LCP. The 3D map (three.js, about 217 KB gzipped) only loads on capable
-desktops when its section comes near. Phones, reduced-motion users and
-Lighthouse get a static SVG map. Videos use `preload="none"` and only play on
+LCP. Videos use `preload="none"` and only play on
 screen.
 
 **Motion.** Desktop home: the hero collapses into the sidebar as you scroll
 (`src/motion/ghost.ts`), the story line draws itself, the counters roll, the
-press marquee reacts to scroll speed, and the tours section pins while the 3D
-camera flies route to route. Everything respects `prefers-reduced-motion`.
+press marquee reacts to scroll speed, and the tours section pins while the
+map camera flies route to route. Everything respects `prefers-reduced-motion`.
 Mobile gets the same content without pinning.
 
 ## Folder structure
@@ -152,7 +150,7 @@ Mobile gets the same content without pinning.
     ├── components/          Layout (sidebar, menu, footer), Modal, TourRequest form, icons, placeholders
     ├── sections/            Hero, Counters, Press, Story, Tours, Follow, Reviews, Faq, Plan, Also
     ├── pages/TourPage.tsx   Tour page template
-    ├── map/                 Geography, SVG map, 3D map
+    ├── map/                 Satellite route map and projection
     ├── motion/              GSAP + Lenis setup, hero collapse engine
     ├── lib/                 SEO head builder, analytics, viewport rules
     └── styles/              Tokens, components, Arabic font
@@ -166,7 +164,6 @@ Mobile gets the same content without pinning.
 - [ ] Avatar photo for the story cards and the chat
 - [ ] Press logos (Arriyadiyah, Al Shabiba FM, SBC) as SVG or WebP, with permission
 - [ ] Final social share image to replace `public/og/og-card.png` (1200 x 630)
-- [ ] Real elevation data (SRTM or Copernicus DEM) and coastline (Natural Earth) for the map; the current terrain is stylised (`src/map/geo.ts`)
 
 **Content**
 - [ ] Issam's real story for the four timeline cards

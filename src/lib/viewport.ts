@@ -13,17 +13,3 @@ export function prefersReducedMotion() {
   return isBrowser && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
-/** Gate for the 3D map: WebGL2, no reduced motion, no data saver, enough cores. */
-export function canRender3D() {
-  if (!isBrowser || prefersReducedMotion()) return false;
-  const nav = navigator as Navigator & { connection?: { saveData?: boolean }; deviceMemory?: number };
-  if (nav.connection?.saveData) return false;
-  if ((nav.hardwareConcurrency ?? 4) < 4) return false;
-  if (nav.deviceMemory !== undefined && nav.deviceMemory < 4) return false;
-  try {
-    const c = document.createElement('canvas');
-    return !!c.getContext('webgl2');
-  } catch {
-    return false;
-  }
-}

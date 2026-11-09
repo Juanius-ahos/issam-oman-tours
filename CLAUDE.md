@@ -27,7 +27,7 @@ text, brand name or videos are used.
 ## House rules (from the user, non-negotiable)
 
 1. **No em dashes** anywhere in copy or markup. `npm run check:copy` enforces it, and it runs before every build.
-2. **No AI-generated images or video.** Use labelled gray placeholders (`Placeholder` / `LazyVideo` in `src/components/Media.tsx`) that say exactly what goes there.
+2. **No AI-generated images or video, and no drawn or illustrated scenery** (the user rejected hand-coded landscapes). Use real photos. Until Issam's arrive, licensed photos from Wikimedia Commons are listed in `src/data/photos.ts`; their licenses require the credits in the footer, so keep those in step.
 3. **All config in one file:** `src/config.ts` (WhatsApp, email, socials, GA ID, stats, locales). Copy lives in `src/locales/*.json`.
 4. **Copy nothing from merheb.** Only structure, layout and interactions.
 5. **Pronouns:** Issam's pronouns have not been stated. In copy and docs, use the name "Issam", not he or she.
@@ -40,7 +40,7 @@ text, brand name or videos are used.
 - **Palette:** sand `#F3EADF`, ink `#1B1A18`, turban purple `#9859C5` (buttons, routes, white text, sampled from Issam's portrait), light purple `#CDA8EE` (text and icons on dark panels), deep purple `#7B499F` (small text on sand, 5.3:1), amber `#E2A33B` (decoration only). Tokens in `src/styles/tokens.css`.
 - **Wordmark:** "ISSAM" in condensed Archivo 900, with "The Languages Ninja" as the tagline.
 - **Hero effect:** a simplified port of merheb's ghost collapse. The wordmark, socials, 2 stat cards and the WhatsApp CTA fly from the hero into the sidebar.
-- **3D:** an interactive relief map of northern Oman with the 4 routes drawing themselves on scroll (React Three Fiber), lazy-loaded on capable desktops only. Everyone else gets a static SVG map.
+- **Map:** real satellite imagery (Sentinel-2 cloudless 2016 by EOX, CC BY 4.0, the only year licensed for commercial use) with routes following real roads (OpenStreetMap via OSRM, stored in `src/data/routeLines.ts`). The camera flies route to route. The earlier three.js relief model was rejected as fake and removed.
 - **Untranslated locales:** the 12 non-English JSON files are English copies marked `"_status": "todo"`. They are served `noindex` and left out of hreflang and the sitemap until translated (avoids duplicate content). Set `"_status": "done"` per locale when translated; `seo.indexTodoLocales` in config forces them on for staging.
 - **Form:** posts to `VITE_FORM_ENDPOINT` if set; otherwise (and on failure) it opens WhatsApp with the request written out, so no lead is lost.
 - **Reviews** are labelled "Sample reviews", so there is no `Review` / `AggregateRating` schema until real ones exist.
@@ -80,9 +80,9 @@ npm run deploy:pages   # build for /issam-oman-tours/ and force-push dist/site t
 - `src/entry-client.tsx`: loads the page locale's JSON chunk, hydrates, starts Lenis and GA.
 - `src/motion/ghost.ts`: the hero collapse engine (desktop only). `index.html` has an inline script that adds `pre-ghost` to hide the sidebar until the engine has placed its nodes.
 - `src/sections/*`: one file per home section. `src/pages/TourPage.tsx`: tour template.
-- `src/map/geo.ts` (hand-traced coastline, stylised terrain), `RoutesMapSvg.tsx` (fallback), `RoutesMap3D.tsx` (three.js, lazy).
+- `src/map/SatelliteRouteMap.tsx` (map, camera, routes, pins, required credit), `src/map/geo.ts` (projection; the image is exported for exactly `mapBounds`).
 - `src/data/tours.ts`: real route coordinates and empty video slots per tour.
-- `vite.config.ts` `manualChunks`: `react`, `motion` (gsap + lenis), `three`. **Keep React in its own chunk**, or Rollup hoists it into the three.js chunk and every page downloads 3D code.
+- `vite.config.ts` `manualChunks`: `react` and `motion` (gsap + lenis).
 
 ## Gotchas learned the hard way
 
@@ -90,7 +90,6 @@ npm run deploy:pages   # build for /issam-oman-tours/ and force-push dist/site t
 - **One ScrollTrigger config object per tween.** Sharing one `scrollTrigger: {...}` object across several tweens froze them at progress 0. `ghost.ts` uses a `st()` factory.
 - **Measure before mutating** in the ghost engine; never use a negative-margin full-bleed hack on a pinned element (the pin shifted the hero by half the sidebar width). The home hero sits outside the padded `.desk:ps-[var(--nav-w)]` wrapper instead.
 - **Tailwind utilities beat `@layer components`.** A component rule like `display: none` loses to a `flex` utility on the same element; use `!important` there (see `.side-stats`).
-- **three.js colors:** CSS tokens are sRGB; convert with `setRGB(..., THREE.SRGBColorSpace)` or the terrain washes out white.
 - **Odometer:** keep the real number in an `sr-only` span and the rolling digits `aria-hidden` (aria-label on a plain span fails Lighthouse).
 - **Hero portrait stacking:** the flying wordmark is a sidebar node (z 70), above the whole hero, and a pinned hero is its own stacking context. `ghost.ts` therefore splits the portrait at the wordmark's bottom edge: a clone on `body` (z 71) above the seam, the hero image below it, so the figure stays in front of the letters and the CTA and stat cards stay on top.
 - `?debug` on any URL exposes `window.gsap` and `window.ScrollTrigger` for inspecting triggers in the console.
@@ -109,4 +108,3 @@ npm run deploy:pages   # build for /issam-oman-tours/ and force-push dist/site t
 2. Replace the dummy copy in `src/locales/en.json` (story, tour details, FAQ answers, real reviews).
 3. Translate the 12 locales (start with Arabic, the home market), then set `_status: "done"`.
 4. Buy and point the domain, set `VITE_SITE_URL` and `VITE_GA_ID`, create the Google Business Profile.
-5. Swap the stylised terrain for real SRTM / Copernicus elevation data (`src/map/geo.ts`).

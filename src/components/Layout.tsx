@@ -9,6 +9,7 @@ import { Icon, type IconName } from './Icon';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { RollText, SocialRow, StatCard, WaButton, WaLink } from './Bits';
 import { RequestProvider } from './TourRequest';
+import { photos } from '../data/photos';
 
 export const sectionIds = ['top', 'story', 'tours', 'follow', 'reviews', 'faq', 'plan'] as const;
 type SectionId = (typeof sectionIds)[number];
@@ -196,6 +197,17 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
           © {new Date().getFullYear()} {config.brand.person}. {m.footer.rights} {m.footer.madeIn}
         </span>
         <a href="#top" onClick={onNav('top')} className="hover:text-ink">{m.nav.backToTop}</a>
+        <details className="w-full font-medium">
+          <summary className="cursor-pointer font-bold hover:text-ink">{m.footer.photoCredits}</summary>
+          <ul className="mt-2 grid gap-1 sm:grid-cols-2">
+            {photos.map((p) => (
+              <li key={p.slug}>
+                <a href={p.source} target="_blank" rel="noopener" className="underline underline-offset-2 hover:text-ink">{p.name}</a>, {p.author},{' '}
+                <a href={p.licenseUrl} target="_blank" rel="noopener" className="underline underline-offset-2 hover:text-ink">{p.license}</a>. {m.footer.photoEdited}
+              </li>
+            ))}
+          </ul>
+        </details>
       </footer>
 
       {/* Floating WhatsApp, mobile only: always one tap away */}

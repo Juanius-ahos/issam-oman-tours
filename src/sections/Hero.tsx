@@ -4,6 +4,8 @@ import { useI18n } from '../i18n';
 import { createGhost } from '../motion/ghost';
 import { ScrollTrigger } from '../motion/gsap';
 import { BASE } from '../routes';
+import { GreetingBubble } from '../oman/Bits';
+import { photoSrc, photoSrcSet } from '../data/photos';
 import { SocialRow, StatCard, WaButton } from '../components/Bits';
 import { Icon } from '../components/Icon';
 import { Smooth } from '../motion/gsap';
@@ -22,6 +24,8 @@ export function Hero() {
       window.scrollTo(0, 0);
       cleanup = createGhost(hero.current!);
       html.classList.remove('pre-ghost');
+      // The hero pin is created last but sits first on the page: sections below must measure after it.
+      ScrollTrigger.sort();
       ScrollTrigger.refresh();
     };
     // Fonts first: a late swap would move every measured box.
@@ -44,7 +48,11 @@ export function Hero() {
 
   return (
     <section id="top" ref={hero} className="hero hero-layout" aria-labelledby="hero-title">
+      <GreetingBubble />
       <div className="hero-stage">
+        <div className="hero-backdrop" data-hero-fade>
+          <img src={photoSrc('wahiba-soft-dunes')} srcSet={photoSrcSet('wahiba-soft-dunes')} sizes="100vw" alt="" decoding="async" />
+        </div>
         <span data-ghost-target="wordmark" className="wordmark hero-mark" aria-hidden="true">
           {config.brand.wordmark}
         </span>
