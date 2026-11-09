@@ -53,7 +53,9 @@ Done: Steps 1 to 3 of the original brief, plus a live preview.
 - GA4 (`VITE_GA_ID`), loaded after the first interaction, with events `whatsapp_click` (param `location`) and `tour_request_submit`.
 - **Lighthouse mobile** (preview build): home Performance 97 / Accessibility 96 / Best Practices 100 / SEO 100; tour page 96 / 100 / 100 / 100. Baseline merheb.xyz: Performance 55, LCP 18.8 s. The Arabic page shows SEO 66 only because TODO locales are `noindex` on purpose.
 
-Not done (the launch checklist is in README "TODO before launch"): real photos and videos, Issam's story, real tour content, prices policy, real reviews, translations, domain, GA ID, Google Business Profile link, real elevation data for the map.
+Hero portrait added 2026-11-09 (`public/media/issam-portrait*.webp`), also used as the faint fixed figure behind later sections on desktop.
+
+Not done (the launch checklist is in README "TODO before launch"): remaining real photos and videos, Issam's story, real tour content, prices policy, real reviews, translations, domain, GA ID, Google Business Profile link, real elevation data for the map.
 
 ## Commands
 
@@ -90,6 +92,7 @@ npm run deploy:pages   # build for /issam-oman-tours/ and force-push dist/site t
 - **Tailwind utilities beat `@layer components`.** A component rule like `display: none` loses to a `flex` utility on the same element; use `!important` there (see `.side-stats`).
 - **three.js colors:** CSS tokens are sRGB; convert with `setRGB(..., THREE.SRGBColorSpace)` or the terrain washes out white.
 - **Odometer:** keep the real number in an `sr-only` span and the rolling digits `aria-hidden` (aria-label on a plain span fails Lighthouse).
+- **Hero portrait stacking:** the flying wordmark is a sidebar node (z 70), above the whole hero, and a pinned hero is its own stacking context. `ghost.ts` therefore splits the portrait at the wordmark's bottom edge: a clone on `body` (z 71) above the seam, the hero image below it, so the figure stays in front of the letters and the CTA and stat cards stay on top.
 - `?debug` on any URL exposes `window.gsap` and `window.ScrollTrigger` for inspecting triggers in the console.
 
 ## Environment notes (the user's Windows machine)

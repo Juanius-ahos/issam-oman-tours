@@ -43,6 +43,7 @@ export function createGhost(hero: HTMLElement): () => void {
   }
   html.classList.remove('no-ghost');
 
+  let front: HTMLImageElement | null = null;
   const ctx = gsap.context(() => {
     const reals = [...document.querySelectorAll<HTMLElement>('[data-ghost]')];
     const rtl = document.dir === 'rtl';
@@ -68,8 +69,32 @@ export function createGhost(hero: HTMLElement): () => void {
       });
     }
 
+    const portrait = hero.querySelector<HTMLImageElement>('.hero-portrait');
+    const portraitBox = portrait?.getBoundingClientRect();
+    const markBottom = hero.querySelector('[data-ghost-target="wordmark"]')?.getBoundingClientRect().bottom ?? 0;
+
     // Phase 2: write.
     html.classList.add('is-ghosting');
+
+    // The flying wordmark lives in the sidebar, which stacks above the whole hero.
+    // To keep the figure in front of the letters, lay a copy of the portrait over
+    // the sidebar, clipped to the wordmark's band so the stat cards and CTA stay on top.
+    if (portrait && portraitBox) {
+      const seam = Math.round(Math.min(portraitBox.height, Math.max(0, markBottom + 6 - portraitBox.top)));
+      front = portrait.cloneNode() as HTMLImageElement;
+      front.className = '';
+      front.alt = '';
+      front.setAttribute('aria-hidden', 'true');
+      Object.assign(front.style, {
+        position: 'fixed', zIndex: '71', pointerEvents: 'none', maxWidth: 'none',
+        left: `${portraitBox.left}px`, top: `${portraitBox.top}px`,
+        width: `${portraitBox.width}px`, height: `${portraitBox.height}px`,
+        clipPath: `inset(0 0 ${portraitBox.height - seam}px 0)`,
+      });
+      document.body.appendChild(front);
+      // Two halves that meet at the seam: overlapping them would double up while they fade.
+      portrait.style.clipPath = `inset(${seam}px 0 0 0)`;
+    }
     // A fresh config per tween: ScrollTrigger keeps state on the object it is given.
     const st = () => ({ trigger: hero, start: 'top top', end: `+=${COLLAPSE_PX}`, scrub: 1 });
 
@@ -103,9 +128,8 @@ export function createGhost(hero: HTMLElement): () => void {
       opacity: 0, y: -40, ease: 'none',
       scrollTrigger: { trigger: hero, start: 'top top', end: `+=${COLLAPSE_PX * 0.45}`, scrub: 1 },
     });
-    const portrait = hero.querySelector('.hero-portrait');
     if (portrait) {
-      gsap.to(portrait, {
+      gsap.to(front ? [portrait, front] : portrait, {
         filter: 'blur(18px)', opacity: 0, ease: 'none',
         scrollTrigger: { trigger: hero, start: 'top top', end: `+=${COLLAPSE_PX}`, scrub: 1 },
       });
@@ -135,6 +159,8 @@ export function createGhost(hero: HTMLElement): () => void {
 
   return () => {
     ctx.revert();
+    front?.remove();
+    hero.querySelector<HTMLElement>('.hero-portrait')?.style.removeProperty('clip-path');
     html.classList.remove('is-ghosting', 'is-collapsed');
     document.querySelectorAll<HTMLElement>('[data-ghost]').forEach((el) => {
       el.parentElement?.style.removeProperty('position');

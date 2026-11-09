@@ -3,7 +3,7 @@ import { config } from '../config';
 import { useI18n } from '../i18n';
 import { createGhost } from '../motion/ghost';
 import { ScrollTrigger } from '../motion/gsap';
-import { Placeholder } from '../components/Media';
+import { BASE } from '../routes';
 import { SocialRow, StatCard, WaButton } from '../components/Bits';
 import { Icon } from '../components/Icon';
 import { Smooth } from '../motion/gsap';
@@ -49,7 +49,16 @@ export function Hero() {
           {config.brand.wordmark}
         </span>
 
-        <Placeholder label={m.hero.portraitLabel} className="hero-portrait rounded-[28px]" />
+        <img
+          className="hero-portrait"
+          src={`${BASE}media/issam-portrait.webp`}
+          srcSet={`${BASE}media/issam-portrait-640.webp 391w, ${BASE}media/issam-portrait.webp 606w`}
+          sizes="(max-width: 900px) 82vw, 58vh"
+          width={606}
+          height={992}
+          alt={m.hero.portraitLabel}
+          decoding="async"
+        />
 
         <div className="hero-copy" data-hero-fade>
           <p className="eyebrow">{m.hero.eyebrow}</p>

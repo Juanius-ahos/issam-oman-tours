@@ -3,7 +3,7 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { config, whatsappUrl } from '../config';
 import { useI18n } from '../i18n';
-import { homePath, type Route } from '../routes';
+import { BASE, homePath, type Route } from '../routes';
 import { Smooth } from '../motion/gsap';
 import { Icon, type IconName } from './Icon';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -185,7 +185,7 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
       </aside>
 
       <div className="bg-figure" aria-hidden="true">
-        <div />
+        <img src={`${BASE}media/issam-portrait.webp`} width={606} height={992} alt="" loading="lazy" decoding="async" />
       </div>
 
       {/* The home hero spans the full width; everything else sits beside the sidebar (.content). */}

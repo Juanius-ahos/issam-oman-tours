@@ -147,7 +147,6 @@
     .side-nav a { width: 100%; padding: 16px 18px; font-size: 16px; border-radius: 14px; }
     /* !important: these carry Tailwind display utilities, which sit in a later layer. */
     .side-stats, .side-tagline { display: none !important; }
-    .bg-figure { display: none; }
   }
 }
 
@@ -163,7 +162,7 @@
   /* Mobile / default: a plain stack. */
   .hero-layout { padding: 92px var(--gutter) 48px; }
   .hero-stage { display: flex; flex-direction: column; gap: 22px; }
-  .hero-portrait { order: 1; aspect-ratio: 4 / 5; width: 100%; max-height: 62svh; }
+  .hero-portrait { order: 1; align-self: center; height: 62svh; width: auto; max-width: 100%; object-fit: contain; object-position: bottom; }
   .hero-mark { order: 2; font-size: 31vw; color: rgb(var(--accent-deep)); margin-top: -6px; }
   .hero-copy { order: 3; }
   .hero-ctas { order: 4; display: flex; flex-wrap: wrap; gap: 10px; }
@@ -182,7 +181,8 @@
     .hero-stage { display: block; position: relative; height: 100%; }
     .hero-stage > * { position: absolute; }
     .hero-mark { top: var(--mark-top); inset-inline-start: var(--gutter); font-size: var(--mark-size); z-index: 2; margin: 0; }
-    .hero-portrait { z-index: 5; top: 7vh; bottom: 0; height: auto; max-height: none; aspect-ratio: auto; width: min(36vw, 600px); left: 50%; transform: translateX(-50%); border-end-start-radius: 0; border-end-end-radius: 0; }
+    /* Cutout stands on the hero's bottom edge, in front of the wordmark. Height caps by width on narrow windows. */
+    .hero-portrait { z-index: 5; bottom: 0; height: min(94vh, calc(min(42vw, 680px) / .611)); width: auto; max-width: none; left: 50%; transform: translateX(-50%); }
     .hero-copy { z-index: 6; top: calc(var(--mark-bottom) + 30px); inset-inline-start: var(--gutter); width: min(29vw, 460px); }
     .hero-socials { z-index: 6; bottom: 7vh; inset-inline-start: var(--gutter); }
     .hero-stats { z-index: 6; top: calc(var(--mark-bottom) + 30px); inset-inline-end: calc(var(--gutter) + 340px); gap: 0; }
@@ -206,10 +206,13 @@
     opacity: 0; transition: opacity .6s var(--ease);
   }
   html.is-collapsed .bg-figure, html.no-ghost .bg-figure { opacity: 1; }
-  .bg-figure > div {
-    width: min(46vw, 640px); height: 88vh; border-radius: 48% 48% 12% 12% / 30% 30% 8% 8%;
-    background: rgb(var(--ink) / .045); filter: blur(10px);
+  /* The hero portrait, blacked out and faint, behind every later section. */
+  .bg-figure > img {
+    height: 92vh; width: auto; max-width: none; opacity: .08; filter: brightness(0) blur(2.5px);
     -webkit-mask-image: linear-gradient(#000 55%, transparent 96%); mask-image: linear-gradient(#000 55%, transparent 96%);
+  }
+  @media (max-width: 900px), (max-height: 560px) and (pointer: coarse) {
+    .bg-figure { display: none; }
   }
 }
 

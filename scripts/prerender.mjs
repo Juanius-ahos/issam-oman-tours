@@ -37,7 +37,11 @@ let count = 0;
 for (const route of allRoutes()) {
   const page = render(route);
   const chunk = localeChunk(route.locale);
-  const preloads = [fontPreload, chunk ? `<link rel="modulepreload" href="${BASE}${chunk}">` : ''].filter(Boolean).join('\n    ');
+  // The hero portrait is the home page's largest paint.
+  const portraitPreload = page.path.includes('/tours/')
+    ? ''
+    : `<link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="${BASE}media/issam-portrait-640.webp 391w, ${BASE}media/issam-portrait.webp 606w" imagesizes="(max-width: 900px) 82vw, 58vh">`;
+  const preloads = [fontPreload, portraitPreload, chunk ? `<link rel="modulepreload" href="${BASE}${chunk}">` : ''].filter(Boolean).join('\n    ');
   const html = template
     .replace('<html lang="en" dir="ltr">', `<html lang="${page.lang}" dir="${page.dir}">`)
     .replace('<!--app-head-->', `${page.head}\n    ${preloads}`)
