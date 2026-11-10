@@ -181,7 +181,12 @@
   /* Desktop: one 100vh composition, everything positioned off the wordmark. */
   @media (min-width: 901px) and (min-height: 561px), (min-width: 901px) and (pointer: fine) {
     .hero-layout {
-      --mark-size: min(36vw, calc(118vh - 380px));
+      /* The wordmark ink (78% of the font size) must end 24px above the copy column.
+         Hero.tsx measures the column into --copy-h; before that, estimate it from the
+         H1 size (about 150px + 3.7 x the H1, 4 lines for long languages). */
+      --h1-est: clamp(36px, 3.2vw, 52px);
+      --copy-h-est: calc(150px + var(--h1-est) * 4.7);
+      --mark-size: min(36vw, calc(118vh - 380px), calc((88vh - 24px - var(--copy-h, var(--copy-h-est))) / .78));
       --mark-top: 5vh;
       --mark-bottom: calc(var(--mark-top) + var(--mark-size) * .78);
       height: 100vh; min-height: 620px; padding: 0;

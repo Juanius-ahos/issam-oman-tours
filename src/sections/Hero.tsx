@@ -19,9 +19,17 @@ export function Hero() {
     let cleanup = () => {};
     let timer = 0;
     const html = document.documentElement;
+    // The wordmark is sized to end above the copy column. Its height depends on how
+    // many lines the H1 takes in this language, so measure it rather than guess.
+    const fitMark = () => {
+      const left = hero.current?.querySelector<HTMLElement>('.hero-left');
+      if (left) hero.current!.style.setProperty('--copy-h', `${Math.ceil(left.offsetHeight)}px`);
+    };
+    fitMark();
     const build = () => {
       cleanup();
       window.scrollTo(0, 0);
+      fitMark();
       cleanup = createGhost(hero.current!);
       html.classList.remove('pre-ghost');
       // The hero pin is created last but sits first on the page: sections below must measure after it.
