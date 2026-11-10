@@ -16,6 +16,7 @@
     "locales:sync": "node scripts/sync-locales.mjs",
     "build:pages": "node scripts/build-pages.mjs",
     "deploy:pages": "node scripts/deploy-pages.mjs",
+    "deploy:live": "node scripts/deploy-pages.mjs --live",
     "check:locales": "node scripts/check-locales.mjs"
   },
   "dependencies": {
