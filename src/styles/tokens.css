@@ -32,6 +32,4 @@
   --upper: none;
 }
 :lang(zh) { --font-sans: 'Archivo Variable', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif; --track-tight: 0; --track-wide: 0.04em; }
-:lang(ja) { --font-sans: 'Archivo Variable', 'Hiragino Sans', 'Yu Gothic', 'Noto Sans JP', sans-serif; --track-tight: 0; --track-wide: 0.04em; }
-:lang(ko) { --font-sans: 'Archivo Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif; --track-tight: 0; --track-wide: 0.04em; }
 :lang(hi) { --font-sans: 'Archivo Variable', 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; --track-tight: 0; --track-wide: 0.04em; --upper: none; }

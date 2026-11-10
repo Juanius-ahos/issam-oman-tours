@@ -37,8 +37,7 @@ export const config = {
     facebook: { url: '', handle: '' },
   },
 
-  /** Languages Issam guides in, as English names (FAQ, llms.txt, structured data).
-   *  TODO: Issam named these 11 but says 12; confirm the 12th. */
+  /** The 12 languages Issam guides in, as English names (FAQ, llms.txt, structured data). */
   guideLanguages: [
     { name: 'Arabic', code: 'ar' },
     { name: 'English', code: 'en' },
@@ -51,6 +50,7 @@ export const config = {
     { name: 'Catalan', code: 'ca' },
     { name: 'Chinese', code: 'zh' },
     { name: 'Hindi', code: 'hi' },
+    { name: 'Balochi', code: 'bal' },
   ],
 
   pricing: {
@@ -95,7 +95,7 @@ export const config = {
   },
 } as const;
 
-/** The 13 site locales. Arabic is the only RTL one. Order is the switcher order. */
+/** The site locales: Issam's guiding languages (TODO: add his 12th once confirmed). Arabic is the only RTL one. Order is the switcher order. */
 export const locales = [
   { code: 'en', english: 'English', name: 'English', dir: 'ltr', hreflang: 'en' },
   { code: 'ar', english: 'Arabic', name: 'العربية', dir: 'rtl', hreflang: 'ar' },
@@ -107,8 +107,6 @@ export const locales = [
   { code: 'pt', english: 'Portuguese', name: 'Português', dir: 'ltr', hreflang: 'pt' },
   { code: 'ca', english: 'Catalan', name: 'Català', dir: 'ltr', hreflang: 'ca' },
   { code: 'ru', english: 'Russian', name: 'Русский', dir: 'ltr', hreflang: 'ru' },
-  { code: 'ko', english: 'Korean', name: '한국어', dir: 'ltr', hreflang: 'ko' },
-  { code: 'ja', english: 'Japanese', name: '日本語', dir: 'ltr', hreflang: 'ja' },
   { code: 'hi', english: 'Hindi', name: 'हिन्दी', dir: 'ltr', hreflang: 'hi' },
 ] as const;
 

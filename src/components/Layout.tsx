@@ -55,6 +55,15 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
   const isHome = route.page === 'home';
   const current = useNavSpy(isHome);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showFloat, setShowFloat] = useState(!isHome);
+
+  useEffect(() => {
+    if (!isHome) return;
+    const onScroll = () => setShowFloat(window.scrollY > window.innerHeight * 0.8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [isHome]);
 
   // Tour pages have no hero to collapse: the sidebar is simply there.
   useEffect(() => {
@@ -214,10 +223,10 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
         </details>
       </footer>
 
-      {/* Floating WhatsApp, mobile only: always one tap away */}
+      {/* Floating WhatsApp, mobile only. On the home page it waits until the hero's own button has scrolled away. */}
       <WaLink
         location="float"
-        className="fixed bottom-4 end-4 z-[75] grid h-14 w-14 place-items-center rounded-full bg-accent text-white shadow-[0_10px_30px_rgb(27_26_24/.3)] desk:hidden"
+        className={`fixed bottom-4 end-4 z-[75] grid h-14 w-14 place-items-center rounded-full bg-accent text-white shadow-[0_10px_30px_rgb(27_26_24/.3)] transition-[opacity,transform] duration-300 ease-out desk:hidden ${showFloat ? '' : 'pointer-events-none translate-y-4 opacity-0'}`}
         aria-label={m.hero.ctaWhatsapp}
       >
         <Icon name="whatsapp" size={26} />

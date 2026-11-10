@@ -1,4 +1,4 @@
-/* Issam's greeting bubble in 13 languages. */
+/* Issam's greeting bubble, cycling through the site's languages. */
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { gsap } from '../motion/gsap';
@@ -15,8 +15,6 @@ const greetings: [lang: string, word: string][] = [
   ['pt', 'Bem-vindos'],
   ['ca', 'Benvinguts'],
   ['ru', 'Добро пожаловать'],
-  ['ko', '환영합니다'],
-  ['ja', 'ようこそ'],
   ['hi', 'स्वागत है'],
 ];
 
