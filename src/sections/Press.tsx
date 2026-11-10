@@ -4,14 +4,16 @@ import { useEffect, useRef } from 'react';
 import { useI18n } from '../i18n';
 import { gsap, Smooth } from '../motion/gsap';
 import { prefersReducedMotion } from '../lib/viewport';
+import { BASE } from '../routes';
 
-// Confirmed by Issam (docs/issam-answers-2026-11.md). Logos are allowed; add the
-// files when they arrive. People he has worked with carry no logo.
+// Confirmed by Issam (docs/issam-answers-2026-11.md). Logos are allowed: when the
+// files arrive, put them in public/media/press/ and set logo to the file name.
+// Until then the strip shows names only (no placeholder boxes). People carry no logo.
 // TODO: confirm the exact name of "tv2 Spain" before adding it.
-const press: { name: string; logo?: boolean }[] = [
-  { name: 'Arriyadiyah', logo: true },
-  { name: 'Al Shabiba FM', logo: true },
-  { name: 'SBC', logo: true },
+const press: { name: string; logo?: string }[] = [
+  { name: 'Arriyadiyah' },
+  { name: 'Al Shabiba FM' },
+  { name: 'SBC' },
   { name: 'Iker Casillas' },
   { name: 'Plácido Domingo' },
 ];
@@ -57,9 +59,7 @@ export function Press() {
           {[...row, ...row].map((item, i) => (
             <span key={i} className="press-item" aria-hidden={i >= press.length ? 'true' : undefined}>
               {item.logo && (
-                <span className="ph grid h-[clamp(26px,2.4vw,36px)] w-[clamp(26px,2.4vw,36px)] place-items-center rounded-[22%] text-[8px] font-bold" aria-hidden="true">
-                  {m.press.logoLabel}
-                </span>
+                <img src={`${BASE}media/press/${item.logo}`} alt="" width={36} height={36} loading="lazy" className="h-[clamp(26px,2.4vw,36px)] w-auto" />
               )}
               {item.name}
             </span>
