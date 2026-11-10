@@ -19,9 +19,10 @@ text, brand name or videos are used.
 
 | What | Where |
 |---|---|
-| Domain (confirmed, not live yet) | https://omanwithissam.com |
+| Live site (GitHub Pages, `gh-pages` branch, Let's Encrypt HTTPS, apex canonical) | https://omanwithissam.com/en/ |
+| Domain | Dynadot, registered 2026-11-10. DNS: 4 GitHub A + 4 AAAA records on @, `www` CNAME `juanius-ahos.github.io` |
 | Repo (public) | https://github.com/Juanius-ahos/issam-oman-tours |
-| Live preview (GitHub Pages, `gh-pages` branch) | https://juanius-ahos.github.io/issam-oman-tours/en/ |
+| Old preview URL | https://juanius-ahos.github.io/issam-oman-tours/en/ now 301s to the domain |
 | Design reference studied | https://merheb.xyz |
 | Sister project (AHOS agency site upgrade) | PR https://github.com/Juanius-ahos/ahos/pull/1, preview https://juanius-ahos.github.io/ahos-preview/ |
 
@@ -58,7 +59,7 @@ Hero portrait added 2026-11-09 (`public/media/issam-portrait*.webp`), also used 
 
 **Issam's questionnaire answers (2026-11-10)** are saved in full in [docs/issam-answers-2026-11.md](docs/issam-answers-2026-11.md): contact, socials, numbers, story, tour facts, prices, policies and 6 real reviews (Spanish and Italian, permission given). They are now in `src/config.ts` and `src/locales/en.json`; the 12 TODO locales were re-copied from English. That file ends with a **Still to confirm** list (the 12th language, Korean and Japanese pages he did not list, exact tour stops, a Wahiba overnight option, deposit, license, Tripadvisor link). **Translation priority (his):** German, then Russian, Spanish, English, Italian, French. **New tours he wants:** Muscat by night, Nizwa by night, Al Hamra old village, multi-day round trips.
 
-Not done (the launch checklist is in README "TODO before launch"): remaining real photos and videos, translations, pointing omanwithissam.com at a host, GA ID, Google Business Profile, the 4 new tours, the items in Still to confirm.
+Not done (the launch checklist is in README "TODO before launch"): remaining real photos and videos, translations, GA ID, Google Business Profile, the 4 new tours, the items in Still to confirm.
 
 ## Commands
 
@@ -72,9 +73,9 @@ npm run locales:sync   # push new en.json keys into the 12 other locales
 npm run deploy:live    # build for omanwithissam.com (base /), add CNAME, force-push dist/site to gh-pages (deploy:pages is the same)
 ```
 
-`build:pages` / `deploy:pages` set `VITE_BASE=/issam-oman-tours/` and
-`VITE_SITE_URL=https://juanius-ahos.github.io`. On a real domain, set
-`VITE_SITE_URL` in `.env.local` and use `npm run build`; base stays `/`.
+**Deploy only with `deploy:live` / `deploy:pages`** (both build with base `/` and
+write `dist/site/CNAME`). A gh-pages push without the CNAME file removes the custom
+domain and takes the site offline. `build:pages` (base `/issam-oman-tours/`) is legacy.
 
 ## Architecture quick map
 
@@ -110,4 +111,4 @@ npm run deploy:live    # build for omanwithissam.com (base /), add CNAME, force-
 1. Get real assets from Issam (cutout portrait, 4 tour video loops, avatar, press logos) and drop them into `public/media/` + `src/data/tours.ts`.
 2. Replace the dummy copy in `src/locales/en.json` (story, tour details, FAQ answers, real reviews).
 3. Translate the 12 locales (start with Arabic, the home market), then set `_status: "done"`.
-4. Point **omanwithissam.com** (the confirmed domain, already the default `siteUrl`) at a static host, set `VITE_GA_ID`, create the Google Business Profile.
+4. Live on omanwithissam.com since 2026-11-10. Set `VITE_GA_ID`, submit the sitemap in Google Search Console, create the Google Business Profile.
