@@ -7,6 +7,7 @@ import { useI18n } from '../i18n';
 import { gsap } from '../motion/gsap';
 import { prefersReducedMotion } from '../lib/viewport';
 import { Icon } from '../components/Icon';
+import { StarDivider } from '../oman/Ornament';
 
 function toggle(e: MouseEvent<HTMLElement>) {
   if (prefersReducedMotion()) return;
@@ -39,6 +40,7 @@ export function Faq() {
     <section id="faq" className="section">
       <header className="section-head">
         <p className="eyebrow">{m.faq.eyebrow}</p>
+        <StarDivider />
         <h2 className="section-title">{m.faq.title}</h2>
       </header>
       <div className="grid max-w-[1240px] items-start gap-x-[clamp(32px,4.5vw,72px)] md:grid-cols-2">

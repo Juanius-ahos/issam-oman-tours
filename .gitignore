@@ -7,3 +7,6 @@ dist/
 .env.local
 *.log
 .DS_Store
+
+# Design mockups for review (local only)
+mockups/

@@ -19,6 +19,7 @@ text, brand name or videos are used.
 
 | What | Where |
 |---|---|
+| Domain (confirmed, not live yet) | https://omanwithissam.com |
 | Repo (public) | https://github.com/Juanius-ahos/issam-oman-tours |
 | Live preview (GitHub Pages, `gh-pages` branch) | https://juanius-ahos.github.io/issam-oman-tours/en/ |
 | Design reference studied | https://merheb.xyz |
@@ -30,7 +31,7 @@ text, brand name or videos are used.
 2. **No AI-generated images or video, and no drawn or illustrated scenery** (the user rejected hand-coded landscapes). Use real photos. Until Issam's arrive, licensed photos from Wikimedia Commons are listed in `src/data/photos.ts`; their licenses require the credits in the footer, so keep those in step.
 3. **All config in one file:** `src/config.ts` (WhatsApp, email, socials, GA ID, stats, locales). Copy lives in `src/locales/*.json`.
 4. **Copy nothing from merheb.** Only structure, layout and interactions.
-5. **Pronouns:** Issam's pronouns have not been stated. In copy and docs, use the name "Issam", not he or she.
+5. **Pronouns:** the user refers to Issam as "he". Copy mostly uses his name; he/his is fine.
 6. The user is the AHOS owner, writes tersely, and wants agency-quality results with short reports, not long explanations. They approve big steps (Step 1 notes needed an OK before building).
 
 ## Decisions taken (defaults the user approved)
@@ -55,7 +56,9 @@ Done: Steps 1 to 3 of the original brief, plus a live preview.
 
 Hero portrait added 2026-11-09 (`public/media/issam-portrait*.webp`), also used as the faint fixed figure behind later sections on desktop.
 
-Not done (the launch checklist is in README "TODO before launch"): remaining real photos and videos, Issam's story, real tour content, prices policy, real reviews, translations, domain, GA ID, Google Business Profile link, real elevation data for the map.
+**Issam's questionnaire answers (2026-11-10)** are saved in full in [docs/issam-answers-2026-11.md](docs/issam-answers-2026-11.md): contact, socials, numbers, story, tour facts, prices, policies and 6 real reviews (Spanish and Italian, permission given). They are now in `src/config.ts` and `src/locales/en.json`; the 12 TODO locales were re-copied from English. That file ends with a **Still to confirm** list (the 12th language, Korean and Japanese pages he did not list, exact tour stops, a Wahiba overnight option, deposit, license, Tripadvisor link). **Translation priority (his):** German, then Russian, Spanish, English, Italian, French. **New tours he wants:** Muscat by night, Nizwa by night, Al Hamra old village, multi-day round trips.
+
+Not done (the launch checklist is in README "TODO before launch"): remaining real photos and videos, translations, pointing omanwithissam.com at a host, GA ID, Google Business Profile, the 4 new tours, the items in Still to confirm.
 
 ## Commands
 
@@ -107,4 +110,4 @@ npm run deploy:pages   # build for /issam-oman-tours/ and force-push dist/site t
 1. Get real assets from Issam (cutout portrait, 4 tour video loops, avatar, press logos) and drop them into `public/media/` + `src/data/tours.ts`.
 2. Replace the dummy copy in `src/locales/en.json` (story, tour details, FAQ answers, real reviews).
 3. Translate the 12 locales (start with Arabic, the home market), then set `_status: "done"`.
-4. Buy and point the domain, set `VITE_SITE_URL` and `VITE_GA_ID`, create the Google Business Profile.
+4. Point **omanwithissam.com** (the confirmed domain, already the default `siteUrl`) at a static host, set `VITE_GA_ID`, create the Google Business Profile.

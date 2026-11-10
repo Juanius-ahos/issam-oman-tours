@@ -2,7 +2,7 @@
    focused map, what is included, and a request button. Same visual language
    as the home page. */
 import { useEffect, useRef } from 'react';
-import { tourSlugs, type TourSlug } from '../config';
+import { config, tourSlugs, type TourSlug } from '../config';
 import { useI18n } from '../i18n';
 import { homePath } from '../routes';
 import { tourMedia } from '../data/tours';
@@ -15,6 +15,7 @@ import { useRequest } from '../components/TourRequest';
 import { SatelliteRouteMap } from '../map/SatelliteRouteMap';
 import { TourCard } from '../sections/Tours';
 import { Faq } from '../sections/Faq';
+import { StarPattern } from '../oman/Ornament';
 
 export function TourPage({ slug }: { slug: TourSlug }) {
   const { m, locale } = useI18n();
@@ -40,11 +41,14 @@ export function TourPage({ slug }: { slug: TourSlug }) {
     return () => ctx.revert();
   }, [index]);
 
-  const facts: { icon: IconName; label: string; value: string }[] = [
+  const price = p.priceValue.replace('{price}', `${config.pricing.currency} ${config.pricing.from}`);
+  const facts: { icon: IconName; label: string; value: string; note?: string }[] = [
     { icon: 'clock', label: p.duration, value: t.duration },
     { icon: 'route', label: p.distance, value: t.distance },
     { icon: 'sun', label: p.bestTime, value: t.bestTime },
-    { icon: 'users', label: p.group, value: p.groupValue },
+    { icon: 'users', label: p.group, value: t.group },
+    { icon: 'star', label: p.difficulty, value: t.difficulty },
+    { icon: 'send', label: p.price, value: price, note: p.priceNote },
   ];
 
   return (
@@ -79,12 +83,13 @@ export function TourPage({ slug }: { slug: TourSlug }) {
       </section>
 
       {/* Facts */}
-      <section className="grid grid-cols-2 gap-2.5 px-[var(--gutter)] py-8 lg:grid-cols-4">
+      <section className="grid grid-cols-2 gap-2.5 px-[var(--gutter)] py-8 lg:grid-cols-3">
         {facts.map((f) => (
           <div key={f.label} className="glass-ink rounded-[var(--radius)] p-5">
             <Icon name={f.icon} size={18} className="text-accent-light" />
             <p className="label-xs mt-6 text-white/75">{f.label}</p>
             <p className="mt-1.5 text-[clamp(15px,1.4vw,19px)] font-extrabold leading-snug">{f.value}</p>
+            {f.note && <p className="mt-1 text-[13px] text-white/75">{f.note}</p>}
           </div>
         ))}
       </section>
@@ -93,6 +98,7 @@ export function TourPage({ slug }: { slug: TourSlug }) {
       <section className="section grid items-start gap-10 lg:grid-cols-[1fr_1.1fr]">
         <div>
           <h2 className="eyebrow">{p.route}</h2>
+          <p className="mt-3 max-w-[48ch] text-[14px] text-ink/72">{p.routeNote}</p>
           <ol className="route-list relative mt-6 border-s-2 border-dashed border-ink/20 ps-8">
             {t.stops.map((s, i) => (
               <li key={s.name} className="route-step relative pb-9 last:pb-0">
@@ -115,6 +121,8 @@ export function TourPage({ slug }: { slug: TourSlug }) {
         {[
           { title: p.included, items: t.included, icon: 'check' as const, tone: 'bg-accent text-white' },
           { title: p.notIncluded, items: t.notIncluded, icon: 'minus' as const, tone: 'bg-ink/10 text-ink' },
+          { title: p.bring, items: t.bring, icon: 'check' as const, tone: 'bg-amber/30 text-ink' },
+          { title: p.extras, items: t.extras, icon: 'plus' as const, tone: 'bg-accent/15 text-accent-deep' },
         ].map((col) => (
           <div key={col.title}>
             <h2 className="text-[clamp(24px,2.4vw,34px)] font-black tracking-[-0.03em]">{col.title}</h2>
@@ -133,7 +141,8 @@ export function TourPage({ slug }: { slug: TourSlug }) {
       </section>
 
       {/* Request band */}
-      <section className="mx-[var(--gutter)] mb-[clamp(60px,9vh,110px)] flex flex-wrap items-center justify-between gap-6 rounded-[24px] bg-ink p-[clamp(24px,4vw,48px)] text-sand">
+      <section className="relative isolate mx-[var(--gutter)] mb-[clamp(60px,9vh,110px)] flex flex-wrap items-center justify-between gap-6 overflow-hidden rounded-[24px] bg-ink p-[clamp(24px,4vw,48px)] text-sand">
+        <StarPattern tone="dark" className="band-geo" />
         <h2 className="max-w-[18ch] text-[clamp(28px,3.4vw,48px)] font-black leading-none tracking-[-0.03em]">{m.plan.title}</h2>
         <div className="flex flex-wrap gap-2.5">
           <button type="button" className="btn btn-accent btn-lg" onClick={() => openRequest(slug)}>

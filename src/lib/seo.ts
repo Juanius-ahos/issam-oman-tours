@@ -75,10 +75,10 @@ function person(m: Messages) {
     alternateName: config.brand.nickname,
     jobTitle: 'Private tour guide and interpreter',
     description: m.meta.homeDescription,
-    knowsLanguage: locales.map((l) => l.hreflang),
+    knowsLanguage: config.guideLanguages.map((l) => l.code),
     homeLocation: { '@type': 'Place', name: `${config.business.city}, Oman` },
     url: abs(BASE + ''),
-    sameAs: Object.values(config.socials).map((s) => s.url),
+    sameAs: Object.values(config.socials).map((s) => s.url).filter(Boolean),
   };
 }
 
@@ -86,7 +86,8 @@ function business(m: Messages) {
   return {
     '@type': ['LocalBusiness', 'TravelAgency'],
     '@id': abs(BASE + '#business'),
-    name: m.meta.siteName,
+    name: config.brand.business,
+    alternateName: m.meta.siteName,
     description: m.meta.homeDescription,
     url: abs(BASE + ''),
     image: abs(BASE + 'og/og-card.png'),
@@ -102,7 +103,7 @@ function business(m: Messages) {
     geo: { '@type': 'GeoCoordinates', latitude: config.business.geo.lat, longitude: config.business.geo.lng },
     areaServed: { '@type': 'Country', name: 'Oman' },
     founder: { '@id': abs(BASE + '#issam') },
-    knowsLanguage: locales.map((l) => l.hreflang),
+    knowsLanguage: config.guideLanguages.map((l) => l.code),
     sameAs: [...Object.values(config.socials).map((s) => s.url), config.googleBusinessProfile].filter(Boolean),
   };
 }

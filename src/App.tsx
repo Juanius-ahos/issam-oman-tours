@@ -6,7 +6,6 @@ import { Hero } from './sections/Hero';
 import { Counters } from './sections/Counters';
 import { Press } from './sections/Press';
 import { OmanDay } from './sections/OmanDay';
-import { PatternBand } from './oman/Bits';
 import { initTitleReveals } from './motion/reveals';
 import { Story } from './sections/Story';
 import { Tours } from './sections/Tours';
@@ -25,13 +24,11 @@ function HomePage() {
         <Counters />
         <Press />
         <OmanDay />
-        <PatternBand />
         <Story />
         <Tours />
         <Follow />
         <Reviews />
         <Faq />
-        <PatternBand />
         <Plan />
         <Also />
       </div>

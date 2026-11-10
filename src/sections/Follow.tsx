@@ -1,6 +1,7 @@
 import { config } from '../config';
 import { useI18n } from '../i18n';
 import { Icon, type IconName } from '../components/Icon';
+import { StarDivider } from '../oman/Ornament';
 
 const order = ['instagram', 'tiktok', 'youtube', 'facebook'] as const;
 const names: Record<(typeof order)[number], string> = { instagram: 'Instagram', tiktok: 'TikTok', youtube: 'YouTube', facebook: 'Facebook' };
@@ -11,11 +12,12 @@ export function Follow() {
     <section id="follow" className="section">
       <header className="section-head">
         <p className="eyebrow">{m.follow.eyebrow}</p>
+        <StarDivider />
         <h2 className="section-title">{m.follow.title}</h2>
         <p className="section-lead">{m.follow.lead}</p>
       </header>
       <ul className="border-t border-ink/15">
-        {order.map((k) => (
+        {order.filter((k) => config.socials[k].url).map((k) => (
           <li key={k}>
             <a href={config.socials[k].url} target="_blank" rel="noopener me" className="plat">
               <span className="plat-ico">

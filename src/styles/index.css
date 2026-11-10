@@ -268,8 +268,8 @@
 
   /* Reviews: fanned hand on desktop, swipe deck on mobile */
   .hand { display: flex; justify-content: center; align-items: flex-end; padding: 40px 0 60px; perspective: 1200px; }
-  .hand-card { flex: 0 0 auto; width: 260px; margin-inline-start: var(--overlap, 0); position: relative; z-index: var(--z, 1); }
-  .quote { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; height: 300px; padding: 24px; border-radius: var(--radius); transform: rotate(var(--rot, 0deg)) translateY(var(--lift, 0)); transform-origin: bottom center; transition: transform .45s var(--ease), box-shadow .45s var(--ease); }
+  .hand-card { flex: 0 0 auto; width: 232px; margin-inline-start: var(--overlap, 0); position: relative; z-index: var(--z, 1); }
+  .quote { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; height: 360px; padding: 22px; border-radius: var(--radius); transform: rotate(var(--rot, 0deg)) translateY(var(--lift, 0)); transform-origin: bottom center; transition: transform .45s var(--ease), box-shadow .45s var(--ease); }
   @media (hover: hover) and (pointer: fine) {
     .hand-card:hover { z-index: 20; }
     .hand-card:hover .quote { transform: rotate(0deg) translateY(-28px) scale(1.04); box-shadow: 0 30px 60px rgb(var(--ink) / .35); }

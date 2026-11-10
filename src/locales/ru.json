@@ -2,11 +2,11 @@
   "_status": "todo",
   "_todo": "TODO: translate into \"ru\". Every string below is an English placeholder copied from en.json. Set \"_status\" to \"done\" when translated.",
   "meta": {
-    "siteName": "Issam Baloushi, The Languages Ninja",
-    "homeTitle": "Private Tours of Oman in Your Language | Issam Baloushi",
-    "homeDescription": "Private, tailor-made tours of Oman with Issam Baloushi, a Muscat guide who speaks 12 languages plus Arabic. Muscat, Nizwa, Wahiba desert and Wadi Shab. Book on WhatsApp.",
+    "siteName": "Issam Albalushi, The Languages Ninja",
+    "homeTitle": "Private Tours of Oman in Your Language | Issam Albalushi",
+    "homeDescription": "Private, customizable tours of Oman with Issam Albalushi, The Languages Ninja, guiding since 2016 in 12 languages. Muscat, Nizwa, Wahiba Sands and Wadi Shab, from USD 200. Book on WhatsApp.",
     "tourTitleSuffix": "Private Tour with Issam",
-    "ogAlt": "Issam Baloushi, private tour guide in Oman"
+    "ogAlt": "Issam Albalushi, private tour guide in Oman"
   },
   "nav": {
     "home": "Home",
@@ -27,26 +27,26 @@
     "eyebrow": "Private tour guide in Oman",
     "title": "Your private guide to Oman, in your language",
     "tagline": "The Languages Ninja",
-    "lead": "Tailor-made days across Muscat, the Hajar mountains, the Wahiba sands and the wadis of the coast, guided in the language you think in.",
+    "lead": "Customizable days across Muscat, Nizwa, the Wahiba Sands and Wadi Shab, guided in the language you think in.",
     "ctaWhatsapp": "Chat on WhatsApp",
     "ctaTours": "See the tours",
     "traits": [
-      "Private, never shared",
-      "Hotel pickup in Muscat",
-      "12 languages plus Arabic",
-      "Flexible, day by day"
+      "Private, 1 to 45 travelers",
+      "Pickup wherever you stay",
+      "12 languages, two on one tour",
+      "Tours from USD 200"
     ],
-    "portraitLabel": "Portrait of Issam Baloushi, private tour guide in Oman"
+    "portraitLabel": "Portrait of Issam Albalushi, private tour guide in Oman"
   },
   "counters": {
     "eyebrow": "In numbers",
-    "languages": "Languages plus Arabic",
+    "languages": "Languages spoken",
     "years": "Years guiding",
     "travelers": "Travelers hosted",
     "countries": "Countries welcomed"
   },
   "press": {
-    "eyebrow": "As heard and seen on",
+    "eyebrow": "Seen on and worked with",
     "logoLabel": "Logo"
   },
   "day": {
@@ -76,45 +76,45 @@
   },
   "story": {
     "eyebrow": "The story",
-    "title": "From one language to twelve",
-    "lead": "How a Muscat kid who loved talking to strangers became a guide travelers ask for by name.",
+    "title": "Unique by choice",
+    "lead": "From between Sur and Sohar to guests from all over the world, each welcomed in their own language.",
     "readMore": "Read more",
     "close": "Close story",
     "cards": [
       {
-        "year": "2008",
-        "title": "The first words",
-        "blurb": "Placeholder story. Growing up near the Mutrah Corniche, talking to every visitor who stepped off a ship.",
-        "full": "Placeholder story to replace with Issam's own words. Describe the first languages, the people who taught them, and the moment tourism became the plan.",
-        "quote": "Every new language is a new door into Oman."
+        "year": "Roots",
+        "title": "Between Sur and Sohar",
+        "blurb": "Issam grew up between Sur and Sohar, and on longer trips guests still get to see the places of his childhood.",
+        "full": "Issam grew up in Oman, between Sur and Sohar. On longer trips he opens the door to the Oman he knows best: his home, the places of his childhood and everyday life far from the tourist circuit.",
+        "quote": "I welcome you in your language, help you immerse in our culture till you get lost between the nomads."
       },
       {
-        "year": "2013",
-        "title": "The first tour",
-        "blurb": "Placeholder story. A family from abroad, a borrowed car and a day in Nizwa that turned into a profession.",
-        "full": "Placeholder story to replace. The first paid tour, what went right, what went wrong, and why private tours stuck.",
-        "quote": "One good day can change a whole trip."
+        "year": "2016",
+        "title": "The first tours",
+        "blurb": "Issam started guiding in 2016. About 15,000 travelers later, guests still leave as friends.",
+        "full": "Since 2016 Issam has guided about 15,000 travelers from more than 15 countries: couples and families by car, groups of up to 45 by bus. In his words: \"I love guiding because I am an emotional guy. I love to make people feel good and get goosebumps from how inspiring our Oman is.\"",
+        "quote": "The best praise I get is not how I look but how I make you feel after visiting my country."
       },
       {
-        "year": "2019",
+        "year": "12",
         "title": "Twelve languages",
-        "blurb": "Placeholder story. The nickname The Languages Ninja, earned by switching languages mid-sentence for mixed groups.",
-        "full": "Placeholder story to replace. How the languages were learned, which ones came hardest, and how guests react when they hear their own.",
-        "quote": "Guests relax the moment they hear their own language."
+        "blurb": "A unique job needs a unique person, so Issam set out to learn languages. The hardest were Russian and German.",
+        "full": "\"I felt if I needed a unique job then I needed to be unique myself. Learning languages has absolutely made me unique.\" Russian and German were the hardest. Today Issam can switch between two languages on the same tour, so mixed groups never wait for a translation.",
+        "quote": "I put my heart and soul into my work, the languages, and I have lost my mind in the process. (after Van Gogh)"
       },
       {
-        "year": "2026",
-        "title": "Today",
-        "blurb": "Placeholder story. Private tours across Oman, plus interpreting for press, events and families.",
-        "full": "Placeholder story to replace. What a tour with Issam looks like now, who it is for, and what is next.",
-        "quote": "Oman is best seen slowly, and in good company."
+        "year": "Ninja",
+        "title": "Why the Languages Ninja",
+        "blurb": "To Issam, a ninja stands for power, strength and extraordinary skill. His languages are that strength.",
+        "full": "\"I felt about the ninja as power, strength and extraordinary competency, and I believe my languages are an absolute strength.\" Expect jokes too. In his own words, they can be spicy, but always tasty.",
+        "quote": "I do not offer the cheapest price, I offer the most cultural and authentic experience."
       }
     ]
   },
   "tours": {
     "eyebrow": "The tours",
     "title": "Four days that show you Oman",
-    "lead": "Every tour is private and can be reshaped around you. Start with one of these, or mix them.",
+    "lead": "Every tour is private and customizable. Start with one of these, combine them into a trip of several days, or ask about Muscat or Nizwa by night.",
     "view": "View tour",
     "videoLabel": "Video loop",
     "mapTitle": "The routes",
@@ -122,163 +122,186 @@
     "mapFallback": "Map of northern Oman showing the four tour routes",
     "items": {
       "muscat-city": {
-        "name": "Muscat city",
-        "short": "Mosque, souq, opera house and the old harbour, at your pace.",
-        "seoTitle": "Muscat City Private Tour",
-        "seoDescription": "A private Muscat city tour in your language: Sultan Qaboos Grand Mosque, Mutrah Souq and Corniche, the Royal Opera House and Old Muscat. Hotel pickup included.",
-        "intro": "The capital in one unhurried day: marble and chandeliers at the Grand Mosque, frankincense smoke in Mutrah Souq, and the quiet palaces of Old Muscat by the sea.",
-        "duration": "Half day or full day, 5 to 8 hours",
-        "distance": "About 60 km",
-        "bestTime": "Morning start, October to April",
+        "name": "Muscat Authentic City Tour",
+        "short": "The Sultan Qaboos Grand Mosque and the hidden gems of the capital, half day or full day.",
+        "seoTitle": "Muscat Authentic City Tour",
+        "seoDescription": "A private Muscat city tour in your language with Issam, The Languages Ninja: the Sultan Qaboos Grand Mosque and hidden gems of the capital. Half day or full day, pickup wherever you stay.",
+        "intro": "The capital the way Issam knows it: the Sultan Qaboos Grand Mosque first, then the hidden gems most visitors miss, shaped around what you want to see.",
+        "duration": "Half day 8:00 to 12:00, or full day 8:00 to 15:00",
+        "distance": "About 50 km",
+        "bestTime": "September to May",
+        "difficulty": "Easy, suits everyone",
+        "group": "Private, 1 to 45 travelers",
         "stops": [
           {
             "name": "Sultan Qaboos Grand Mosque",
-            "note": "Open to visitors most mornings. Modest dress required, abayas available."
+            "note": "The first stop. Women cover their hair, and everyone wears long sleeves and long trousers."
           },
           {
             "name": "Royal Opera House Muscat",
-            "note": "Walk the gardens and galleries. Tours inside when there is no rehearsal."
+            "note": "One of the hidden gems on a typical route, chosen with you on the day."
           },
           {
-            "name": "Mutrah Corniche and Souq",
-            "note": "Frankincense, silver, halwa and a coffee with a harbour view."
+            "name": "Muttrah Corniche and Souq",
+            "note": "Frankincense, silver and karak tea by the old harbour."
           },
           {
             "name": "Old Muscat and Al Alam Palace",
-            "note": "Photo stop at the palace gates, the forts and Bait Al Zubair museum."
+            "note": "The palace gates and the forts above the bay."
           }
         ],
         "included": [
           "Private guide in your language",
-          "Hotel pickup and drop-off in Muscat",
-          "Air-conditioned 4x4",
-          "Water, dates and Omani coffee",
-          "Entry tickets listed in the plan"
+          "Pickup and drop-off wherever you stay",
+          "A plan shaped around you, with what is included agreed when you book"
         ],
         "notIncluded": [
-          "Lunch (we choose the place together)",
-          "Personal shopping",
-          "Tips"
+          "Anything not agreed in your plan"
+        ],
+        "bring": [
+          "A head cover for women at the Grand Mosque",
+          "Long sleeves and long trousers"
+        ],
+        "extras": [
+          "Muscat by night"
         ]
       },
       "nizwa-mountains": {
-        "name": "Nizwa and the mountains",
-        "short": "The old capital, a Friday cattle market and the cool green terraces of the Hajar.",
-        "seoTitle": "Nizwa and Jebel Akhdar Private Tour",
-        "seoDescription": "A private day trip from Muscat to Nizwa Fort and Souq, the abandoned village of Birkat Al Mouz and the terraces of Jebel Akhdar, guided in your language.",
-        "intro": "Inland Oman in a day: the round tower of Nizwa Fort, a souq that has traded for centuries, and a climb into the Hajar mountains where roses and pomegranates grow on terraces.",
-        "duration": "Full day, about 10 hours",
-        "distance": "About 380 km round trip",
-        "bestTime": "Friday for the cattle market, all year in the mountains",
+        "name": "Nizwa Historical Tour",
+        "short": "An ancient Oman day trip to the old capital under the Hajar mountains.",
+        "seoTitle": "Nizwa Historical Tour",
+        "seoDescription": "A private day trip from Muscat to Nizwa with Issam, The Languages Ninja: immerse yourself in ancient Oman, guided in your language. About 8 hours, all year round.",
+        "intro": "Immerse yourself in ancient Oman: the forts, souqs and old villages of Nizwa, the former capital at the foot of the Hajar mountains.",
+        "duration": "About 8 hours",
+        "distance": "About 300 km round trip",
+        "bestTime": "All year round",
+        "difficulty": "Moderate, with some walking",
+        "group": "Private, 1 to 45 travelers",
         "stops": [
           {
             "name": "Nizwa Fort and Souq",
-            "note": "Climb the tower, then walk the pottery, dates and silver souqs."
+            "note": "The heart of the old capital."
           },
           {
-            "name": "Birkat Al Mouz",
-            "note": "Mud-brick ruins and a working falaj irrigation channel among the palms."
+            "name": "Birkat Al Mawz",
+            "note": "Optional extra: an abandoned mud-brick village and a working falaj among the palms."
           },
           {
             "name": "Jebel Akhdar plateau",
-            "note": "Terraced villages at 2000 m. Cooler air, wide views."
+            "note": "On request: terraced villages high in the Hajar mountains."
           },
           {
-            "name": "Bahla Fort (optional)",
-            "note": "A UNESCO World Heritage site, if time and energy allow."
+            "name": "Bahla Fort",
+            "note": "On request: a UNESCO World Heritage fort near Nizwa."
           }
         ],
         "included": [
           "Private guide in your language",
-          "Hotel pickup and drop-off in Muscat",
-          "4x4 for the mountain road",
-          "Water, dates and Omani coffee",
-          "Fort entry tickets"
+          "Pickup and drop-off wherever you stay",
+          "Details agreed when you book"
         ],
         "notIncluded": [
-          "Lunch",
-          "Personal shopping",
-          "Tips"
+          "Anything not agreed in your plan"
+        ],
+        "bring": [
+          "Sports shoes",
+          "No short dresses (no head cover needed)"
+        ],
+        "extras": [
+          "Birkat Al Mawz"
         ]
       },
       "wahiba-desert": {
-        "name": "Wahiba desert",
-        "short": "Wadi Bani Khalid by day, red dunes at sunset, a night under the stars.",
-        "seoTitle": "Wahiba Sands Desert Private Tour",
-        "seoDescription": "A private overnight trip to the Wahiba Sands (Sharqiya Sands) with a swim in Wadi Bani Khalid, dune driving, sunset and a desert camp, guided in your language.",
-        "intro": "Turquoise pools in a palm-filled wadi, then the sand: dune driving with an experienced desert driver, a sunset from the crest, and dinner and a night in a desert camp.",
-        "duration": "2 days, 1 night",
-        "distance": "About 450 km round trip",
-        "bestTime": "October to April",
+        "name": "Wahiba Sands Tour",
+        "short": "Infinite landscapes of dunes by 4x4, with a camel ride, a quad or dune bashing if you want them.",
+        "seoTitle": "Wahiba Sands Tour",
+        "seoDescription": "A private day trip from Muscat to the Wahiba Sands (Sharqiya Sands) by Toyota 4x4 with Issam, The Languages Ninja: dunes, camel rides, quads and dune bashing, guided in your language.",
+        "intro": "Infinite landscapes: a day out of Muscat into the dunes of the Wahiba Sands by Toyota 4x4, with a camel ride, a quad or dune bashing if you are up for it.",
+        "duration": "About 8 hours",
+        "distance": "About 300 km round trip",
+        "bestTime": "September to May",
+        "difficulty": "Easy, suits everyone",
+        "group": "Private, 1 to 45 travelers",
         "stops": [
           {
             "name": "Wadi Bani Khalid",
-            "note": "Swim in the pools. Bring swimwear and something to cover up."
+            "note": "On a typical route: green pools in a palm-filled wadi on the way to the sands."
           },
           {
             "name": "Al Wasil and the edge of the sands",
-            "note": "Tyre pressure down, then into the dunes."
+            "note": "Into the dunes by Toyota 4x4."
           },
           {
-            "name": "Sunset dune",
-            "note": "The best light of the trip. Sandboarding if you want it."
+            "name": "Sunset over the dunes",
+            "note": "The best light of the day, from the top of a dune."
           },
           {
-            "name": "Desert camp",
-            "note": "Dinner, stars and a quiet night. Breakfast before the drive back."
+            "name": "Camel ride, quad or dune bashing",
+            "note": "Optional extras, booked when you plan the day."
           }
         ],
         "included": [
           "Private guide in your language",
-          "Hotel pickup and drop-off in Muscat",
-          "4x4 with desert-experienced driving",
-          "Camp night with dinner and breakfast",
-          "Water and snacks"
+          "Pickup and drop-off wherever you stay",
+          "Toyota 4x4"
         ],
         "notIncluded": [
-          "Camp upgrades",
-          "Quad bikes or camel rides",
-          "Tips"
+          "Optional extras",
+          "Anything not agreed in your plan"
+        ],
+        "bring": [
+          "A fun spirit"
+        ],
+        "extras": [
+          "Camel ride",
+          "Quad",
+          "Dune bashing"
         ]
       },
       "wadi-shab-coast": {
-        "name": "Wadi Shab and the coast",
-        "short": "A hike and swim into a hidden cave, the Bimmah sinkhole and white beaches.",
-        "seoTitle": "Wadi Shab and Bimmah Sinkhole Private Tour",
-        "seoDescription": "A private coastal day trip from Muscat to the Bimmah Sinkhole, Fins beach and Wadi Shab with its hike, pools and cave waterfall, guided in your language.",
-        "intro": "The coast road south of Muscat: a swim in the Bimmah Sinkhole, a white beach at Fins, then the walk and swim up Wadi Shab to a waterfall inside a cave.",
-        "duration": "Full day, about 9 hours",
-        "distance": "About 320 km round trip",
-        "bestTime": "Weekdays, October to May",
+        "name": "Wadi Shab Adventure",
+        "short": "Natural erosion and turquoise pools in the canyon of Wadi Shab, early in the morning.",
+        "seoTitle": "Wadi Shab Adventure",
+        "seoDescription": "A private Wadi Shab day trip from Muscat with Issam, The Languages Ninja: canyon walls, natural erosion and swimming pools, with the Bimmah Sinkhole as an extra. About 6 hours.",
+        "intro": "Natural erosion and pools: an early start along the coast south of Muscat, then the walk and swim into the canyon of Wadi Shab.",
+        "duration": "About 6 hours, early morning start",
+        "distance": "About 200 km round trip",
+        "bestTime": "September to April",
+        "difficulty": "Moderate to slightly difficult, only for people able to walk",
+        "group": "Private, 1 to 45 travelers",
         "stops": [
           {
             "name": "Bimmah Sinkhole",
-            "note": "Steps down to green-blue water. Bring swimwear."
+            "note": "Optional extra: steps down to green-blue water."
           },
           {
             "name": "Fins beach",
-            "note": "White sand, clear water, almost no one there."
+            "note": "On a typical route: white sand and clear water on the coast road."
           },
           {
             "name": "Wadi Shab",
-            "note": "A short boat crossing, a 45 minute hike, then swim to the cave."
+            "note": "A short boat crossing, a walk up the canyon, then the pools."
           },
           {
-            "name": "Sur (optional)",
-            "note": "The dhow yard and the lighthouse, if you want a longer day."
+            "name": "Sur",
+            "note": "On request, for a longer day: the dhow yard and the lighthouse."
           }
         ],
         "included": [
           "Private guide in your language",
-          "Hotel pickup and drop-off in Muscat",
-          "Air-conditioned 4x4",
-          "Wadi Shab boat crossing",
-          "Water and snacks"
+          "Pickup and drop-off wherever you stay",
+          "Details agreed when you book"
         ],
         "notIncluded": [
-          "Lunch",
-          "Waterproof bag (we can lend one)",
-          "Tips"
+          "Anything not agreed in your plan"
+        ],
+        "bring": [
+          "Sports shoes",
+          "A towel",
+          "A waterproof case for your phone"
+        ],
+        "extras": [
+          "Bimmah Sinkhole"
         ]
       }
     }
@@ -286,7 +309,7 @@
   "follow": {
     "eyebrow": "Follow along",
     "title": "Oman, every day",
-    "lead": "Daily stories from the road, tips before you land, and the places that do not make the guidebooks.",
+    "lead": "Language videos, daily stories from the road and the places that do not make the guidebooks.",
     "notes": {
       "instagram": "Stories and reels",
       "tiktok": "Short trips",
@@ -297,32 +320,50 @@
   "reviews": {
     "eyebrow": "Traveler reviews",
     "title": "What guests say",
-    "placeholderNote": "Sample reviews. Replace with real guest quotes before launch.",
+    "note": "Real reviews in the guest's own words, with an English translation.",
+    "translation": "English translation",
     "items": [
       {
-        "quote": "Sample review. Issam switched between our two languages all day and nobody felt left out.",
-        "name": "Guest name",
-        "meta": "Country, Muscat city"
+        "lang": "es",
+        "quote": "Fuimos dos amigas, pero el viaje desde el día que le conocimos se convirtió en un viaje de 3 amigos.",
+        "translation": "We were two friends, but from the day we met him the trip became a trip of three friends.",
+        "name": "Two friends from Spain",
+        "meta": "Reviewed in Spanish"
       },
       {
-        "quote": "Sample review. The Wadi Shab day was the highlight of our trip. Issam knew every pool.",
-        "name": "Guest name",
-        "meta": "Country, Wadi Shab"
+        "lang": "es",
+        "quote": "Lo que empezó como un guía terminó en un buen amigo. Habla 12 idiomas. Sí, es cierto. ¡12!",
+        "translation": "What started as a guide ended as a good friend. He speaks 12 languages. Yes, really. 12!",
+        "name": "Traveler from Spain",
+        "meta": "Reviewed in Spanish"
       },
       {
-        "quote": "Sample review. We asked for a slower day with the kids and Issam rebuilt the plan on the spot.",
-        "name": "Guest name",
-        "meta": "Country, Nizwa"
+        "lang": "it",
+        "quote": "Issam non è stato solo una guida, ma un compagno di viaggio, un narratore, un ponte autentico tra noi e la sua terra.",
+        "translation": "Issam was not just a guide but a travel companion, a storyteller, a true bridge between us and his country.",
+        "name": "Four days in Oman",
+        "meta": "Reviewed in Italian"
       },
       {
-        "quote": "Sample review. Sunset on the dunes, then the best dinner we had in Oman.",
-        "name": "Guest name",
-        "meta": "Country, Wahiba desert"
+        "lang": "it",
+        "quote": "Fra tutti i tour guidati che ho fatto con la mia famiglia, questo è di gran lunga il migliore.",
+        "translation": "Of all the guided tours I have done with my family, this is by far the best.",
+        "name": "Family trip",
+        "meta": "Reviewed in Italian"
       },
       {
-        "quote": "Sample review. Felt like being shown around by a friend who happens to know everyone.",
-        "name": "Guest name",
-        "meta": "Country, Muscat city"
+        "lang": "it",
+        "quote": "Ci ha fatto vivere l'Oman come se fossimo parte della comunità locale.",
+        "translation": "He let us live Oman as if we were part of the local community.",
+        "name": "Travelers from Italy",
+        "meta": "Reviewed in Italian"
+      },
+      {
+        "lang": "it",
+        "quote": "Fare un tour con Issam è un po' come tornare a casa dopo tanto tempo.",
+        "translation": "A tour with Issam is a bit like coming home after a long time.",
+        "name": "Muscat in Italian and German",
+        "meta": "Reviewed in Italian"
       }
     ]
   },
@@ -332,38 +373,58 @@
     "items": [
       {
         "q": "How much does a private tour cost?",
-        "a": "Placeholder answer. Prices depend on the tour, the group size and the season. Send your dates and group size on WhatsApp and you get a clear price for the whole group, with no per-head surprises."
+        "a": "Tours start at USD 200. The final price depends on the tour, on whether you need a car or a bus, and on the language. Send your dates and group size on WhatsApp for a quote."
       },
       {
         "q": "Where do you pick us up?",
-        "a": "Placeholder answer. From any hotel, apartment or cruise terminal in Muscat. Pickup from other cities can be arranged."
+        "a": "Wherever you are staying. Issam picks up anywhere."
       },
       {
         "q": "How long are the tours?",
-        "a": "Placeholder answer. Muscat city is a half or full day, Nizwa and Wadi Shab are full days, and the Wahiba desert is an overnight trip. Every tour can be shortened or extended."
+        "a": "Muscat is a half day (8:00 to 12:00) or a full day (8:00 to 15:00). Wadi Shab takes about 6 hours, Nizwa and the Wahiba Sands about 8. Tours can be combined into a trip of several days."
       },
       {
         "q": "Which languages do you guide in?",
-        "a": "Placeholder answer. Arabic plus English, Spanish, Italian, German, French, Chinese, Portuguese, Catalan, Russian, Korean, Japanese and Hindi. Mixed-language groups are welcome."
+        "a": "Arabic, English, German, Russian, Spanish, Italian, French, Portuguese, Catalan, Chinese and Hindi. One tour can mix two languages, so mixed groups are welcome."
       },
       {
         "q": "How big can the group be?",
-        "a": "Placeholder answer. Tours are private, from one traveler up to six in one vehicle. Larger groups can travel with a second vehicle."
+        "a": "Every tour is private, for 1 to 45 travelers. Small groups travel by car and larger groups by bus."
       },
       {
         "q": "How do we book and pay?",
-        "a": "Placeholder answer. Message on WhatsApp or send the request form. A small deposit secures the date and the rest is paid on the day."
+        "a": "Message on WhatsApp or send the request form. A deposit confirms your date. You can pay by card, cash, online, or by bank transfer as long as the money arrives before the tour."
+      },
+      {
+        "q": "What is the cancellation policy?",
+        "a": "There is no refund after confirmation, unless the tour cannot be delivered because of a failure on our side. If bad weather or a flooded wadi stops a tour, you get an alternative, or a refund if there is none."
+      },
+      {
+        "q": "How far ahead should we book?",
+        "a": "Booking is flexible. Message as early as you can, and last-minute requests are welcome too."
+      },
+      {
+        "q": "Can you help us book hotels?",
+        "a": "Yes."
+      },
+      {
+        "q": "Does it rain in Oman?",
+        "a": "Yes, it does. If the weather closes a route, Issam plans an alternative."
+      },
+      {
+        "q": "Can we pay by card in Oman?",
+        "a": "In most places, yes. Taxis are the exception, so carry some cash."
       }
     ]
   },
   "plan": {
     "eyebrow": "Plan your tour",
     "title": "Tell me where you want to go",
-    "note": "Replies in your language, usually within a few hours",
+    "note": "Message on WhatsApp, in your language",
     "bubble": "Hi, I'm Issam. Where would you like to go?",
     "ctaRequest": "Request a tour",
     "ctaWhatsapp": "WhatsApp me",
-    "avatarLabel": "Issam avatar"
+    "avatarLabel": "Issam"
   },
   "form": {
     "title": "Request a tour",
@@ -389,9 +450,9 @@
   },
   "also": {
     "eyebrow": "Also available",
-    "title": "Interpreting and translation",
-    "text": "Interpreting for press, business meetings, events and families, and written translation between Arabic and 12 languages.",
-    "cta": "Ask about interpreting"
+    "title": "Interpreting, translation and business help",
+    "text": "Interpreting and translation in the same languages as the tours, plus help with investing in Oman, buying real estate and legal matters.",
+    "cta": "Ask on WhatsApp"
   },
   "tourPage": {
     "back": "All tours",
@@ -399,14 +460,20 @@
     "distance": "Distance",
     "bestTime": "Best time",
     "group": "Group",
-    "groupValue": "Private, 1 to 6 travelers",
     "route": "The route",
     "included": "Included",
     "notIncluded": "Not included",
     "request": "Request this tour",
     "whatsapp": "Ask on WhatsApp",
     "more": "More tours",
-    "heroVideoLabel": "Hero video loop, 10 to 15 seconds, 1920x1080 WebM and MP4"
+    "heroVideoLabel": "Hero video loop, 10 to 15 seconds, 1920x1080 WebM and MP4",
+    "difficulty": "Difficulty",
+    "price": "Price",
+    "priceValue": "From {price}",
+    "priceNote": "Depends on group size, vehicle and language",
+    "bring": "Bring and wear",
+    "extras": "Optional extras",
+    "routeNote": "A typical route. Every tour is customizable, so Issam shapes the stops around you."
   },
   "footer": {
     "rights": "All rights reserved.",

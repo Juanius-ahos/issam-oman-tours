@@ -112,10 +112,7 @@ writeFileSync(
 
 > ${en.meta.homeDescription}
 
-${config.brand.person} ("${config.brand.nickname}") is a private tour guide based in ${config.business.city}, Oman. Tours are guided in Arabic plus ${config.business.stats.languages} languages: ${locales
-    .filter((l) => l.code !== 'ar')
-    .map((l) => l.english)
-    .join(', ')}. Tours are private, with hotel pickup in Muscat. Bookings are made on WhatsApp (https://wa.me/${config.whatsapp.number}) or with the tour request form. Interpreting and translation are also available.
+${config.brand.person} ("${config.brand.nickname}", trading as ${config.brand.business}) is a private tour guide in Oman, guiding since ${config.business.startedGuiding} and with about ${config.business.stats.travelersHosted.toLocaleString('en-US')} travelers hosted. Tours are guided in ${config.guideLanguages.map((l) => l.name).join(', ')}, and one tour can mix two languages. Tours are private, for 1 to 45 travelers, with pickup wherever guests stay. Prices start at ${config.pricing.currency} ${config.pricing.from}. Bookings are made on WhatsApp (https://wa.me/${config.whatsapp.number}), by email (${config.email}) or with the tour request form. Interpreting, translation and help with investing, real estate and legal matters in Oman are also available.
 
 ## Tours
 

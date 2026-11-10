@@ -20,10 +20,15 @@
 .day-progress { display: block; height: 100%; background: #fff; transform: scaleX(0); transform-origin: left; }
 [dir='rtl'] .day-progress { transform-origin: right; }
 
-/* Geometric star band, the kind carved on Omani doors and plaster. */
-.pattern-band {
-  height: 64px; background-color: rgb(var(--accent-deep)); background-position: 0 0; background-size: 64px 64px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='none' stroke='%23CDA8EE' stroke-width='1.6'%3E%3Crect x='16' y='16' width='32' height='32'/%3E%3Crect x='16' y='16' width='32' height='32' transform='rotate(45 32 32)'/%3E%3Cpath d='M0 32H9.4M54.6 32H64M32 0V9.4M32 54.6V64'/%3E%3C/svg%3E");
+/* Star-and-cross accents (src/oman/Ornament.tsx). Always behind content, masked so they fade out. */
+.plan-geo { position: absolute; z-index: -1; inset-block: 0; inset-inline-end: 0; width: 46%; -webkit-mask-image: linear-gradient(90deg, transparent, #000 45%); mask-image: linear-gradient(90deg, transparent, #000 45%); }
+[dir='rtl'] .plan-geo { -webkit-mask-image: linear-gradient(-90deg, transparent, #000 45%); mask-image: linear-gradient(-90deg, transparent, #000 45%); }
+.band-geo { position: absolute; z-index: -1; inset: 0; -webkit-mask-image: linear-gradient(100deg, transparent 30%, #000 85%); mask-image: linear-gradient(100deg, transparent 30%, #000 85%); }
+[dir='rtl'] .band-geo { -webkit-mask-image: linear-gradient(-100deg, transparent 30%, #000 85%); mask-image: linear-gradient(-100deg, transparent 30%, #000 85%); }
+.modal-geo { position: absolute; z-index: -1; inset: 0 0 auto; height: 170px; -webkit-mask-image: linear-gradient(#000, transparent); mask-image: linear-gradient(#000, transparent); }
+.frieze { height: 44px; padding-block: 5px; background: rgb(var(--ink)); border-block: 1px solid rgb(var(--accent) / .45); }
+@media (max-width: 900px) {
+  .plan-geo { width: 100%; opacity: .6; -webkit-mask-image: linear-gradient(transparent 40%, #000); mask-image: linear-gradient(transparent 40%, #000); }
 }
 
 /* Hero: real dunes behind Issam, melting into the sand of the page. */

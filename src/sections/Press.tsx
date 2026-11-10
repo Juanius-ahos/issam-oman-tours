@@ -5,8 +5,16 @@ import { useI18n } from '../i18n';
 import { gsap, Smooth } from '../motion/gsap';
 import { prefersReducedMotion } from '../lib/viewport';
 
-// TODO: real logos (SVG or WebP) once Issam has permission to show them.
-const press = ['Arriyadiyah', 'Al Shabiba FM', 'SBC'];
+// Confirmed by Issam (docs/issam-answers-2026-11.md). Logos are allowed; add the
+// files when they arrive. People he has worked with carry no logo.
+// TODO: confirm the exact name of "tv2 Spain" before adding it.
+const press: { name: string; logo?: boolean }[] = [
+  { name: 'Arriyadiyah', logo: true },
+  { name: 'Al Shabiba FM', logo: true },
+  { name: 'SBC', logo: true },
+  { name: 'Iker Casillas' },
+  { name: 'Plácido Domingo' },
+];
 
 export function Press() {
   const { m, dir } = useI18n();
@@ -46,12 +54,14 @@ export function Press() {
       <p className="eyebrow mb-6 px-[var(--gutter)]">{m.press.eyebrow}</p>
       <div className="marquee">
         <div ref={track} className="marquee-track">
-          {[...row, ...row].map((name, i) => (
+          {[...row, ...row].map((item, i) => (
             <span key={i} className="press-item" aria-hidden={i >= press.length ? 'true' : undefined}>
-              <span className="ph grid h-[clamp(26px,2.4vw,36px)] w-[clamp(26px,2.4vw,36px)] place-items-center rounded-[22%] text-[8px] font-bold" aria-hidden="true">
-                {m.press.logoLabel}
-              </span>
-              {name}
+              {item.logo && (
+                <span className="ph grid h-[clamp(26px,2.4vw,36px)] w-[clamp(26px,2.4vw,36px)] place-items-center rounded-[22%] text-[8px] font-bold" aria-hidden="true">
+                  {m.press.logoLabel}
+                </span>
+              )}
+              {item.name}
             </span>
           ))}
         </div>

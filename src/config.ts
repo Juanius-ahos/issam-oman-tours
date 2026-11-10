@@ -9,27 +9,54 @@ const env = import.meta.env;
 
 export const config = {
   /** Public origin, no trailing slash. Drives canonical, hreflang, sitemap and JSON-LD. */
-  siteUrl: (env.VITE_SITE_URL as string | undefined) || 'https://www.example-oman-tours.com', // TODO: real domain
+  siteUrl: (env.VITE_SITE_URL as string | undefined) || 'https://omanwithissam.com',
 
+  /* Contact, socials, numbers and prices below come from Issam's questionnaire
+     (docs/issam-answers-2026-11.md). */
   brand: {
-    person: 'Issam Baloushi',
+    person: 'Issam Albalushi',
     nickname: 'The Languages Ninja',
     wordmark: 'ISSAM',
+    /** Trading name, used as the business name in structured data. */
+    business: 'Oman with Issam',
   },
 
   whatsapp: {
     /** International format, digits only, no + or spaces. */
-    number: '96800000000', // TODO: Issam's WhatsApp number
-    display: '+968 0000 0000', // TODO
+    number: '96872738685',
+    display: '+968 7273 8685',
   },
 
-  email: 'hello@example-oman-tours.com', // TODO
+  email: 'Languagesninja@gmail.com',
 
+  /** Leave a url empty to hide that network everywhere (Issam has no Facebook page). */
   socials: {
-    instagram: { url: 'https://www.instagram.com/TODO', handle: '@TODO' },
-    tiktok: { url: 'https://www.tiktok.com/@TODO', handle: '@TODO' },
-    youtube: { url: 'https://www.youtube.com/@TODO', handle: '@TODO' },
-    facebook: { url: 'https://www.facebook.com/TODO', handle: '/TODO' },
+    instagram: { url: 'https://www.instagram.com/languages_ninja', handle: '@languages_ninja' },
+    tiktok: { url: 'https://www.tiktok.com/@languagesninja', handle: '@languagesninja' },
+    youtube: { url: 'https://www.youtube.com/@Languagesninja', handle: '@Languagesninja' },
+    facebook: { url: '', handle: '' },
+  },
+
+  /** Languages Issam guides in, as English names (FAQ, llms.txt, structured data).
+   *  TODO: Issam named these 11 but says 12; confirm the 12th. */
+  guideLanguages: [
+    { name: 'Arabic', code: 'ar' },
+    { name: 'English', code: 'en' },
+    { name: 'German', code: 'de' },
+    { name: 'Russian', code: 'ru' },
+    { name: 'Spanish', code: 'es' },
+    { name: 'Italian', code: 'it' },
+    { name: 'French', code: 'fr' },
+    { name: 'Portuguese', code: 'pt' },
+    { name: 'Catalan', code: 'ca' },
+    { name: 'Chinese', code: 'zh' },
+    { name: 'Hindi', code: 'hi' },
+  ],
+
+  pricing: {
+    /** Issam wants a starting price only; the rest is quoted on WhatsApp. */
+    from: 200,
+    currency: 'USD',
   },
 
   /** Google Business Profile URL, added to LocalBusiness sameAs once it exists. */
@@ -49,11 +76,12 @@ export const config = {
     city: 'Muscat',
     region: 'Muscat Governorate',
     country: 'OM',
-    /** Approximate centre of Muscat. TODO: exact pickup base if Issam wants it public. */
+    /** Approximate centre of Muscat. Issam picks up anywhere. */
     geo: { lat: 23.588, lng: 58.3829 },
-    priceRange: '$$',
-    /** Headline figures for the counters. TODO: real numbers. */
-    stats: { languages: 12, yearsGuiding: 10, travelersHosted: 3000, countries: 60 },
+    priceRange: 'From USD 200',
+    /** Headline figures for the counters. Guiding since 2016; about 15,000 travelers; "more than 15" countries. */
+    startedGuiding: 2016,
+    stats: { languages: 12, yearsGuiding: new Date().getFullYear() - 2016, travelersHosted: 15000, countries: 15 },
   },
 
   seo: {

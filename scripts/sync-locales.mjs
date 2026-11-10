@@ -2,7 +2,7 @@
 //   - Missing locale files are created as English copies marked "_status": "todo".
 //   - Keys missing from an existing locale are filled from English.
 //   - Keys that no longer exist in English are removed.
-//   - Translated strings are never overwritten.
+//   - Translated strings are never overwritten. Locales still marked "todo" are re-copied from English.
 // Run: npm run locales:sync
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -26,7 +26,9 @@ function merge(source, target) {
 
 for (const code of codes) {
   const file = join(dir, `${code}.json`);
-  const existing = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : undefined;
+  const current = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : undefined;
+  // An untranslated locale is only an English copy, so refresh it from en.json in full.
+  const existing = current?._status === 'todo' ? undefined : current;
   const merged = merge(en, existing);
   if (!existing) {
     merged._status = 'todo';

@@ -6,6 +6,7 @@ import { createPortal } from 'react-dom';
 import { gsap, Smooth } from '../motion/gsap';
 import { prefersReducedMotion } from '../lib/viewport';
 import { Icon } from './Icon';
+import { StarPattern } from '../oman/Ornament';
 
 const useIsoLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
@@ -90,7 +91,8 @@ export function Modal({
   return createPortal(
     <div className="modal" role="dialog" aria-modal="true" aria-labelledby={labelledBy}>
       <div ref={scrim} className="modal-scrim" onClick={onClose} />
-      <div ref={panel} className={`modal-panel ${panelClassName}`}>
+      <div ref={panel} className={`modal-panel isolate ${panelClassName}`}>
+        <StarPattern tone="fine" className="modal-geo" />
         <button type="button" className="modal-close" onClick={onClose} aria-label={closeLabel}>
           <Icon name="close" />
         </button>

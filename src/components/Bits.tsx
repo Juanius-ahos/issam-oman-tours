@@ -5,6 +5,7 @@ import { config, whatsappUrl } from '../config';
 import { useI18n } from '../i18n';
 import { trackWhatsApp } from '../lib/analytics';
 import { Icon, type IconName } from './Icon';
+import { BASE } from '../routes';
 
 export function WaLink({
   location,
@@ -46,7 +47,7 @@ const socialIcons: Record<keyof typeof config.socials, IconName> = {
 export function SocialRow({ tileClass = '' }: { tileClass?: string }) {
   return (
     <ul className="flex gap-1.5">
-      {(Object.keys(config.socials) as (keyof typeof config.socials)[]).map((k) => (
+      {(Object.keys(config.socials) as (keyof typeof config.socials)[]).filter((k) => config.socials[k].url).map((k) => (
         <li key={k}>
           <a
             href={config.socials[k].url}
@@ -64,15 +65,27 @@ export function SocialRow({ tileClass = '' }: { tileClass?: string }) {
 }
 
 export function StatCard({ value, suffix = '', label, icon }: { value: number; suffix?: string; label: string; icon: IconName }) {
+  const text = value.toLocaleString('en-US') + suffix;
   return (
     <div className="glass-ink relative flex h-[96px] w-[101px] flex-col justify-end rounded-[14px] p-3">
       <Icon name={icon} size={14} className="absolute end-3 top-3 text-accent-light" />
-      <span className="text-[23px] font-black leading-none tracking-[-0.045em] text-accent-light">
-        {value.toLocaleString('en-US')}
-        {suffix}
-      </span>
+      {/* About 77px of room inside the card: longer figures step down so they never clip. */}
+      <span className={`${text.length > 6 ? 'text-[18px]' : text.length > 5 ? 'text-[20px]' : 'text-[23px]'} font-black leading-none tracking-[-0.045em] text-accent-light`}>{text}</span>
       <span className="mt-1.5 text-[8.5px] font-extrabold uppercase leading-tight tracking-[0.12em] text-white/85">{label}</span>
     </div>
+  );
+}
+
+/** Issam's face, cropped from the hero cutout (no separate avatar file needed). */
+export function Avatar({ className = '', label }: { className?: string; label?: string }) {
+  return (
+    <span
+      className={`inline-block flex-none rounded-full bg-accent/20 bg-no-repeat ${className}`}
+      style={{ backgroundImage: `url(${BASE}media/issam-portrait-640.webp)`, backgroundSize: '213%', backgroundPosition: '44% 3%' }}
+      role={label ? 'img' : undefined}
+      aria-label={label}
+      aria-hidden={label ? undefined : true}
+    />
   );
 }
 

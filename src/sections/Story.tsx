@@ -7,6 +7,9 @@ import { useI18n } from '../i18n';
 import { gsap, ScrollTrigger } from '../motion/gsap';
 import { isMobile, prefersReducedMotion } from '../lib/viewport';
 import { Modal } from '../components/Modal';
+import { Avatar } from '../components/Bits';
+import { config } from '../config';
+import { StarDivider } from '../oman/Ornament';
 
 export function Story() {
   const { m, dir } = useI18n();
@@ -111,6 +114,7 @@ export function Story() {
     <section id="story" ref={root} className="section">
       <header className="section-head">
         <p className="eyebrow">{m.story.eyebrow}</p>
+        <StarDivider />
         <h2 className="section-title">{m.story.title}</h2>
         <p className="section-lead">{m.story.lead}</p>
       </header>
@@ -137,16 +141,22 @@ export function Story() {
           {cards.map((c, i) => (
             <li key={c.year} className={`tl-card glass-light ${i % 2 === 0 ? 'is-end' : ''}`}>
               <p className="tl-year">
-                <span aria-hidden="true">’{c.year.slice(2)}</span>
-                <span className="sr-only">{c.year}</span>
+                {/^\d{4}$/.test(c.year) ? (
+                  <>
+                    <span aria-hidden="true">’{c.year.slice(2)}</span>
+                    <span className="sr-only">{c.year}</span>
+                  </>
+                ) : (
+                  c.year
+                )}
               </p>
               <h3 className="mt-3 text-[clamp(20px,1.9vw,26px)] font-extrabold tracking-[-0.02em]">{c.title}</h3>
               <p className="mt-2 text-[clamp(14px,1.15vw,16px)] text-ink/70">{c.blurb}</p>
               <div className="mt-6 flex items-center justify-between gap-3">
-                <span className="flex items-center gap-2.5 text-[13px] text-ink/72">
-                  <span className="ph h-9 w-9 rounded-full" aria-hidden="true" />
-                  @TODO
-                </span>
+                <a href={config.socials.instagram.url} target="_blank" rel="noopener me" className="flex items-center gap-2.5 text-[13px] text-ink/72 hover:text-ink">
+                  <Avatar className="h-9 w-9" />
+                  {config.socials.instagram.handle}
+                </a>
                 <button
                   type="button"
                   className="btn btn-outline min-h-[38px] px-4 text-[13px]"

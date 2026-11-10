@@ -1,5 +1,4 @@
-/* Issam's greeting bubble in 13 languages, and the geometric star band
-   between sections. */
+/* Issam's greeting bubble in 13 languages. */
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { gsap } from '../motion/gsap';
@@ -52,21 +51,4 @@ export function GreetingBubble() {
     </div>,
     document.body,
   );
-}
-
-export function PatternBand() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (prefersReducedMotion()) return;
-    const tween = gsap.to(ref.current, {
-      backgroundPositionX: -320,
-      ease: 'none',
-      scrollTrigger: { trigger: ref.current, start: 'top bottom', end: 'bottom top', scrub: true },
-    });
-    return () => {
-      tween.scrollTrigger?.kill();
-      tween.kill();
-    };
-  }, []);
-  return <div ref={ref} className="pattern-band" aria-hidden="true" />;
 }

@@ -5,8 +5,9 @@ import { useI18n } from '../i18n';
 import { gsap } from '../motion/gsap';
 import { prefersReducedMotion } from '../lib/viewport';
 import { useRequest } from '../components/TourRequest';
-import { WaLink, RollText } from '../components/Bits';
+import { WaLink, RollText, Avatar } from '../components/Bits';
 import { Icon } from '../components/Icon';
+import { StarPattern } from '../oman/Ornament';
 
 export function Plan() {
   const { m, dir } = useI18n();
@@ -33,13 +34,14 @@ export function Plan() {
   }, [dir]);
 
   return (
-    <section id="plan" className="section">
+    <section id="plan" className="section isolate overflow-hidden">
+      <StarPattern tone="sand" className="plan-geo" />
       <p className="eyebrow">{m.plan.eyebrow}</p>
       <h2 className="mt-4 max-w-[14ch] text-[clamp(42px,7.4vw,110px)] font-black leading-[0.95] tracking-[-0.05em] [text-wrap:balance]">{m.plan.title}</h2>
       <p className="label-xs mt-5 text-ink/70">{m.plan.note}</p>
 
       <div ref={chat} className="mt-10 flex items-end gap-3">
-        <span className="chat-avatar ph h-14 w-14 flex-none rounded-full" role="img" aria-label={m.plan.avatarLabel} />
+        <Avatar className="chat-avatar h-14 w-14" label={m.plan.avatarLabel} />
         <div className="grid gap-3">
           <div className="chat-typing" aria-hidden="true">
             <span />
