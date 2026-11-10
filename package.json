@@ -15,7 +15,7 @@
     "check:copy": "node scripts/check-copy.mjs",
     "locales:sync": "node scripts/sync-locales.mjs",
     "build:pages": "node scripts/build-pages.mjs",
-    "deploy:pages": "node scripts/deploy-pages.mjs",
+    "deploy:pages": "node scripts/deploy-pages.mjs --live",
     "deploy:live": "node scripts/deploy-pages.mjs --live",
     "check:locales": "node scripts/check-locales.mjs"
   },

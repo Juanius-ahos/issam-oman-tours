@@ -69,7 +69,7 @@ npm run build          # copy check + client + SSR + prerender into dist/site
 npm run preview        # http://localhost:4173/en/ (serves dist/site)
 npm run typecheck
 npm run locales:sync   # push new en.json keys into the 12 other locales
-npm run deploy:pages   # build for /issam-oman-tours/ and force-push dist/site to gh-pages
+npm run deploy:live    # build for omanwithissam.com (base /), add CNAME, force-push dist/site to gh-pages (deploy:pages is the same)
 ```
 
 `build:pages` / `deploy:pages` set `VITE_BASE=/issam-oman-tours/` and

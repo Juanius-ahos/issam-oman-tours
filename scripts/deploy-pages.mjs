@@ -1,6 +1,6 @@
 // Publishes the static site to the gh-pages branch.
-//   npm run deploy:pages  preview at https://juanius-ahos.github.io/issam-oman-tours/
-//   npm run deploy:live   omanwithissam.com at the domain root, with a CNAME file.
+//   node scripts/deploy-pages.mjs  old github.io preview build (do NOT use now: it drops the CNAME and takes the domain offline)
+//   npm run deploy:live (or deploy:pages)  omanwithissam.com at the domain root, with a CNAME file.
 // Run deploy:live only once the domain's DNS points at GitHub Pages: from then on
 // GitHub redirects the github.io preview URL to the domain.
 import { execSync } from 'node:child_process';
