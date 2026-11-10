@@ -90,7 +90,7 @@ export function Tours() {
             <div className="sat-scrim" />
           </div>
           <div className="relative flex h-full flex-col justify-between px-[var(--gutter)] pb-[6vh] pt-[8vh]">
-            <header className="max-w-[560px] text-white">
+            <header className="tours-head relative max-w-[560px] text-white">
               <p className="eyebrow !text-white/80">{m.tours.eyebrow}</p>
               <h2 className="section-title mt-3">{m.tours.title}</h2>
               <p className="section-lead mt-3 !text-white/85">{m.tours.lead}</p>

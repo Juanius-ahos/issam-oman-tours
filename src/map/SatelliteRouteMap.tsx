@@ -25,6 +25,31 @@ const linePath = (slug: TourSlug) =>
     .map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`)
     .join('');
 
+/** Once the camera settles, a stop label that runs past the map edge switches to the other side of its pin. */
+function fitLabels(box: HTMLElement) {
+  const edge = box.getBoundingClientRect();
+  box.querySelectorAll<HTMLElement>('.sat-pin:not(.sat-pin-end):not(.sat-pin-city)').forEach((pin) => {
+    const r = pin.getBoundingClientRect();
+    const flipped = pin.classList.contains('sat-pin-flip');
+    if (!flipped && r.right > edge.right - 8) pin.classList.add('sat-pin-flip');
+    else if (flipped && r.left < edge.left + 8) pin.classList.remove('sat-pin-flip');
+  });
+  // Neighbouring labels that overlap: flip the later one if it still fits, else hide its text.
+  const pins = [...box.querySelectorAll<HTMLElement>('.sat-pin:not(.sat-pin-end)')];
+  const hit = (a: DOMRect, b: DOMRect) => a.left < b.right && b.left < a.right && a.top < b.bottom && b.top < a.bottom;
+  pins.forEach((pin, i) => {
+    pin.classList.remove('sat-pin-quiet');
+    const clash = () => pins.slice(0, i).some((o) => hit(o.getBoundingClientRect(), pin.getBoundingClientRect()));
+    if (!clash()) return;
+    pin.classList.toggle('sat-pin-flip');
+    const r = pin.getBoundingClientRect();
+    if (clash() || r.left < edge.left + 8 || r.right > edge.right - 8) {
+      pin.classList.toggle('sat-pin-flip');
+      pin.classList.add('sat-pin-quiet');
+    }
+  });
+}
+
 const pct = (slugPoint: [number, number]) => ({ left: `${(slugPoint[0] / W) * 100}%`, top: `${(slugPoint[1] / H) * 100}%` });
 
 export function SatelliteRouteMap({ active, focus, className = '' }: { active?: TourSlug | null; focus?: TourSlug; className?: string }) {
@@ -63,7 +88,11 @@ export function SatelliteRouteMap({ active, focus, className = '' }: { active?: 
         y = gsap.utils.clamp(-limY, limY, area.y - ch / 2 - (cy - mh / 2) * scale);
       }
       const sync = () => c.style.setProperty('--cam', String(gsap.getProperty(c, 'scale')));
-      gsap.to(c, { x, y, scale, xPercent: -50, yPercent: -50, duration: animate && !prefersReducedMotion() ? 1.5 : 0, ease: 'power3.inOut', overwrite: true, onUpdate: sync, onComplete: sync });
+      const settle = () => {
+        sync();
+        fitLabels(box);
+      };
+      gsap.to(c, { x, y, scale, xPercent: -50, yPercent: -50, duration: animate && !prefersReducedMotion() ? 1.5 : 0, ease: 'power3.inOut', overwrite: true, onUpdate: sync, onComplete: settle });
     };
     place(!focus);
     const onResize = () => place(false);

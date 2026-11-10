@@ -54,7 +54,7 @@ export function TourPage({ slug }: { slug: TourSlug }) {
   return (
     <div ref={root} className="desk:ps-[var(--nav-w)]">
       {/* Hero */}
-      <section className="relative isolate flex min-h-[88svh] flex-col justify-end overflow-hidden px-[var(--gutter)] pb-[7vh] pt-[120px] text-white desk:pt-[10vh]">
+      <section data-own-cta className="relative isolate flex min-h-[88svh] flex-col justify-end overflow-hidden px-[var(--gutter)] pb-[7vh] pt-[120px] text-white desk:pt-[10vh]">
         <LazyVideo src={tourMedia[slug]} poster={tourMedia[slug].poster} label={t.name} className="!absolute inset-0 -z-10 h-full w-full" />
         <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
         <nav aria-label="Breadcrumb" data-rise>
@@ -141,7 +141,7 @@ export function TourPage({ slug }: { slug: TourSlug }) {
       </section>
 
       {/* Request band */}
-      <section className="relative isolate mx-[var(--gutter)] mb-[clamp(60px,9vh,110px)] flex flex-wrap items-center justify-between gap-6 overflow-hidden rounded-[24px] bg-ink p-[clamp(24px,4vw,48px)] text-sand">
+      <section data-own-cta className="relative isolate mx-[var(--gutter)] mb-[clamp(60px,9vh,110px)] flex flex-wrap items-center justify-between gap-6 overflow-hidden rounded-[24px] bg-ink p-[clamp(24px,4vw,48px)] text-sand">
         <StarPattern tone="dark" className="band-geo" />
         <h2 className="max-w-[18ch] text-[clamp(28px,3.4vw,48px)] font-black leading-none tracking-[-0.03em]">{m.plan.title}</h2>
         <div className="flex flex-wrap gap-2.5">

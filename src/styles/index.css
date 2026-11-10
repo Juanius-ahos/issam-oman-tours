@@ -219,19 +219,6 @@
   /* Ghost targets: hero content that the sidebar's real nodes fly out of. While
      the engine runs, the real nodes draw at these boxes, so the targets hide. */
   html.is-ghosting [data-ghost-target] { visibility: hidden; }
-  .bg-figure {
-    position: fixed; inset: 0; z-index: -1; pointer-events: none; display: flex; justify-content: center; align-items: flex-end;
-    opacity: 0; transition: opacity .6s var(--ease);
-  }
-  html.is-collapsed .bg-figure, html.no-ghost .bg-figure { opacity: 1; }
-  /* The hero portrait, blacked out and faint, behind every later section. */
-  .bg-figure > img {
-    height: 92vh; width: auto; max-width: none; opacity: .08; filter: brightness(0) blur(2.5px);
-    -webkit-mask-image: linear-gradient(#000 55%, transparent 96%); mask-image: linear-gradient(#000 55%, transparent 96%);
-  }
-  @media (max-width: 900px), (max-height: 560px) and (pointer: coarse) {
-    .bg-figure { display: none; }
-  }
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -266,7 +253,7 @@
 
   /* Platforms */
   .plat { display: grid; grid-template-columns: 48px 1fr auto 24px; align-items: center; gap: 20px; padding: 18px 14px; margin: 0 -14px; border-radius: 14px; border-bottom: 1px solid rgb(var(--ink) / .14); transition: padding .35s var(--ease), background-color .3s var(--ease); }
-  @media (min-width: 900px) { .plat { grid-template-columns: 48px 1fr 1fr 160px 24px; } }
+  @media (min-width: 768px) { .plat { grid-template-columns: 48px 1fr 1fr minmax(0, 160px) 24px; } }
   .plat-ico { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: rgb(var(--ink) / .07); transition: background-color .3s var(--ease), color .3s var(--ease); }
   .plat-arrow { opacity: 0; transform: translate(-8px, 8px); transition: opacity .3s var(--ease), transform .35s var(--ease); }
   [dir='rtl'] .plat-arrow { transform: translate(8px, 8px) scaleX(-1); }
@@ -279,7 +266,9 @@
   }
 
   /* Reviews: fanned hand on desktop, swipe deck on mobile */
-  .hand { display: flex; justify-content: center; align-items: flex-end; padding: 40px 0 60px; perspective: 1200px; }
+  .hand { display: flex; justify-content: center; align-items: flex-end; padding: 40px 24px 60px; perspective: 1200px; container-type: inline-size; }
+  /* Overlap so the whole fan fits the column (cards tilt, so keep 24px each side). */
+  .hand-card { --fan-gap: clamp(-150px, calc((100cqw - var(--n) * 232px) / (var(--n) - 1)), -46px); }
   .hand-card { flex: 0 0 auto; width: 232px; margin-inline-start: var(--overlap, 0); position: relative; z-index: var(--z, 1); }
   .quote { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; height: 360px; padding: 22px; border-radius: var(--radius); transform: rotate(var(--rot, 0deg)) translateY(var(--lift, 0)); transform-origin: bottom center; transition: transform .45s var(--ease), box-shadow .45s var(--ease); }
   @media (hover: hover) and (pointer: fine) {

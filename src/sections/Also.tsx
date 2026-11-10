@@ -6,7 +6,7 @@ import { Icon } from '../components/Icon';
 export function Also() {
   const { m } = useI18n();
   return (
-    <section className="border-y border-ink/10 px-[var(--gutter)] py-10" aria-labelledby="also-title">
+    <section id="also" className="border-y border-ink/10 px-[var(--gutter)] py-10" aria-labelledby="also-title">
       <div className="flex flex-wrap items-center justify-between gap-x-10 gap-y-5">
         <div className="flex max-w-[760px] items-start gap-4">
           <span className="grid h-11 w-11 flex-none place-items-center rounded-xl bg-ink/[0.07]">

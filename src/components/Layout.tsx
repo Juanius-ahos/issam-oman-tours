@@ -3,7 +3,7 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { config, whatsappUrl } from '../config';
 import { useI18n } from '../i18n';
-import { BASE, homePath, type Route } from '../routes';
+import { homePath, type Route } from '../routes';
 import { Smooth } from '../motion/gsap';
 import { Icon, type IconName } from './Icon';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -57,12 +57,33 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
   const [menuOpen, setMenuOpen] = useState(false);
   const [showFloat, setShowFloat] = useState(!isHome);
 
+  // The floating WhatsApp button: after the hero on home, and out of the way
+  // wherever the page already shows its own WhatsApp and request buttons.
   useEffect(() => {
-    if (!isHome) return;
-    const onScroll = () => setShowFloat(window.scrollY > window.innerHeight * 0.8);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    const own = [...document.querySelectorAll('#plan, #also, footer, [data-own-cta]')];
+    const inView = new Set<Element>();
+    // Reading downward it steps aside; scrolling back up (looking for it) brings it back.
+    let lastY = window.scrollY;
+    let down = false;
+    const update = () => {
+      const y = window.scrollY;
+      if (Math.abs(y - lastY) > 6) {
+        down = y > lastY;
+        lastY = y;
+      }
+      setShowFloat((!isHome || y > window.innerHeight * 0.8) && inView.size === 0 && !down);
+    };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => (e.isIntersecting ? inView.add(e.target) : inView.delete(e.target)));
+      update();
+    });
+    own.forEach((el) => io.observe(el));
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    return () => {
+      io.disconnect();
+      window.removeEventListener('scroll', update);
+    };
   }, [isHome]);
 
   // Tour pages have no hero to collapse: the sidebar is simply there.
@@ -194,10 +215,6 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
           <WaButton location="sidebar" />
         </div>
       </aside>
-
-      <div className="bg-figure" aria-hidden="true">
-        <img src={`${BASE}media/issam-portrait.webp`} width={867} height={1376} alt="" loading="lazy" decoding="async" />
-      </div>
 
       {/* The home hero spans the full width; everything else sits beside the sidebar (.content). */}
       <main id="main">{children}</main>

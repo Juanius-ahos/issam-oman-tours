@@ -12,7 +12,7 @@ function Odometer({ value, suffix = '' }: { value: number; suffix?: string }) {
   return (
     <>
       <span className="sr-only">{text}</span>
-      <span className="odo" aria-hidden="true">
+      <span className="odo" dir="ltr" aria-hidden="true">
         {value
           .toLocaleString('en-US')
           .split('')
@@ -76,11 +76,11 @@ export function Counters() {
   return (
     <section ref={root} className="border-y border-ink/10 px-[var(--gutter)] py-[clamp(60px,9vh,110px)]" aria-label={m.counters.eyebrow}>
       <p className="eyebrow mb-8">{m.counters.eyebrow}</p>
-      <dl className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4">
+      <dl className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-[repeat(4,auto)] lg:justify-between lg:gap-x-10">
         {items.map((it) => (
           <div key={it.label} className="grid gap-2">
             <dt className="order-2 text-[11px] font-extrabold uppercase tracking-[0.17em] text-ink/75 [text-transform:var(--upper)]">{it.label}</dt>
-            <dd className="order-1 text-[clamp(44px,4.8vw,84px)] font-black leading-[0.9] tracking-[-0.055em] text-accent-deep">
+            <dd className="order-1 text-[clamp(44px,4.4vw,84px)] font-black whitespace-nowrap leading-[0.9] tracking-[-0.055em] text-accent-deep">
               <Odometer value={it.value} suffix={it.suffix} />
             </dd>
           </div>

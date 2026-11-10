@@ -53,14 +53,14 @@ export function Reviews() {
         <h2 className="section-title">{m.reviews.title}</h2>
         <p className="section-lead">{m.reviews.note}</p>
       </header>
-      <ul ref={hand} className="hand">
+      <ul ref={hand} className="hand" style={{ ['--n' as string]: m.reviews.items.length }}>
         {m.reviews.items.map((r, i, all) => {
           const f = fan(i, all.length);
           return (
           <li
             key={i}
             className="hand-card transition-transform duration-200 ease-out"
-            style={{ ['--rot' as string]: `${f.rot}deg`, ['--lift' as string]: f.lift, ['--z' as string]: f.z, ['--overlap' as string]: i ? '-46px' : '0' }}
+            style={{ ['--rot' as string]: `${f.rot}deg`, ['--lift' as string]: f.lift, ['--z' as string]: f.z, ['--overlap' as string]: i ? 'var(--fan-gap)' : '0' }}
             onPointerMove={tilt}
             onPointerLeave={reset}
           >
