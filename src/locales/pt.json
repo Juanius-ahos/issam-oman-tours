@@ -112,13 +112,13 @@
   },
   "tours": {
     "eyebrow": "Os passeios",
-    "title": "Quatro dias para conhecer Omã",
-    "lead": "Todos os passeios são privados e personalizáveis. Comece por um deles, combine vários numa viagem de vários dias ou pergunte por Mascate ou Nizwa à noite.",
+    "title": "Oito maneiras de conhecer Omã",
+    "lead": "Cada tour é privado e personalizável. Escolha um dia ou uma noite, ou junte vários numa viagem circular de alguns dias.",
     "view": "Ver passeio",
     "videoLabel": "Vídeo",
     "mapTitle": "Os percursos",
     "mapHint": "Deslize para sobrevoar os percursos",
-    "mapFallback": "Mapa do norte de Omã com os quatro percursos",
+    "mapFallback": "Mapa do norte de Omã com as rotas dos tours",
     "items": {
       "muscat-city": {
         "name": "Mascate autêntica",
@@ -301,6 +301,162 @@
         ],
         "extras": [
           "Bimmah Sinkhole"
+        ]
+      },
+      "muscat-night": {
+        "name": "Mascate à noite",
+        "short": "A capital depois de escurecer: a Ópera iluminada, a Corniche de Mutrah e o souq ao fim do dia.",
+        "seoTitle": "Tour privado de Mascate à noite em português",
+        "seoDescription": "Tour privado de Mascate à noite com Issam (The Languages Ninja) em português: a Royal Opera House iluminada, a Corniche de Mutrah e o souq ao fim do dia. Recolha onde estiver hospedado.",
+        "intro": "Mascate muda depois do pôr do sol. Quando o calor baixa, Issam leva-o pela marginal iluminada de Mutrah, ao souq da noite e diante do palácio da velha Mascate.",
+        "duration": "Uma noite, combinada na reserva",
+        "distance": "Cerca de 70 km ida e volta",
+        "bestTime": "De setembro a maio, ao fim do dia",
+        "difficulty": "Fácil, para todos",
+        "group": "Privado, de 1 a 45 viajantes",
+        "stops": [
+          {
+            "name": "Royal Opera House Mascate",
+            "note": "A ópera, iluminada à noite."
+          },
+          {
+            "name": "Corniche de Mutrah",
+            "note": "A marginal junto ao velho porto."
+          },
+          {
+            "name": "Souq de Mutrah",
+            "note": "Incenso, prata e chá karak ao fim do dia."
+          },
+          {
+            "name": "Velha Mascate e Palácio Al Alam",
+            "note": "O palácio e os fortes sobre a baía, iluminados à noite."
+          }
+        ],
+        "included": [
+          "Guia privado no seu idioma",
+          "Recolha e regresso onde estiver hospedado",
+          "Detalhes combinados na reserva"
+        ],
+        "notIncluded": [
+          "Tudo o que não estiver combinado no seu plano"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "nizwa-night": {
+        "name": "Nizwa à noite",
+        "short": "A antiga capital à noite, com o forte de Nizwa iluminado sobre o souq.",
+        "seoTitle": "Tour privado de Nizwa à noite em português",
+        "seoDescription": "Tour privado de Nizwa à noite a partir de Mascate com Issam (The Languages Ninja) em português: o forte de Nizwa iluminado e o souq ao fim do dia. Recolha onde estiver hospedado.",
+        "intro": "Nizwa ao fim do dia, quando a torre redonda do forte brilha contra o céu noturno e as ruelas do souq à volta ficam abertas até tarde.",
+        "duration": "Uma noite, combinada na reserva",
+        "distance": "Cerca de 320 km ida e volta a partir de Mascate",
+        "bestTime": "Todo o ano",
+        "difficulty": "Fácil, caminhadas curtas",
+        "group": "Privado, de 1 a 45 viajantes",
+        "stops": [
+          {
+            "name": "Forte de Nizwa",
+            "note": "A grande torre redonda, iluminada à noite."
+          },
+          {
+            "name": "Souq de Nizwa",
+            "note": "As ruelas à volta do forte ao fim do dia."
+          }
+        ],
+        "included": [
+          "Guia privado no seu idioma",
+          "Recolha e regresso onde estiver hospedado",
+          "Detalhes combinados na reserva"
+        ],
+        "notIncluded": [
+          "Tudo o que não estiver combinado no seu plano"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "al-hamra": {
+        "name": "Aldeia antiga de Al Hamra",
+        "short": "Uma das aldeias de adobe mais bem conservadas de Omã, aos pés das montanhas Hajar.",
+        "seoTitle": "Tour privado à aldeia antiga de Al Hamra em português",
+        "seoDescription": "Passeio privado de um dia a partir de Mascate à antiga aldeia de adobe de Al Hamra com Issam (The Languages Ninja) em português, com Misfat Al Abriyeen a pedido. Recolha onde estiver hospedado.",
+        "intro": "O bairro antigo de Al Hamra é uma aldeia de casas altas de adobe que descem até aos palmeirais, com as montanhas Hajar por trás. Issam guia-o pelas suas ruelas e, a pedido, sobe consigo a Misfat Al Abriyeen.",
+        "duration": "Um dia, combinado na reserva",
+        "distance": "Cerca de 450 km ida e volta a partir de Mascate",
+        "bestTime": "Todo o ano",
+        "difficulty": "Moderada, alguma caminhada",
+        "group": "Privado, de 1 a 45 viajantes",
+        "stops": [
+          {
+            "name": "Aldeia antiga de Al Hamra",
+            "note": "Casas de adobe de vários andares sobre os palmeirais."
+          },
+          {
+            "name": "Bait Al Safah",
+            "note": "Uma casa restaurada que mostra a vida da aldeia como era."
+          },
+          {
+            "name": "Misfat Al Abriyeen",
+            "note": "A pedido: uma aldeia na encosta com socalcos e um falaj."
+          }
+        ],
+        "included": [
+          "Guia privado no seu idioma",
+          "Recolha e regresso onde estiver hospedado",
+          "Detalhes combinados na reserva"
+        ],
+        "notIncluded": [
+          "Tudo o que não estiver combinado no seu plano"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "multi-day": {
+        "name": "Volta a Omã em vários dias",
+        "short": "Nizwa, Al Hamra, o deserto de Wahiba e Wadi Shab numa só viagem privada de vários dias.",
+        "seoTitle": "Volta privada a Omã em vários dias em português",
+        "seoDescription": "Viagem circular privada de vários dias por Omã com Issam (The Languages Ninja) em português: Nizwa, Al Hamra, o deserto de Wahiba, Wadi Shab e Sur, planeada consigo e com ajuda para reservar hotéis.",
+        "intro": "Vários dias na estrada com um só guia. Issam junta os tours numa viagem circular, planeia a ordem consigo e ajuda-o a reservar os hotéis pelo caminho.",
+        "duration": "Vários dias, planeados consigo",
+        "distance": "Cerca de 840 km na volta completa",
+        "bestTime": "De setembro a maio",
+        "difficulty": "Pensada para o seu grupo",
+        "group": "Privado, de 1 a 45 viajantes",
+        "stops": [
+          {
+            "name": "Nizwa",
+            "note": "A antiga capital e o seu forte."
+          },
+          {
+            "name": "Al Hamra",
+            "note": "A velha aldeia de adobe sob as montanhas."
+          },
+          {
+            "name": "Deserto de Wahiba",
+            "note": "Um dia e um pôr do sol nas dunas."
+          },
+          {
+            "name": "Wadi Shab",
+            "note": "Uma caminhada pelo desfiladeiro e piscinas naturais."
+          },
+          {
+            "name": "Sur",
+            "note": "A cidade costeira dos construtores de dhows."
+          }
+        ],
+        "included": [
+          "Guia privado no seu idioma",
+          "Recolha e regresso onde estiver hospedado",
+          "Ajuda para reservar hotéis pelo caminho",
+          "Detalhes combinados na reserva"
+        ],
+        "notIncluded": [
+          "Tudo o que não estiver combinado no seu plano"
+        ],
+        "bring": [],
+        "extras": [
+          "Mascate à noite",
+          "Passeio de camelo, moto-quatro ou dune bashing"
         ]
       }
     }

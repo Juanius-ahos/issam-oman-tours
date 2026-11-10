@@ -14,7 +14,7 @@ const same = (path, value) =>
   /^_status$|\.lang$|\.quote$|^reviews\.items\.\d+\.quote|tagline|siteName|avatarLabel|logoLabel|\.year$/.test(path) ||
   /^[\d\s.,:+\-/()]*$/.test(value) ||
   // Words that are spelled the same in the target language.
-  /^(Issam|Ninja|Tour|Tours|Home|Questions|Distance|Video|Wadi Shab|Wadi Bani Khalid|Bimmah Sinkhole|Sur|Birkat Al Mawz|Quad|Dune bashing|Logo|Menu|FAQ|Toyota 4x4)$/i.test(value);
+  /^(Issam|Ninja|Tour|Tours|Home|Questions|Distance|Video|Wadi Shab|Wadi Bani Khalid|Bimmah Sinkhole|Sur|Birkat Al Mawz|Bait Al Safah|Misfat Al Abriyeen|Nizwa|Al Hamra|Quad|Dune bashing|Logo|Menu|FAQ|Toyota 4x4)$/i.test(value);
 
 const problems = [];
 function walk(a, b, path, code, strict) {

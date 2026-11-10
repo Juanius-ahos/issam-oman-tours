@@ -112,13 +112,13 @@
   },
   "tours": {
     "eyebrow": "Els tours",
-    "title": "Quatre dies per conèixer Oman",
-    "lead": "Tots els tours són privats i a mida. Comença per un d'aquests, combina'n uns quants en un viatge de diversos dies o pregunta per Mascat o Nizwa de nit.",
+    "title": "Vuit maneres de veure Oman",
+    "lead": "Cada tour és privat i personalitzable. Tria un dia o un vespre, o uneix-ne uns quants en un viatge circular de pocs dies.",
     "view": "Veure el tour",
     "videoLabel": "Vídeo",
     "mapTitle": "Les rutes",
     "mapHint": "Desplaça't per sobrevolar les rutes",
-    "mapFallback": "Mapa del nord d'Oman amb les quatre rutes",
+    "mapFallback": "Mapa del nord d’Oman amb les rutes dels tours",
     "items": {
       "muscat-city": {
         "name": "Mascat autèntica",
@@ -301,6 +301,162 @@
         ],
         "extras": [
           "Bimmah Sinkhole"
+        ]
+      },
+      "muscat-night": {
+        "name": "Mascat de nit",
+        "short": "La capital quan es fa fosc: l’Òpera il·luminada, la Corniche de Mutrah i el soc al vespre.",
+        "seoTitle": "Tour privat de Mascat de nit en català",
+        "seoDescription": "Tour privat de Mascat de nit amb Issam (The Languages Ninja) en català: la Royal Opera House il·luminada, la Corniche de Mutrah i el soc al vespre. Recollida allà on t’allotgis.",
+        "intro": "Mascat canvia quan es pon el sol. Quan baixa la calor, Issam et porta pel passeig marítim il·luminat de Mutrah, al soc del vespre i davant del palau del vell Mascat.",
+        "duration": "Un vespre, a concretar en reservar",
+        "distance": "Uns 70 km anada i tornada",
+        "bestTime": "De setembre a maig, al vespre",
+        "difficulty": "Fàcil, per a tothom",
+        "group": "Privat, d’1 a 45 viatgers",
+        "stops": [
+          {
+            "name": "Royal Opera House Mascat",
+            "note": "L’òpera, il·luminada de nit."
+          },
+          {
+            "name": "Corniche de Mutrah",
+            "note": "El passeig marítim al costat del vell port."
+          },
+          {
+            "name": "Soc de Mutrah",
+            "note": "Encens, plata i te karak al vespre."
+          },
+          {
+            "name": "Vell Mascat i Palau Al Alam",
+            "note": "El palau i els forts sobre la badia, il·luminats de nit."
+          }
+        ],
+        "included": [
+          "Guia privat en el teu idioma",
+          "Recollida i tornada allà on t’allotgis",
+          "Detalls acordats en reservar"
+        ],
+        "notIncluded": [
+          "Tot el que no estigui acordat en el teu pla"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "nizwa-night": {
+        "name": "Nizwa de nit",
+        "short": "L’antiga capital de nit, amb el fort de Nizwa il·luminat sobre el soc.",
+        "seoTitle": "Tour privat de Nizwa de nit en català",
+        "seoDescription": "Tour privat de Nizwa de nit des de Mascat amb Issam (The Languages Ninja) en català: el fort de Nizwa il·luminat i el soc al vespre. Recollida allà on t’allotgis.",
+        "intro": "Nizwa al vespre, quan la torre rodona del fort brilla contra el cel nocturn i els carrerons del soc queden oberts fins tard.",
+        "duration": "Un vespre, a concretar en reservar",
+        "distance": "Uns 320 km anada i tornada des de Mascat",
+        "bestTime": "Tot l’any",
+        "difficulty": "Fàcil, passejades curtes",
+        "group": "Privat, d’1 a 45 viatgers",
+        "stops": [
+          {
+            "name": "Fort de Nizwa",
+            "note": "La gran torre rodona, il·luminada de nit."
+          },
+          {
+            "name": "Soc de Nizwa",
+            "note": "Els carrerons al voltant del fort al vespre."
+          }
+        ],
+        "included": [
+          "Guia privat en el teu idioma",
+          "Recollida i tornada allà on t’allotgis",
+          "Detalls acordats en reservar"
+        ],
+        "notIncluded": [
+          "Tot el que no estigui acordat en el teu pla"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "al-hamra": {
+        "name": "Poble antic d’Al Hamra",
+        "short": "Un dels pobles de tova més ben conservats d’Oman, als peus de les muntanyes Hajar.",
+        "seoTitle": "Tour privat al poble antic d’Al Hamra en català",
+        "seoDescription": "Excursió privada d’un dia des de Mascat al vell poble de tova d’Al Hamra amb Issam (The Languages Ninja) en català, amb Misfat Al Abriyeen si ho demanes. Recollida allà on t’allotgis.",
+        "intro": "El barri antic d’Al Hamra és un poble de cases altes de tova que baixen cap als palmerars, amb les muntanyes Hajar al darrere. Issam et guia pels seus carrerons i, si ho demanes, puja amb tu a Misfat Al Abriyeen.",
+        "duration": "Un dia, a concretar en reservar",
+        "distance": "Uns 450 km anada i tornada des de Mascat",
+        "bestTime": "Tot l’any",
+        "difficulty": "Moderada, una mica de caminada",
+        "group": "Privat, d’1 a 45 viatgers",
+        "stops": [
+          {
+            "name": "Poble antic d’Al Hamra",
+            "note": "Cases de tova de diversos pisos sobre els palmerars."
+          },
+          {
+            "name": "Bait Al Safah",
+            "note": "Una casa restaurada que mostra la vida del poble com era."
+          },
+          {
+            "name": "Misfat Al Abriyeen",
+            "note": "A petició: un poble al vessant de la muntanya amb terrasses i un falaj."
+          }
+        ],
+        "included": [
+          "Guia privat en el teu idioma",
+          "Recollida i tornada allà on t’allotgis",
+          "Detalls acordats en reservar"
+        ],
+        "notIncluded": [
+          "Tot el que no estigui acordat en el teu pla"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "multi-day": {
+        "name": "Volta a Oman de diversos dies",
+        "short": "Nizwa, Al Hamra, el desert de Wahiba i Wadi Shab en un sol viatge privat de diversos dies.",
+        "seoTitle": "Volta privada a Oman de diversos dies en català",
+        "seoDescription": "Viatge circular privat de diversos dies per Oman amb Issam (The Languages Ninja) en català: Nizwa, Al Hamra, el desert de Wahiba, Wadi Shab i Sur, planificat amb tu i amb ajuda per reservar hotels.",
+        "intro": "Diversos dies de ruta amb un sol guia. Issam uneix els tours en un viatge circular, planifica l’ordre amb tu i t’ajuda a reservar els hotels pel camí.",
+        "duration": "Diversos dies, planificats amb tu",
+        "distance": "Uns 840 km la volta completa",
+        "bestTime": "De setembre a maig",
+        "difficulty": "Pensada per al teu grup",
+        "group": "Privat, d’1 a 45 viatgers",
+        "stops": [
+          {
+            "name": "Nizwa",
+            "note": "L’antiga capital i el seu fort."
+          },
+          {
+            "name": "Al Hamra",
+            "note": "El vell poble de tova sota les muntanyes."
+          },
+          {
+            "name": "Desert de Wahiba",
+            "note": "Un dia i una posta de sol entre les dunes."
+          },
+          {
+            "name": "Wadi Shab",
+            "note": "Una caminada pel canyó i gorgs naturals."
+          },
+          {
+            "name": "Sur",
+            "note": "La ciutat costanera dels constructors de dhows."
+          }
+        ],
+        "included": [
+          "Guia privat en el teu idioma",
+          "Recollida i tornada allà on t’allotgis",
+          "Ajuda per reservar hotels pel camí",
+          "Detalls acordats en reservar"
+        ],
+        "notIncluded": [
+          "Tot el que no estigui acordat en el teu pla"
+        ],
+        "bring": [],
+        "extras": [
+          "Mascat de nit",
+          "Passeig en camell, quad o dune bashing"
         ]
       }
     }

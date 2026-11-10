@@ -55,11 +55,13 @@ Done: Steps 1 to 3 of the original brief, plus a live preview.
 - GA4 (`VITE_GA_ID`), loaded after the first interaction, with events `whatsapp_click` (param `location`) and `tour_request_submit`.
 - **Lighthouse mobile** (preview build): home Performance 97 / Accessibility 96 / Best Practices 100 / SEO 100; tour page 96 / 100 / 100 / 100. Baseline merheb.xyz: Performance 55, LCP 18.8 s. The Arabic page shows SEO 66 only because TODO locales are `noindex` on purpose.
 
-Hero portrait added 2026-11-09 (`public/media/issam-portrait*.webp`), also used as the faint fixed figure behind later sections on desktop.
+Hero portrait added 2026-11-09 (`public/media/issam-portrait*.webp`). The faint fixed silhouette behind later sections was removed on 2026-11-10 (the user saw it as a broken overlay).
+
+**2026-11-10, later:** live on omanwithissam.com. 8 tours (4 new: `muscat-night`, `nizwa-night`, `al-hamra`, `multi-day`), 108 pages. New tours use only Issam's names plus real places; durations he did not give read "agreed when you book", and empty `bring` / `extras` lists are hidden on the tour page. Their routes are real OSRM roads, photos from Wikimedia Commons (credits in `src/data/photos.ts`). QA sweep (`360 / 768 / 1280 px`, all pages, no sideways scroll, no console errors) is clean.
 
 **Issam's questionnaire answers (2026-11-10)** are saved in full in [docs/issam-answers-2026-11.md](docs/issam-answers-2026-11.md): contact, socials, numbers, story, tour facts, prices, policies and 6 real reviews (Spanish and Italian, permission given). They are now in `src/config.ts` and `src/locales/en.json`; the 12 TODO locales were re-copied from English. That file ends with a **Still to confirm** list (the 12th language, Korean and Japanese pages he did not list, exact tour stops, a Wahiba overnight option, deposit, license, Tripadvisor link). **Translation priority (his):** German, then Russian, Spanish, English, Italian, French. **New tours he wants:** Muscat by night, Nizwa by night, Al Hamra old village, multi-day round trips.
 
-Not done (the launch checklist is in README "TODO before launch"): remaining real photos and videos, translations, GA ID, Google Business Profile, the 4 new tours, the items in Still to confirm.
+Not done (the launch checklist is in README "TODO before launch"): remaining real photos and videos, GA ID, Google Search Console, Google Business Profile, Issam's review of the Balochi copy and of the 4 new tours, the items in Still to confirm.
 
 ## Commands
 
@@ -95,6 +97,8 @@ domain and takes the site offline. `build:pages` (base `/issam-oman-tours/`) is 
 - **Measure before mutating** in the ghost engine; never use a negative-margin full-bleed hack on a pinned element (the pin shifted the hero by half the sidebar width). The home hero sits outside the padded `.desk:ps-[var(--nav-w)]` wrapper instead.
 - **Tailwind utilities beat `@layer components`.** A component rule like `display: none` loses to a `flex` utility on the same element; use `!important` there (see `.side-stats`).
 - **Odometer:** keep the real number in an `sr-only` span and the rolling digits `aria-hidden` (aria-label on a plain span fails Lighthouse).
+- **Map labels:** `fitLabels()` in `SatelliteRouteMap.tsx` runs when the camera settles: stop labels flip or hide so they stay inside the map and off each other, and overview tour numbers that overlap merge into one tag.
+- **Floating WhatsApp button (mobile):** hidden near `#plan`, `#also`, the footer and any `[data-own-cta]` section, and while scrolling down.
 - **Hero portrait stacking:** the flying wordmark is a sidebar node (z 70), above the whole hero, and a pinned hero is its own stacking context. `ghost.ts` therefore splits the portrait at the wordmark's bottom edge: a clone on `body` (z 71) above the seam, the hero image below it, so the figure stays in front of the letters and the CTA and stat cards stay on top.
 - `?debug` on any URL exposes `window.gsap` and `window.ScrollTrigger` for inspecting triggers in the console.
 

@@ -112,13 +112,13 @@
   },
   "tours": {
     "eyebrow": "The tours",
-    "title": "Four days that show you Oman",
-    "lead": "Every tour is private and customizable. Start with one of these, combine them into a trip of several days, or ask about Muscat or Nizwa by night.",
+    "title": "Eight ways to see Oman",
+    "lead": "Every tour is private and customizable. Pick a day or an evening, or join several into a round trip of a few days.",
     "view": "View tour",
     "videoLabel": "Video loop",
     "mapTitle": "The routes",
     "mapHint": "Scroll to fly the routes",
-    "mapFallback": "Map of northern Oman showing the four tour routes",
+    "mapFallback": "Map of northern Oman showing the tour routes",
     "items": {
       "muscat-city": {
         "name": "Muscat Authentic City Tour",
@@ -301,6 +301,162 @@
         ],
         "extras": [
           "Bimmah Sinkhole"
+        ]
+      },
+      "muscat-night": {
+        "name": "Muscat by Night",
+        "short": "The capital after dark: the Opera House lit up, the Mutrah Corniche and the souq in the evening.",
+        "seoTitle": "Private Muscat by Night Tour",
+        "seoDescription": "Private Muscat by night tour with Issam (The Languages Ninja) in your language: the Royal Opera House lit up, the Mutrah Corniche and the souq in the evening. Pickup wherever you stay.",
+        "intro": "Muscat changes after sunset. When the heat drops, Issam takes you along the lit seafront of Mutrah, into the evening souq and past the palace in old Muscat.",
+        "duration": "An evening, agreed when you book",
+        "distance": "About 70 km round trip",
+        "bestTime": "September to May, evenings",
+        "difficulty": "Easy, suits everyone",
+        "group": "Private, 1 to 45 travelers",
+        "stops": [
+          {
+            "name": "Royal Opera House Muscat",
+            "note": "The opera house, lit up at night."
+          },
+          {
+            "name": "Mutrah Corniche",
+            "note": "The seafront promenade along the old harbour."
+          },
+          {
+            "name": "Mutrah Souq",
+            "note": "Frankincense, silver and karak tea in the evening."
+          },
+          {
+            "name": "Old Muscat and Al Alam Palace",
+            "note": "The palace and the forts above the bay, lit after dark."
+          }
+        ],
+        "included": [
+          "Private guide in your language",
+          "Pickup and drop-off wherever you stay",
+          "Details agreed when you book"
+        ],
+        "notIncluded": [
+          "Anything not agreed in your plan"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "nizwa-night": {
+        "name": "Nizwa by Night",
+        "short": "The old capital after dark, with Nizwa Fort lit up above the souq.",
+        "seoTitle": "Private Nizwa by Night Tour",
+        "seoDescription": "Private Nizwa by night tour from Muscat with Issam (The Languages Ninja) in your language: Nizwa Fort lit up and the souq around it in the evening. Pickup wherever you stay.",
+        "intro": "Nizwa in the evening, when the round tower of the fort glows against the night sky and the lanes of the souq around it stay open late.",
+        "duration": "An evening, agreed when you book",
+        "distance": "About 320 km round trip from Muscat",
+        "bestTime": "All year",
+        "difficulty": "Easy, short walks",
+        "group": "Private, 1 to 45 travelers",
+        "stops": [
+          {
+            "name": "Nizwa Fort",
+            "note": "The great round tower, lit at night."
+          },
+          {
+            "name": "Nizwa Souq",
+            "note": "The lanes around the fort in the evening."
+          }
+        ],
+        "included": [
+          "Private guide in your language",
+          "Pickup and drop-off wherever you stay",
+          "Details agreed when you book"
+        ],
+        "notIncluded": [
+          "Anything not agreed in your plan"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "al-hamra": {
+        "name": "Al Hamra Old Village",
+        "short": "One of the best preserved mud-brick villages in Oman, below the Hajar mountains.",
+        "seoTitle": "Private Al Hamra Old Village Tour",
+        "seoDescription": "Private day trip from Muscat to the old mud-brick village of Al Hamra with Issam (The Languages Ninja) in your language, with Misfat Al Abriyeen on request. Pickup wherever you stay.",
+        "intro": "The old quarter of Al Hamra is a village of tall mud-brick houses stepping down to the palm groves, with the Hajar mountains behind. Issam walks you through its lanes, and on request takes you up to Misfat Al Abriyeen nearby.",
+        "duration": "A day, agreed when you book",
+        "distance": "About 450 km round trip from Muscat",
+        "bestTime": "All year",
+        "difficulty": "Moderate, some walking",
+        "group": "Private, 1 to 45 travelers",
+        "stops": [
+          {
+            "name": "Al Hamra old village",
+            "note": "Mud-brick houses several storeys high, above the palm groves."
+          },
+          {
+            "name": "Bait Al Safah",
+            "note": "A restored house that shows village life as it was."
+          },
+          {
+            "name": "Misfat Al Abriyeen",
+            "note": "On request: a mountainside village with terraces and a falaj."
+          }
+        ],
+        "included": [
+          "Private guide in your language",
+          "Pickup and drop-off wherever you stay",
+          "Details agreed when you book"
+        ],
+        "notIncluded": [
+          "Anything not agreed in your plan"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "multi-day": {
+        "name": "Oman Round Trip, Several Days",
+        "short": "Join Nizwa, Al Hamra, the Wahiba Sands and Wadi Shab into one private trip of several days.",
+        "seoTitle": "Private Multi-Day Oman Round Trip",
+        "seoDescription": "Private round trip of several days across Oman with Issam (The Languages Ninja) in your language: Nizwa, Al Hamra, the Wahiba Sands, Wadi Shab and Sur, planned with you, with help booking hotels.",
+        "intro": "Several days on the road with one guide. Issam joins the tours into a round trip, plans the order with you and helps you book the hotels on the way.",
+        "duration": "Several days, planned with you",
+        "distance": "About 840 km for the full loop",
+        "bestTime": "September to May",
+        "difficulty": "Planned around your group",
+        "group": "Private, 1 to 45 travelers",
+        "stops": [
+          {
+            "name": "Nizwa",
+            "note": "The old capital and its fort."
+          },
+          {
+            "name": "Al Hamra",
+            "note": "The old mud-brick village below the mountains."
+          },
+          {
+            "name": "Wahiba Sands",
+            "note": "A day and a sunset in the dunes."
+          },
+          {
+            "name": "Wadi Shab",
+            "note": "A canyon walk and natural pools."
+          },
+          {
+            "name": "Sur",
+            "note": "The coastal town of the dhow builders."
+          }
+        ],
+        "included": [
+          "Private guide in your language",
+          "Pickup and drop-off wherever you stay",
+          "Help booking hotels on the way",
+          "Details agreed when you book"
+        ],
+        "notIncluded": [
+          "Anything not agreed in your plan"
+        ],
+        "bring": [],
+        "extras": [
+          "Muscat by night",
+          "Camel ride, quad or dune bashing"
         ]
       }
     }

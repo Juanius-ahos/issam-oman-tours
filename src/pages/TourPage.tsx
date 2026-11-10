@@ -123,7 +123,9 @@ export function TourPage({ slug }: { slug: TourSlug }) {
           { title: p.notIncluded, items: t.notIncluded, icon: 'minus' as const, tone: 'bg-ink/10 text-ink' },
           { title: p.bring, items: t.bring, icon: 'check' as const, tone: 'bg-amber/30 text-ink' },
           { title: p.extras, items: t.extras, icon: 'plus' as const, tone: 'bg-accent/15 text-accent-deep' },
-        ].map((col) => (
+        ]
+          .filter((col) => col.items.length > 0)
+          .map((col) => (
           <div key={col.title}>
             <h2 className="text-[clamp(24px,2.4vw,34px)] font-black tracking-[-0.03em]">{col.title}</h2>
             <ul className="mt-5 grid gap-3 border-t border-ink/15 pt-5">

@@ -138,3 +138,4 @@ All guests agreed to publication. Reviews are also on Tripadvisor (no link given
 5. Deposit amount, reply time, license number, insurance, Tripadvisor link, "tv2 Spain" (which channel), reviewer first names and countries.
 
 - **Balochi copy (`src/locales/bal.json`)** was drafted without a native speaker. Issam should read the /bal/ pages and send corrections before launch.
+- **New tours (built 2026-11-10 from his names only):** Muscat by night, Nizwa by night, Al Hamra old village, multi-day round trip. Please confirm for each: duration and start time, stops, what is included, what to bring, and price if different from USD 200.

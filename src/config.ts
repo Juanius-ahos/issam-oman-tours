@@ -115,7 +115,7 @@ export type Locale = (typeof locales)[number]['code'];
 export const defaultLocale: Locale = 'en';
 
 /** Tour slugs in display order. Content for each lives under "tours" in the locale JSON. */
-export const tourSlugs = ['muscat-city', 'nizwa-mountains', 'wahiba-desert', 'wadi-shab-coast'] as const;
+export const tourSlugs = ['muscat-city', 'nizwa-mountains', 'wahiba-desert', 'wadi-shab-coast', 'muscat-night', 'nizwa-night', 'al-hamra', 'multi-day'] as const;
 export type TourSlug = (typeof tourSlugs)[number];
 
 export function whatsappUrl(text?: string) {

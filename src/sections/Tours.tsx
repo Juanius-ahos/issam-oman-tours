@@ -65,7 +65,7 @@ export function Tours() {
             scrub: 1,
             invalidateOnRefresh: true,
             onUpdate: (st) => {
-              setActive(tourSlugs[Math.min(3, Math.floor(st.progress * 4))]);
+              setActive(tourSlugs[Math.min(tourSlugs.length - 1, Math.floor(st.progress * tourSlugs.length))]);
             },
             onLeaveBack: () => setActive(null),
           },

@@ -69,6 +69,52 @@ export const tourGeo: Record<TourSlug, TourGeo> = {
     ],
     hue: 'ink',
   },
+  'muscat-night': {
+    slug: 'muscat-night',
+    index: '05',
+    start: MUSCAT,
+    stops: [
+      [58.4689, 23.6144], // Royal Opera House
+      [58.565, 23.617], // Mutrah Corniche
+      [58.565, 23.6153], // Mutrah Souq
+      [58.5937, 23.6145], // Al Alam Palace
+    ],
+    hue: 'accent',
+  },
+  'nizwa-night': {
+    slug: 'nizwa-night',
+    index: '06',
+    start: MUSCAT,
+    stops: [
+      [57.5297, 22.9333], // Nizwa Fort
+      [57.531, 22.9318], // Nizwa Souq
+    ],
+    hue: 'deep',
+  },
+  'al-hamra': {
+    slug: 'al-hamra',
+    index: '07',
+    start: MUSCAT,
+    stops: [
+      [57.2836, 23.1214], // Al Hamra old village
+      [57.2828, 23.119], // Bait Al Safah
+      [57.2925, 23.1386], // Misfat Al Abriyeen
+    ],
+    hue: 'amber',
+  },
+  'multi-day': {
+    slug: 'multi-day',
+    index: '08',
+    start: MUSCAT,
+    stops: [
+      [57.5297, 22.9333], // Nizwa
+      [57.2836, 23.1214], // Al Hamra
+      [58.8833, 22.4667], // Wahiba Sands, Al Wasil
+      [59.2436, 22.8386], // Wadi Shab
+      [59.5289, 22.5667], // Sur
+    ],
+    hue: 'ink',
+  },
 };
 
 /** Per tour: a real photo now. Add webm and mp4 from Issam's footage and the video takes over. */
@@ -77,6 +123,10 @@ export const tourMedia: Record<TourSlug, { webm?: string; mp4?: string; poster?:
   'nizwa-mountains': { poster: photoSrc('nizwa-fort') },
   'wahiba-desert': { poster: photoSrc('wahiba-dune-drive') },
   'wadi-shab-coast': { poster: photoSrc('wadi-shab') },
+  'muscat-night': { poster: photoSrc('muscat-corniche-night') },
+  'nizwa-night': { poster: photoSrc('nizwa-night') },
+  'al-hamra': { poster: photoSrc('al-hamra') },
+  'multi-day': { poster: photoSrc('wahiba-sunset') },
 };
 
 /** Map extent (northern Oman) used by both the SVG fallback and the 3D terrain. */

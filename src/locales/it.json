@@ -112,13 +112,13 @@
   },
   "tours": {
     "eyebrow": "I tour",
-    "title": "Quattro giornate per scoprire l'Oman",
-    "lead": "Ogni tour è privato e su misura. Inizia da uno di questi, combinali in un viaggio di più giorni o chiedi di Mascate e Nizwa di sera.",
+    "title": "Otto modi di vedere l’Oman",
+    "lead": "Ogni tour è privato e personalizzabile. Scegli un giorno o una sera, oppure unisci più tour in un viaggio ad anello di qualche giorno.",
     "view": "Vedi il tour",
     "videoLabel": "Video",
     "mapTitle": "I percorsi",
     "mapHint": "Scorri per sorvolare i percorsi",
-    "mapFallback": "Mappa dell'Oman settentrionale con i quattro percorsi",
+    "mapFallback": "Mappa dell’Oman settentrionale con i percorsi dei tour",
     "items": {
       "muscat-city": {
         "name": "Tour autentico di Mascate",
@@ -301,6 +301,162 @@
         ],
         "extras": [
           "Bimmah Sinkhole"
+        ]
+      },
+      "muscat-night": {
+        "name": "Mascate di notte",
+        "short": "La capitale dopo il tramonto: il Teatro dell’Opera illuminato, la Corniche di Mutrah e il suq di sera.",
+        "seoTitle": "Tour privato di Mascate di notte in italiano",
+        "seoDescription": "Tour privato di Mascate di notte con Issam (The Languages Ninja) in italiano: la Royal Opera House illuminata, la Corniche di Mutrah e il suq di sera. Prelievo dove alloggi.",
+        "intro": "Mascate cambia dopo il tramonto. Quando il caldo cala, Issam ti accompagna lungo il lungomare illuminato di Mutrah, nel suq serale e davanti al palazzo della vecchia Mascate.",
+        "duration": "Una serata, da concordare alla prenotazione",
+        "distance": "Circa 70 km andata e ritorno",
+        "bestTime": "Da settembre a maggio, di sera",
+        "difficulty": "Facile, adatto a tutti",
+        "group": "Privato, da 1 a 45 viaggiatori",
+        "stops": [
+          {
+            "name": "Royal Opera House Mascate",
+            "note": "Il teatro dell’opera, illuminato di notte."
+          },
+          {
+            "name": "Corniche di Mutrah",
+            "note": "Il lungomare accanto al vecchio porto."
+          },
+          {
+            "name": "Suq di Mutrah",
+            "note": "Incenso, argento e tè karak di sera."
+          },
+          {
+            "name": "Vecchia Mascate e Palazzo Al Alam",
+            "note": "Il palazzo e i forti sopra la baia, illuminati di notte."
+          }
+        ],
+        "included": [
+          "Guida privata nella tua lingua",
+          "Prelievo e rientro dove alloggi",
+          "Dettagli concordati alla prenotazione"
+        ],
+        "notIncluded": [
+          "Tutto ciò che non è concordato nel tuo programma"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "nizwa-night": {
+        "name": "Nizwa di notte",
+        "short": "L’antica capitale di notte, con il forte di Nizwa illuminato sopra il suq.",
+        "seoTitle": "Tour privato di Nizwa di notte in italiano",
+        "seoDescription": "Tour privato di Nizwa di notte da Mascate con Issam (The Languages Ninja) in italiano: il forte di Nizwa illuminato e il suq di sera. Prelievo dove alloggi.",
+        "intro": "Nizwa di sera, quando la torre rotonda del forte risplende nel cielo notturno e i vicoli del suq intorno restano aperti fino a tardi.",
+        "duration": "Una serata, da concordare alla prenotazione",
+        "distance": "Circa 320 km andata e ritorno da Mascate",
+        "bestTime": "Tutto l’anno",
+        "difficulty": "Facile, brevi passeggiate",
+        "group": "Privato, da 1 a 45 viaggiatori",
+        "stops": [
+          {
+            "name": "Forte di Nizwa",
+            "note": "La grande torre rotonda, illuminata di notte."
+          },
+          {
+            "name": "Suq di Nizwa",
+            "note": "I vicoli intorno al forte di sera."
+          }
+        ],
+        "included": [
+          "Guida privata nella tua lingua",
+          "Prelievo e rientro dove alloggi",
+          "Dettagli concordati alla prenotazione"
+        ],
+        "notIncluded": [
+          "Tutto ciò che non è concordato nel tuo programma"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "al-hamra": {
+        "name": "Villaggio antico di Al Hamra",
+        "short": "Uno dei villaggi di mattoni di fango meglio conservati dell’Oman, ai piedi dei monti Hajar.",
+        "seoTitle": "Tour privato al villaggio antico di Al Hamra in italiano",
+        "seoDescription": "Gita privata di un giorno da Mascate all’antico villaggio di fango di Al Hamra con Issam (The Languages Ninja) in italiano, con Misfat Al Abriyeen su richiesta. Prelievo dove alloggi.",
+        "intro": "Il quartiere antico di Al Hamra è un villaggio di alte case di mattoni di fango che scendono verso i palmeti, con i monti Hajar alle spalle. Issam ti guida tra i suoi vicoli e, su richiesta, ti porta a Misfat Al Abriyeen.",
+        "duration": "Una giornata, da concordare alla prenotazione",
+        "distance": "Circa 450 km andata e ritorno da Mascate",
+        "bestTime": "Tutto l’anno",
+        "difficulty": "Media, un po’ di cammino",
+        "group": "Privato, da 1 a 45 viaggiatori",
+        "stops": [
+          {
+            "name": "Villaggio antico di Al Hamra",
+            "note": "Case di fango a più piani sopra i palmeti."
+          },
+          {
+            "name": "Bait Al Safah",
+            "note": "Una casa restaurata che mostra la vita del villaggio di un tempo."
+          },
+          {
+            "name": "Misfat Al Abriyeen",
+            "note": "Su richiesta: un villaggio sul fianco della montagna con terrazze e un falaj."
+          }
+        ],
+        "included": [
+          "Guida privata nella tua lingua",
+          "Prelievo e rientro dove alloggi",
+          "Dettagli concordati alla prenotazione"
+        ],
+        "notIncluded": [
+          "Tutto ciò che non è concordato nel tuo programma"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "multi-day": {
+        "name": "Tour dell’Oman di più giorni",
+        "short": "Nizwa, Al Hamra, il deserto di Wahiba e Wadi Shab in un unico viaggio privato di più giorni.",
+        "seoTitle": "Tour privato dell’Oman di più giorni in italiano",
+        "seoDescription": "Viaggio privato ad anello di più giorni in Oman con Issam (The Languages Ninja) in italiano: Nizwa, Al Hamra, il deserto di Wahiba, Wadi Shab e Sur, organizzato con te e con aiuto per prenotare gli hotel.",
+        "intro": "Più giorni in viaggio con un’unica guida. Issam unisce i tour in un viaggio ad anello, decide l’ordine insieme a te e ti aiuta a prenotare gli hotel lungo il percorso.",
+        "duration": "Più giorni, organizzati con te",
+        "distance": "Circa 840 km per l’anello completo",
+        "bestTime": "Da settembre a maggio",
+        "difficulty": "Calibrata sul tuo gruppo",
+        "group": "Privato, da 1 a 45 viaggiatori",
+        "stops": [
+          {
+            "name": "Nizwa",
+            "note": "L’antica capitale e il suo forte."
+          },
+          {
+            "name": "Al Hamra",
+            "note": "Il vecchio villaggio di fango sotto le montagne."
+          },
+          {
+            "name": "Deserto di Wahiba",
+            "note": "Una giornata e un tramonto tra le dune."
+          },
+          {
+            "name": "Wadi Shab",
+            "note": "Una camminata nel canyon e piscine naturali."
+          },
+          {
+            "name": "Sur",
+            "note": "La città costiera dei costruttori di dhow."
+          }
+        ],
+        "included": [
+          "Guida privata nella tua lingua",
+          "Prelievo e rientro dove alloggi",
+          "Aiuto per prenotare gli hotel lungo il percorso",
+          "Dettagli concordati alla prenotazione"
+        ],
+        "notIncluded": [
+          "Tutto ciò che non è concordato nel tuo programma"
+        ],
+        "bring": [],
+        "extras": [
+          "Mascate di notte",
+          "Giro in cammello, quad o dune bashing"
         ]
       }
     }

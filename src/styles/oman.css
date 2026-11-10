@@ -122,3 +122,4 @@
 :is(:lang(ar), :lang(bal)) :is(h1, h2, .section-title) { line-height: 1.22 !important; letter-spacing: 0 !important; }
 :lang(hi) :is(h1, h2, .section-title) { line-height: 1.18 !important; letter-spacing: 0 !important; }
 .sat-pin-quiet em { display: none; }
+.sat-pin[hidden] { display: none; }

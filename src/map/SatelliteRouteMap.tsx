@@ -18,6 +18,10 @@ const labelLeft: Record<TourSlug, number[]> = {
   'nizwa-mountains': [0, 3],
   'wahiba-desert': [2],
   'wadi-shab-coast': [1],
+  'muscat-night': [0, 2],
+  'nizwa-night': [1],
+  'al-hamra': [1],
+  'multi-day': [1],
 };
 const linePath = (slug: TourSlug) =>
   routeLines[slug]
@@ -33,6 +37,19 @@ function fitLabels(box: HTMLElement) {
     const flipped = pin.classList.contains('sat-pin-flip');
     if (!flipped && r.right > edge.right - 8) pin.classList.add('sat-pin-flip');
     else if (flipped && r.left < edge.left + 8) pin.classList.remove('sat-pin-flip');
+  });
+  // Overview: tour numbers that land on top of each other merge into one tag ("02 · 06").
+  const ends = [...box.querySelectorAll<HTMLElement>('.sat-pin-end')];
+  ends.forEach((pin) => {
+    pin.hidden = false;
+    pin.textContent = pin.dataset.index ?? pin.textContent;
+  });
+  const near = (a: DOMRect, b: DOMRect) => a.left < b.right + 4 && b.left < a.right + 4 && a.top < b.bottom + 4 && b.top < a.bottom + 4;
+  ends.forEach((pin, i) => {
+    const host = ends.slice(0, i).find((o) => !o.hidden && near(o.getBoundingClientRect(), pin.getBoundingClientRect()));
+    if (!host) return;
+    host.textContent = `${host.textContent} · ${pin.dataset.index}`;
+    pin.hidden = true;
   });
   // Neighbouring labels that overlap: flip the later one if it still fits, else hide its text.
   const pins = [...box.querySelectorAll<HTMLElement>('.sat-pin:not(.sat-pin-end)')];
@@ -131,7 +148,7 @@ export function SatelliteRouteMap({ active, focus, className = '' }: { active?: 
           if (!open) {
             if (target) return null;
             return (
-              <span key={slug} className="sat-pin sat-pin-end" style={pct(project(g.stops[g.stops.length - 1]))}>
+              <span key={slug} data-index={g.index} className="sat-pin sat-pin-end" style={pct(project(g.stops[g.stops.length - 1]))}>
                 {g.index}
               </span>
             );

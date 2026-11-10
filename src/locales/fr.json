@@ -112,13 +112,13 @@
   },
   "tours": {
     "eyebrow": "Les circuits",
-    "title": "Quatre journées pour découvrir Oman",
-    "lead": "Chaque circuit est privé et sur mesure. Commencez par l'un d'eux, combinez-les en un voyage de plusieurs jours ou demandez Mascate ou Nizwa de nuit.",
+    "title": "Huit façons de découvrir Oman",
+    "lead": "Chaque circuit est privé et personnalisable. Choisissez une journée ou une soirée, ou réunissez-en plusieurs en un circuit de quelques jours.",
     "view": "Voir le circuit",
     "videoLabel": "Vidéo",
     "mapTitle": "Les itinéraires",
     "mapHint": "Faites défiler pour survoler les itinéraires",
-    "mapFallback": "Carte du nord d'Oman avec les quatre itinéraires",
+    "mapFallback": "Carte du nord d’Oman avec les itinéraires des circuits",
     "items": {
       "muscat-city": {
         "name": "Mascate authentique",
@@ -301,6 +301,162 @@
         ],
         "extras": [
           "Bimmah Sinkhole"
+        ]
+      },
+      "muscat-night": {
+        "name": "Mascate la nuit",
+        "short": "La capitale à la nuit tombée : l’Opéra illuminé, la corniche de Mutrah et le souk en soirée.",
+        "seoTitle": "Visite privée de Mascate la nuit en français",
+        "seoDescription": "Visite privée de Mascate la nuit avec Issam (The Languages Ninja) en français : la Royal Opera House illuminée, la corniche de Mutrah et le souk en soirée. Prise en charge à votre hébergement.",
+        "intro": "Mascate change après le coucher du soleil. Quand la chaleur retombe, Issam vous emmène le long du front de mer illuminé de Mutrah, dans le souk du soir et devant le palais du vieux Mascate.",
+        "duration": "Une soirée, convenue à la réservation",
+        "distance": "Environ 70 km aller-retour",
+        "bestTime": "De septembre à mai, en soirée",
+        "difficulty": "Facile, pour tous",
+        "group": "Privé, de 1 à 45 voyageurs",
+        "stops": [
+          {
+            "name": "Royal Opera House Mascate",
+            "note": "L’opéra, illuminé la nuit."
+          },
+          {
+            "name": "Corniche de Mutrah",
+            "note": "La promenade du bord de mer le long du vieux port."
+          },
+          {
+            "name": "Souk de Mutrah",
+            "note": "Encens, argent et thé karak en soirée."
+          },
+          {
+            "name": "Vieux Mascate et palais Al Alam",
+            "note": "Le palais et les forts au-dessus de la baie, illuminés la nuit."
+          }
+        ],
+        "included": [
+          "Guide privé dans votre langue",
+          "Prise en charge et retour à votre hébergement",
+          "Détails convenus à la réservation"
+        ],
+        "notIncluded": [
+          "Tout ce qui n’est pas convenu dans votre programme"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "nizwa-night": {
+        "name": "Nizwa la nuit",
+        "short": "L’ancienne capitale la nuit, avec le fort de Nizwa illuminé au-dessus du souk.",
+        "seoTitle": "Visite privée de Nizwa la nuit en français",
+        "seoDescription": "Visite privée de Nizwa la nuit depuis Mascate avec Issam (The Languages Ninja) en français : le fort de Nizwa illuminé et le souk en soirée. Prise en charge à votre hébergement.",
+        "intro": "Nizwa le soir, quand la tour ronde du fort brille dans le ciel nocturne et que les ruelles du souk restent ouvertes tard.",
+        "duration": "Une soirée, convenue à la réservation",
+        "distance": "Environ 320 km aller-retour depuis Mascate",
+        "bestTime": "Toute l’année",
+        "difficulty": "Facile, courtes marches",
+        "group": "Privé, de 1 à 45 voyageurs",
+        "stops": [
+          {
+            "name": "Fort de Nizwa",
+            "note": "La grande tour ronde, illuminée la nuit."
+          },
+          {
+            "name": "Souk de Nizwa",
+            "note": "Les ruelles autour du fort en soirée."
+          }
+        ],
+        "included": [
+          "Guide privé dans votre langue",
+          "Prise en charge et retour à votre hébergement",
+          "Détails convenus à la réservation"
+        ],
+        "notIncluded": [
+          "Tout ce qui n’est pas convenu dans votre programme"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "al-hamra": {
+        "name": "Vieux village d’Al Hamra",
+        "short": "L’un des villages en briques de terre les mieux conservés d’Oman, au pied des monts Hajar.",
+        "seoTitle": "Visite privée du vieux village d’Al Hamra en français",
+        "seoDescription": "Excursion privée d’une journée depuis Mascate au vieux village en terre d’Al Hamra avec Issam (The Languages Ninja) en français, avec Misfat Al Abriyeen sur demande. Prise en charge à votre hébergement.",
+        "intro": "Le vieux quartier d’Al Hamra est un village de hautes maisons en briques de terre qui descendent vers les palmeraies, avec les monts Hajar derrière. Issam vous guide dans ses ruelles et, sur demande, monte avec vous à Misfat Al Abriyeen.",
+        "duration": "Une journée, convenue à la réservation",
+        "distance": "Environ 450 km aller-retour depuis Mascate",
+        "bestTime": "Toute l’année",
+        "difficulty": "Modérée, un peu de marche",
+        "group": "Privé, de 1 à 45 voyageurs",
+        "stops": [
+          {
+            "name": "Vieux village d’Al Hamra",
+            "note": "Des maisons en terre de plusieurs étages au-dessus des palmeraies."
+          },
+          {
+            "name": "Bait Al Safah",
+            "note": "Une maison restaurée qui montre la vie du village d’autrefois."
+          },
+          {
+            "name": "Misfat Al Abriyeen",
+            "note": "Sur demande : un village à flanc de montagne avec terrasses et falaj."
+          }
+        ],
+        "included": [
+          "Guide privé dans votre langue",
+          "Prise en charge et retour à votre hébergement",
+          "Détails convenus à la réservation"
+        ],
+        "notIncluded": [
+          "Tout ce qui n’est pas convenu dans votre programme"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "multi-day": {
+        "name": "Circuit d’Oman sur plusieurs jours",
+        "short": "Nizwa, Al Hamra, le désert de Wahiba et Wadi Shab en un seul voyage privé de plusieurs jours.",
+        "seoTitle": "Circuit privé d’Oman sur plusieurs jours en français",
+        "seoDescription": "Circuit privé de plusieurs jours à travers Oman avec Issam (The Languages Ninja) en français : Nizwa, Al Hamra, le désert de Wahiba, Wadi Shab et Sour, préparé avec vous, avec de l’aide pour réserver les hôtels.",
+        "intro": "Plusieurs jours sur la route avec un seul guide. Issam réunit les circuits en une boucle, choisit l’ordre avec vous et vous aide à réserver les hôtels en chemin.",
+        "duration": "Plusieurs jours, préparés avec vous",
+        "distance": "Environ 840 km pour la boucle complète",
+        "bestTime": "De septembre à mai",
+        "difficulty": "Adaptée à votre groupe",
+        "group": "Privé, de 1 à 45 voyageurs",
+        "stops": [
+          {
+            "name": "Nizwa",
+            "note": "L’ancienne capitale et son fort."
+          },
+          {
+            "name": "Al Hamra",
+            "note": "Le vieux village en terre au pied des montagnes."
+          },
+          {
+            "name": "Désert de Wahiba",
+            "note": "Une journée et un coucher de soleil dans les dunes."
+          },
+          {
+            "name": "Wadi Shab",
+            "note": "Une marche dans le canyon et des bassins naturels."
+          },
+          {
+            "name": "Sour",
+            "note": "La ville côtière des constructeurs de boutres."
+          }
+        ],
+        "included": [
+          "Guide privé dans votre langue",
+          "Prise en charge et retour à votre hébergement",
+          "Aide pour réserver les hôtels en chemin",
+          "Détails convenus à la réservation"
+        ],
+        "notIncluded": [
+          "Tout ce qui n’est pas convenu dans votre programme"
+        ],
+        "bring": [],
+        "extras": [
+          "Mascate la nuit",
+          "Balade à dos de chameau, quad ou dune bashing"
         ]
       }
     }

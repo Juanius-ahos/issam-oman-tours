@@ -112,13 +112,13 @@
   },
   "tours": {
     "eyebrow": "Die Touren",
-    "title": "Vier Tage, die Ihnen den Oman zeigen",
-    "lead": "Jede Tour ist privat und lässt sich anpassen. Beginnen Sie mit einer davon, kombinieren Sie mehrere zu einer Rundreise oder fragen Sie nach Maskat oder Nizwa bei Nacht.",
+    "title": "Acht Wege, Oman zu erleben",
+    "lead": "Jede Tour ist privat und anpassbar. Wählen Sie einen Tag oder einen Abend, oder verbinden Sie mehrere zu einer Rundreise über einige Tage.",
     "view": "Zur Tour",
     "videoLabel": "Video",
     "mapTitle": "Die Routen",
     "mapHint": "Scrollen, um die Routen abzufliegen",
-    "mapFallback": "Karte des nördlichen Oman mit den vier Tourrouten",
+    "mapFallback": "Karte des nördlichen Oman mit den Tourrouten",
     "items": {
       "muscat-city": {
         "name": "Authentische Stadttour Maskat",
@@ -301,6 +301,162 @@
         ],
         "extras": [
           "Bimmah Sinkhole"
+        ]
+      },
+      "muscat-night": {
+        "name": "Maskat bei Nacht",
+        "short": "Die Hauptstadt nach Einbruch der Dunkelheit: das beleuchtete Opernhaus, die Corniche von Mutrah und der Souk am Abend.",
+        "seoTitle": "Private Tour Maskat bei Nacht auf Deutsch",
+        "seoDescription": "Private Tour Maskat bei Nacht mit Issam (The Languages Ninja) auf Deutsch: das beleuchtete Royal Opera House, die Corniche von Mutrah und der Souk am Abend. Abholung an Ihrer Unterkunft.",
+        "intro": "Maskat verändert sich nach Sonnenuntergang. Wenn die Hitze nachlässt, führt Issam Sie an der beleuchteten Uferpromenade von Mutrah entlang, in den abendlichen Souk und am Palast im alten Maskat vorbei.",
+        "duration": "Ein Abend, bei der Buchung abgestimmt",
+        "distance": "Etwa 70 km hin und zurück",
+        "bestTime": "September bis Mai, abends",
+        "difficulty": "Leicht, für alle geeignet",
+        "group": "Privat, 1 bis 45 Reisende",
+        "stops": [
+          {
+            "name": "Royal Opera House Maskat",
+            "note": "Das Opernhaus, nachts beleuchtet."
+          },
+          {
+            "name": "Corniche von Mutrah",
+            "note": "Die Uferpromenade am alten Hafen."
+          },
+          {
+            "name": "Souk von Mutrah",
+            "note": "Weihrauch, Silber und Karak-Tee am Abend."
+          },
+          {
+            "name": "Altes Maskat und Al-Alam-Palast",
+            "note": "Der Palast und die Forts über der Bucht, nach Einbruch der Dunkelheit beleuchtet."
+          }
+        ],
+        "included": [
+          "Privater Guide in Ihrer Sprache",
+          "Abholung und Rückfahrt zu Ihrer Unterkunft",
+          "Details bei der Buchung abgestimmt"
+        ],
+        "notIncluded": [
+          "Alles, was nicht in Ihrem Programm vereinbart ist"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "nizwa-night": {
+        "name": "Nizwa bei Nacht",
+        "short": "Die alte Hauptstadt bei Nacht, mit dem beleuchteten Fort von Nizwa über dem Souk.",
+        "seoTitle": "Private Tour Nizwa bei Nacht auf Deutsch",
+        "seoDescription": "Private Tour Nizwa bei Nacht ab Maskat mit Issam (The Languages Ninja) auf Deutsch: das beleuchtete Fort von Nizwa und der Souk am Abend. Abholung an Ihrer Unterkunft.",
+        "intro": "Nizwa am Abend, wenn der runde Turm des Forts vor dem Nachthimmel leuchtet und die Gassen des Souks ringsum lange geöffnet bleiben.",
+        "duration": "Ein Abend, bei der Buchung abgestimmt",
+        "distance": "Etwa 320 km hin und zurück ab Maskat",
+        "bestTime": "Das ganze Jahr",
+        "difficulty": "Leicht, kurze Wege zu Fuß",
+        "group": "Privat, 1 bis 45 Reisende",
+        "stops": [
+          {
+            "name": "Fort von Nizwa",
+            "note": "Der große runde Turm, nachts beleuchtet."
+          },
+          {
+            "name": "Souk von Nizwa",
+            "note": "Die Gassen rund um das Fort am Abend."
+          }
+        ],
+        "included": [
+          "Privater Guide in Ihrer Sprache",
+          "Abholung und Rückfahrt zu Ihrer Unterkunft",
+          "Details bei der Buchung abgestimmt"
+        ],
+        "notIncluded": [
+          "Alles, was nicht in Ihrem Programm vereinbart ist"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "al-hamra": {
+        "name": "Altes Dorf Al Hamra",
+        "short": "Eines der am besten erhaltenen Lehmziegeldörfer Omans, unterhalb des Hadschar-Gebirges.",
+        "seoTitle": "Private Tour ins alte Dorf Al Hamra auf Deutsch",
+        "seoDescription": "Privater Tagesausflug ab Maskat in das alte Lehmziegeldorf Al Hamra mit Issam (The Languages Ninja) auf Deutsch, auf Wunsch mit Misfat Al Abriyeen. Abholung an Ihrer Unterkunft.",
+        "intro": "Die Altstadt von Al Hamra ist ein Dorf aus hohen Lehmziegelhäusern, die zu den Palmenhainen hinabsteigen, mit dem Hadschar-Gebirge im Rücken. Issam führt Sie durch die Gassen und auf Wunsch hinauf nach Misfat Al Abriyeen.",
+        "duration": "Ein Tag, bei der Buchung abgestimmt",
+        "distance": "Etwa 450 km hin und zurück ab Maskat",
+        "bestTime": "Das ganze Jahr",
+        "difficulty": "Mittel, etwas zu Fuß",
+        "group": "Privat, 1 bis 45 Reisende",
+        "stops": [
+          {
+            "name": "Altes Dorf Al Hamra",
+            "note": "Mehrstöckige Lehmziegelhäuser über den Palmenhainen."
+          },
+          {
+            "name": "Bait Al Safah",
+            "note": "Ein restauriertes Haus, das das Dorfleben von früher zeigt."
+          },
+          {
+            "name": "Misfat Al Abriyeen",
+            "note": "Auf Wunsch: ein Bergdorf mit Terrassen und einem Falaj."
+          }
+        ],
+        "included": [
+          "Privater Guide in Ihrer Sprache",
+          "Abholung und Rückfahrt zu Ihrer Unterkunft",
+          "Details bei der Buchung abgestimmt"
+        ],
+        "notIncluded": [
+          "Alles, was nicht in Ihrem Programm vereinbart ist"
+        ],
+        "bring": [],
+        "extras": []
+      },
+      "multi-day": {
+        "name": "Oman-Rundreise über mehrere Tage",
+        "short": "Nizwa, Al Hamra, die Wahiba-Wüste und Wadi Shab in einer privaten Reise über mehrere Tage.",
+        "seoTitle": "Private Oman-Rundreise über mehrere Tage auf Deutsch",
+        "seoDescription": "Private Rundreise über mehrere Tage durch Oman mit Issam (The Languages Ninja) auf Deutsch: Nizwa, Al Hamra, die Wahiba-Wüste, Wadi Shab und Sur, mit Ihnen geplant, mit Hilfe bei der Hotelbuchung.",
+        "intro": "Mehrere Tage unterwegs mit einem Guide. Issam verbindet die Touren zu einer Rundreise, plant die Reihenfolge mit Ihnen und hilft Ihnen, die Hotels unterwegs zu buchen.",
+        "duration": "Mehrere Tage, mit Ihnen geplant",
+        "distance": "Etwa 840 km für die ganze Runde",
+        "bestTime": "September bis Mai",
+        "difficulty": "Auf Ihre Gruppe abgestimmt",
+        "group": "Privat, 1 bis 45 Reisende",
+        "stops": [
+          {
+            "name": "Nizwa",
+            "note": "Die alte Hauptstadt und ihr Fort."
+          },
+          {
+            "name": "Al Hamra",
+            "note": "Das alte Lehmziegeldorf unter den Bergen."
+          },
+          {
+            "name": "Wahiba-Wüste",
+            "note": "Ein Tag und ein Sonnenuntergang in den Dünen."
+          },
+          {
+            "name": "Wadi Shab",
+            "note": "Eine Wanderung durch die Schlucht und natürliche Becken."
+          },
+          {
+            "name": "Sur",
+            "note": "Die Küstenstadt der Dhau-Bauer."
+          }
+        ],
+        "included": [
+          "Privater Guide in Ihrer Sprache",
+          "Abholung und Rückfahrt zu Ihrer Unterkunft",
+          "Hilfe bei der Hotelbuchung unterwegs",
+          "Details bei der Buchung abgestimmt"
+        ],
+        "notIncluded": [
+          "Alles, was nicht in Ihrem Programm vereinbart ist"
+        ],
+        "bring": [],
+        "extras": [
+          "Maskat bei Nacht",
+          "Kamelritt, Quad oder Dune Bashing"
         ]
       }
     }

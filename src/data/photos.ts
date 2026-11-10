@@ -12,6 +12,9 @@ export const photos = [
   { slug: "nizwa-fort", name: "Nizwa Fort", author: "dconvertini", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", source: "https://commons.wikimedia.org/wiki/File:Nizwa_Fort,_Oman_2024_14.jpg" },
   { slug: "nizwa-oasis", name: "Nizwa oasis and the Hajar mountains", author: "dconvertini", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", source: "https://commons.wikimedia.org/wiki/File:Nizwa_Fort,_Oman_2024_10.jpg" },
   { slug: "wadi-shab", name: "Wadi Shab", author: "dconvertini", license: "CC BY-SA 2.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0", source: "https://commons.wikimedia.org/wiki/File:Wadi_Shab,_Oman_-_2024_10.jpg" },
+  { slug: "nizwa-night", name: "Nizwa Fort by night", author: "Ekrem Canli", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", source: "https://commons.wikimedia.org/wiki/File:Nizwa_Fort_by_night_2019.jpg" },
+  { slug: "muscat-corniche-night", name: "Mutrah Corniche at night, Muscat", author: "Omar AV", license: "CC BY 3.0", licenseUrl: "https://creativecommons.org/licenses/by/3.0", source: "https://commons.wikimedia.org/wiki/File:Fishing_at_night_time,_Mutrah,_Muscat_-_panoramio.jpg" },
+  { slug: "al-hamra", name: "Al Hamra and the Hajar mountains", author: "Christoph Strässler", license: "CC BY-SA 2.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0", source: "https://commons.wikimedia.org/wiki/File:Al_Hamra,_Oman.jpg" },
 ] as const;
 
 export type PhotoSlug = (typeof photos)[number]['slug'];
