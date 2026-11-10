@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const dir = join(dirname(fileURLToPath(import.meta.url)), '..', 'src', 'locales');
-const codes = ['ar', 'de', 'ru', 'es', 'it', 'fr', 'pt', 'ca', 'zh', 'hi'];
+const codes = ['ar', 'de', 'ru', 'es', 'it', 'fr', 'pt', 'ca', 'zh', 'hi', 'bal'];
 const en = JSON.parse(readFileSync(join(dir, 'en.json'), 'utf8'));
 
 function merge(source, target) {

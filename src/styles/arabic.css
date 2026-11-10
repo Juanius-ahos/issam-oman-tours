@@ -1,3 +1,3 @@
-/* Arabic font, loaded only on /ar/ pages. */
+/* Arabic-script font, loaded only on /ar/ and /bal/ pages. */
 @import '@fontsource/ibm-plex-sans-arabic/arabic-400.css';
 @import '@fontsource/ibm-plex-sans-arabic/arabic-700.css';

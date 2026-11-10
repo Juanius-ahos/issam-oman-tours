@@ -136,3 +136,5 @@ All guests agreed to publication. Reviews are also on Tripadvisor (no link given
 3. **Exact stops** for each tour. The site shows a typical route per tour (real places on the way) and says every tour is customizable.
 4. **Wahiba:** a day tour (8 hours) per his answer, so the site no longer mentions a camp night. Is an overnight option offered?
 5. Deposit amount, reply time, license number, insurance, Tripadvisor link, "tv2 Spain" (which channel), reviewer first names and countries.
+
+- **Balochi copy (`src/locales/bal.json`)** was drafted without a native speaker. Issam should read the /bal/ pages and send corrections before launch.

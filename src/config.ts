@@ -95,7 +95,7 @@ export const config = {
   },
 } as const;
 
-/** The site locales: Issam's guiding languages (TODO: add his 12th once confirmed). Arabic is the only RTL one. Order is the switcher order. */
+/** The site locales: Issam's 12 guiding languages. Arabic and Balochi are RTL. Order is the switcher order. */
 export const locales = [
   { code: 'en', english: 'English', name: 'English', dir: 'ltr', hreflang: 'en' },
   { code: 'ar', english: 'Arabic', name: 'العربية', dir: 'rtl', hreflang: 'ar' },
@@ -108,6 +108,7 @@ export const locales = [
   { code: 'ca', english: 'Catalan', name: 'Català', dir: 'ltr', hreflang: 'ca' },
   { code: 'ru', english: 'Russian', name: 'Русский', dir: 'ltr', hreflang: 'ru' },
   { code: 'hi', english: 'Hindi', name: 'हिन्दी', dir: 'ltr', hreflang: 'hi' },
+  { code: 'bal', english: 'Balochi', name: 'بلوچی', dir: 'rtl', hreflang: 'bal' },
 ] as const;
 
 export type Locale = (typeof locales)[number]['code'];

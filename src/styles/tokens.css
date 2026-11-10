@@ -25,7 +25,7 @@
 }
 
 /* Scripts without Archivo glyphs: their own fonts, no negative tracking, no uppercase. */
-:lang(ar) {
+:lang(ar), :lang(bal) {
   --font-sans: 'IBM Plex Sans Arabic', 'Archivo Variable', system-ui, sans-serif;
   --track-tight: 0;
   --track-wide: 0;

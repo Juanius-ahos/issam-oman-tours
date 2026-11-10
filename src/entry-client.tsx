@@ -11,7 +11,7 @@ import { Smooth } from './motion/gsap';
 const route = parsePath(location.pathname);
 
 async function start() {
-  if (route.locale === 'ar') await import('./styles/arabic.css');
+  if (route.locale === 'ar' || route.locale === 'bal') await import('./styles/arabic.css');
   const messages = await loadMessages(route.locale);
   const root = document.getElementById('root')!;
 

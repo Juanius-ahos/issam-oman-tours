@@ -1,484 +1,483 @@
 {
-  "_status": "todo",
-  "_todo": "TODO: translate into \"ar\". Every string below is an English placeholder copied from en.json. Set \"_status\" to \"done\" when translated.",
+  "_status": "done",
   "meta": {
-    "siteName": "Issam Albalushi, The Languages Ninja",
-    "homeTitle": "Private Tours of Oman in Your Language | Issam Albalushi",
-    "homeDescription": "Private, customizable tours of Oman with Issam Albalushi, The Languages Ninja, guiding since 2016 in 12 languages. Muscat, Nizwa, Wahiba Sands and Wadi Shab, from USD 200. Book on WhatsApp.",
-    "tourTitleSuffix": "Private Tour with Issam",
-    "ogAlt": "Issam Albalushi, private tour guide in Oman"
+    "siteName": "عصام البلوشي، نينجا اللغات",
+    "homeTitle": "جولات خاصة في عُمان بلغتك | عصام البلوشي",
+    "homeDescription": "جولات خاصة ومصممة حسب رغبتك في عُمان مع عصام البلوشي، نينجا اللغات: مرشد سياحي منذ 2016 بـ12 لغة. مسقط ونزوى ورمال الشرقية ووادي الشاب، تبدأ من 200 دولار أمريكي. احجز عبر واتساب.",
+    "tourTitleSuffix": "جولة خاصة مع عصام",
+    "ogAlt": "عصام البلوشي، مرشد سياحي خاص في عُمان"
   },
   "nav": {
-    "home": "Home",
-    "story": "Story",
-    "tours": "Tours",
-    "follow": "Follow",
-    "reviews": "Reviews",
-    "faq": "FAQ",
-    "plan": "Plan your tour",
-    "menu": "Menu",
-    "close": "Close",
-    "language": "Language",
-    "skip": "Skip to content",
-    "backToTop": "Back to top",
-    "allTours": "All tours"
+    "home": "الرئيسية",
+    "story": "القصة",
+    "tours": "الجولات",
+    "follow": "تابعني",
+    "reviews": "آراء الضيوف",
+    "faq": "الأسئلة",
+    "plan": "خطّط جولتك",
+    "menu": "القائمة",
+    "close": "إغلاق",
+    "language": "اللغة",
+    "skip": "انتقل إلى المحتوى",
+    "backToTop": "العودة للأعلى",
+    "allTours": "كل الجولات"
   },
   "hero": {
-    "eyebrow": "Private tour guide in Oman",
-    "title": "Your private guide to Oman, in your language",
-    "tagline": "The Languages Ninja",
-    "lead": "Customizable days across Muscat, Nizwa, the Wahiba Sands and Wadi Shab, guided in the language you think in.",
-    "ctaWhatsapp": "Chat on WhatsApp",
-    "ctaTours": "See the tours",
+    "eyebrow": "مرشد سياحي خاص في عُمان",
+    "title": "مرشدك الخاص في عُمان، بلغتك",
+    "tagline": "نينجا اللغات",
+    "lead": "أيام مصممة لك في مسقط ونزوى ورمال الشرقية ووادي الشاب، بإرشاد باللغة التي تفكر بها.",
+    "ctaWhatsapp": "راسلني على واتساب",
+    "ctaTours": "شاهد الجولات",
     "traits": [
-      "Private, 1 to 45 travelers",
-      "Pickup wherever you stay",
-      "12 languages, two on one tour",
-      "Tours from USD 200"
+      "خاصة، من 1 إلى 45 مسافرًا",
+      "استقبال من مكان إقامتك",
+      "12 لغة، ولغتان في الجولة نفسها",
+      "جولات تبدأ من 200 دولار"
     ],
-    "portraitLabel": "Portrait of Issam Albalushi, private tour guide in Oman"
+    "portraitLabel": "صورة عصام البلوشي، مرشد سياحي خاص في عُمان"
   },
   "counters": {
-    "eyebrow": "In numbers",
-    "languages": "Languages spoken",
-    "years": "Years guiding",
-    "travelers": "Travelers hosted",
-    "countries": "Countries welcomed"
+    "eyebrow": "بالأرقام",
+    "languages": "لغة يتحدثها",
+    "years": "سنوات في الإرشاد",
+    "travelers": "مسافر رافقهم",
+    "countries": "دولة جاؤوا منها"
   },
   "press": {
-    "eyebrow": "Seen on and worked with",
-    "logoLabel": "Logo"
+    "eyebrow": "ظهر في وعمل مع",
+    "logoLabel": "شعار"
   },
   "day": {
-    "label": "One day in Oman",
+    "label": "يوم في عُمان",
     "items": [
       {
-        "time": "Morning",
-        "title": "Nizwa under the Hajar",
-        "text": "Date palms and mud-brick forts below the mountains."
+        "time": "الصباح",
+        "title": "نزوى تحت جبال الحجر",
+        "text": "نخيل وقلاع طينية عند سفح الجبال."
       },
       {
-        "time": "Noon",
-        "title": "The pools of Wadi Shab",
-        "text": "Green water, canyon walls and a swim to cool off."
+        "time": "الظهيرة",
+        "title": "برك وادي الشاب",
+        "text": "مياه خضراء وجدران أخدود وسباحة منعشة."
       },
       {
-        "time": "Sunset",
-        "title": "The Wahiba turns red",
-        "text": "The wind drops, the dunes glow and the whole desert goes quiet."
+        "time": "الغروب",
+        "title": "الرمال تتلون بالأحمر",
+        "text": "تهدأ الرياح وتتوهج الكثبان ويسكن الصحراء كلها الهدوء."
       },
       {
-        "time": "Night",
-        "title": "Muttrah lights up",
-        "text": "The Corniche glows along the old harbour of Muscat."
+        "time": "المساء",
+        "title": "مطرح تضيء",
+        "text": "يتلألأ الكورنيش على طول ميناء مسقط القديم."
       }
     ]
   },
   "story": {
-    "eyebrow": "The story",
-    "title": "Unique by choice",
-    "lead": "From between Sur and Sohar to guests from all over the world, each welcomed in their own language.",
-    "readMore": "Read more",
-    "close": "Close story",
+    "eyebrow": "القصة",
+    "title": "متميز باختياره",
+    "lead": "من الساحل بين صور وصحار إلى ضيوف من كل أنحاء العالم، يستقبل كل واحد منهم بلغته.",
+    "readMore": "اقرأ المزيد",
+    "close": "إغلاق القصة",
     "cards": [
       {
-        "year": "Roots",
-        "title": "Between Sur and Sohar",
-        "blurb": "Issam grew up between Sur and Sohar, and on longer trips guests still get to see the places of his childhood.",
-        "full": "Issam grew up in Oman, between Sur and Sohar. On longer trips he opens the door to the Oman he knows best: his home, the places of his childhood and everyday life far from the tourist circuit.",
-        "quote": "I welcome you in your language, help you immerse in our culture till you get lost between the nomads."
+        "year": "الجذور",
+        "title": "بين صور وصحار",
+        "blurb": "نشأ عصام بين صور وصحار، وفي الرحلات الطويلة يرى ضيوفه أماكن طفولته.",
+        "full": "نشأ عصام في عُمان بين صور وصحار. وفي الرحلات الطويلة يفتح الباب على عُمان التي يعرفها أكثر من غيرها: بيته وأماكن طفولته والحياة اليومية بعيدًا عن المسارات السياحية.",
+        "quote": "أستقبلك بلغتك، وأساعدك على الانغماس في ثقافتنا حتى تتوه بين البدو."
       },
       {
         "year": "2016",
-        "title": "The first tours",
-        "blurb": "Issam started guiding in 2016. About 15,000 travelers later, guests still leave as friends.",
-        "full": "Since 2016 Issam has guided about 15,000 travelers from more than 15 countries: couples and families by car, groups of up to 45 by bus. In his words: \"I love guiding because I am an emotional guy. I love to make people feel good and get goosebumps from how inspiring our Oman is.\"",
-        "quote": "The best praise I get is not how I look but how I make you feel after visiting my country."
+        "title": "الجولات الأولى",
+        "blurb": "بدأ عصام الإرشاد السياحي عام 2016. وبعد نحو 15 ألف مسافر، ما زال ضيوفه يغادرون أصدقاء.",
+        "full": "منذ عام 2016 رافق عصام نحو 15 ألف مسافر من أكثر من 15 دولة: أزواجًا وعائلات بالسيارة، ومجموعات تصل إلى 45 شخصًا بالحافلة. وبكلماته: «أحب الإرشاد لأنني إنسان عاطفي. أحب أن يشعر الناس بالسعادة وأن يقشعر بدنهم من روعة عُمان».",
+        "quote": "أجمل مديح لا يتعلق بمظهري، بل بما تشعر به بعد زيارة بلدي."
       },
       {
         "year": "12",
-        "title": "Twelve languages",
-        "blurb": "A unique job needs a unique person, so Issam set out to learn languages. The hardest were Russian and German.",
-        "full": "\"I felt if I needed a unique job then I needed to be unique myself. Learning languages has absolutely made me unique.\" Russian and German were the hardest. Today Issam can switch between two languages on the same tour, so mixed groups never wait for a translation.",
-        "quote": "I put my heart and soul into my work, the languages, and I have lost my mind in the process. (after Van Gogh)"
+        "title": "اثنتا عشرة لغة",
+        "blurb": "العمل المتميز يحتاج إلى إنسان متميز، فقرر عصام أن يتعلم اللغات. وكانت الروسية والألمانية الأصعب.",
+        "full": "«شعرت أنني إذا أردت عملًا فريدًا فعليّ أن أكون فريدًا. وتعلم اللغات جعلني فريدًا». وكانت الروسية والألمانية الأصعب. واليوم ينتقل عصام بين لغتين في الجولة نفسها، فلا تنتظر المجموعات المختلطة أي ترجمة.",
+        "quote": "وضعت قلبي وروحي في عملي، في اللغات، وفقدت عقلي في الطريق. (على طريقة فان غوخ)"
       },
       {
-        "year": "Ninja",
-        "title": "Why the Languages Ninja",
-        "blurb": "To Issam, a ninja stands for power, strength and extraordinary skill. His languages are that strength.",
-        "full": "\"I felt about the ninja as power, strength and extraordinary competency, and I believe my languages are an absolute strength.\" Expect jokes too. In his own words, they can be spicy, but always tasty.",
-        "quote": "I do not offer the cheapest price, I offer the most cultural and authentic experience."
+        "year": "نينجا",
+        "title": "لماذا نينجا اللغات",
+        "blurb": "النينجا عند عصام رمز للقوة والصلابة والمهارة الاستثنائية، ولغاته هي هذه القوة.",
+        "full": "«النينجا عندي يعني القوة والصلابة والكفاءة الاستثنائية، ولغاتي قوة مطلقة». وتوقع النكات أيضًا، فهي كما يقول: حارة أحيانًا، لكنها لذيذة دائمًا.",
+        "quote": "لا أقدم أرخص سعر، بل أقدم التجربة الأغنى ثقافةً والأكثر أصالة."
       }
     ]
   },
   "tours": {
-    "eyebrow": "The tours",
-    "title": "Four days that show you Oman",
-    "lead": "Every tour is private and customizable. Start with one of these, combine them into a trip of several days, or ask about Muscat or Nizwa by night.",
-    "view": "View tour",
-    "videoLabel": "Video loop",
-    "mapTitle": "The routes",
-    "mapHint": "Scroll to fly the routes",
-    "mapFallback": "Map of northern Oman showing the four tour routes",
+    "eyebrow": "الجولات",
+    "title": "أربعة أيام تُريك عُمان",
+    "lead": "كل الجولات خاصة ويمكن تعديلها لك. ابدأ بإحداها، أو اجمع عدة جولات في رحلة لعدة أيام، أو اسأل عن مسقط أو نزوى ليلًا.",
+    "view": "تفاصيل الجولة",
+    "videoLabel": "فيديو",
+    "mapTitle": "المسارات",
+    "mapHint": "مرّر لتتنقل بين المسارات",
+    "mapFallback": "خريطة شمال عُمان بالمسارات الأربعة",
     "items": {
       "muscat-city": {
-        "name": "Muscat Authentic City Tour",
-        "short": "The Sultan Qaboos Grand Mosque and the hidden gems of the capital, half day or full day.",
-        "seoTitle": "Muscat Authentic City Tour",
-        "seoDescription": "A private Muscat city tour in your language with Issam, The Languages Ninja: the Sultan Qaboos Grand Mosque and hidden gems of the capital. Half day or full day, pickup wherever you stay.",
-        "intro": "The capital the way Issam knows it: the Sultan Qaboos Grand Mosque first, then the hidden gems most visitors miss, shaped around what you want to see.",
-        "duration": "Half day 8:00 to 12:00, or full day 8:00 to 15:00",
-        "distance": "About 50 km",
-        "bestTime": "September to May",
-        "difficulty": "Easy, suits everyone",
-        "group": "Private, 1 to 45 travelers",
+        "name": "جولة مسقط الأصيلة",
+        "short": "جامع السلطان قابوس الأكبر وكنوز العاصمة الخفية، نصف يوم أو يومًا كاملًا.",
+        "seoTitle": "جولة خاصة في مسقط",
+        "seoDescription": "جولة خاصة في مسقط بلغتك مع عصام، نينجا اللغات: جامع السلطان قابوس الأكبر وكنوز العاصمة الخفية. نصف يوم أو يوم كامل، مع الاستقبال من مكان إقامتك.",
+        "intro": "العاصمة كما يعرفها عصام: جامع السلطان قابوس الأكبر أولًا، ثم الزوايا التي يفوتها معظم الزوار، حسب ما تحب أن ترى.",
+        "duration": "نصف يوم من 8:00 إلى 12:00، أو يوم كامل من 8:00 إلى 15:00",
+        "distance": "نحو 50 كم",
+        "bestTime": "من سبتمبر إلى مايو",
+        "difficulty": "سهلة، تناسب الجميع",
+        "group": "خاصة، من 1 إلى 45 مسافرًا",
         "stops": [
           {
-            "name": "Sultan Qaboos Grand Mosque",
-            "note": "The first stop. Women cover their hair, and everyone wears long sleeves and long trousers."
+            "name": "جامع السلطان قابوس الأكبر",
+            "note": "المحطة الأولى. تغطي النساء شعرهن، ويرتدي الجميع أكمامًا وسراويل طويلة."
           },
           {
-            "name": "Royal Opera House Muscat",
-            "note": "One of the hidden gems on a typical route, chosen with you on the day."
+            "name": "دار الأوبرا السلطانية مسقط",
+            "note": "من الكنوز الخفية في مسار نموذجي، نختارها معًا في يوم الجولة."
           },
           {
-            "name": "Muttrah Corniche and Souq",
-            "note": "Frankincense, silver and karak tea by the old harbour."
+            "name": "كورنيش وسوق مطرح",
+            "note": "اللبان والفضة وشاي الكرك قرب الميناء القديم."
           },
           {
-            "name": "Old Muscat and Al Alam Palace",
-            "note": "The palace gates and the forts above the bay."
+            "name": "مسقط القديمة وقصر العلم",
+            "note": "بوابات القصر والقلاع المطلة على الخليج."
           }
         ],
         "included": [
-          "Private guide in your language",
-          "Pickup and drop-off wherever you stay",
-          "A plan shaped around you, with what is included agreed when you book"
+          "مرشد خاص بلغتك",
+          "الاستقبال والعودة إلى مكان إقامتك",
+          "برنامج مصمم لك، ويُتفق على ما يشمله عند الحجز"
         ],
         "notIncluded": [
-          "Anything not agreed in your plan"
+          "كل ما لم يُتفق عليه في البرنامج"
         ],
         "bring": [
-          "A head cover for women at the Grand Mosque",
-          "Long sleeves and long trousers"
+          "غطاء للرأس للنساء في الجامع",
+          "أكمام وسراويل طويلة"
         ],
         "extras": [
-          "Muscat by night"
+          "مسقط ليلًا"
         ]
       },
       "nizwa-mountains": {
-        "name": "Nizwa Historical Tour",
-        "short": "An ancient Oman day trip to the old capital under the Hajar mountains.",
-        "seoTitle": "Nizwa Historical Tour",
-        "seoDescription": "A private day trip from Muscat to Nizwa with Issam, The Languages Ninja: immerse yourself in ancient Oman, guided in your language. About 8 hours, all year round.",
-        "intro": "Immerse yourself in ancient Oman: the forts, souqs and old villages of Nizwa, the former capital at the foot of the Hajar mountains.",
-        "duration": "About 8 hours",
-        "distance": "About 300 km round trip",
-        "bestTime": "All year round",
-        "difficulty": "Moderate, with some walking",
-        "group": "Private, 1 to 45 travelers",
+        "name": "جولة نزوى التاريخية",
+        "short": "رحلة يوم إلى عُمان القديمة، إلى العاصمة التاريخية عند سفح جبال الحجر.",
+        "seoTitle": "رحلة خاصة إلى نزوى",
+        "seoDescription": "رحلة خاصة ليوم واحد من مسقط إلى نزوى مع عصام، نينجا اللغات: انغمس في عُمان القديمة مع مرشد بلغتك. نحو 8 ساعات، طوال العام.",
+        "intro": "انغمس في عُمان القديمة: قلاع نزوى وأسواقها وقراها القديمة، العاصمة التاريخية عند سفح جبال الحجر.",
+        "duration": "نحو 8 ساعات",
+        "distance": "نحو 300 كم ذهابًا وإيابًا",
+        "bestTime": "طوال العام",
+        "difficulty": "متوسطة، مع بعض المشي",
+        "group": "خاصة، من 1 إلى 45 مسافرًا",
         "stops": [
           {
-            "name": "Nizwa Fort and Souq",
-            "note": "The heart of the old capital."
+            "name": "قلعة وسوق نزوى",
+            "note": "قلب العاصمة القديمة."
           },
           {
-            "name": "Birkat Al Mawz",
-            "note": "Optional extra: an abandoned mud-brick village and a working falaj among the palms."
+            "name": "بركة الموز",
+            "note": "إضافة اختيارية: قرية طينية مهجورة وفلج ما زال يجري بين النخيل."
           },
           {
-            "name": "Jebel Akhdar plateau",
-            "note": "On request: terraced villages high in the Hajar mountains."
+            "name": "هضبة الجبل الأخضر",
+            "note": "عند الطلب: قرى المدرجات في أعالي جبال الحجر."
           },
           {
-            "name": "Bahla Fort",
-            "note": "On request: a UNESCO World Heritage fort near Nizwa."
+            "name": "قلعة بهلا",
+            "note": "عند الطلب: قلعة مدرجة في قائمة التراث العالمي لليونسكو قرب نزوى."
           }
         ],
         "included": [
-          "Private guide in your language",
-          "Pickup and drop-off wherever you stay",
-          "Details agreed when you book"
+          "مرشد خاص بلغتك",
+          "الاستقبال والعودة إلى مكان إقامتك",
+          "تفاصيل يُتفق عليها عند الحجز"
         ],
         "notIncluded": [
-          "Anything not agreed in your plan"
+          "كل ما لم يُتفق عليه في البرنامج"
         ],
         "bring": [
-          "Sports shoes",
-          "No short dresses (no head cover needed)"
+          "حذاء رياضي",
+          "دون فساتين قصيرة (لا حاجة لتغطية الرأس)"
         ],
         "extras": [
-          "Birkat Al Mawz"
+          "بركة الموز"
         ]
       },
       "wahiba-desert": {
-        "name": "Wahiba Sands Tour",
-        "short": "Infinite landscapes of dunes by 4x4, with a camel ride, a quad or dune bashing if you want them.",
-        "seoTitle": "Wahiba Sands Tour",
-        "seoDescription": "A private day trip from Muscat to the Wahiba Sands (Sharqiya Sands) by Toyota 4x4 with Issam, The Languages Ninja: dunes, camel rides, quads and dune bashing, guided in your language.",
-        "intro": "Infinite landscapes: a day out of Muscat into the dunes of the Wahiba Sands by Toyota 4x4, with a camel ride, a quad or dune bashing if you are up for it.",
-        "duration": "About 8 hours",
-        "distance": "About 300 km round trip",
-        "bestTime": "September to May",
-        "difficulty": "Easy, suits everyone",
-        "group": "Private, 1 to 45 travelers",
+        "name": "جولة رمال الشرقية",
+        "short": "مناظر لا نهاية لها من الكثبان بسيارة دفع رباعي، مع ركوب الجمال أو الدراجات الرباعية أو التطعيس إن رغبت.",
+        "seoTitle": "جولة خاصة إلى رمال الشرقية",
+        "seoDescription": "رحلة خاصة ليوم واحد من مسقط إلى رمال الشرقية (رمال وهيبة) بسيارة تويوتا دفع رباعي مع عصام، نينجا اللغات: كثبان وجمال ودراجات رباعية وتطعيس، مع مرشد بلغتك.",
+        "intro": "مناظر لا تنتهي: يوم من مسقط إلى كثبان رمال الشرقية بسيارة تويوتا دفع رباعي، مع ركوب الجمال أو الدراجات الرباعية أو التطعيس إن أحببت.",
+        "duration": "نحو 8 ساعات",
+        "distance": "نحو 300 كم ذهابًا وإيابًا",
+        "bestTime": "من سبتمبر إلى مايو",
+        "difficulty": "سهلة، تناسب الجميع",
+        "group": "خاصة، من 1 إلى 45 مسافرًا",
         "stops": [
           {
-            "name": "Wadi Bani Khalid",
-            "note": "On a typical route: green pools in a palm-filled wadi on the way to the sands."
+            "name": "وادي بني خالد",
+            "note": "في مسار نموذجي: برك خضراء في وادٍ من النخيل في الطريق إلى الرمال."
           },
           {
-            "name": "Al Wasil and the edge of the sands",
-            "note": "Into the dunes by Toyota 4x4."
+            "name": "الواصل وأطراف الرمال",
+            "note": "ندخل الكثبان بسيارة تويوتا دفع رباعي."
           },
           {
-            "name": "Sunset over the dunes",
-            "note": "The best light of the day, from the top of a dune."
+            "name": "الغروب فوق الكثبان",
+            "note": "أجمل ضوء في اليوم، من أعلى كثيب."
           },
           {
-            "name": "Camel ride, quad or dune bashing",
-            "note": "Optional extras, booked when you plan the day."
+            "name": "الجمال أو الدراجات الرباعية أو التطعيس",
+            "note": "إضافات اختيارية تُحجز عند تخطيط اليوم."
           }
         ],
         "included": [
-          "Private guide in your language",
-          "Pickup and drop-off wherever you stay",
-          "Toyota 4x4"
+          "مرشد خاص بلغتك",
+          "الاستقبال والعودة إلى مكان إقامتك",
+          "سيارة تويوتا دفع رباعي"
         ],
         "notIncluded": [
-          "Optional extras",
-          "Anything not agreed in your plan"
+          "الإضافات الاختيارية",
+          "كل ما لم يُتفق عليه في البرنامج"
         ],
         "bring": [
-          "A fun spirit"
+          "روح مرحة"
         ],
         "extras": [
-          "Camel ride",
-          "Quad",
-          "Dune bashing"
+          "ركوب الجمال",
+          "دراجة رباعية",
+          "التطعيس"
         ]
       },
       "wadi-shab-coast": {
-        "name": "Wadi Shab Adventure",
-        "short": "Natural erosion and turquoise pools in the canyon of Wadi Shab, early in the morning.",
-        "seoTitle": "Wadi Shab Adventure",
-        "seoDescription": "A private Wadi Shab day trip from Muscat with Issam, The Languages Ninja: canyon walls, natural erosion and swimming pools, with the Bimmah Sinkhole as an extra. About 6 hours.",
-        "intro": "Natural erosion and pools: an early start along the coast south of Muscat, then the walk and swim into the canyon of Wadi Shab.",
-        "duration": "About 6 hours, early morning start",
-        "distance": "About 200 km round trip",
-        "bestTime": "September to April",
-        "difficulty": "Moderate to slightly difficult, only for people able to walk",
-        "group": "Private, 1 to 45 travelers",
+        "name": "مغامرة وادي الشاب",
+        "short": "صخور نحتتها المياه وبرك فيروزية في أخدود وادي الشاب، في الصباح الباكر.",
+        "seoTitle": "جولة خاصة إلى وادي الشاب",
+        "seoDescription": "رحلة خاصة ليوم واحد من مسقط إلى وادي الشاب مع عصام، نينجا اللغات: جدران الأخدود وصخور نحتتها المياه وبرك للسباحة، مع حفرة بمة كإضافة. نحو 6 ساعات.",
+        "intro": "صخور نحتتها المياه وبرك طبيعية: انطلاقة مبكرة على الساحل جنوب مسقط، ثم مشيًا وسباحة إلى داخل أخدود وادي الشاب.",
+        "duration": "نحو 6 ساعات، انطلاق في الصباح الباكر",
+        "distance": "نحو 200 كم ذهابًا وإيابًا",
+        "bestTime": "من سبتمبر إلى أبريل",
+        "difficulty": "متوسطة إلى صعبة قليلًا، لمن يستطيع المشي فقط",
+        "group": "خاصة، من 1 إلى 45 مسافرًا",
         "stops": [
           {
-            "name": "Bimmah Sinkhole",
-            "note": "Optional extra: steps down to green-blue water."
+            "name": "حفرة بمة",
+            "note": "إضافة اختيارية: درج ينزل إلى مياه خضراء زرقاء."
           },
           {
-            "name": "Fins beach",
-            "note": "On a typical route: white sand and clear water on the coast road."
+            "name": "شاطئ فنس",
+            "note": "في مسار نموذجي: رمال بيضاء ومياه صافية على الطريق الساحلي."
           },
           {
-            "name": "Wadi Shab",
-            "note": "A short boat crossing, a walk up the canyon, then the pools."
+            "name": "وادي الشاب",
+            "note": "عبور قصير بالقارب، ثم مشي داخل الأخدود، ثم البرك."
           },
           {
-            "name": "Sur",
-            "note": "On request, for a longer day: the dhow yard and the lighthouse."
+            "name": "صور",
+            "note": "عند الطلب، ليوم أطول: مصنع السفن الخشبية والمنارة."
           }
         ],
         "included": [
-          "Private guide in your language",
-          "Pickup and drop-off wherever you stay",
-          "Details agreed when you book"
+          "مرشد خاص بلغتك",
+          "الاستقبال والعودة إلى مكان إقامتك",
+          "تفاصيل يُتفق عليها عند الحجز"
         ],
         "notIncluded": [
-          "Anything not agreed in your plan"
+          "كل ما لم يُتفق عليه في البرنامج"
         ],
         "bring": [
-          "Sports shoes",
-          "A towel",
-          "A waterproof case for your phone"
+          "حذاء رياضي",
+          "منشفة",
+          "غلاف مقاوم للماء للهاتف"
         ],
         "extras": [
-          "Bimmah Sinkhole"
+          "حفرة بمة"
         ]
       }
     }
   },
   "follow": {
-    "eyebrow": "Follow along",
-    "title": "Oman, every day",
-    "lead": "Language videos, daily stories from the road and the places that do not make the guidebooks.",
+    "eyebrow": "تابعني",
+    "title": "عُمان، كل يوم",
+    "lead": "فيديوهات عن اللغات وقصص من الطريق وأماكن لا تجدها في الكتيبات السياحية.",
     "notes": {
-      "instagram": "Stories and reels",
-      "tiktok": "Short trips",
-      "youtube": "Full tours",
-      "facebook": "Updates"
+      "instagram": "قصص وريلز",
+      "tiktok": "رحلات قصيرة",
+      "youtube": "جولات كاملة",
+      "facebook": "آخر الأخبار"
     }
   },
   "reviews": {
-    "eyebrow": "Traveler reviews",
-    "title": "What guests say",
-    "note": "Real reviews in the guest's own words, with an English translation.",
-    "translation": "English translation",
+    "eyebrow": "آراء الضيوف",
+    "title": "ماذا يقول الضيوف",
+    "note": "آراء حقيقية بكلمات الضيوف أنفسهم، مع ترجمة عربية.",
+    "translation": "الترجمة العربية",
     "items": [
       {
         "lang": "es",
         "quote": "Fuimos dos amigas, pero el viaje desde el día que le conocimos se convirtió en un viaje de 3 amigos.",
-        "translation": "We were two friends, but from the day we met him the trip became a trip of three friends.",
-        "name": "Two friends from Spain",
-        "meta": "Reviewed in Spanish"
+        "translation": "كنا صديقتين، لكن منذ اليوم الذي التقيناه فيه أصبحت الرحلة رحلة ثلاثة أصدقاء.",
+        "name": "صديقتان من إسبانيا",
+        "meta": "رأي بالإسبانية"
       },
       {
         "lang": "es",
         "quote": "Lo que empezó como un guía terminó en un buen amigo. Habla 12 idiomas. Sí, es cierto. ¡12!",
-        "translation": "What started as a guide ended as a good friend. He speaks 12 languages. Yes, really. 12!",
-        "name": "Traveler from Spain",
-        "meta": "Reviewed in Spanish"
+        "translation": "ما بدأ كمرشد انتهى صديقًا عزيزًا. يتحدث 12 لغة. نعم، هذا صحيح. 12!",
+        "name": "مسافر من إسبانيا",
+        "meta": "رأي بالإسبانية"
       },
       {
         "lang": "it",
         "quote": "Issam non è stato solo una guida, ma un compagno di viaggio, un narratore, un ponte autentico tra noi e la sua terra.",
-        "translation": "Issam was not just a guide but a travel companion, a storyteller, a true bridge between us and his country.",
-        "name": "Four days in Oman",
-        "meta": "Reviewed in Italian"
+        "translation": "لم يكن عصام مجرد مرشد، بل رفيق سفر وراويًا وجسرًا حقيقيًا بيننا وبين أرضه.",
+        "name": "أربعة أيام في عُمان",
+        "meta": "رأي بالإيطالية"
       },
       {
         "lang": "it",
         "quote": "Fra tutti i tour guidati che ho fatto con la mia famiglia, questo è di gran lunga il migliore.",
-        "translation": "Of all the guided tours I have done with my family, this is by far the best.",
-        "name": "Family trip",
-        "meta": "Reviewed in Italian"
+        "translation": "من بين كل الجولات المرشدة التي قمت بها مع عائلتي، كانت هذه الأفضل بفارق كبير.",
+        "name": "رحلة عائلية",
+        "meta": "رأي بالإيطالية"
       },
       {
         "lang": "it",
         "quote": "Ci ha fatto vivere l'Oman come se fossimo parte della comunità locale.",
-        "translation": "He let us live Oman as if we were part of the local community.",
-        "name": "Travelers from Italy",
-        "meta": "Reviewed in Italian"
+        "translation": "جعلنا نعيش عُمان كأننا من أهلها.",
+        "name": "مسافرون من إيطاليا",
+        "meta": "رأي بالإيطالية"
       },
       {
         "lang": "it",
         "quote": "Fare un tour con Issam è un po' come tornare a casa dopo tanto tempo.",
-        "translation": "A tour with Issam is a bit like coming home after a long time.",
-        "name": "Muscat in Italian and German",
-        "meta": "Reviewed in Italian"
+        "translation": "الجولة مع عصام تشبه العودة إلى البيت بعد غياب طويل.",
+        "name": "مسقط بالإيطالية والألمانية",
+        "meta": "رأي بالإيطالية"
       }
     ]
   },
   "faq": {
-    "eyebrow": "Questions",
-    "title": "Before you message",
+    "eyebrow": "الأسئلة",
+    "title": "قبل أن تراسلني",
     "items": [
       {
-        "q": "How much does a private tour cost?",
-        "a": "Tours start at USD 200. The final price depends on the tour, on whether you need a car or a bus, and on the language. Send your dates and group size on WhatsApp for a quote."
+        "q": "كم تكلفة الجولة الخاصة؟",
+        "a": "تبدأ الجولات من 200 دولار أمريكي. ويعتمد السعر النهائي على الجولة، وعلى حاجتك إلى سيارة أو حافلة، وعلى اللغة. أرسل مواعيدك وعدد أفراد المجموعة عبر واتساب لتحصل على عرض سعر."
       },
       {
-        "q": "Where do you pick us up?",
-        "a": "Wherever you are staying. Issam picks up anywhere."
+        "q": "من أين تستقبلوننا؟",
+        "a": "من مكان إقامتك، فعصام يستقبل ضيوفه من أي مكان."
       },
       {
-        "q": "How long are the tours?",
-        "a": "Muscat is a half day (8:00 to 12:00) or a full day (8:00 to 15:00). Wadi Shab takes about 6 hours, Nizwa and the Wahiba Sands about 8. Tours can be combined into a trip of several days."
+        "q": "كم تستغرق الجولات؟",
+        "a": "جولة مسقط نصف يوم (من 8:00 إلى 12:00) أو يوم كامل (من 8:00 إلى 15:00). ويستغرق وادي الشاب نحو 6 ساعات، ونزوى ورمال الشرقية نحو 8 ساعات. ويمكن جمع الجولات في رحلة لعدة أيام."
       },
       {
-        "q": "Which languages do you guide in?",
-        "a": "Twelve: Arabic, English, German, Russian, Spanish, Italian, French, Portuguese, Catalan, Chinese, Hindi and Balochi. One tour can mix two languages, so mixed groups are welcome."
+        "q": "بأي لغات تقدم الجولات؟",
+        "a": "باثنتي عشرة لغة: العربية والإنجليزية والألمانية والروسية والإسبانية والإيطالية والفرنسية والبرتغالية والكتالونية والصينية والهندية والبلوشية. ويمكن الجمع بين لغتين في الجولة نفسها، لذا نرحب بالمجموعات المختلطة."
       },
       {
-        "q": "How big can the group be?",
-        "a": "Every tour is private, for 1 to 45 travelers. Small groups travel by car and larger groups by bus."
+        "q": "كم يمكن أن يكون حجم المجموعة؟",
+        "a": "كل جولة خاصة، من مسافر واحد إلى 45 مسافرًا. تسافر المجموعات الصغيرة بالسيارة والكبيرة بالحافلة."
       },
       {
-        "q": "How do we book and pay?",
-        "a": "Message on WhatsApp or send the request form. A deposit confirms your date. You can pay by card, cash, online, or by bank transfer as long as the money arrives before the tour."
+        "q": "كيف نحجز وندفع؟",
+        "a": "راسلنا عبر واتساب أو أرسل نموذج الطلب. يؤكد العربون موعدك. ويمكنك الدفع بالبطاقة أو نقدًا أو عبر الإنترنت أو بتحويل بنكي بشرط وصول المبلغ قبل الجولة."
       },
       {
-        "q": "What is the cancellation policy?",
-        "a": "There is no refund after confirmation, unless the tour cannot be delivered because of a failure on our side. If bad weather or a flooded wadi stops a tour, you get an alternative, or a refund if there is none."
+        "q": "ما سياسة الإلغاء؟",
+        "a": "لا يُسترد المبلغ بعد التأكيد، إلا إذا تعذر تقديم الجولة بسبب خطأ من جانبنا. وإذا منع سوء الطقس أو جريان الوادي الجولة، تحصل على بديل، أو على استرداد المبلغ إن لم يوجد بديل."
       },
       {
-        "q": "How far ahead should we book?",
-        "a": "Booking is flexible. Message as early as you can, and last-minute requests are welcome too."
+        "q": "متى يجب أن نحجز؟",
+        "a": "الحجز مرن. راسلنا في أقرب وقت ممكن، ونرحب أيضًا بالطلبات في اللحظة الأخيرة."
       },
       {
-        "q": "Can you help us book hotels?",
-        "a": "Yes."
+        "q": "هل تساعدنا في حجز الفنادق؟",
+        "a": "نعم."
       },
       {
-        "q": "Does it rain in Oman?",
-        "a": "Yes, it does. If the weather closes a route, Issam plans an alternative."
+        "q": "هل تمطر في عُمان؟",
+        "a": "نعم، تمطر. وإذا أغلق الطقس أحد المسارات، يجهز عصام بديلًا."
       },
       {
-        "q": "Can we pay by card in Oman?",
-        "a": "In most places, yes. Taxis are the exception, so carry some cash."
+        "q": "هل يمكن الدفع بالبطاقة في عُمان؟",
+        "a": "في معظم الأماكن نعم، ما عدا سيارات الأجرة، لذا احمل معك بعض النقود."
       }
     ]
   },
   "plan": {
-    "eyebrow": "Plan your tour",
-    "title": "Tell me where you want to go",
-    "note": "Message on WhatsApp, in your language",
-    "bubble": "Hi, I'm Issam. Where would you like to go?",
-    "ctaRequest": "Request a tour",
-    "ctaWhatsapp": "WhatsApp me",
-    "avatarLabel": "Issam"
+    "eyebrow": "خطّط جولتك",
+    "title": "قل لي إلى أين تريد أن تذهب",
+    "note": "عبر واتساب، وبلغتك",
+    "bubble": "مرحبًا، أنا عصام. إلى أين تحب أن تذهب؟",
+    "ctaRequest": "اطلب جولة",
+    "ctaWhatsapp": "راسلني على واتساب",
+    "avatarLabel": "عصام"
   },
   "form": {
-    "title": "Request a tour",
-    "intro": "Send the basics and Issam replies with a plan and a price.",
-    "tour": "Tour",
-    "tourAny": "Not sure yet, help me choose",
-    "date": "Preferred date",
-    "groupSize": "Group size",
-    "language": "Preferred language",
-    "name": "Your name",
-    "whatsapp": "WhatsApp number",
-    "whatsappHint": "With country code, for example +44 7700 900123",
-    "message": "Anything else?",
-    "messagePlaceholder": "Kids, mobility, interests, hotel...",
-    "submit": "Send request",
-    "sending": "Sending...",
-    "success": "Thank you. Issam will reply on WhatsApp soon.",
-    "openedWhatsapp": "WhatsApp opened with your request. Press send there to finish.",
-    "error": "Something went wrong. Your request opened in WhatsApp instead.",
-    "required": "Please fill in your name, WhatsApp number and date.",
-    "close": "Close",
-    "waIntro": "Hello Issam, I would like to request a tour."
+    "title": "اطلب جولة",
+    "intro": "أرسل المعلومات الأساسية، وسيرد عليك عصام ببرنامج وسعر.",
+    "tour": "الجولة",
+    "tourAny": "لست متأكدًا بعد، ساعدني في الاختيار",
+    "date": "التاريخ المفضل",
+    "groupSize": "عدد أفراد المجموعة",
+    "language": "اللغة المفضلة",
+    "name": "اسمك",
+    "whatsapp": "رقم واتساب",
+    "whatsappHint": "مع رمز الدولة، مثل +968 9123 4567",
+    "message": "هل هناك شيء آخر؟",
+    "messagePlaceholder": "أطفال، تنقل، اهتمامات، الفندق...",
+    "submit": "أرسل الطلب",
+    "sending": "جارٍ الإرسال...",
+    "success": "شكرًا لك. سيرد عليك عصام قريبًا عبر واتساب.",
+    "openedWhatsapp": "فُتح واتساب ومعه طلبك. اضغط إرسال هناك لإتمامه.",
+    "error": "حدث خطأ ما، ففُتح طلبك في واتساب بدلًا من ذلك.",
+    "required": "يرجى كتابة اسمك ورقم واتساب والتاريخ.",
+    "close": "إغلاق",
+    "waIntro": "مرحبًا عصام، أود طلب جولة."
   },
   "also": {
-    "eyebrow": "Also available",
-    "title": "Interpreting, translation and business help",
-    "text": "Interpreting and translation in the same languages as the tours, plus help with investing in Oman, buying real estate and legal matters.",
-    "cta": "Ask on WhatsApp"
+    "eyebrow": "خدمات أخرى",
+    "title": "الترجمة الفورية والتحريرية ودعم الأعمال",
+    "text": "ترجمة فورية وتحريرية بلغات الجولات نفسها، إضافة إلى المساعدة في الاستثمار في عُمان وشراء العقارات والشؤون القانونية.",
+    "cta": "اسأل عبر واتساب"
   },
   "tourPage": {
-    "back": "All tours",
-    "duration": "Duration",
-    "distance": "Distance",
-    "bestTime": "Best time",
-    "group": "Group",
-    "route": "The route",
-    "included": "Included",
-    "notIncluded": "Not included",
-    "request": "Request this tour",
-    "whatsapp": "Ask on WhatsApp",
-    "more": "More tours",
-    "heroVideoLabel": "Hero video loop, 10 to 15 seconds, 1920x1080 WebM and MP4",
-    "difficulty": "Difficulty",
-    "price": "Price",
-    "priceValue": "From {price}",
-    "priceNote": "Depends on group size, vehicle and language",
-    "bring": "Bring and wear",
-    "extras": "Optional extras",
-    "routeNote": "A typical route. Every tour is customizable, so Issam shapes the stops around you."
+    "back": "كل الجولات",
+    "duration": "المدة",
+    "distance": "المسافة",
+    "bestTime": "أفضل وقت",
+    "group": "المجموعة",
+    "route": "المسار",
+    "included": "يشمل",
+    "notIncluded": "لا يشمل",
+    "request": "اطلب هذه الجولة",
+    "whatsapp": "اسأل عبر واتساب",
+    "more": "جولات أخرى",
+    "heroVideoLabel": "فيديو الجولة",
+    "difficulty": "الصعوبة",
+    "price": "السعر",
+    "priceValue": "يبدأ من {price}",
+    "priceNote": "حسب عدد أفراد المجموعة ونوع المركبة واللغة",
+    "bring": "ما تحضره وترتديه",
+    "extras": "إضافات اختيارية",
+    "routeNote": "مسار نموذجي. كل الجولات قابلة للتعديل، ويختار عصام المحطات معك."
   },
   "footer": {
-    "rights": "All rights reserved.",
-    "madeIn": "Private tours of Oman from Muscat.",
-    "photoCredits": "Photo credits",
-    "photoEdited": "Resized."
+    "rights": "جميع الحقوق محفوظة.",
+    "madeIn": "جولات خاصة في عُمان انطلاقًا من مسقط.",
+    "photoCredits": "حقوق الصور",
+    "photoEdited": "تم تغيير الحجم."
   }
 }

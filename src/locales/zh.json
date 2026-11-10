@@ -1,484 +1,483 @@
 {
-  "_status": "todo",
-  "_todo": "TODO: translate into \"zh\". Every string below is an English placeholder copied from en.json. Set \"_status\" to \"done\" when translated.",
+  "_status": "done",
   "meta": {
-    "siteName": "Issam Albalushi, The Languages Ninja",
-    "homeTitle": "Private Tours of Oman in Your Language | Issam Albalushi",
-    "homeDescription": "Private, customizable tours of Oman with Issam Albalushi, The Languages Ninja, guiding since 2016 in 12 languages. Muscat, Nizwa, Wahiba Sands and Wadi Shab, from USD 200. Book on WhatsApp.",
-    "tourTitleSuffix": "Private Tour with Issam",
-    "ogAlt": "Issam Albalushi, private tour guide in Oman"
+    "siteName": "Issam Albalushi，The Languages Ninja",
+    "homeTitle": "阿曼中文私人导游包团游 | Issam Albalushi",
+    "homeDescription": "与阿曼私人导游 Issam Albalushi（The Languages Ninja）一起定制专属行程：2016 年起从事导游工作，精通 12 种语言，包括中文。马斯喀特、尼兹瓦、瓦希巴沙漠和沙布干河谷，200 美元起。通过 WhatsApp 预订。",
+    "tourTitleSuffix": "与 Issam 的私人行程",
+    "ogAlt": "Issam Albalushi，阿曼私人导游"
   },
   "nav": {
-    "home": "Home",
-    "story": "Story",
-    "tours": "Tours",
-    "follow": "Follow",
-    "reviews": "Reviews",
-    "faq": "FAQ",
-    "plan": "Plan your tour",
-    "menu": "Menu",
-    "close": "Close",
-    "language": "Language",
-    "skip": "Skip to content",
-    "backToTop": "Back to top",
-    "allTours": "All tours"
+    "home": "首页",
+    "story": "故事",
+    "tours": "行程",
+    "follow": "关注",
+    "reviews": "评价",
+    "faq": "常见问题",
+    "plan": "规划行程",
+    "menu": "菜单",
+    "close": "关闭",
+    "language": "语言",
+    "skip": "跳到正文",
+    "backToTop": "返回顶部",
+    "allTours": "全部行程"
   },
   "hero": {
-    "eyebrow": "Private tour guide in Oman",
-    "title": "Your private guide to Oman, in your language",
+    "eyebrow": "阿曼私人导游",
+    "title": "您在阿曼的私人导游，说您的语言",
     "tagline": "The Languages Ninja",
-    "lead": "Customizable days across Muscat, Nizwa, the Wahiba Sands and Wadi Shab, guided in the language you think in.",
-    "ctaWhatsapp": "Chat on WhatsApp",
-    "ctaTours": "See the tours",
+    "lead": "为您量身定制的马斯喀特、尼兹瓦、瓦希巴沙漠和沙布干河谷之旅，用您最熟悉的语言讲解。",
+    "ctaWhatsapp": "WhatsApp 联系我",
+    "ctaTours": "查看行程",
     "traits": [
-      "Private, 1 to 45 travelers",
-      "Pickup wherever you stay",
-      "12 languages, two on one tour",
-      "Tours from USD 200"
+      "私人包团，1 至 45 人",
+      "住处接送",
+      "12 种语言，一次行程可用两种",
+      "行程 200 美元起"
     ],
-    "portraitLabel": "Portrait of Issam Albalushi, private tour guide in Oman"
+    "portraitLabel": "Issam Albalushi 肖像，阿曼私人导游"
   },
   "counters": {
-    "eyebrow": "In numbers",
-    "languages": "Languages spoken",
-    "years": "Years guiding",
-    "travelers": "Travelers hosted",
-    "countries": "Countries welcomed"
+    "eyebrow": "数字一览",
+    "languages": "掌握语言",
+    "years": "导游年限",
+    "travelers": "接待游客",
+    "countries": "游客来源国家"
   },
   "press": {
-    "eyebrow": "Seen on and worked with",
-    "logoLabel": "Logo"
+    "eyebrow": "媒体报道与合作",
+    "logoLabel": "标志"
   },
   "day": {
-    "label": "One day in Oman",
+    "label": "阿曼的一天",
     "items": [
       {
-        "time": "Morning",
-        "title": "Nizwa under the Hajar",
-        "text": "Date palms and mud-brick forts below the mountains."
+        "time": "清晨",
+        "title": "哈杰尔山下的尼兹瓦",
+        "text": "山脚下的椰枣林和泥砖城堡。"
       },
       {
-        "time": "Noon",
-        "title": "The pools of Wadi Shab",
-        "text": "Green water, canyon walls and a swim to cool off."
+        "time": "正午",
+        "title": "沙布干河谷的水潭",
+        "text": "碧绿的潭水、峡谷石壁，再游个泳消暑。"
       },
       {
-        "time": "Sunset",
-        "title": "The Wahiba turns red",
-        "text": "The wind drops, the dunes glow and the whole desert goes quiet."
+        "time": "日落",
+        "title": "瓦希巴染成红色",
+        "text": "风停了，沙丘发光，整片沙漠安静下来。"
       },
       {
-        "time": "Night",
-        "title": "Muttrah lights up",
-        "text": "The Corniche glows along the old harbour of Muscat."
+        "time": "夜晚",
+        "title": "马特拉灯火通明",
+        "text": "滨海大道沿着马斯喀特老港闪闪发亮。"
       }
     ]
   },
   "story": {
-    "eyebrow": "The story",
-    "title": "Unique by choice",
-    "lead": "From between Sur and Sohar to guests from all over the world, each welcomed in their own language.",
-    "readMore": "Read more",
-    "close": "Close story",
+    "eyebrow": "故事",
+    "title": "选择与众不同",
+    "lead": "从苏尔与索哈尔之间的海岸，走向来自世界各地的游客，用每个人的母语迎接他们。",
+    "readMore": "阅读更多",
+    "close": "关闭故事",
     "cards": [
       {
-        "year": "Roots",
-        "title": "Between Sur and Sohar",
-        "blurb": "Issam grew up between Sur and Sohar, and on longer trips guests still get to see the places of his childhood.",
-        "full": "Issam grew up in Oman, between Sur and Sohar. On longer trips he opens the door to the Oman he knows best: his home, the places of his childhood and everyday life far from the tourist circuit.",
-        "quote": "I welcome you in your language, help you immerse in our culture till you get lost between the nomads."
+        "year": "根",
+        "title": "在苏尔与索哈尔之间",
+        "blurb": "Issam 在苏尔与索哈尔之间长大，在较长的旅程中，游客还能看到他童年的地方。",
+        "full": "Issam 在阿曼长大，家乡在苏尔与索哈尔之间。在较长的旅程中，他会带您走进他最熟悉的阿曼：他的家、他童年的地方，以及远离旅游线路的日常生活。",
+        "quote": "我用您的语言欢迎您，带您沉浸在我们的文化中，直到您迷失在游牧民之间。"
       },
       {
         "year": "2016",
-        "title": "The first tours",
-        "blurb": "Issam started guiding in 2016. About 15,000 travelers later, guests still leave as friends.",
-        "full": "Since 2016 Issam has guided about 15,000 travelers from more than 15 countries: couples and families by car, groups of up to 45 by bus. In his words: \"I love guiding because I am an emotional guy. I love to make people feel good and get goosebumps from how inspiring our Oman is.\"",
-        "quote": "The best praise I get is not how I look but how I make you feel after visiting my country."
+        "title": "最初的行程",
+        "blurb": "Issam 从 2016 年开始做导游。接待了约 15,000 名游客后，客人们依然像朋友一样离开。",
+        "full": "自 2016 年以来，Issam 带过约 15,000 名来自 15 个以上国家的游客：情侣和家庭乘车出游，最多 45 人的团队乘大巴出行。用他的话说：“我热爱导游工作，因为我是个感性的人。我喜欢让人开心，让他们被阿曼的魅力感动得起鸡皮疙瘩。”",
+        "quote": "最好的赞美不是关于我的样子，而是您游览我的国家之后的感受。"
       },
       {
         "year": "12",
-        "title": "Twelve languages",
-        "blurb": "A unique job needs a unique person, so Issam set out to learn languages. The hardest were Russian and German.",
-        "full": "\"I felt if I needed a unique job then I needed to be unique myself. Learning languages has absolutely made me unique.\" Russian and German were the hardest. Today Issam can switch between two languages on the same tour, so mixed groups never wait for a translation.",
-        "quote": "I put my heart and soul into my work, the languages, and I have lost my mind in the process. (after Van Gogh)"
+        "title": "十二种语言",
+        "blurb": "独特的工作需要独特的人，所以 Issam 决定学习语言。最难的是俄语和德语。",
+        "full": "“我觉得，想要一份独特的工作，自己首先要与众不同。学习语言让我变得独一无二。”最难的是俄语和德语。如今 Issam 可以在同一次行程中切换两种语言，多语种团队无需等待翻译。",
+        "quote": "我把全部的心血都投入到我的工作，也就是语言之中，并在这条路上为之痴迷。（借用梵高的话）"
       },
       {
-        "year": "Ninja",
-        "title": "Why the Languages Ninja",
-        "blurb": "To Issam, a ninja stands for power, strength and extraordinary skill. His languages are that strength.",
-        "full": "\"I felt about the ninja as power, strength and extraordinary competency, and I believe my languages are an absolute strength.\" Expect jokes too. In his own words, they can be spicy, but always tasty.",
-        "quote": "I do not offer the cheapest price, I offer the most cultural and authentic experience."
+        "year": "忍者",
+        "title": "为什么叫 Languages Ninja",
+        "blurb": "对 Issam 来说，忍者代表力量、坚韧和非凡的本领。他的语言就是这种力量。",
+        "full": "“在我心里，忍者意味着力量、坚韧和非凡的能力，而语言就是我最大的力量。”也请准备好听笑话。用他自己的话说：有时很辣，但总是很有味道。",
+        "quote": "我提供的不是最便宜的价格，而是最有文化底蕴、最地道的体验。"
       }
     ]
   },
   "tours": {
-    "eyebrow": "The tours",
-    "title": "Four days that show you Oman",
-    "lead": "Every tour is private and customizable. Start with one of these, combine them into a trip of several days, or ask about Muscat or Nizwa by night.",
-    "view": "View tour",
-    "videoLabel": "Video loop",
-    "mapTitle": "The routes",
-    "mapHint": "Scroll to fly the routes",
-    "mapFallback": "Map of northern Oman showing the four tour routes",
+    "eyebrow": "行程",
+    "title": "四天，看见阿曼",
+    "lead": "每条行程都是私人定制，可以随您调整。从其中一条开始，或把几条组合成多日之旅，也可以询问马斯喀特或尼兹瓦夜游。",
+    "view": "查看行程",
+    "videoLabel": "视频",
+    "mapTitle": "路线",
+    "mapHint": "滚动页面浏览各条路线",
+    "mapFallback": "阿曼北部地图，标有四条行程路线",
     "items": {
       "muscat-city": {
-        "name": "Muscat Authentic City Tour",
-        "short": "The Sultan Qaboos Grand Mosque and the hidden gems of the capital, half day or full day.",
-        "seoTitle": "Muscat Authentic City Tour",
-        "seoDescription": "A private Muscat city tour in your language with Issam, The Languages Ninja: the Sultan Qaboos Grand Mosque and hidden gems of the capital. Half day or full day, pickup wherever you stay.",
-        "intro": "The capital the way Issam knows it: the Sultan Qaboos Grand Mosque first, then the hidden gems most visitors miss, shaped around what you want to see.",
-        "duration": "Half day 8:00 to 12:00, or full day 8:00 to 15:00",
-        "distance": "About 50 km",
-        "bestTime": "September to May",
-        "difficulty": "Easy, suits everyone",
-        "group": "Private, 1 to 45 travelers",
+        "name": "马斯喀特深度城市游",
+        "short": "苏丹卡布斯大清真寺和首都的隐秘角落，半日或全日。",
+        "seoTitle": "马斯喀特中文私人城市游",
+        "seoDescription": "与 Issam（The Languages Ninja）一起用中文私人游览马斯喀特：苏丹卡布斯大清真寺和首都的隐秘角落。半日或全日，住处接送。",
+        "intro": "Issam 眼中的首都：先参观苏丹卡布斯大清真寺，再去大多数游客错过的隐秘角落，一切按您的兴趣安排。",
+        "duration": "半日 8:00 至 12:00，或全日 8:00 至 15:00",
+        "distance": "约 50 公里",
+        "bestTime": "9 月至次年 5 月",
+        "difficulty": "轻松，适合所有人",
+        "group": "私人包团，1 至 45 人",
         "stops": [
           {
-            "name": "Sultan Qaboos Grand Mosque",
-            "note": "The first stop. Women cover their hair, and everyone wears long sleeves and long trousers."
+            "name": "苏丹卡布斯大清真寺",
+            "note": "第一站。女士需遮住头发，所有人需穿长袖和长裤。"
           },
           {
-            "name": "Royal Opera House Muscat",
-            "note": "One of the hidden gems on a typical route, chosen with you on the day."
+            "name": "马斯喀特皇家歌剧院",
+            "note": "典型路线中的一处隐秘景点，当天与您一起选择。"
           },
           {
-            "name": "Muttrah Corniche and Souq",
-            "note": "Frankincense, silver and karak tea by the old harbour."
+            "name": "马特拉滨海大道和集市",
+            "note": "老港旁的乳香、银器和卡拉克奶茶。"
           },
           {
-            "name": "Old Muscat and Al Alam Palace",
-            "note": "The palace gates and the forts above the bay."
+            "name": "马斯喀特老城和阿拉姆宫",
+            "note": "王宫大门和海湾上方的城堡。"
           }
         ],
         "included": [
-          "Private guide in your language",
-          "Pickup and drop-off wherever you stay",
-          "A plan shaped around you, with what is included agreed when you book"
+          "使用您的语言的私人导游",
+          "住处接送",
+          "为您定制的行程，包含内容在预订时确定"
         ],
         "notIncluded": [
-          "Anything not agreed in your plan"
+          "行程中未约定的一切"
         ],
         "bring": [
-          "A head cover for women at the Grand Mosque",
-          "Long sleeves and long trousers"
+          "女士进清真寺需带头巾",
+          "长袖和长裤"
         ],
         "extras": [
-          "Muscat by night"
+          "马斯喀特夜游"
         ]
       },
       "nizwa-mountains": {
-        "name": "Nizwa Historical Tour",
-        "short": "An ancient Oman day trip to the old capital under the Hajar mountains.",
-        "seoTitle": "Nizwa Historical Tour",
-        "seoDescription": "A private day trip from Muscat to Nizwa with Issam, The Languages Ninja: immerse yourself in ancient Oman, guided in your language. About 8 hours, all year round.",
-        "intro": "Immerse yourself in ancient Oman: the forts, souqs and old villages of Nizwa, the former capital at the foot of the Hajar mountains.",
-        "duration": "About 8 hours",
-        "distance": "About 300 km round trip",
-        "bestTime": "All year round",
-        "difficulty": "Moderate, with some walking",
-        "group": "Private, 1 to 45 travelers",
+        "name": "尼兹瓦历史之旅",
+        "short": "走进古老阿曼的一日游，前往哈杰尔山脚下的古都。",
+        "seoTitle": "尼兹瓦中文私人一日游",
+        "seoDescription": "与 Issam（The Languages Ninja）一起从马斯喀特出发前往尼兹瓦的私人一日游：沉浸在古老的阿曼，中文讲解。约 8 小时，全年可游。",
+        "intro": "沉浸在古老的阿曼：哈杰尔山脚下的旧都尼兹瓦，有城堡、集市和古老村落。",
+        "duration": "约 8 小时",
+        "distance": "往返约 300 公里",
+        "bestTime": "全年",
+        "difficulty": "中等，需要步行一段",
+        "group": "私人包团，1 至 45 人",
         "stops": [
           {
-            "name": "Nizwa Fort and Souq",
-            "note": "The heart of the old capital."
+            "name": "尼兹瓦城堡和集市",
+            "note": "古都的中心。"
           },
           {
-            "name": "Birkat Al Mawz",
-            "note": "Optional extra: an abandoned mud-brick village and a working falaj among the palms."
+            "name": "比尔卡特穆兹",
+            "note": "可选：棕榈林中废弃的泥砖村落和仍在流淌的法拉吉灌溉渠。"
           },
           {
-            "name": "Jebel Akhdar plateau",
-            "note": "On request: terraced villages high in the Hajar mountains."
+            "name": "绿山高原",
+            "note": "可应要求安排：哈杰尔山高处的梯田村落。"
           },
           {
-            "name": "Bahla Fort",
-            "note": "On request: a UNESCO World Heritage fort near Nizwa."
+            "name": "巴赫莱城堡",
+            "note": "可应要求安排：尼兹瓦附近的联合国教科文组织世界遗产城堡。"
           }
         ],
         "included": [
-          "Private guide in your language",
-          "Pickup and drop-off wherever you stay",
-          "Details agreed when you book"
+          "使用您的语言的私人导游",
+          "住处接送",
+          "细节在预订时确定"
         ],
         "notIncluded": [
-          "Anything not agreed in your plan"
+          "行程中未约定的一切"
         ],
         "bring": [
-          "Sports shoes",
-          "No short dresses (no head cover needed)"
+          "运动鞋",
+          "不要穿短裙（无需遮盖头部）"
         ],
         "extras": [
-          "Birkat Al Mawz"
+          "比尔卡特穆兹"
         ]
       },
       "wahiba-desert": {
-        "name": "Wahiba Sands Tour",
-        "short": "Infinite landscapes of dunes by 4x4, with a camel ride, a quad or dune bashing if you want them.",
-        "seoTitle": "Wahiba Sands Tour",
-        "seoDescription": "A private day trip from Muscat to the Wahiba Sands (Sharqiya Sands) by Toyota 4x4 with Issam, The Languages Ninja: dunes, camel rides, quads and dune bashing, guided in your language.",
-        "intro": "Infinite landscapes: a day out of Muscat into the dunes of the Wahiba Sands by Toyota 4x4, with a camel ride, a quad or dune bashing if you are up for it.",
-        "duration": "About 8 hours",
-        "distance": "About 300 km round trip",
-        "bestTime": "September to May",
-        "difficulty": "Easy, suits everyone",
-        "group": "Private, 1 to 45 travelers",
+        "name": "瓦希巴沙漠之旅",
+        "short": "乘四驱车穿越无边沙丘，还可选择骑骆驼、沙滩摩托或冲沙。",
+        "seoTitle": "瓦希巴沙漠中文私人一日游",
+        "seoDescription": "与 Issam（The Languages Ninja）一起乘丰田四驱车从马斯喀特前往瓦希巴沙漠（沙尔基亚沙漠）的私人一日游：沙丘、骆驼、沙滩摩托和冲沙，中文讲解。",
+        "intro": "无边的风景：从马斯喀特出发，乘丰田四驱车深入瓦希巴的沙丘，愿意的话还可以骑骆驼、开沙滩摩托或冲沙。",
+        "duration": "约 8 小时",
+        "distance": "往返约 300 公里",
+        "bestTime": "9 月至次年 5 月",
+        "difficulty": "轻松，适合所有人",
+        "group": "私人包团，1 至 45 人",
         "stops": [
           {
-            "name": "Wadi Bani Khalid",
-            "note": "On a typical route: green pools in a palm-filled wadi on the way to the sands."
+            "name": "巴尼哈立德干河谷",
+            "note": "典型路线：前往沙漠途中，棕榈山谷里的碧绿水潭。"
           },
           {
-            "name": "Al Wasil and the edge of the sands",
-            "note": "Into the dunes by Toyota 4x4."
+            "name": "瓦西勒和沙漠边缘",
+            "note": "乘丰田四驱车驶入沙丘。"
           },
           {
-            "name": "Sunset over the dunes",
-            "note": "The best light of the day, from the top of a dune."
+            "name": "沙丘日落",
+            "note": "一天中最美的光线，在沙丘顶上欣赏。"
           },
           {
-            "name": "Camel ride, quad or dune bashing",
-            "note": "Optional extras, booked when you plan the day."
+            "name": "骑骆驼、沙滩摩托或冲沙",
+            "note": "可选项目，在规划当天行程时预订。"
           }
         ],
         "included": [
-          "Private guide in your language",
-          "Pickup and drop-off wherever you stay",
-          "Toyota 4x4"
+          "使用您的语言的私人导游",
+          "住处接送",
+          "丰田四驱车"
         ],
         "notIncluded": [
-          "Optional extras",
-          "Anything not agreed in your plan"
+          "可选项目",
+          "行程中未约定的一切"
         ],
         "bring": [
-          "A fun spirit"
+          "愉快的心情"
         ],
         "extras": [
-          "Camel ride",
-          "Quad",
-          "Dune bashing"
+          "骑骆驼",
+          "沙滩摩托",
+          "冲沙"
         ]
       },
       "wadi-shab-coast": {
-        "name": "Wadi Shab Adventure",
-        "short": "Natural erosion and turquoise pools in the canyon of Wadi Shab, early in the morning.",
-        "seoTitle": "Wadi Shab Adventure",
-        "seoDescription": "A private Wadi Shab day trip from Muscat with Issam, The Languages Ninja: canyon walls, natural erosion and swimming pools, with the Bimmah Sinkhole as an extra. About 6 hours.",
-        "intro": "Natural erosion and pools: an early start along the coast south of Muscat, then the walk and swim into the canyon of Wadi Shab.",
-        "duration": "About 6 hours, early morning start",
-        "distance": "About 200 km round trip",
-        "bestTime": "September to April",
-        "difficulty": "Moderate to slightly difficult, only for people able to walk",
-        "group": "Private, 1 to 45 travelers",
+        "name": "沙布干河谷探险",
+        "short": "清晨走进沙布干河谷的峡谷，欣赏流水侵蚀的岩石和碧蓝水潭。",
+        "seoTitle": "沙布干河谷中文私人一日游",
+        "seoDescription": "与 Issam（The Languages Ninja）一起从马斯喀特出发前往沙布干河谷的私人一日游：峡谷石壁、流水侵蚀的岩石和可游泳的水潭，可加选比玛天坑。约 6 小时。",
+        "intro": "流水雕琢的岩石和天然水潭：清晨沿马斯喀特以南的海岸出发，再徒步、游泳进入沙布干河谷的峡谷深处。",
+        "duration": "约 6 小时，清晨出发",
+        "distance": "往返约 200 公里",
+        "bestTime": "9 月至次年 4 月",
+        "difficulty": "中等偏难，只适合能正常步行的游客",
+        "group": "私人包团，1 至 45 人",
         "stops": [
           {
-            "name": "Bimmah Sinkhole",
-            "note": "Optional extra: steps down to green-blue water."
+            "name": "比玛天坑",
+            "note": "可选：沿台阶走下，就是蓝绿色的潭水。"
           },
           {
-            "name": "Fins beach",
-            "note": "On a typical route: white sand and clear water on the coast road."
+            "name": "芬斯海滩",
+            "note": "典型路线：海滨公路旁的白沙和清澈海水。"
           },
           {
-            "name": "Wadi Shab",
-            "note": "A short boat crossing, a walk up the canyon, then the pools."
+            "name": "沙布干河谷",
+            "note": "先乘船短途渡河，再沿峡谷步行，最后到达水潭。"
           },
           {
-            "name": "Sur",
-            "note": "On request, for a longer day: the dhow yard and the lighthouse."
+            "name": "苏尔",
+            "note": "可应要求安排，适合更长的一天：传统木船造船厂和灯塔。"
           }
         ],
         "included": [
-          "Private guide in your language",
-          "Pickup and drop-off wherever you stay",
-          "Details agreed when you book"
+          "使用您的语言的私人导游",
+          "住处接送",
+          "细节在预订时确定"
         ],
         "notIncluded": [
-          "Anything not agreed in your plan"
+          "行程中未约定的一切"
         ],
         "bring": [
-          "Sports shoes",
-          "A towel",
-          "A waterproof case for your phone"
+          "运动鞋",
+          "毛巾",
+          "手机防水袋"
         ],
         "extras": [
-          "Bimmah Sinkhole"
+          "比玛天坑"
         ]
       }
     }
   },
   "follow": {
-    "eyebrow": "Follow along",
-    "title": "Oman, every day",
-    "lead": "Language videos, daily stories from the road and the places that do not make the guidebooks.",
+    "eyebrow": "关注",
+    "title": "每天的阿曼",
+    "lead": "语言视频、旅途故事，还有旅游指南里找不到的地方。",
     "notes": {
-      "instagram": "Stories and reels",
-      "tiktok": "Short trips",
-      "youtube": "Full tours",
-      "facebook": "Updates"
+      "instagram": "快拍和短视频",
+      "tiktok": "短途旅行",
+      "youtube": "完整行程",
+      "facebook": "最新动态"
     }
   },
   "reviews": {
-    "eyebrow": "Traveler reviews",
-    "title": "What guests say",
-    "note": "Real reviews in the guest's own words, with an English translation.",
-    "translation": "English translation",
+    "eyebrow": "游客评价",
+    "title": "游客怎么说",
+    "note": "真实评价，保留游客原话，并附中文翻译。",
+    "translation": "中文翻译",
     "items": [
       {
         "lang": "es",
         "quote": "Fuimos dos amigas, pero el viaje desde el día que le conocimos se convirtió en un viaje de 3 amigos.",
-        "translation": "We were two friends, but from the day we met him the trip became a trip of three friends.",
-        "name": "Two friends from Spain",
-        "meta": "Reviewed in Spanish"
+        "translation": "我们是两个闺蜜一起去的，但从认识他的那天起，这趟旅行就变成了三个朋友的旅行。",
+        "name": "来自西班牙的两位朋友",
+        "meta": "西班牙语评价"
       },
       {
         "lang": "es",
         "quote": "Lo que empezó como un guía terminó en un buen amigo. Habla 12 idiomas. Sí, es cierto. ¡12!",
-        "translation": "What started as a guide ended as a good friend. He speaks 12 languages. Yes, really. 12!",
-        "name": "Traveler from Spain",
-        "meta": "Reviewed in Spanish"
+        "translation": "开始时他是导游，最后成了好朋友。他会说 12 种语言。没错，真的是 12 种！",
+        "name": "来自西班牙的游客",
+        "meta": "西班牙语评价"
       },
       {
         "lang": "it",
         "quote": "Issam non è stato solo una guida, ma un compagno di viaggio, un narratore, un ponte autentico tra noi e la sua terra.",
-        "translation": "Issam was not just a guide but a travel companion, a storyteller, a true bridge between us and his country.",
-        "name": "Four days in Oman",
-        "meta": "Reviewed in Italian"
+        "translation": "Issam 不只是导游，更是旅伴、讲故事的人，是我们与他的国家之间真正的桥梁。",
+        "name": "阿曼四日游",
+        "meta": "意大利语评价"
       },
       {
         "lang": "it",
         "quote": "Fra tutti i tour guidati che ho fatto con la mia famiglia, questo è di gran lunga il migliore.",
-        "translation": "Of all the guided tours I have done with my family, this is by far the best.",
-        "name": "Family trip",
-        "meta": "Reviewed in Italian"
+        "translation": "在我和家人参加过的所有导游行程中，这是遥遥领先最好的一次。",
+        "name": "家庭旅行",
+        "meta": "意大利语评价"
       },
       {
         "lang": "it",
         "quote": "Ci ha fatto vivere l'Oman come se fossimo parte della comunità locale.",
-        "translation": "He let us live Oman as if we were part of the local community.",
-        "name": "Travelers from Italy",
-        "meta": "Reviewed in Italian"
+        "translation": "他让我们像当地人一样体验阿曼。",
+        "name": "来自意大利的游客",
+        "meta": "意大利语评价"
       },
       {
         "lang": "it",
         "quote": "Fare un tour con Issam è un po' come tornare a casa dopo tanto tempo.",
-        "translation": "A tour with Issam is a bit like coming home after a long time.",
-        "name": "Muscat in Italian and German",
-        "meta": "Reviewed in Italian"
+        "translation": "和 Issam 一起旅行，有点像久别之后回到家。",
+        "name": "意大利语和德语的马斯喀特之旅",
+        "meta": "意大利语评价"
       }
     ]
   },
   "faq": {
-    "eyebrow": "Questions",
-    "title": "Before you message",
+    "eyebrow": "常见问题",
+    "title": "联系之前",
     "items": [
       {
-        "q": "How much does a private tour cost?",
-        "a": "Tours start at USD 200. The final price depends on the tour, on whether you need a car or a bus, and on the language. Send your dates and group size on WhatsApp for a quote."
+        "q": "私人行程多少钱？",
+        "a": "行程 200 美元起。最终价格取决于具体行程、需要轿车还是大巴，以及讲解语言。请通过 WhatsApp 发送日期和人数，即可获得报价。"
       },
       {
-        "q": "Where do you pick us up?",
-        "a": "Wherever you are staying. Issam picks up anywhere."
+        "q": "在哪里接我们？",
+        "a": "在您的住处。Issam 可以在任何地方接您。"
       },
       {
-        "q": "How long are the tours?",
-        "a": "Muscat is a half day (8:00 to 12:00) or a full day (8:00 to 15:00). Wadi Shab takes about 6 hours, Nizwa and the Wahiba Sands about 8. Tours can be combined into a trip of several days."
+        "q": "行程需要多长时间？",
+        "a": "马斯喀特为半日（8:00 至 12:00）或全日（8:00 至 15:00）。沙布干河谷约 6 小时，尼兹瓦和瓦希巴沙漠约 8 小时。多条行程可以组合成多日之旅。"
       },
       {
-        "q": "Which languages do you guide in?",
-        "a": "Twelve: Arabic, English, German, Russian, Spanish, Italian, French, Portuguese, Catalan, Chinese, Hindi and Balochi. One tour can mix two languages, so mixed groups are welcome."
+        "q": "您用哪些语言讲解？",
+        "a": "共十二种：阿拉伯语、英语、德语、俄语、西班牙语、意大利语、法语、葡萄牙语、加泰罗尼亚语、中文、印地语和俾路支语。一次行程可以使用两种语言，欢迎多语种团队。"
       },
       {
-        "q": "How big can the group be?",
-        "a": "Every tour is private, for 1 to 45 travelers. Small groups travel by car and larger groups by bus."
+        "q": "团队最多可以多少人？",
+        "a": "每条行程都是私人包团，1 至 45 人。小团乘轿车，大团乘大巴。"
       },
       {
-        "q": "How do we book and pay?",
-        "a": "Message on WhatsApp or send the request form. A deposit confirms your date. You can pay by card, cash, online, or by bank transfer as long as the money arrives before the tour."
+        "q": "如何预订和付款？",
+        "a": "通过 WhatsApp 联系或提交预订表格。支付定金即可确认日期。可以刷卡、现金、在线支付，或在行程开始前完成银行转账。"
       },
       {
-        "q": "What is the cancellation policy?",
-        "a": "There is no refund after confirmation, unless the tour cannot be delivered because of a failure on our side. If bad weather or a flooded wadi stops a tour, you get an alternative, or a refund if there is none."
+        "q": "取消政策是怎样的？",
+        "a": "确认后不予退款，除非因我方原因无法提供服务。如因恶劣天气或干河谷涨水无法出行，我们会提供替代方案；若没有替代方案，则予以退款。"
       },
       {
-        "q": "How far ahead should we book?",
-        "a": "Booking is flexible. Message as early as you can, and last-minute requests are welcome too."
+        "q": "需要提前多久预订？",
+        "a": "预订很灵活。请尽早联系，临时需求也同样欢迎。"
       },
       {
-        "q": "Can you help us book hotels?",
-        "a": "Yes."
+        "q": "可以帮我们预订酒店吗？",
+        "a": "可以。"
       },
       {
-        "q": "Does it rain in Oman?",
-        "a": "Yes, it does. If the weather closes a route, Issam plans an alternative."
+        "q": "阿曼会下雨吗？",
+        "a": "会下雨。如果天气导致某条路线关闭，Issam 会安排替代方案。"
       },
       {
-        "q": "Can we pay by card in Oman?",
-        "a": "In most places, yes. Taxis are the exception, so carry some cash."
+        "q": "在阿曼可以刷卡吗？",
+        "a": "大多数地方可以。出租车除外，请备一些现金。"
       }
     ]
   },
   "plan": {
-    "eyebrow": "Plan your tour",
-    "title": "Tell me where you want to go",
-    "note": "Message on WhatsApp, in your language",
-    "bubble": "Hi, I'm Issam. Where would you like to go?",
-    "ctaRequest": "Request a tour",
-    "ctaWhatsapp": "WhatsApp me",
+    "eyebrow": "规划行程",
+    "title": "告诉我您想去哪里",
+    "note": "通过 WhatsApp，用您的语言沟通",
+    "bubble": "您好，我是 Issam。您想去哪里？",
+    "ctaRequest": "咨询行程",
+    "ctaWhatsapp": "WhatsApp 联系我",
     "avatarLabel": "Issam"
   },
   "form": {
-    "title": "Request a tour",
-    "intro": "Send the basics and Issam replies with a plan and a price.",
-    "tour": "Tour",
-    "tourAny": "Not sure yet, help me choose",
-    "date": "Preferred date",
-    "groupSize": "Group size",
-    "language": "Preferred language",
-    "name": "Your name",
-    "whatsapp": "WhatsApp number",
-    "whatsappHint": "With country code, for example +44 7700 900123",
-    "message": "Anything else?",
-    "messagePlaceholder": "Kids, mobility, interests, hotel...",
-    "submit": "Send request",
-    "sending": "Sending...",
-    "success": "Thank you. Issam will reply on WhatsApp soon.",
-    "openedWhatsapp": "WhatsApp opened with your request. Press send there to finish.",
-    "error": "Something went wrong. Your request opened in WhatsApp instead.",
-    "required": "Please fill in your name, WhatsApp number and date.",
-    "close": "Close",
-    "waIntro": "Hello Issam, I would like to request a tour."
+    "title": "咨询行程",
+    "intro": "发送基本信息，Issam 会回复您行程安排和价格。",
+    "tour": "行程",
+    "tourAny": "还没想好，请帮我推荐",
+    "date": "期望日期",
+    "groupSize": "人数",
+    "language": "讲解语言",
+    "name": "您的姓名",
+    "whatsapp": "WhatsApp 号码",
+    "whatsappHint": "请加国家区号，例如 +86 138 0013 8000",
+    "message": "其他需求？",
+    "messagePlaceholder": "儿童、行动不便、兴趣、酒店……",
+    "submit": "发送咨询",
+    "sending": "正在发送……",
+    "success": "谢谢。Issam 会尽快通过 WhatsApp 回复您。",
+    "openedWhatsapp": "已打开 WhatsApp 并填好您的咨询，请在那里点击发送。",
+    "error": "出现问题，您的咨询已改为在 WhatsApp 中打开。",
+    "required": "请填写您的姓名、WhatsApp 号码和日期。",
+    "close": "关闭",
+    "waIntro": "您好 Issam，我想咨询一个行程。"
   },
   "also": {
-    "eyebrow": "Also available",
-    "title": "Interpreting, translation and business help",
-    "text": "Interpreting and translation in the same languages as the tours, plus help with investing in Oman, buying real estate and legal matters.",
-    "cta": "Ask on WhatsApp"
+    "eyebrow": "其他服务",
+    "title": "口译、笔译和商务协助",
+    "text": "提供与行程相同语言的口译和笔译服务，并协助在阿曼投资、购置房产和处理法律事务。",
+    "cta": "WhatsApp 咨询"
   },
   "tourPage": {
-    "back": "All tours",
-    "duration": "Duration",
-    "distance": "Distance",
-    "bestTime": "Best time",
-    "group": "Group",
-    "route": "The route",
-    "included": "Included",
-    "notIncluded": "Not included",
-    "request": "Request this tour",
-    "whatsapp": "Ask on WhatsApp",
-    "more": "More tours",
-    "heroVideoLabel": "Hero video loop, 10 to 15 seconds, 1920x1080 WebM and MP4",
-    "difficulty": "Difficulty",
-    "price": "Price",
-    "priceValue": "From {price}",
-    "priceNote": "Depends on group size, vehicle and language",
-    "bring": "Bring and wear",
-    "extras": "Optional extras",
-    "routeNote": "A typical route. Every tour is customizable, so Issam shapes the stops around you."
+    "back": "全部行程",
+    "duration": "时长",
+    "distance": "距离",
+    "bestTime": "最佳时间",
+    "group": "团队",
+    "route": "路线",
+    "included": "包含",
+    "notIncluded": "不包含",
+    "request": "咨询此行程",
+    "whatsapp": "WhatsApp 咨询",
+    "more": "更多行程",
+    "heroVideoLabel": "行程视频",
+    "difficulty": "难度",
+    "price": "价格",
+    "priceValue": "{price} 起",
+    "priceNote": "根据人数、车辆和语言而定",
+    "bring": "携带与着装",
+    "extras": "可选项目",
+    "routeNote": "典型路线。每条行程都可以定制，Issam 会与您一起安排停靠点。"
   },
   "footer": {
-    "rights": "All rights reserved.",
-    "madeIn": "Private tours of Oman from Muscat.",
-    "photoCredits": "Photo credits",
-    "photoEdited": "Resized."
+    "rights": "版权所有。",
+    "madeIn": "从马斯喀特出发的阿曼私人行程。",
+    "photoCredits": "图片来源",
+    "photoEdited": "已调整尺寸。"
   }
 }

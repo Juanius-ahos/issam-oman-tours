@@ -16,6 +16,7 @@ const greetings: [lang: string, word: string][] = [
   ['ca', 'Benvinguts'],
   ['ru', 'Добро пожаловать'],
   ['hi', 'स्वागत है'],
+  ['bal', 'وش آتکے'],
 ];
 
 /** Portalled to body: the hero's flying wordmark stacks above everything inside the hero. */

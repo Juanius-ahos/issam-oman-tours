@@ -42,7 +42,7 @@ text, brand name or videos are used.
 - **Wordmark:** "ISSAM" in condensed Archivo 900, with "The Languages Ninja" as the tagline.
 - **Hero effect:** a simplified port of merheb's ghost collapse. The wordmark, socials, 2 stat cards and the WhatsApp CTA fly from the hero into the sidebar.
 - **Map:** real satellite imagery (Sentinel-2 cloudless 2016 by EOX, CC BY 4.0, the only year licensed for commercial use) with routes following real roads (OpenStreetMap via OSRM, stored in `src/data/routeLines.ts`). The camera flies route to route. The earlier three.js relief model was rejected as fake and removed.
-- **Untranslated locales:** the 12 non-English JSON files are English copies marked `"_status": "todo"`. They are served `noindex` and left out of hreflang and the sitemap until translated (avoids duplicate content). Set `"_status": "done"` per locale when translated; `seo.indexTodoLocales` in config forces them on for staging.
+- **Locales (2026-11-10):** all 12 are translated and indexable: en, ar, es, it, de, fr, zh, pt, ca, ru, hi, bal (Balochi, RTL, Arabic-script font; needs Issam's review). `npm run check:locales` runs in the build and fails on missing keys or strings left in English. Earlier rule for any future locale: They are served `noindex` and left out of hreflang and the sitemap until translated (avoids duplicate content). Set `"_status": "done"` per locale when translated; `seo.indexTodoLocales` in config forces them on for staging.
 - **Form:** posts to `VITE_FORM_ENDPOINT` if set; otherwise (and on failure) it opens WhatsApp with the request written out, so no lead is lost.
 - **Reviews** are labelled "Sample reviews", so there is no `Review` / `AggregateRating` schema until real ones exist.
 

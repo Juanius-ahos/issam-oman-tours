@@ -39,7 +39,7 @@
     font-size: 10px; font-weight: 800; letter-spacing: .22em; text-transform: var(--upper);
     color: rgb(var(--ink) / .7);
   }
-  :lang(ar) .eyebrow, :lang(zh) .eyebrow { letter-spacing: var(--track-wide); font-size: 12px; }
+  :lang(ar) .eyebrow, :lang(bal) .eyebrow, :lang(zh) .eyebrow { letter-spacing: var(--track-wide); font-size: 12px; }
   .section-title {
     font-size: clamp(32px, 4.4vw, 64px); font-weight: 900; line-height: 1.02;
     letter-spacing: var(--track-tight); text-wrap: balance;
