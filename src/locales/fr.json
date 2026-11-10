@@ -579,7 +579,9 @@
     "bubble": "Bonjour, je suis Issam. Où aimeriez-vous aller ?",
     "ctaRequest": "Demander un circuit",
     "ctaWhatsapp": "M'écrire sur WhatsApp",
-    "avatarLabel": "Issam"
+    "avatarLabel": "Issam",
+    "chipsLabel": "Ou saluez-le dans votre langue",
+    "localTime": "En ce moment à Mascate {time}"
   },
   "form": {
     "title": "Demander un circuit",

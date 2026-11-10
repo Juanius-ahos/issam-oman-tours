@@ -579,7 +579,9 @@
     "bubble": "مرحبًا، أنا عصام. إلى أين تحب أن تذهب؟",
     "ctaRequest": "اطلب جولة",
     "ctaWhatsapp": "راسلني على واتساب",
-    "avatarLabel": "عصام"
+    "avatarLabel": "عصام",
+    "chipsLabel": "أو ألقِ التحية بلغتك",
+    "localTime": "الآن في مسقط {time}"
   },
   "form": {
     "title": "اطلب جولة",

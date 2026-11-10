@@ -579,7 +579,9 @@
     "bubble": "नमस्ते, मैं इस्साम हूँ। आप कहाँ जाना चाहेंगे?",
     "ctaRequest": "टूर के लिए अनुरोध करें",
     "ctaWhatsapp": "WhatsApp पर संदेश भेजें",
-    "avatarLabel": "इस्साम"
+    "avatarLabel": "इस्साम",
+    "chipsLabel": "या अपनी भाषा में नमस्ते कहें",
+    "localTime": "मस्कट में अभी {time}"
   },
   "form": {
     "title": "टूर के लिए अनुरोध",

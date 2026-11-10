@@ -579,7 +579,9 @@
     "bubble": "您好，我是 Issam。您想去哪里？",
     "ctaRequest": "咨询行程",
     "ctaWhatsapp": "WhatsApp 联系我",
-    "avatarLabel": "Issam"
+    "avatarLabel": "Issam",
+    "chipsLabel": "或用您的语言打个招呼",
+    "localTime": "马斯喀特当前时间 {time}"
   },
   "form": {
     "title": "咨询行程",

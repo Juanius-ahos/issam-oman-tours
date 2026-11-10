@@ -579,7 +579,9 @@
     "bubble": "Hola, soc l'Issam. On t'agradaria anar?",
     "ctaRequest": "Demana un tour",
     "ctaWhatsapp": "Escriu-me per WhatsApp",
-    "avatarLabel": "Issam"
+    "avatarLabel": "Issam",
+    "chipsLabel": "O saluda'l en el teu idioma",
+    "localTime": "Ara a Mascat {time}"
   },
   "form": {
     "title": "Demana el teu tour",

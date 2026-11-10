@@ -135,3 +135,21 @@
 @media (min-width: 901px) and (max-height: 660px) {
   html .side .side-tagline, html .side .side-press { display: none; }
 }
+/* Say hello in his 12 languages: each chip opens WhatsApp with a first message in that language. */
+.hello { position: relative; }
+.hello-chip {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 8px 15px; border-radius: 999px;
+  background: rgb(255 255 255 / .72); border: 1px solid rgb(var(--ink) / .12); color: rgb(var(--ink));
+  font-size: 15px; font-weight: 700; line-height: 1;
+  transition: background-color .25s var(--ease), color .25s var(--ease), transform .25s var(--ease), border-color .25s var(--ease);
+}
+.hello li:first-child .hello-chip { background: rgb(var(--accent)); border-color: transparent; color: #fff; }
+.hello-chip:hover { background: rgb(var(--ink)); border-color: transparent; color: rgb(var(--sand)); transform: translateY(-2px); }
+.hello-chip:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 3px; }
+.hello-chip:is(:lang(ar), :lang(bal)) { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; }
+/* Live local time in Muscat, with a soft pulse. */
+.muscat-time { display: inline-flex; align-items: center; gap: 8px; color: rgb(var(--accent-deep)); }
+.muscat-dot { width: 8px; height: 8px; border-radius: 50%; background: #2fb36d; box-shadow: 0 0 0 0 rgb(47 179 109 / .5); animation: muscat-pulse 2.4s ease-out infinite; }
+@keyframes muscat-pulse { 70% { box-shadow: 0 0 0 7px rgb(47 179 109 / 0); } 100% { box-shadow: 0 0 0 0 rgb(47 179 109 / 0); } }
+@media (prefers-reduced-motion: reduce) { .muscat-dot { animation: none; } }
+.brand-ar { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; font-size: 13px; font-weight: 700; color: rgb(var(--accent-light)); }

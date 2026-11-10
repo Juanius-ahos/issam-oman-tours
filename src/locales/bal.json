@@ -580,7 +580,9 @@
     "bubble": "وش آتکے، من عصام آن. شما کجا روگ لوٹێت؟",
     "ctaRequest": "ٹور ءِ لوٹ",
     "ctaWhatsapp": "واتس ایپءَ کُلئو دێم دئیێت",
-    "avatarLabel": "عصام"
+    "avatarLabel": "عصام",
+    "chipsLabel": "یا وتی زبانءَ سلام کنێت",
+    "localTime": "مسقطءَ اِنّون {time}"
   },
   "form": {
     "title": "ٹور ءِ لوٹ",

@@ -579,7 +579,9 @@
     "bubble": "Ciao, sono Issam. Dove ti piacerebbe andare?",
     "ctaRequest": "Richiedi un tour",
     "ctaWhatsapp": "Scrivimi su WhatsApp",
-    "avatarLabel": "Issam"
+    "avatarLabel": "Issam",
+    "chipsLabel": "Oppure salutalo nella tua lingua",
+    "localTime": "Ora a Mascate {time}"
   },
   "form": {
     "title": "Richiedi un tour",

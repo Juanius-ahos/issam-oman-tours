@@ -103,15 +103,19 @@ export function createGhost(hero: HTMLElement): () => void {
       const { real, r, g, parent } = m;
       if (m.type === 'text') {
         const p = real.parentElement!;
+        // The text leaves the flow while it flies, so the badge keeps its own size
+        // (text plus padding) and the text lands inside the padding, not on the corner.
+        const ps = getComputedStyle(p);
+        const pad = { t: parseFloat(ps.paddingTop), l: parseFloat(ps.paddingLeft), r: parseFloat(ps.paddingRight), b: parseFloat(ps.paddingBottom) };
         p.style.position = 'relative';
-        p.style.minWidth = `${r.width}px`;
-        p.style.minHeight = `${r.height}px`;
-        const edge = rtl ? { right: 0 } : { left: 0 };
-        const dx = rtl ? g.right - parent.right : g.left - parent.left;
+        p.style.minWidth = `${r.width + pad.l + pad.r}px`;
+        p.style.minHeight = `${r.height + pad.t + pad.b}px`;
+        const edge = rtl ? { right: pad.r } : { left: pad.l };
+        const dx = rtl ? g.right - (parent.right - pad.r) : g.left - (parent.left + pad.l);
         gsap.fromTo(
           real,
-          { position: 'absolute', top: 0, ...edge, x: dx, y: g.top - parent.top, fontSize: m.ghostFont, color: m.ghostColor },
-          { position: 'absolute', top: 0, ...edge, x: 0, y: 0, fontSize: m.realFont, color: m.realColor, ease: 'power1.inOut', scrollTrigger: st() },
+          { position: 'absolute', top: pad.t, ...edge, x: dx, y: g.top - (parent.top + pad.t), fontSize: m.ghostFont, color: m.ghostColor },
+          { position: 'absolute', top: pad.t, ...edge, x: 0, y: 0, fontSize: m.realFont, color: m.realColor, ease: 'power1.inOut', scrollTrigger: st() },
         );
       } else {
         const s = g.width / r.width;
@@ -136,7 +140,12 @@ export function createGhost(hero: HTMLElement): () => void {
       });
     }
     // Sidebar panel backgrounds appear just as the labels arrive.
-    gsap.fromTo('.side-panel-bg', { opacity: 0 }, {
+    // The wordmark badge waits until the flying letters have shrunk into it.
+    gsap.fromTo('.side .wordmark-bg', { opacity: 0 }, {
+      opacity: 1, ease: 'none',
+      scrollTrigger: { trigger: hero, start: `top+=${COLLAPSE_PX * 0.9} top`, end: `top+=${COLLAPSE_PX} top`, scrub: 1 },
+    });
+    gsap.fromTo('.side-panel-bg:not(.wordmark-bg)', { opacity: 0 }, {
       opacity: 1, ease: 'none',
       scrollTrigger: { trigger: hero, start: `top+=${COLLAPSE_PX * 0.38} top`, end: `top+=${COLLAPSE_PX * 0.5} top`, scrub: 1 },
     });

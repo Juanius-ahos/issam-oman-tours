@@ -8,6 +8,7 @@ import { useRequest } from '../components/TourRequest';
 import { WaLink, RollText, Avatar } from '../components/Bits';
 import { Icon } from '../components/Icon';
 import { StarPattern } from '../oman/Ornament';
+import { HelloChips, MuscatTime } from '../components/Hello';
 
 export function Plan() {
   const { m, dir } = useI18n();
@@ -38,7 +39,10 @@ export function Plan() {
       <StarPattern tone="sand" className="plan-geo" />
       <p className="eyebrow">{m.plan.eyebrow}</p>
       <h2 className="mt-4 max-w-[14ch] text-[clamp(42px,7.4vw,110px)] font-black leading-[0.95] tracking-[-0.05em] [text-wrap:balance]">{m.plan.title}</h2>
-      <p className="label-xs mt-5 text-ink/70">{m.plan.note}</p>
+      <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
+        <p className="label-xs text-ink/70">{m.plan.note}</p>
+        <MuscatTime />
+      </div>
 
       <div ref={chat} className="mt-10 flex items-end gap-3">
         <Avatar className="chat-avatar h-14 w-14" label={m.plan.avatarLabel} />
@@ -61,6 +65,7 @@ export function Plan() {
           </div>
         </div>
       </div>
+      <HelloChips />
     </section>
   );
 }

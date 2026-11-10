@@ -579,7 +579,9 @@
     "bubble": "Hallo, ich bin Issam. Wohin möchten Sie?",
     "ctaRequest": "Tour anfragen",
     "ctaWhatsapp": "WhatsApp schreiben",
-    "avatarLabel": "Issam"
+    "avatarLabel": "Issam",
+    "chipsLabel": "Oder grüßen Sie ihn in Ihrer Sprache",
+    "localTime": "Jetzt in Maskat {time}"
   },
   "form": {
     "title": "Tour anfragen",

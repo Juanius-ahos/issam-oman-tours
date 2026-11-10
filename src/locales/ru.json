@@ -579,7 +579,9 @@
     "bubble": "Здравствуйте, я Иссам. Куда бы вы хотели поехать?",
     "ctaRequest": "Запросить тур",
     "ctaWhatsapp": "Написать в WhatsApp",
-    "avatarLabel": "Иссам"
+    "avatarLabel": "Иссам",
+    "chipsLabel": "Или поздоровайтесь на своём языке",
+    "localTime": "Сейчас в Маскате {time}"
   },
   "form": {
     "title": "Запросить тур",

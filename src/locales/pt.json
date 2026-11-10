@@ -579,7 +579,9 @@
     "bubble": "Olá, sou o Issam. Para onde gostaria de ir?",
     "ctaRequest": "Pedir um passeio",
     "ctaWhatsapp": "Falar no WhatsApp",
-    "avatarLabel": "Issam"
+    "avatarLabel": "Issam",
+    "chipsLabel": "Ou cumprimente-o no seu idioma",
+    "localTime": "Agora em Mascate {time}"
   },
   "form": {
     "title": "Pedir um passeio",

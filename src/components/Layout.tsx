@@ -159,7 +159,7 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
           <div className="side-panel-bg glass-ink" />
           <div className="flex items-start justify-between gap-2">
             <a href={homePath(locale)} className="relative isolate inline-flex rounded-[10px] px-2.5 py-1.5" aria-label={config.brand.person}>
-              <span className="side-panel-bg rounded-[10px] bg-accent" />
+              <span className="side-panel-bg wordmark-bg rounded-[10px] bg-accent" />
               <span data-ghost="wordmark" data-ghost-type="text" className="wordmark block text-[30px] text-white">
                 {config.brand.wordmark}
               </span>
@@ -175,7 +175,10 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
 
         <div className="side-panel side-tagline text-[12.5px] font-medium leading-snug text-white">
           <div className="side-panel-bg glass-ink" />
-          <strong className="block text-[14px] font-black tracking-[-0.01em]" lang="en">{config.brand.business}</strong>
+          <span className="flex items-baseline justify-between gap-2">
+            <strong className="block text-[14px] font-black tracking-[-0.01em]" lang="en">{config.brand.business}</strong>
+            <span className="brand-ar" lang="ar" dir="rtl">عُمان مع عصام</span>
+          </span>
           <span className="block font-bold text-accent-light">{config.brand.nickname}</span>
         </div>
 
