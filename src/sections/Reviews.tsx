@@ -13,7 +13,7 @@ function fan(i: number, n: number) {
 }
 
 export function Reviews() {
-  const { m } = useI18n();
+  const { m, locale } = useI18n();
   const hand = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
@@ -67,10 +67,12 @@ export function Reviews() {
             <figure className="quote glass-ink">
               <div>
                 <blockquote lang={r.lang} className="text-[14.5px] leading-relaxed tracking-[-0.01em]">“{r.quote}”</blockquote>
-                <p className="mt-3 text-[12.5px] leading-snug text-white/75">
-                  <span className="sr-only">{m.reviews.translation}: </span>
-                  {r.translation}
-                </p>
+                {r.lang !== locale && (
+                  <p className="mt-3 text-[12.5px] leading-snug text-white/75">
+                    <span className="sr-only">{m.reviews.translation}: </span>
+                    {r.translation}
+                  </p>
+                )}
               </div>
               <figcaption>
                 <strong className="block text-[14px] font-extrabold">{r.name}</strong>

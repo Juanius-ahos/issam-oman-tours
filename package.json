@@ -6,7 +6,7 @@
   "description": "Private tours of Oman with Issam Baloushi, The Languages Ninja. Static, pre-rendered, 13 locales.",
   "scripts": {
     "dev": "vite",
-    "build": "npm run check:copy && npm run build:client && npm run build:server && npm run prerender",
+    "build": "npm run check:copy && npm run check:locales && npm run build:client && npm run build:server && npm run prerender",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
     "prerender": "node scripts/prerender.mjs",
@@ -15,7 +15,8 @@
     "check:copy": "node scripts/check-copy.mjs",
     "locales:sync": "node scripts/sync-locales.mjs",
     "build:pages": "node scripts/build-pages.mjs",
-    "deploy:pages": "node scripts/deploy-pages.mjs"
+    "deploy:pages": "node scripts/deploy-pages.mjs",
+    "check:locales": "node scripts/check-locales.mjs"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "5.1.1",
