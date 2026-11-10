@@ -83,7 +83,9 @@ export function Hero() {
             {m.hero.title}
           </h1>
           <p className="mt-4 max-w-[46ch] text-[15px] text-ink/70">{m.hero.lead}</p>
-          <p className="mt-3 text-[13px] font-extrabold uppercase tracking-[0.14em] text-accent-deep">{m.hero.tagline}</p>
+          <p className="mt-3 text-[13px] font-extrabold uppercase tracking-[0.14em] text-accent-deep">
+            <span lang="en">{config.brand.business}</span> · {m.hero.tagline}
+          </p>
         </div>
 
         <div className="hero-socials">

@@ -130,8 +130,13 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
 
       {/* Mobile top bar */}
       <header className="fixed inset-x-0 top-0 z-[80] flex h-[68px] items-center justify-between border-b border-ink/10 bg-sand/90 px-5 backdrop-blur-md desk:hidden">
-        <a href={homePath(locale)} className="wordmark rounded-[10px] bg-accent px-3 py-2 text-[22px] text-white" aria-label={config.brand.person}>
-          {config.brand.wordmark}
+        <a href={homePath(locale)} className="flex items-center gap-2.5" aria-label={config.brand.business}>
+          <span className="wordmark rounded-[10px] bg-accent px-3 py-2 text-[22px] text-white">{config.brand.wordmark}</span>
+          <span className="top-name text-[13px] font-black leading-[1.05] tracking-[-0.01em] text-ink" lang="en">
+            Oman with
+            <br />
+            Issam
+          </span>
         </a>
         <div className="flex items-center gap-2">
           <LanguageSwitcher route={route} variant="dark" />
@@ -170,8 +175,8 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
 
         <div className="side-panel side-tagline text-[12.5px] font-medium leading-snug text-white">
           <div className="side-panel-bg glass-ink" />
-          <strong className="block text-[13px] font-extrabold">{config.brand.nickname}</strong>
-          {m.hero.eyebrow}. {m.counters.languages}: {s.languages}.
+          <strong className="block text-[14px] font-black tracking-[-0.01em]" lang="en">{config.brand.business}</strong>
+          <span className="block font-bold text-accent-light">{config.brand.nickname}</span>
         </div>
 
         <div className="side-stats flex gap-2">
@@ -224,7 +229,7 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
       </div>
       <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-ink/10 px-[var(--gutter)] py-6 text-[11px] font-bold text-ink/70 desk:ms-[var(--nav-w)]">
         <span>
-          © {new Date().getFullYear()} {config.brand.person}. {m.footer.rights} {m.footer.madeIn}
+          © {new Date().getFullYear()} {config.brand.business}, {config.brand.person}. {m.footer.rights} {m.footer.madeIn}
         </span>
         <a href="#top" onClick={onNav('top')} className="hover:text-ink">{m.nav.backToTop}</a>
         <details className="w-full font-medium">

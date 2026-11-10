@@ -40,7 +40,7 @@ export function buildHead(route: Route, all: AllMessages): string {
     `<link rel="canonical" href="${url}">`,
     `<meta name="robots" content="${indexable ? 'index,follow,max-image-preview:large' : 'noindex,follow'}">`,
     `<meta property="og:type" content="website">`,
-    `<meta property="og:site_name" content="${esc(m.meta.siteName)}">`,
+    `<meta property="og:site_name" content="${esc(config.brand.business)}">`,
     `<meta property="og:title" content="${esc(title)}">`,
     `<meta property="og:description" content="${esc(description)}">`,
     `<meta property="og:url" content="${url}">`,
@@ -148,7 +148,8 @@ function jsonLd(route: Route, m: Messages): object[] {
             '@type': 'WebSite',
             '@id': abs(BASE + '#website'),
             url: abs(BASE + ''),
-            name: m.meta.siteName,
+            name: config.brand.business,
+            alternateName: m.meta.siteName,
             inLanguage: route.locale,
           },
           {
