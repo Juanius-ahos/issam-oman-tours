@@ -281,7 +281,7 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
               </li>
               <li className="footer-note">{m.plan.note}</li>
             </ul>
-            <SocialRow tileClass="!h-10 !w-10 !rounded-xl" />
+            <SocialRow tileClass="!h-10 !w-10 !rounded-xl !bg-ink !text-sand" />
           </div>
         </div>
 
