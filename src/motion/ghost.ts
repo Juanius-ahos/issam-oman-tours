@@ -128,11 +128,6 @@ export function createGhost(hero: HTMLElement): () => void {
       }
     }
 
-    // As the hero empties, its sand fills with the star lattice and a rosette.
-    gsap.fromTo(hero.querySelector('.hero-geo'), { opacity: 0 }, {
-      opacity: 1, ease: 'none',
-      scrollTrigger: { trigger: hero, start: `top+=${COLLAPSE_PX * 0.2} top`, end: `+=${COLLAPSE_PX * 0.6}`, scrub: 1 },
-    });
     // Hero-only content leaves; the portrait blurs into the background figure.
     gsap.to(hero.querySelectorAll('[data-hero-fade]'), {
       opacity: 0, y: -40, ease: 'none',

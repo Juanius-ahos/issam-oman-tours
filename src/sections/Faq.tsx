@@ -7,7 +7,7 @@ import { useI18n } from '../i18n';
 import { gsap } from '../motion/gsap';
 import { prefersReducedMotion } from '../lib/viewport';
 import { Icon } from '../components/Icon';
-import { StarDivider, StarPattern } from '../oman/Ornament';
+import { StarDivider } from '../oman/Ornament';
 
 function toggle(e: MouseEvent<HTMLElement>) {
   if (prefersReducedMotion()) return;
@@ -37,8 +37,7 @@ export function Faq() {
   const items = m.faq.items;
   const half = Math.ceil(items.length / 2);
   return (
-    <section id="faq" className="section isolate overflow-clip">
-      <StarPattern tone="sand" className="edge-geo edge-geo-start" />
+    <section id="faq" className="section">
       <header className="section-head">
         <p className="eyebrow">{m.faq.eyebrow}</p>
         <StarDivider />
