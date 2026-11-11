@@ -57,18 +57,15 @@ const site = config.siteUrl;
 const indexable = locales.filter((l) => isIndexable(messages[l.code]));
 const pathFor = (code, slug) => (slug ? `${BASE}${code}/tours/${slug}/` : `${BASE}${code}/`);
 
-// Root: send visitors to their browser language when that locale is live, else English.
-const live = JSON.stringify(indexable.map((l) => l.code));
-writeFileSync(
-  join(outDir, 'index.html'),
-  `<!doctype html><html lang="en"><head><meta charset="utf-8">
-<title>${messages.en.meta.homeTitle}</title>
-<meta name="robots" content="noindex,follow">
-<link rel="canonical" href="${site}${BASE}en/">
-<meta http-equiv="refresh" content="0; url=${BASE}en/">
-<script>(function(){var live=${live};var l=(navigator.language||'en').slice(0,2);location.replace('${BASE}'+(live.indexOf(l)>-1?l:'en')+'/');})();</script>
-</head><body><a href="${BASE}en/">${messages.en.meta.siteName}</a></body></html>\n`,
-);
+// Root: the full English home page (so the domain itself is a real, indexable page
+// with content, headings and favicons, not a redirect stub). Its canonical points to
+// /en/, so Google keeps one URL. Visitors whose browser language is another live
+// locale are sent there; English and unknown languages stay on this page.
+const live = JSON.stringify(indexable.map((l) => l.code).filter((c) => c !== 'en'));
+const enHome = readFileSync(join(outDir, 'en', 'index.html'), 'utf8');
+const langHop = `<script>(function(){try{var live=${live};var l=(navigator.language||'en').slice(0,2).toLowerCase();if(live.indexOf(l)>-1&&!/[?&]stay/.test(location.search))location.replace('${BASE}'+l+'/');}catch(e){}})();</script>`;
+writeFileSync(join(outDir, 'index.html'), enHome.replace('<meta charset="utf-8" />', `<meta charset="utf-8" />
+    ${langHop}`));
 
 // 404
 writeFileSync(

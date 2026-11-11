@@ -1,7 +1,7 @@
 import { config } from '../config';
 import { useI18n } from '../i18n';
 import { Icon, type IconName } from '../components/Icon';
-import { StarDivider, StarPattern } from '../oman/Ornament';
+import { StarDivider } from '../oman/Ornament';
 
 const order = ['instagram', 'tiktok', 'youtube', 'facebook'] as const;
 const names: Record<(typeof order)[number], string> = { instagram: 'Instagram', tiktok: 'TikTok', youtube: 'YouTube', facebook: 'Facebook' };
@@ -10,7 +10,6 @@ export function Follow() {
   const { m } = useI18n();
   return (
     <section id="follow" className="section isolate overflow-clip">
-      <StarPattern tone="sand" className="edge-geo edge-geo-top" />
       <header className="section-head">
         <p className="eyebrow">{m.follow.eyebrow}</p>
         <StarDivider />

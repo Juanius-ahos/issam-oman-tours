@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react';
 import { config } from '../config';
 import { useI18n } from '../i18n';
 import { createGhost } from '../motion/ghost';
-import { Rosette, StarPattern } from '../oman/Ornament';
 import { ScrollTrigger } from '../motion/gsap';
 import { BASE } from '../routes';
 import { GreetingBubble } from '../oman/Bits';
@@ -59,10 +58,6 @@ export function Hero() {
     <section id="top" ref={hero} className="hero hero-layout" aria-labelledby="hero-title">
       <GreetingBubble />
       <div className="hero-stage">
-        <div className="hero-geo" aria-hidden="true">
-          <StarPattern tone="sand" />
-          <Rosette tone="sand" className="hero-rosette" />
-        </div>
         <div className="hero-backdrop" data-hero-fade>
           <img src={photoSrc('wahiba-soft-dunes')} srcSet={photoSrcSet('wahiba-soft-dunes')} sizes="100vw" alt="" decoding="async" />
         </div>
