@@ -100,7 +100,10 @@ export function Frieze({ className = '' }: { className?: string }) {
 }
 
 /** Sixteen-point rosette: four squares turned 22.5 degrees apart inside two rings, an eight-point star at the heart. */
-export function Rosette({ className = '' }: { className?: string }) {
+export function Rosette({ className = '', tone = 'dark' }: { className?: string; tone?: 'dark' | 'sand' }) {
+  const c = tone === 'dark'
+    ? { ring: 'rgb(var(--accent-light) / .35)', sqFill: 'rgb(var(--accent) / .1)', sq: 'rgb(var(--accent-light) / .6)', inner: 'rgb(var(--accent-light) / .8)', petal: 'rgb(var(--amber) / .8)' }
+    : { ring: 'rgb(var(--accent-deep) / .22)', sqFill: 'rgb(var(--accent) / .045)', sq: 'rgb(var(--accent-deep) / .32)', inner: 'rgb(var(--accent-deep) / .42)', petal: 'rgb(var(--amber) / .55)' };
   const R = 100;
   const sq = (rot: number, r: number) => `M${[0, 1, 2, 3].map((i) => P(r * Math.cos(rot + (i * Math.PI) / 2), r * Math.sin(rot + (i * Math.PI) / 2))).join('L')}Z`;
   const squares = [0, 1, 2, 3].map((i) => sq(-Math.PI / 2 + (i * Math.PI) / 8, R)).join(' ');
@@ -112,11 +115,11 @@ export function Rosette({ className = '' }: { className?: string }) {
   }).join(' ');
   return (
     <svg className={`rosette pointer-events-none ${className}`} viewBox="-125 -125 250 250" aria-hidden="true" focusable="false">
-      <circle r="122" fill="none" stroke="rgb(var(--accent-light) / .35)" strokeWidth=".6" />
-      <circle r="103" fill="none" stroke="rgb(var(--accent-light) / .35)" strokeWidth=".6" />
-      <path d={petals} fill="rgb(var(--amber) / .8)" />
-      <path d={squares} fill="rgb(var(--accent) / .1)" stroke="rgb(var(--accent-light) / .6)" strokeWidth=".8" strokeLinejoin="miter" />
-      <path d={inner} fill="none" stroke="rgb(var(--accent-light) / .8)" strokeWidth=".8" />
+      <circle r="122" fill="none" stroke={c.ring} strokeWidth=".6" />
+      <circle r="103" fill="none" stroke={c.ring} strokeWidth=".6" />
+      <path d={petals} fill={c.petal} />
+      <path d={squares} fill={c.sqFill} stroke={c.sq} strokeWidth=".8" strokeLinejoin="miter" />
+      <path d={inner} fill="none" stroke={c.inner} strokeWidth=".8" />
       <path d={octagram(0, 0, 17)} fill="rgb(var(--amber))" />
     </svg>
   );
