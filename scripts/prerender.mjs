@@ -78,18 +78,27 @@ writeFileSync(
 
 // Sitemap with hreflang alternates, indexable locales only.
 const urls = [];
+const today = new Date().toISOString().slice(0, 10);
 for (const slug of [null, ...tourSlugs]) {
   for (const l of indexable) {
     const alts = indexable
       .map((a) => `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${site}${pathFor(a.code, slug)}"/>`)
       .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${site}${pathFor('en', slug)}"/>`)
       .join('\n');
-    urls.push(`  <url>\n    <loc>${site}${pathFor(l.code, slug)}</loc>\n${alts}\n    <changefreq>monthly</changefreq>\n    <priority>${slug ? '0.8' : '1.0'}</priority>\n  </url>`);
+    const img = `${site}${BASE}og/${slug ? `tour-${slug}` : 'home'}.jpg`;
+    urls.push(`  <url>
+    <loc>${site}${pathFor(l.code, slug)}</loc>
+    <lastmod>${today}</lastmod>
+${alts}
+    <image:image><image:loc>${img}</image:loc></image:image>
+    <changefreq>monthly</changefreq>
+    <priority>${slug ? '0.8' : '1.0'}</priority>
+  </url>`);
   }
 }
 writeFileSync(
   join(outDir, 'sitemap.xml'),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls.join('\n')}\n</urlset>\n`,
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.join('\n')}\n</urlset>\n`,
 );
 
 writeFileSync(
@@ -109,7 +118,7 @@ writeFileSync(
 
 > ${en.meta.homeDescription}
 
-${config.brand.person} ("${config.brand.nickname}", trading as ${config.brand.business}) is a private tour guide in Oman, guiding since ${config.business.startedGuiding} and with about ${config.business.stats.travelersHosted.toLocaleString('en-US')} travelers hosted. Tours are guided in ${config.guideLanguages.map((l) => l.name).join(', ')}, and one tour can mix two languages. Tours are private, for 1 to 45 travelers, with pickup wherever guests stay. Prices start at ${config.pricing.currency} ${config.pricing.from}. Bookings are made on WhatsApp (https://wa.me/${config.whatsapp.number}), by email (${config.email}) or with the tour request form. Interpreting, translation and help with investing, real estate and legal matters in Oman are also available.
+${config.brand.person} ("${config.brand.nickname}", trading as ${config.brand.business}) is a private tour guide in Oman, guiding since ${config.business.startedGuiding} and with about ${config.business.stats.travelersHosted.toLocaleString('en-US')} travelers hosted. Tours are guided in ${config.guideLanguages.map((l) => l.name).join(', ')}, and one tour can mix two languages. Tours are private, for 1 to 45 travelers, with pickup wherever guests stay. Prices start at ${config.pricing.currency} ${config.pricing.from}. Bookings are made on WhatsApp (https://wa.me/${config.whatsapp.number}), by email (${config.email}) or with the tour request form. Interpreting, translation and help with investing, real estate and legal matters in Oman are also available. Rated ${config.tripadvisorRating.score} out of 5 on Tripadvisor from ${config.tripadvisorRating.count} reviews (${config.tripadvisor}). Website: ${site}${BASE}en/.
 
 ## Tours
 
@@ -127,7 +136,7 @@ ${faqLines}
 );
 
 console.log(`Pre-rendered ${count} pages (${indexable.length} indexable locale(s): ${indexable.map((l) => l.code).join(', ')}) into dist/site`);
-if (!existsSync(join(outDir, 'og/og-card.png'))) console.warn('Warning: public/og/og-card.png is missing');
+if (!existsSync(join(outDir, 'og/home.jpg'))) console.warn('Warning: public/og/home.jpg is missing');
 
 // GitHub Pages: serve files as they are (no Jekyll processing).
 writeFileSync(join(outDir, '.nojekyll'), '');

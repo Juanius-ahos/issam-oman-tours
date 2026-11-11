@@ -24,7 +24,9 @@ export function pageMeta(route: Route, m: Messages) {
     return { title: m.meta.homeTitle, description: m.meta.homeDescription };
   }
   const t = m.tours.items[route.slug];
-  return { title: `${t.seoTitle} | ${m.meta.tourTitleSuffix}`, description: t.seoDescription };
+  // Keep titles inside what Google shows (about 60 characters): add the brand only when it fits.
+  const branded = `${t.seoTitle} | ${config.brand.business}`;
+  return { title: [...branded].length <= 62 ? branded : t.seoTitle, description: t.seoDescription };
 }
 
 export function buildHead(route: Route, all: AllMessages): string {
@@ -45,7 +47,7 @@ export function buildHead(route: Route, all: AllMessages): string {
     `<meta property="og:description" content="${esc(description)}">`,
     `<meta property="og:url" content="${url}">`,
     `<meta property="og:locale" content="${ogLocale}">`,
-    `<meta property="og:image" content="${abs(BASE + 'og/og-card.png')}">`,
+    `<meta property="og:image" content="${abs(BASE + (route.page === 'tour' ? `og/tour-${route.slug}.jpg` : 'og/home.jpg'))}">`,
     `<meta property="og:image:width" content="1200">`,
     `<meta property="og:image:height" content="630">`,
     `<meta property="og:image:alt" content="${esc(m.meta.ogAlt)}">`,
@@ -90,7 +92,7 @@ function business(m: Messages) {
     alternateName: m.meta.siteName,
     description: m.meta.homeDescription,
     url: abs(BASE + ''),
-    image: abs(BASE + 'og/og-card.png'),
+    image: [abs(BASE + 'og/home.jpg'), abs(BASE + 'media/issam-portrait.webp')],
     logo: abs(BASE + 'icon-512.png'),
     telephone: `+${config.whatsapp.number}`,
     email: config.email,
@@ -103,6 +105,10 @@ function business(m: Messages) {
     },
     geo: { '@type': 'GeoCoordinates', latitude: config.business.geo.lat, longitude: config.business.geo.lng },
     areaServed: { '@type': 'Country', name: 'Oman' },
+    // Hours as listed by Issam on Tripadvisor (2026-11-11).
+    openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '07:00', closes: '23:30' }],
+    currenciesAccepted: config.pricing.currency,
+    paymentAccepted: 'Cash, Credit Card, Bank transfer',
     founder: { '@id': abs(BASE + '#issam') },
     knowsLanguage: config.guideLanguages.map((l) => l.code),
     sameAs: [...Object.values(config.socials).map((s) => s.url), config.tripadvisor, config.googleBusinessProfile].filter(Boolean),
@@ -120,7 +126,16 @@ function trip(route: Route & { page: 'tour' }, m: Messages) {
     url: abs(pathFor(route)),
     inLanguage: route.locale,
     touristType: ['Private travelers', 'Families', 'Couples'],
+    image: abs(BASE + `og/tour-${route.slug}.jpg`),
     provider: { '@id': abs(BASE + '#business') },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: config.pricing.currency,
+      price: config.pricing.from,
+      priceSpecification: { '@type': 'PriceSpecification', minPrice: config.pricing.from, priceCurrency: config.pricing.currency },
+      availability: 'https://schema.org/InStock',
+      url: abs(pathFor(route)),
+    },
     itinerary: {
       '@type': 'ItemList',
       itemListElement: t.stops.map((s, i) => ({
