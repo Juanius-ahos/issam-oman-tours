@@ -309,7 +309,7 @@
         "seoTitle": "Private Muscat by Night Tour",
         "seoDescription": "Private Muscat by night tour with Issam (The Languages Ninja) in your language: the Royal Opera House lit up, the Mutrah Corniche and the souq in the evening. Pickup wherever you stay.",
         "intro": "Muscat changes after sunset. When the heat drops, Issam takes you along the lit seafront of Mutrah, into the evening souq and past the palace in old Muscat.",
-        "duration": "An evening, agreed when you book",
+        "duration": "About 5 hours, in the evening",
         "distance": "About 70 km round trip",
         "bestTime": "September to May, evenings",
         "difficulty": "Easy, suits everyone",
@@ -520,7 +520,9 @@
         "name": "Muscat in Italian and German",
         "meta": "Reviewed in Italian"
       }
-    ]
+    ],
+    "tripadvisor": "Read them on Tripadvisor",
+    "taCount": "{count} reviews on Tripadvisor"
   },
   "faq": {
     "eyebrow": "Questions",
@@ -637,5 +639,13 @@
     "madeIn": "Private tours of Oman from Muscat.",
     "photoCredits": "Photo credits",
     "photoEdited": "Resized."
+  },
+  "gallery": {
+    "eyebrow": "On the road",
+    "title": "Moments from Issam's tours",
+    "lead": "Real days with guests: the desert, the wadis and the road between.",
+    "altGuests": "Issam with guests on a tour in Oman",
+    "altIssam": "Issam on a tour in Oman",
+    "altPlace": "On a tour in Oman"
   }
 }

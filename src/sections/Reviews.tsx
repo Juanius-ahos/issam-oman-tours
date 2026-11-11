@@ -5,6 +5,8 @@ import { useI18n } from '../i18n';
 import { gsap } from '../motion/gsap';
 import { isMobile, prefersReducedMotion } from '../lib/viewport';
 import { StarDivider, StarPattern } from '../oman/Ornament';
+import { Icon } from '../components/Icon';
+import { config } from '../config';
 
 /** Position in the fanned hand for card i of n: tilted and lowered toward the edges. */
 function fan(i: number, n: number) {
@@ -53,6 +55,17 @@ export function Reviews() {
         <StarDivider />
         <h2 className="section-title">{m.reviews.title}</h2>
         <p className="section-lead">{m.reviews.note}</p>
+        <a href={config.tripadvisor} target="_blank" rel="noopener" className="ta-badge">
+          <span className="ta-score">{config.tripadvisorRating.score}</span>
+          <span className="ta-stars" aria-hidden="true">★★★★★</span>
+          <span className="ta-text">
+            {m.reviews.taCount.replace('{count}', String(config.tripadvisorRating.count))}
+            <span className="ta-more">
+              {m.reviews.tripadvisor}
+              <Icon name="arrow" size={13} />
+            </span>
+          </span>
+        </a>
       </header>
       <ul ref={hand} className="hand" style={{ ['--n' as string]: m.reviews.items.length }}>
         {m.reviews.items.map((r, i, all) => {

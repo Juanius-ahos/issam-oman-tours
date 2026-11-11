@@ -309,7 +309,7 @@
         "seoTitle": "Tour privato di Mascate di notte in italiano",
         "seoDescription": "Tour privato di Mascate di notte con Issam (The Languages Ninja) in italiano: la Royal Opera House illuminata, la Corniche di Mutrah e il suq di sera. Prelievo dove alloggi.",
         "intro": "Mascate cambia dopo il tramonto. Quando il caldo cala, Issam ti accompagna lungo il lungomare illuminato di Mutrah, nel suq serale e davanti al palazzo della vecchia Mascate.",
-        "duration": "Una serata, da concordare alla prenotazione",
+        "duration": "Circa 5 ore, di sera",
         "distance": "Circa 70 km andata e ritorno",
         "bestTime": "Da settembre a maggio, di sera",
         "difficulty": "Facile, adatto a tutti",
@@ -520,7 +520,9 @@
         "name": "Mascate in italiano e tedesco",
         "meta": "Recensione in italiano"
       }
-    ]
+    ],
+    "tripadvisor": "Leggile su Tripadvisor",
+    "taCount": "{count} recensioni su Tripadvisor"
   },
   "faq": {
     "eyebrow": "Domande",
@@ -637,5 +639,13 @@
     "madeIn": "Tour privati in Oman da Mascate.",
     "photoCredits": "Crediti fotografici",
     "photoEdited": "Ridimensionata."
+  },
+  "gallery": {
+    "eyebrow": "In viaggio",
+    "title": "Momenti dai tour di Issam",
+    "lead": "Giornate vere con gli ospiti: il deserto, i wadi e la strada in mezzo.",
+    "altGuests": "Issam con ospiti durante un tour in Oman",
+    "altIssam": "Issam durante un tour in Oman",
+    "altPlace": "Durante un tour in Oman"
   }
 }

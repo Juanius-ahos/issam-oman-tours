@@ -1,5 +1,9 @@
 import type { TourSlug } from '../config';
 import { photoSrc } from './photos';
+import { BASE } from '../routes';
+
+/** Issam's own photos from his tours (public/media/issam), 640 and 1280 wide. */
+const own = (name: string) => `${BASE}media/issam/${name}-1280.webp`;
 
 /* Language-neutral tour data: route geometry for the map and JSON-LD.
    Names and descriptions live in the locale JSON under tours.items.<slug>.
@@ -121,12 +125,12 @@ export const tourGeo: Record<TourSlug, TourGeo> = {
 export const tourMedia: Record<TourSlug, { webm?: string; mp4?: string; poster?: string }> = {
   'muscat-city': { poster: photoSrc('muscat-grand-mosque') },
   'nizwa-mountains': { poster: photoSrc('nizwa-fort') },
-  'wahiba-desert': { poster: photoSrc('wahiba-dune-drive') },
+  'wahiba-desert': { poster: own('desert-sunset') },
   'wadi-shab-coast': { poster: photoSrc('wadi-shab') },
   'muscat-night': { poster: photoSrc('muscat-corniche-night') },
   'nizwa-night': { poster: photoSrc('nizwa-night') },
   'al-hamra': { poster: photoSrc('al-hamra') },
-  'multi-day': { poster: photoSrc('wahiba-sunset') },
+  'multi-day': { poster: own('desert-landcruiser') },
 };
 
 /** Map extent (northern Oman) used by both the SVG fallback and the 3D terrain. */

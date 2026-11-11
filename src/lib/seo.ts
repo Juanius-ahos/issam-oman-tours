@@ -78,7 +78,7 @@ function person(m: Messages) {
     knowsLanguage: config.guideLanguages.map((l) => l.code),
     homeLocation: { '@type': 'Place', name: `${config.business.city}, Oman` },
     url: abs(BASE + ''),
-    sameAs: Object.values(config.socials).map((s) => s.url).filter(Boolean),
+    sameAs: [...Object.values(config.socials).map((s) => s.url), config.tripadvisor].filter(Boolean),
   };
 }
 
@@ -104,7 +104,7 @@ function business(m: Messages) {
     areaServed: { '@type': 'Country', name: 'Oman' },
     founder: { '@id': abs(BASE + '#issam') },
     knowsLanguage: config.guideLanguages.map((l) => l.code),
-    sameAs: [...Object.values(config.socials).map((s) => s.url), config.googleBusinessProfile].filter(Boolean),
+    sameAs: [...Object.values(config.socials).map((s) => s.url), config.tripadvisor, config.googleBusinessProfile].filter(Boolean),
   };
 }
 

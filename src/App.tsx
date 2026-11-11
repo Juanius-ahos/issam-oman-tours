@@ -12,6 +12,7 @@ import { Story } from './sections/Story';
 import { Tours } from './sections/Tours';
 import { Follow } from './sections/Follow';
 import { Reviews } from './sections/Reviews';
+import { Gallery } from './sections/Gallery';
 import { Faq } from './sections/Faq';
 import { Plan } from './sections/Plan';
 import { Also } from './sections/Also';
@@ -30,6 +31,7 @@ function HomePage() {
         <Tours />
         <Follow />
         <Reviews />
+        <Gallery />
         <Faq />
         <Plan />
         <Also />

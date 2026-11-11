@@ -309,7 +309,7 @@
         "seoTitle": "Private Tour Maskat bei Nacht auf Deutsch",
         "seoDescription": "Private Tour Maskat bei Nacht mit Issam (The Languages Ninja) auf Deutsch: das beleuchtete Royal Opera House, die Corniche von Mutrah und der Souk am Abend. Abholung an Ihrer Unterkunft.",
         "intro": "Maskat verändert sich nach Sonnenuntergang. Wenn die Hitze nachlässt, führt Issam Sie an der beleuchteten Uferpromenade von Mutrah entlang, in den abendlichen Souk und am Palast im alten Maskat vorbei.",
-        "duration": "Ein Abend, bei der Buchung abgestimmt",
+        "duration": "Etwa 5 Stunden, am Abend",
         "distance": "Etwa 70 km hin und zurück",
         "bestTime": "September bis Mai, abends",
         "difficulty": "Leicht, für alle geeignet",
@@ -520,7 +520,9 @@
         "name": "Maskat auf Italienisch und Deutsch",
         "meta": "Bewertung auf Italienisch"
       }
-    ]
+    ],
+    "tripadvisor": "Auf Tripadvisor lesen",
+    "taCount": "{count} Bewertungen auf Tripadvisor"
   },
   "faq": {
     "eyebrow": "Fragen",
@@ -637,5 +639,13 @@
     "madeIn": "Private Touren im Oman ab Maskat.",
     "photoCredits": "Bildnachweise",
     "photoEdited": "Größe angepasst."
+  },
+  "gallery": {
+    "eyebrow": "Unterwegs",
+    "title": "Momente aus Issams Touren",
+    "lead": "Echte Tage mit Gästen: die Wüste, die Wadis und die Straße dazwischen.",
+    "altGuests": "Issam mit Gästen auf einer Tour im Oman",
+    "altIssam": "Issam auf einer Tour im Oman",
+    "altPlace": "Auf einer Tour im Oman"
   }
 }

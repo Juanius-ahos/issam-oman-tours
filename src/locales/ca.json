@@ -309,7 +309,7 @@
         "seoTitle": "Tour privat de Mascat de nit en català",
         "seoDescription": "Tour privat de Mascat de nit amb Issam (The Languages Ninja) en català: la Royal Opera House il·luminada, la Corniche de Mutrah i el soc al vespre. Recollida allà on t’allotgis.",
         "intro": "Mascat canvia quan es pon el sol. Quan baixa la calor, Issam et porta pel passeig marítim il·luminat de Mutrah, al soc del vespre i davant del palau del vell Mascat.",
-        "duration": "Un vespre, a concretar en reservar",
+        "duration": "Unes 5 hores, al vespre",
         "distance": "Uns 70 km anada i tornada",
         "bestTime": "De setembre a maig, al vespre",
         "difficulty": "Fàcil, per a tothom",
@@ -520,7 +520,9 @@
         "name": "Mascat en italià i alemany",
         "meta": "Opinió en italià"
       }
-    ]
+    ],
+    "tripadvisor": "Llegeix-les a Tripadvisor",
+    "taCount": "{count} opinions a Tripadvisor"
   },
   "faq": {
     "eyebrow": "Preguntes",
@@ -637,5 +639,13 @@
     "madeIn": "Tours privats per Oman des de Mascat.",
     "photoCredits": "Crèdits de les fotos",
     "photoEdited": "Redimensionada."
+  },
+  "gallery": {
+    "eyebrow": "A la carretera",
+    "title": "Moments dels tours de l’Issam",
+    "lead": "Dies reals amb viatgers: el desert, els wadis i la carretera entremig.",
+    "altGuests": "Issam amb viatgers en un tour per Oman",
+    "altIssam": "Issam en un tour per Oman",
+    "altPlace": "En un tour per Oman"
   }
 }

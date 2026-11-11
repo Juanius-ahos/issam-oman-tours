@@ -61,6 +61,11 @@ export const config = {
 
   /** Google Business Profile URL, added to LocalBusiness sameAs once it exists. */
   googleBusinessProfile: '', // TODO
+  /** Issam's Tripadvisor listing (from Issam, 2026-11-11). Linked from Reviews and in sameAs. */
+  tripadvisor: 'https://www.tripadvisor.com/Attraction_Review-g1940497-d28122142-Reviews-LocalGuide-Muscat_Muscat_Governorate.html',
+  /** As shown on the listing on 2026-11-11. Update when it changes. Shown as text only:
+      Google does not allow review markup for reviews collected on another site. */
+  tripadvisorRating: { score: '5.0', count: 105 },
 
   analytics: {
     /** GA4 measurement ID from .env.local (VITE_GA_ID). Empty disables GA entirely. */

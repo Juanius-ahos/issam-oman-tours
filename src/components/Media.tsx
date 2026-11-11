@@ -59,7 +59,9 @@ export function LazyVideo({
   }, [hasSrc]);
 
   if (!hasSrc && poster) {
-    return <img src={poster} srcSet={`${poster.replace('-1920.', '-960.')} 960w, ${poster} 1920w`} sizes={sizes} alt={label} loading="lazy" decoding="async" className={`tour-photo ${className}`} />;
+    // Place photos come in 960/1920; Issam's own photos in 640/1280.
+    const srcSet = poster.includes('-1280.') ? `${poster.replace('-1280.', '-640.')} 640w, ${poster} 1280w` : `${poster.replace('-1920.', '-960.')} 960w, ${poster} 1920w`;
+    return <img src={poster} srcSet={srcSet} sizes={sizes} alt={label} loading="lazy" decoding="async" className={`tour-photo ${className}`} />;
   }
   if (!hasSrc) return <Placeholder label={label} dark={dark} className={className} />;
   return (

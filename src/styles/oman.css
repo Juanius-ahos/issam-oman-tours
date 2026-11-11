@@ -225,3 +225,28 @@
 @media (max-width: 900px) {
   .footer-bar { padding-bottom: 92px; }
 }
+/* Moments from the road: Issam's own tour photos. Masonry on desktop, a swipe strip on phones. */
+.moments { columns: 4 220px; column-gap: 14px; }
+.moment { break-inside: avoid; margin-bottom: 14px; overflow: hidden; border-radius: var(--radius); background: rgb(var(--ink) / .06); }
+.moment img { display: block; width: 100%; height: auto; transition: transform .8s cubic-bezier(.22, 1, .36, 1); }
+@media (hover: hover) and (pointer: fine) { .moment:hover img { transform: scale(1.04); } }
+@media (max-width: 900px) {
+  .moments { columns: auto; display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter) 8px; scrollbar-width: none; }
+  .moments::-webkit-scrollbar { display: none; }
+  .moment { flex: 0 0 auto; width: 72vw; margin: 0; scroll-snap-align: center; }
+  .moment img { aspect-ratio: 3 / 4; object-fit: cover; }
+}
+/* Tripadvisor link under the reviews heading. */
+.ta-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 14px; font-weight: 800; color: rgb(var(--accent-deep)); text-decoration: underline; text-underline-offset: 4px; }
+.ta-link:hover { color: rgb(var(--ink)); }
+[dir='rtl'] .ta-link svg { transform: scaleX(-1); }
+/* Tripadvisor rating badge under the reviews heading. */
+.ta-badge { width: fit-content; justify-self: start; align-self: start; display: inline-flex; align-items: center; gap: 12px; margin-top: 18px; padding: 10px 16px 10px 12px; border-radius: 16px; background: rgb(var(--ink)); color: rgb(var(--sand)); transition: transform .25s var(--ease); }
+.ta-badge:hover { transform: translateY(-2px); }
+.ta-score { display: grid; place-items: center; min-width: 46px; height: 46px; border-radius: 12px; background: #34e0a1; color: rgb(var(--ink)); font-size: 19px; font-weight: 900; }
+.ta-stars { color: #34e0a1; font-size: 15px; letter-spacing: 2px; }
+.ta-text { display: grid; gap: 2px; font-size: 14px; font-weight: 800; line-height: 1.2; }
+.ta-more { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; color: rgb(var(--accent-light)); }
+[dir='rtl'] .ta-badge { padding: 10px 12px 10px 16px; }
+[dir='rtl'] .ta-more svg { transform: scaleX(-1); }
+@media (max-width: 420px) { .ta-stars { display: none; } }

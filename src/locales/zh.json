@@ -309,7 +309,7 @@
         "seoTitle": "马斯喀特中文私人夜游",
         "seoDescription": "与 Issam (The Languages Ninja) 一起的马斯喀特中文私人夜游：灯光下的皇家歌剧院、马特拉滨海大道和傍晚的集市。住处接送。",
         "intro": "日落之后的马斯喀特别有一番样子。暑气退去时，Issam 带您走过灯火通明的马特拉海滨，逛傍晚的集市，再到老城的王宫前。",
-        "duration": "一个晚上，预订时商定",
+        "duration": "约 5 小时，晚间",
         "distance": "往返约 70 公里",
         "bestTime": "9 月至 5 月，傍晚",
         "difficulty": "轻松，适合所有人",
@@ -520,7 +520,9 @@
         "name": "意大利语和德语的马斯喀特之旅",
         "meta": "意大利语评价"
       }
-    ]
+    ],
+    "tripadvisor": "去 Tripadvisor 查看",
+    "taCount": "Tripadvisor 上 {count} 条评价"
   },
   "faq": {
     "eyebrow": "常见问题",
@@ -637,5 +639,13 @@
     "madeIn": "从马斯喀特出发的阿曼私人行程。",
     "photoCredits": "图片来源",
     "photoEdited": "已调整尺寸。"
+  },
+  "gallery": {
+    "eyebrow": "在路上",
+    "title": "Issam 行程中的瞬间",
+    "lead": "与客人度过的真实日子：沙漠、干河谷和沿途的路。",
+    "altGuests": "Issam 与客人在阿曼的行程中",
+    "altIssam": "Issam 在阿曼的行程中",
+    "altPlace": "在阿曼的行程中"
   }
 }
