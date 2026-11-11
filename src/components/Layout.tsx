@@ -1,9 +1,9 @@
 /* Page chrome: sidebar (desktop) that doubles as the menu sheet (mobile),
    the mobile top bar, a floating WhatsApp button and the footer. */
 import { useEffect, useState, type ReactNode } from 'react';
-import { config, whatsappUrl } from '../config';
+import { config, tourSlugs, whatsappUrl } from '../config';
 import { useI18n } from '../i18n';
-import { homePath, type Route } from '../routes';
+import { homePath, tourPath, type Route } from '../routes';
 import { Smooth } from '../motion/gsap';
 import { Icon, type IconName } from './Icon';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -228,26 +228,87 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
       <main id="main">{children}</main>
 
       <Frieze className="desk:ms-[var(--nav-w)]" />
-      <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-ink/10 px-[var(--gutter)] py-6 text-[11px] font-bold text-ink/70 desk:ms-[var(--nav-w)]">
-        <span>
-          © {new Date().getFullYear()} {config.brand.business}, {config.brand.person}. {m.footer.rights} {m.footer.madeIn}
-        </span>
-        <a href="#top" onClick={onNav('top')} className="hover:text-ink">{m.nav.backToTop}</a>
-        <details className="w-full font-medium">
-          <summary className="cursor-pointer font-bold hover:text-ink">{m.footer.photoCredits}</summary>
-          <ul className="mt-2 grid gap-1 sm:grid-cols-2">
-            {photos.map((p) => (
-              <li key={p.slug}>
-                <a href={p.source} target="_blank" rel="noopener" className="underline underline-offset-2 hover:text-ink">{p.name}</a>, {p.author},{' '}
-                <a href={p.licenseUrl} target="_blank" rel="noopener" className="underline underline-offset-2 hover:text-ink">{p.license}</a>. {m.footer.photoEdited}
+      <footer className="site-footer desk:ms-[var(--nav-w)]">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <a href={homePath(locale)} className="footer-mark wordmark" aria-label={config.brand.business}>
+              {config.brand.wordmark}
+            </a>
+            <p className="footer-name">
+              <strong lang="en">{config.brand.business}</strong>
+              <span lang="ar" dir="rtl">عُمان مع عصام</span>
+            </p>
+            <p className="footer-about">{m.hero.eyebrow}. {m.footer.madeIn}</p>
+            <WaButton location="footer" className="mt-5" />
+          </div>
+
+          <nav aria-label={m.nav.menu}>
+            <h2 className="footer-title">{m.nav.menu}</h2>
+            <ul className="footer-links">
+              {sectionIds.map((id) => (
+                <li key={id}>
+                  <a href={href(id)} onClick={onNav(id)}>{m.nav[id === 'top' ? 'home' : id]}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav aria-label={m.tours.eyebrow}>
+            <h2 className="footer-title">{m.tours.eyebrow}</h2>
+            <ul className="footer-links">
+              {tourSlugs.map((slug) => (
+                <li key={slug}>
+                  <a href={tourPath(locale, slug)}>{m.tours.items[slug].name}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div>
+            <h2 className="footer-title">{m.plan.eyebrow}</h2>
+            <ul className="footer-links footer-contact">
+              <li>
+                <WaLink location="footer-number">
+                  <Icon name="whatsapp" size={15} />
+                  <span dir="ltr">{config.whatsapp.display}</span>
+                </WaLink>
               </li>
-            ))}
-          </ul>
-        </details>
-        <p className="w-full text-[10px] font-medium text-ink/70" dir="ltr" lang="en">
-          This website was made by{' '}
-          <a href="https://ahos.xyz" target="_blank" rel="noopener" className="font-bold underline underline-offset-2 hover:text-ink">ahos.xyz</a>
-        </p>
+              <li>
+                <a href={`mailto:${config.email}`}>
+                  <Icon name="send" size={15} />
+                  <span dir="ltr">{config.email}</span>
+                </a>
+              </li>
+              <li className="footer-note">{m.plan.note}</li>
+            </ul>
+            <SocialRow tileClass="!h-10 !w-10 !rounded-xl" />
+          </div>
+        </div>
+
+        <div className="footer-bar">
+          <p>
+            © {new Date().getFullYear()} {config.brand.business}, {config.brand.person}. {m.footer.rights}
+          </p>
+          <p dir="ltr" lang="en">
+            This website was made by{' '}
+            <a href="https://ahos.xyz" target="_blank" rel="noopener">ahos.xyz</a>
+          </p>
+          <a href="#top" onClick={onNav('top')} className="footer-top">
+            {m.nav.backToTop}
+            <Icon name="arrowRight" size={13} className="-rotate-90" />
+          </a>
+          <details className="footer-credits">
+            <summary>{m.footer.photoCredits}</summary>
+            <ul>
+              {photos.map((p) => (
+                <li key={p.slug}>
+                  <a href={p.source} target="_blank" rel="noopener">{p.name}</a>, {p.author},{' '}
+                  <a href={p.licenseUrl} target="_blank" rel="noopener">{p.license}</a>. {m.footer.photoEdited}
+                </li>
+              ))}
+            </ul>
+          </details>
+        </div>
       </footer>
 
       {/* Floating WhatsApp, mobile only. On the home page it waits until the hero's own button has scrolled away. */}
