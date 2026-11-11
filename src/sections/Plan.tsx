@@ -7,6 +7,7 @@ import { prefersReducedMotion } from '../lib/viewport';
 import { useRequest } from '../components/TourRequest';
 import { WaLink, RollText, Avatar } from '../components/Bits';
 import { Icon } from '../components/Icon';
+import { StarPattern } from '../oman/Ornament';
 import { HelloChips, MuscatTime } from '../components/Hello';
 
 export function Plan() {
@@ -35,6 +36,7 @@ export function Plan() {
 
   return (
     <section id="plan" className="section isolate overflow-hidden">
+      <StarPattern tone="sand" className="plan-geo" />
       <p className="eyebrow">{m.plan.eyebrow}</p>
       <h2 className="mt-4 max-w-[14ch] text-[clamp(42px,7.4vw,110px)] font-black leading-[0.95] tracking-[-0.05em] [text-wrap:balance]">{m.plan.title}</h2>
       <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">

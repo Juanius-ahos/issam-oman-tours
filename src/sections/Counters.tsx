@@ -2,6 +2,7 @@
    (merheb ships "0" until JS runs); the client only adds the roll on top. */
 import { useEffect, useRef } from 'react';
 import { config } from '../config';
+import { StarPattern } from '../oman/Ornament';
 import { useI18n } from '../i18n';
 import { gsap, ScrollTrigger } from '../motion/gsap';
 import { prefersReducedMotion } from '../lib/viewport';
@@ -75,6 +76,7 @@ export function Counters() {
 
   return (
     <section ref={root} className="relative isolate overflow-hidden border-y border-ink/10 px-[var(--gutter)] py-[clamp(60px,9vh,110px)]" aria-label={m.counters.eyebrow}>
+      <StarPattern tone="sand" className="edge-geo" />
       <p className="eyebrow mb-8">{m.counters.eyebrow}</p>
       <dl className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-[repeat(4,auto)] lg:justify-between lg:gap-x-10">
         {items.map((it) => (

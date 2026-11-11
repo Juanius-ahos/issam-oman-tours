@@ -4,7 +4,7 @@
    Desktop: one large feature plus a mosaic. Phones: a swipe strip. */
 import { BASE } from '../routes';
 import { useI18n } from '../i18n';
-import { StarDivider } from '../oman/Ornament';
+import { StarDivider, StarPattern } from '../oman/Ornament';
 
 type Kind = 'guests' | 'issam' | 'place';
 type Shape = 'xl' | 'tall' | 'wide' | '';
@@ -31,6 +31,7 @@ export function Gallery() {
         <p className="section-lead">{m.gallery.lead}</p>
       </header>
       <div className="moments-wrap">
+        <StarPattern tone="sand" className="moments-geo" />
         <ul className="moments">
           {shots.map((s) => (
             <li key={s.name} className={`moment ${s.shape ? `moment-${s.shape}` : ''}`}>

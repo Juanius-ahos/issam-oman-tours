@@ -4,7 +4,6 @@ import { useEffect, useState, type ReactNode } from 'react';
 import { config, tourSlugs, whatsappUrl } from '../config';
 import { useI18n } from '../i18n';
 import { homePath, tourPath, type Route } from '../routes';
-import { PageGeo } from '../oman/PageGeo';
 import { Smooth } from '../motion/gsap';
 import { Icon, type IconName } from './Icon';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -224,8 +223,6 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
           <WaButton location="sidebar" />
         </div>
       </aside>
-
-      <PageGeo />
 
       {/* The home hero spans the full width; everything else sits beside the sidebar (.content). */}
       <main id="main">{children}</main>

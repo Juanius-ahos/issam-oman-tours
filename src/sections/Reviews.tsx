@@ -4,7 +4,7 @@ import { useEffect, useRef, type PointerEvent } from 'react';
 import { useI18n } from '../i18n';
 import { gsap } from '../motion/gsap';
 import { isMobile, prefersReducedMotion } from '../lib/viewport';
-import { StarDivider } from '../oman/Ornament';
+import { StarDivider, StarPattern } from '../oman/Ornament';
 import { Icon } from '../components/Icon';
 import { config } from '../config';
 
@@ -49,6 +49,7 @@ export function Reviews() {
 
   return (
     <section id="reviews" className="section isolate overflow-hidden">
+      <StarPattern tone="sand" className="edge-geo edge-geo-top" />
       <header className="section-head">
         <p className="eyebrow">{m.reviews.eyebrow}</p>
         <StarDivider />

@@ -280,18 +280,3 @@
   .moments::-webkit-scrollbar { display: none; }
   .moment { flex: 0 0 auto; width: 74vw; aspect-ratio: 3 / 4; scroll-snap-align: center; }
 }
-
-/* One page-wide ornament layer (src/oman/PageGeo.tsx): a single lattice and rosette
-   behind every light section, drifting and turning with the scroll. The per-section
-   .edge-geo / .corner-rosette pieces above are no longer used. */
-.page-geo { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
-.page-geo-lattice { position: absolute; inset: 0 0 -24% 0; opacity: .75;
-  -webkit-mask-image: radial-gradient(ellipse 62% 70% at 55% 45%, rgb(0 0 0 / .28), #000 78%); mask-image: radial-gradient(ellipse 62% 70% at 55% 45%, rgb(0 0 0 / .28), #000 78%); }
-.page-geo-lattice > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-.page-geo-rosette { position: absolute; width: min(78vh, 58vw); aspect-ratio: 1; top: 50%; right: 0; translate: 42% -50%; opacity: .7; }
-[dir='rtl'] .page-geo-rosette { right: auto; left: 0; translate: -42% -50%; }
-@media (max-width: 900px) {
-  .page-geo-lattice { opacity: .55; }
-  .page-geo-rosette { width: 92vw; opacity: .45; translate: 55% -50%; }
-  [dir='rtl'] .page-geo-rosette { translate: -55% -50%; }
-}

@@ -9,7 +9,7 @@ import { isMobile, prefersReducedMotion } from '../lib/viewport';
 import { Modal } from '../components/Modal';
 import { Avatar } from '../components/Bits';
 import { config } from '../config';
-import { StarDivider } from '../oman/Ornament';
+import { StarDivider, StarPattern } from '../oman/Ornament';
 
 export function Story() {
   const { m, dir } = useI18n();
@@ -112,6 +112,7 @@ export function Story() {
 
   return (
     <section id="story" ref={root} className="section isolate overflow-clip">
+      <StarPattern tone="sand" className="edge-geo edge-geo-start" />
       <header className="section-head">
         <p className="eyebrow">{m.story.eyebrow}</p>
         <StarDivider />
