@@ -91,6 +91,7 @@ function business(m: Messages) {
     description: m.meta.homeDescription,
     url: abs(BASE + ''),
     image: abs(BASE + 'og/og-card.png'),
+    logo: abs(BASE + 'icon-512.png'),
     telephone: `+${config.whatsapp.number}`,
     email: config.email,
     priceRange: config.business.priceRange,
