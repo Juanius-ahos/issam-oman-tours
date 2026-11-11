@@ -12,6 +12,7 @@ import { isMobile, prefersReducedMotion } from '../lib/viewport';
 import { LazyVideo } from '../components/Media';
 import { SatelliteRouteMap } from '../map/SatelliteRouteMap';
 import { Icon } from '../components/Icon';
+import { StarBadge } from '../oman/Ornament';
 
 export function TourCard({ slug, className = '' }: { slug: TourSlug; className?: string }) {
   const { m, locale } = useI18n();
@@ -20,7 +21,7 @@ export function TourCard({ slug, className = '' }: { slug: TourSlug; className?:
   return (
     <a href={tourPath(locale, slug)} className={`tour-card group roll-host ${className}`} data-tour={slug}>
       <LazyVideo src={tourMedia[slug]} poster={tourMedia[slug].poster} label={t.name} sizes="(max-width: 900px) 100vw, 420px" className="tour-media h-full w-full" />
-      <span className="absolute start-5 top-5 text-[10px] font-extrabold tracking-[0.2em] text-white/80">{index}</span>
+      <StarBadge className="!absolute start-4 top-4">{index}</StarBadge>
       <div className="p-[22px]">
         <h3 className="text-[clamp(26px,2.4vw,38px)] font-black leading-none tracking-[-0.04em]">{t.name}</h3>
         <p className="mt-2 max-w-[34ch] text-[13px] text-white/80">{t.short}</p>

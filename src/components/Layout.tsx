@@ -10,7 +10,7 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 import { RollText, SocialRow, StatCard, WaButton, WaLink } from './Bits';
 import { RequestProvider } from './TourRequest';
 import { photos } from '../data/photos';
-import { StarPattern } from '../oman/Ornament';
+import { Frieze } from '../oman/Ornament';
 
 export const sectionIds = ['top', 'story', 'tours', 'follow', 'reviews', 'faq', 'plan'] as const;
 type SectionId = (typeof sectionIds)[number];
@@ -227,9 +227,7 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
       {/* The home hero spans the full width; everything else sits beside the sidebar (.content). */}
       <main id="main">{children}</main>
 
-      <div className="frieze desk:ms-[var(--nav-w)]" aria-hidden="true">
-        <StarPattern tone="frieze" />
-      </div>
+      <Frieze className="desk:ms-[var(--nav-w)]" />
       <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-ink/10 px-[var(--gutter)] py-6 text-[11px] font-bold text-ink/70 desk:ms-[var(--nav-w)]">
         <span>
           © {new Date().getFullYear()} {config.brand.business}, {config.brand.person}. {m.footer.rights} {m.footer.madeIn}

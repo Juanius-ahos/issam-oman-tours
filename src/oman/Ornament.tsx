@@ -89,3 +89,47 @@ export function StarDivider({ align = 'start', width = 240, className = '' }: { 
     </svg>
   );
 }
+
+/** Thin band of small stars, used as a border above and below dark sections. */
+export function Frieze({ className = '' }: { className?: string }) {
+  return (
+    <div className={`frieze ${className}`} aria-hidden="true">
+      <StarPattern tone="frieze" />
+    </div>
+  );
+}
+
+/** Sixteen-point rosette: four squares turned 22.5 degrees apart inside two rings, an eight-point star at the heart. */
+export function Rosette({ className = '' }: { className?: string }) {
+  const R = 100;
+  const sq = (rot: number, r: number) => `M${[0, 1, 2, 3].map((i) => P(r * Math.cos(rot + (i * Math.PI) / 2), r * Math.sin(rot + (i * Math.PI) / 2))).join('L')}Z`;
+  const squares = [0, 1, 2, 3].map((i) => sq(-Math.PI / 2 + (i * Math.PI) / 8, R)).join(' ');
+  const inner = [0, 1].map((i) => sq(-Math.PI / 2 + (i * Math.PI) / 4, R * 0.42)).join(' ');
+  const petals = Array.from({ length: 16 }, (_, i) => {
+    const a = (i * Math.PI) / 8;
+    const [x, y] = [112 * Math.cos(a), 112 * Math.sin(a)];
+    return `M${P(x, y - 3.2)}L${P(x + 3.2, y)}L${P(x, y + 3.2)}L${P(x - 3.2, y)}Z`;
+  }).join(' ');
+  return (
+    <svg className={`rosette pointer-events-none ${className}`} viewBox="-125 -125 250 250" aria-hidden="true" focusable="false">
+      <circle r="122" fill="none" stroke="rgb(var(--accent-light) / .35)" strokeWidth=".6" />
+      <circle r="103" fill="none" stroke="rgb(var(--accent-light) / .35)" strokeWidth=".6" />
+      <path d={petals} fill="rgb(var(--amber) / .8)" />
+      <path d={squares} fill="rgb(var(--accent) / .1)" stroke="rgb(var(--accent-light) / .6)" strokeWidth=".8" strokeLinejoin="miter" />
+      <path d={inner} fill="none" stroke="rgb(var(--accent-light) / .8)" strokeWidth=".8" />
+      <path d={octagram(0, 0, 17)} fill="rgb(var(--amber))" />
+    </svg>
+  );
+}
+
+/** Eight-point star holding a short label, such as a tour number. */
+export function StarBadge({ children, className = '' }: { children: string; className?: string }) {
+  return (
+    <span className={`star-badge ${className}`}>
+      <svg viewBox="-20 -20 40 40" aria-hidden="true" focusable="false">
+        <path d={octagram(0, 0, 19)} fill="rgb(var(--accent))" stroke="rgb(255 255 255 / .85)" strokeWidth="1" />
+      </svg>
+      <span>{children}</span>
+    </span>
+  );
+}

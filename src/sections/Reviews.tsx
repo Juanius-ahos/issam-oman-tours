@@ -4,7 +4,7 @@ import { useEffect, useRef, type PointerEvent } from 'react';
 import { useI18n } from '../i18n';
 import { gsap } from '../motion/gsap';
 import { isMobile, prefersReducedMotion } from '../lib/viewport';
-import { StarDivider } from '../oman/Ornament';
+import { StarDivider, StarPattern } from '../oman/Ornament';
 
 /** Position in the fanned hand for card i of n: tilted and lowered toward the edges. */
 function fan(i: number, n: number) {
@@ -46,7 +46,8 @@ export function Reviews() {
   };
 
   return (
-    <section id="reviews" className="section overflow-hidden">
+    <section id="reviews" className="section isolate overflow-hidden">
+      <StarPattern tone="sand" className="edge-geo edge-geo-top" />
       <header className="section-head">
         <p className="eyebrow">{m.reviews.eyebrow}</p>
         <StarDivider />

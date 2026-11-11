@@ -31,6 +31,41 @@
   .plan-geo { width: 100%; opacity: .6; -webkit-mask-image: linear-gradient(transparent 40%, #000); mask-image: linear-gradient(transparent 40%, #000); }
 }
 
+/* Issam's motto band */
+.quote-band { position: relative; color: #fff; background: rgb(var(--ink)); }
+.quote-band-body { position: relative; isolation: isolate; overflow: hidden; padding: clamp(72px, 13vh, 150px) var(--gutter); }
+.quote-band-geo { position: absolute; z-index: -2; inset: 0; -webkit-mask-image: radial-gradient(ellipse at center, transparent 30%, #000 100%); mask-image: radial-gradient(ellipse at center, transparent 30%, #000 100%); }
+.rosette { position: absolute; z-index: -1; width: clamp(300px, 40vw, 620px); aspect-ratio: 1; }
+.rosette-a { top: 50%; inset-inline-end: 0; translate: 46% -50%; }
+.rosette-b { top: 50%; inset-inline-start: 0; translate: -46% -50%; }
+[dir='rtl'] .rosette-a { translate: -46% -50%; }
+[dir='rtl'] .rosette-b { translate: 46% -50%; }
+.quote-band-figure { max-width: 980px; margin-inline: auto; text-align: center; }
+.quote-band-text { margin-top: 26px; font-size: clamp(25px, 3.5vw, 54px); font-weight: 800; line-height: 1.14; letter-spacing: -.03em; text-wrap: balance; }
+.quote-band-text em { font-style: normal; color: rgb(var(--accent-light)); }
+:is(:lang(ar), :lang(bal), :lang(hi), :lang(zh)) .quote-band-text { letter-spacing: 0; line-height: 1.5; }
+.quote-band-by { margin-top: 30px; display: inline-flex; align-items: center; gap: 12px; text-align: start; }
+.quote-band-by b { display: block; font-size: 15px; font-weight: 800; }
+.quote-band-by i { display: block; font-style: normal; font-size: 12px; font-weight: 700; color: rgb(var(--accent-light)); }
+@media (max-width: 900px) {
+  .rosette { width: 300px; opacity: .55; }
+  .rosette-a { top: 0; translate: 50% -50%; }
+  .rosette-b { top: 100%; translate: -50% -50%; }
+  [dir='rtl'] .rosette-a { translate: -50% -50%; }
+  [dir='rtl'] .rosette-b { translate: 50% -50%; }
+}
+
+/* Star lattice fading in from the far edge of light sections. */
+.edge-geo { position: absolute; z-index: -1; inset-block: 0; inset-inline-end: 0; width: min(46%, 620px); -webkit-mask-image: linear-gradient(90deg, transparent, #000 70%); mask-image: linear-gradient(90deg, transparent, #000 70%); }
+[dir='rtl'] .edge-geo { -webkit-mask-image: linear-gradient(-90deg, transparent, #000 70%); mask-image: linear-gradient(-90deg, transparent, #000 70%); }
+.edge-geo-top { inset-block: 0 auto; height: 360px; -webkit-mask-image: linear-gradient(200deg, #000, transparent 62%); mask-image: linear-gradient(200deg, #000, transparent 62%); }
+[dir='rtl'] .edge-geo-top { -webkit-mask-image: linear-gradient(-200deg, #000, transparent 62%); mask-image: linear-gradient(-200deg, #000, transparent 62%); }
+
+/* Tour number inside an eight-point star. */
+.star-badge { position: relative; display: grid; place-items: center; width: 40px; height: 40px; color: #fff; font-size: 11.5px; font-weight: 900; letter-spacing: .02em; filter: drop-shadow(0 4px 10px rgb(0 0 0 / .4)); }
+.star-badge svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.star-badge span { position: relative; }
+
 /* Hero: real dunes behind Issam, melting into the sand of the page. */
 .hero-backdrop { position: absolute; z-index: 0; top: -84px; inset-inline: calc(var(--gutter) * -1); height: calc(84px + var(--mob-mark) * .28 + var(--mob-portrait) + 2px); overflow: hidden; }
 .hero-backdrop img { width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 100%; }

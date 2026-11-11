@@ -6,6 +6,7 @@ import { Hero } from './sections/Hero';
 import { Counters } from './sections/Counters';
 import { Press } from './sections/Press';
 import { OmanDay } from './sections/OmanDay';
+import { QuoteBand } from './sections/QuoteBand';
 import { initTitleReveals } from './motion/reveals';
 import { Story } from './sections/Story';
 import { Tours } from './sections/Tours';
@@ -23,6 +24,7 @@ function HomePage() {
       <div className="desk:ps-[var(--nav-w)]">
         <Counters />
         <Press />
+        <QuoteBand />
         <OmanDay />
         <Story />
         <Tours />
