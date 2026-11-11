@@ -244,6 +244,10 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
             ))}
           </ul>
         </details>
+        <p className="w-full text-[10px] font-medium text-ink/70" dir="ltr" lang="en">
+          Made by{' '}
+          <a href="https://ahos.xyz" target="_blank" rel="noopener" className="font-bold underline underline-offset-2 hover:text-ink">ahos.xyz</a>
+        </p>
       </footer>
 
       {/* Floating WhatsApp, mobile only. On the home page it waits until the hero's own button has scrolled away. */}
