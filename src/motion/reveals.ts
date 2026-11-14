@@ -34,3 +34,28 @@ export function initTitleReveals() {
     restored.forEach(([title, text]) => (title.textContent = text));
   };
 }
+
+/** The section lattices (.edge-geo) slide in from their side as the section
+    arrives, then drift slowly while it scrolls past, so the pattern moves with
+    the page instead of sitting still. */
+export function initPatternMotion() {
+  if (prefersReducedMotion()) return () => {};
+  const rtl = document.documentElement.dir === 'rtl';
+  const ctx = gsap.context(() => {
+    document.querySelectorAll<HTMLElement>('.edge-geo').forEach((geo) => {
+      const section = geo.closest('section') ?? geo.parentElement!;
+      const fromStart = geo.classList.contains('edge-geo-start');
+      const top = geo.classList.contains('edge-geo-top');
+      const side = (fromStart ? -1 : 1) * (rtl ? -1 : 1);
+      gsap.fromTo(geo, { opacity: 0, x: top ? 0 : side * 70, y: top ? -40 : 0 }, {
+        opacity: 1, x: 0, y: 0, ease: 'none',
+        scrollTrigger: { trigger: section, start: 'top 90%', end: 'top 35%', scrub: 1 },
+      });
+      gsap.fromTo(geo, { yPercent: 6 }, {
+        yPercent: -6, ease: 'none',
+        scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1.5 },
+      });
+    });
+  });
+  return () => ctx.revert();
+}

@@ -3,7 +3,7 @@
 import { useI18n } from '../i18n';
 import { guidePath } from '../routes';
 import { guides, guideSlugs, guideUi, hasGuide } from '../content/guides';
-import { StarDivider } from '../oman/Ornament';
+import { StarDivider, StarPattern } from '../oman/Ornament';
 
 export function Guides({ id = 'guides', eyebrow }: { id?: string; eyebrow?: string }) {
   const { locale } = useI18n();
@@ -11,7 +11,8 @@ export function Guides({ id = 'guides', eyebrow }: { id?: string; eyebrow?: stri
   const list = guideSlugs.filter((g) => hasGuide(g, locale));
   if (!ui || list.length === 0) return null;
   return (
-    <section id={id} className="section" aria-labelledby={`${id}-title`}>
+    <section id={id} className="section isolate overflow-clip" aria-labelledby={`${id}-title`}>
+      <StarPattern tone="sand" className="edge-geo" />
       <header className="section-head">
         {eyebrow && <p className="eyebrow">{eyebrow}</p>}
         <StarDivider />

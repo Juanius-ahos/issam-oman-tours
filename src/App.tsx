@@ -7,7 +7,7 @@ import { Counters } from './sections/Counters';
 import { Press } from './sections/Press';
 import { OmanDay } from './sections/OmanDay';
 import { QuoteBand } from './sections/QuoteBand';
-import { initTitleReveals } from './motion/reveals';
+import { initTitleReveals, initPatternMotion } from './motion/reveals';
 import { Story } from './sections/Story';
 import { Tours } from './sections/Tours';
 import { Follow } from './sections/Follow';
@@ -47,6 +47,7 @@ function HomePage() {
 export function App({ route, messages }: { route: Route; messages: Messages }) {
   const dir = localeInfo(route.locale).dir;
   useEffect(() => initTitleReveals(), []);
+  useEffect(() => initPatternMotion(), []);
   return (
     <I18nContext.Provider value={{ locale: route.locale, m: messages, dir }}>
       <Layout route={route}>{route.page === 'home' ? <HomePage /> : route.page === 'tours' ? <ToursPage /> : route.page === 'guide' ? <GuidePage slug={route.slug} /> : <TourPage slug={route.slug} />}</Layout>
