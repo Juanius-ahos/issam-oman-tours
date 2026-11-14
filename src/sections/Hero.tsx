@@ -61,6 +61,10 @@ export function Hero() {
         <div className="hero-backdrop" data-hero-fade>
           <img src={photoSrc('wahiba-soft-dunes')} srcSet={photoSrcSet('wahiba-soft-dunes')} sizes="100vw" alt="" decoding="async" />
         </div>
+        {/* "OMAN WITH" sits on the wordmark: together they read as the brand, Oman with Issam. */}
+        <span className="wordmark hero-kicker" lang="en" dir="ltr" aria-hidden="true" data-hero-fade>
+          Oman with
+        </span>
         <span data-ghost-target="wordmark" className="wordmark hero-mark" aria-hidden="true">
           {config.brand.wordmark}
         </span>

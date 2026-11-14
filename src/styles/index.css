@@ -164,6 +164,7 @@
      the first screen. Issam stands in front of the wordmark, as on desktop. */
   .hero-layout { --mob-mark: 38vw; --mob-portrait: clamp(240px, 42svh, 420px); padding: 84px var(--gutter) 48px; }
   .hero-stage { display: flex; flex-direction: column; gap: 14px; }
+  .hero-kicker { order: 1; position: relative; z-index: 1; font-size: calc(var(--mob-mark) * .2); line-height: .82; color: rgb(var(--ink)); margin: 0 0 -6px; align-self: flex-start; padding-inline-start: calc(var(--mob-mark) * .03); }
   .hero-mark { order: 1; position: relative; z-index: 1; font-size: var(--mob-mark); color: rgb(var(--accent)); text-align: center; margin: 0; }
   .hero-portrait { order: 2; align-self: center; height: var(--mob-portrait); width: auto; max-width: 100%; object-fit: contain; object-position: bottom; margin-top: calc(var(--mob-mark) * -.5); }
   .hero-side, .hero-left, .hero-copy { display: contents; }
@@ -186,14 +187,19 @@
          H1 size (about 150px + 3.7 x the H1, 4 lines for long languages). */
       --h1-est: clamp(36px, 3.2vw, 52px);
       --copy-h-est: calc(150px + var(--h1-est) * 4.7);
-      --mark-size: min(36vw, calc(118vh - 380px), calc((88vh - 24px - var(--copy-h, var(--copy-h-est))) / .78));
-      --mark-top: 5vh;
+      /* "OMAN WITH" (--kick, 17% of the wordmark) sits above ISSAM; the wordmark makes room for it. */
+      --mark-size: min(36vw, calc(118vh - 380px), calc((88vh - 24px - var(--copy-h, var(--copy-h-est))) / .969));
+      --kick: calc(var(--mark-size) * .17);
+      --mark-top: calc(5vh + var(--kick) * .82 + var(--mark-size) * .025);
       --mark-bottom: calc(var(--mark-top) + var(--mark-size) * .78);
       height: 100vh; min-height: 620px; padding: 0;
     }
     .hero-stage { display: block; position: relative; height: 100%; }
     .hero-stage > * { position: absolute; }
     .hero-mark { top: var(--mark-top); inset-inline-start: var(--gutter); font-size: var(--mark-size); z-index: 2; margin: 0; }
+    /* Physical sides: the kicker is dir=ltr text, so logical insets would follow its own direction, not the page's. */
+    .hero-kicker { top: 5vh; left: calc(var(--gutter) + var(--mark-size) * .012); right: auto; font-size: var(--kick); padding: 0; margin: 0; z-index: 2; align-self: auto; }
+    [dir='rtl'] .hero-kicker { left: auto; right: calc(var(--gutter) + var(--mark-size) * .012); }
     /* Cutout stands on the hero's bottom edge, in front of the wordmark. Height caps by width on narrow windows. */
     .hero-portrait { z-index: 5; bottom: 0; height: min(94vh, calc(min(42vw, 680px) / .63)); width: auto; max-width: none; left: 50%; transform: translateX(-50%); }
     /* Copy and socials share one column, on the same bottom line as the stats. */
