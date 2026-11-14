@@ -4,7 +4,7 @@
    a dark full-story panel (DESIGN-NOTES 5.4). */
 import { useEffect, useId, useRef, useState } from 'react';
 import { useI18n } from '../i18n';
-import { gsap, ScrollTrigger } from '../motion/gsap';
+import { gsap, refreshSoon } from '../motion/gsap';
 import { isMobile, prefersReducedMotion } from '../lib/viewport';
 import { Modal } from '../components/Modal';
 import { Avatar } from '../components/Bits';
@@ -104,7 +104,7 @@ export function Story() {
         gsap.from(card, { opacity: 0, y: 40, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: card, start: 'top 85%' } });
       });
     }, root);
-    ScrollTrigger.refresh();
+    refreshSoon();
     return () => ctx.revert();
   }, [d, dots]);
 

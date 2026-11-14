@@ -7,7 +7,7 @@ import { tourSlugs, type TourSlug } from '../config';
 import { useI18n } from '../i18n';
 import { tourPath } from '../routes';
 import { tourMedia } from '../data/tours';
-import { gsap, ScrollTrigger } from '../motion/gsap';
+import { gsap, refreshSoon } from '../motion/gsap';
 import { isMobile, prefersReducedMotion } from '../lib/viewport';
 import { LazyVideo } from '../components/Media';
 import { SatelliteRouteMap } from '../map/SatelliteRouteMap';
@@ -78,7 +78,7 @@ export function Tours() {
         { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.95, stagger: 0.09, ease: 'power3.out', scrollTrigger: { trigger: section.current, start: 'top 75%' } },
       );
     }, section);
-    ScrollTrigger.refresh();
+    refreshSoon();
     return () => ctx.revert();
   }, [mode, dir]);
 

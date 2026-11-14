@@ -51,3 +51,12 @@ export const Smooth = {
 };
 
 export const EASE = 'power3.out';
+
+/** One ScrollTrigger.refresh for a burst of requests (sections mounting together),
+    instead of a full layout pass per section. */
+let refreshTimer = 0;
+export function refreshSoon(delay = 120) {
+  if (typeof window === 'undefined') return;
+  window.clearTimeout(refreshTimer);
+  refreshTimer = window.setTimeout(() => ScrollTrigger.refresh(), delay);
+}
