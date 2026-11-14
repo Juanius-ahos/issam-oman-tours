@@ -11,7 +11,7 @@ const clientDir = join(root, 'dist/client');
 const outDir = join(root, 'dist/site');
 
 const server = await import(pathToFileURL(join(root, 'dist/server/entry-server.js')).href);
-const { render, allRoutes, config, locales, tourSlugs, messages, isIndexable, BASE } = server;
+const { render, allRoutes, config, locales, tourSlugs, messages, isIndexable, BASE, guides, guideSlugs, guideLocales } = server;
 // Every route path starts with BASE ("/" or "/issam-oman-tours/"); files are written without it.
 
 const template = readFileSync(join(clientDir, 'index.html'), 'utf8');
@@ -38,10 +38,12 @@ for (const route of allRoutes()) {
   const page = render(route);
   const chunk = localeChunk(route.locale);
   // The hero portrait is the home page's largest paint.
-  const portraitPreload = page.path.includes('/tours/')
+  // Only the home page shows the hero portrait and dunes.
+  const isHome = route.page === 'home';
+  const portraitPreload = !isHome
     ? ''
     : `<link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="${BASE}media/issam-portrait-640.webp 640w, ${BASE}media/issam-portrait.webp 867w" imagesizes="(max-width: 900px) 82vw, 60vh">`;
-  const dunesPreload = page.path.includes('/tours/')
+  const dunesPreload = !isHome
     ? ''
     : `<link rel="preload" as="image" type="image/webp" imagesrcset="${BASE}media/places/wahiba-soft-dunes-960.webp 960w, ${BASE}media/places/wahiba-soft-dunes-1920.webp 1920w" imagesizes="100vw">`;
   const preloads = [fontPreload, portraitPreload, dunesPreload, chunk ? `<link rel="modulepreload" href="${BASE}${chunk}">` : ''].filter(Boolean).join('\n    ');
@@ -98,6 +100,22 @@ ${alts}
   </url>`);
   }
 }
+for (const g of guideSlugs) {
+  const langs = guideLocales(g).filter((c) => indexable.some((l) => l.code === c));
+  for (const c of langs) {
+    const alts = langs
+      .map((a) => `    <xhtml:link rel="alternate" hreflang="${locales.find((l) => l.code === a).hreflang}" href="${site}${BASE}${a}/guide/${g}/"/>`)
+      .concat(langs.includes('en') ? [`    <xhtml:link rel="alternate" hreflang="x-default" href="${site}${BASE}en/guide/${g}/"/>`] : [])
+      .join('\n');
+    urls.push(`  <url>
+    <loc>${site}${BASE}${c}/guide/${g}/</loc>
+    <lastmod>${guides[g][c].updated}</lastmod>
+${alts}
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`);
+  }
+}
 writeFileSync(
   join(outDir, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.join('\n')}\n</urlset>\n`,
@@ -132,6 +150,10 @@ ${tourLines}
 - [Home](${site}${BASE}en/): overview, tours, reviews, FAQ and booking.
 - [Private tours in Oman](${site}${pathFor('en', HUB)}): all tours, prices, why book privately, FAQ.
 - [Sitemap](${site}${BASE}sitemap.xml)
+
+## Oman travel guides
+
+${guideSlugs.filter((g) => guides[g].en).map((g) => `- [${guides[g].en.title}](${site}${BASE}en/guide/${g}/): ${guides[g].en.seoDescription}`).join('\n')}
 
 ## The site in each guiding language
 

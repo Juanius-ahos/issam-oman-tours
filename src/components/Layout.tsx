@@ -3,7 +3,8 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { config, tourSlugs, whatsappUrl } from '../config';
 import { useI18n } from '../i18n';
-import { homePath, tourPath, toursPath, type Route } from '../routes';
+import { homePath, tourPath, toursPath, guidePath, type Route } from '../routes';
+import { guides, guideSlugs, guideUi, hasGuide } from '../content/guides';
 import { Smooth } from '../motion/gsap';
 import { Icon, type IconName } from './Icon';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -266,6 +267,19 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
               ))}
             </ul>
           </nav>
+
+          {guideUi[locale] && (
+            <nav aria-label={guideUi[locale]!.footer}>
+              <h2 className="footer-title">{guideUi[locale]!.footer}</h2>
+              <ul className="footer-links">
+                {guideSlugs.filter((g) => hasGuide(g, locale)).map((g) => (
+                  <li key={g}>
+                    <a href={guidePath(locale, g)}>{guides[g][locale]!.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
 
           <div>
             <h2 className="footer-title">{m.plan.eyebrow}</h2>

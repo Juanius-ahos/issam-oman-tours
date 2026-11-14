@@ -18,6 +18,7 @@ import { Plan } from './sections/Plan';
 import { Also } from './sections/Also';
 import { TourPage } from './pages/TourPage';
 import { ToursPage } from './pages/ToursPage';
+import { GuidePage } from './pages/GuidePage';
 
 function HomePage() {
   return (
@@ -46,7 +47,7 @@ export function App({ route, messages }: { route: Route; messages: Messages }) {
   useEffect(() => initTitleReveals(), []);
   return (
     <I18nContext.Provider value={{ locale: route.locale, m: messages, dir }}>
-      <Layout route={route}>{route.page === 'home' ? <HomePage /> : route.page === 'tours' ? <ToursPage /> : <TourPage slug={route.slug} />}</Layout>
+      <Layout route={route}>{route.page === 'home' ? <HomePage /> : route.page === 'tours' ? <ToursPage /> : route.page === 'guide' ? <GuidePage slug={route.slug} /> : <TourPage slug={route.slug} />}</Layout>
     </I18nContext.Provider>
   );
 }

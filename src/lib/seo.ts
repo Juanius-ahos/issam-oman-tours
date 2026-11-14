@@ -5,6 +5,7 @@ import { config, locales, tourSlugs, type Locale } from '../config';
 import type { Messages } from '../i18n';
 import { BASE, pathFor, swapLocale, homePath, tourPath, toursPath, type Route } from '../routes';
 import { tourGeo } from '../data/tours';
+import { guides, hasGuide, guideUi } from '../content/guides';
 
 type AllMessages = Record<Locale, Messages>;
 
@@ -24,6 +25,11 @@ export function pageMeta(route: Route, m: Messages) {
     return { title: m.meta.homeTitle, description: m.meta.homeDescription };
   }
   if (route.page === 'tours') return { title: m.toursPage.seoTitle, description: m.toursPage.seoDescription };
+  if (route.page === 'guide') {
+    const g = guides[route.slug][route.locale]!;
+    const branded = `${g.seoTitle} | ${config.brand.business}`;
+    return { title: [...branded].length <= 62 ? branded : g.seoTitle, description: g.seoDescription };
+  }
   const t = m.tours.items[route.slug];
   // Keep titles inside what Google shows (about 60 characters): add the brand only when it fits.
   const branded = `${t.seoTitle} | ${config.brand.business}`;
@@ -57,11 +63,12 @@ export function buildHead(route: Route, all: AllMessages): string {
 
   // hreflang only between indexable versions; pointing at noindex pages is an error.
   if (indexable) {
-    const alternates = locales.filter((l) => isIndexable(all[l.code]));
+    // Guides: only the languages they exist in.
+    const alternates = locales.filter((l) => isIndexable(all[l.code]) && (route.page !== 'guide' || hasGuide(route.slug, l.code)));
     for (const l of alternates) {
       tags.push(`<link rel="alternate" hreflang="${l.hreflang}" href="${abs(pathFor(swapLocale(route, l.code)))}">`);
     }
-    tags.push(`<link rel="alternate" hreflang="x-default" href="${abs(pathFor(swapLocale(route, 'en')))}">`);
+    if (route.page !== 'guide' || hasGuide(route.slug, 'en')) tags.push(`<link rel="alternate" hreflang="x-default" href="${abs(pathFor(swapLocale(route, 'en')))}">`);
   }
 
   for (const block of jsonLd(route, m)) {
@@ -186,6 +193,43 @@ function jsonLd(route: Route, m: Messages): object[] {
               name: f.q,
               acceptedAnswer: { '@type': 'Answer', text: f.a },
             })),
+          },
+        ],
+      },
+    ];
+  }
+  if (route.page === 'guide') {
+    const g = guides[route.slug][route.locale]!;
+    const ui = guideUi[route.locale]!;
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'Article',
+            '@id': abs(pathFor(route)) + '#article',
+            headline: g.title,
+            description: g.seoDescription,
+            inLanguage: route.locale,
+            url: abs(pathFor(route)),
+            mainEntityOfPage: abs(pathFor(route)),
+            image: abs(BASE + 'og/home.jpg'),
+            datePublished: g.updated,
+            dateModified: g.updated,
+            author: { '@type': 'Person', '@id': abs(BASE + '#issam'), name: config.brand.person, url: abs(homePath(route.locale)), jobTitle: 'Private tour guide' },
+            publisher: { '@type': 'Organization', '@id': abs(BASE + '#business'), name: config.brand.business, logo: { '@type': 'ImageObject', url: abs(BASE + 'icon-512.png') } },
+            about: { '@type': 'Country', name: 'Oman' },
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: g.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: m.nav.home, item: abs(homePath(route.locale)) },
+              { '@type': 'ListItem', position: 2, name: ui.crumb, item: abs(pathFor(route)) },
+            ],
           },
         ],
       },

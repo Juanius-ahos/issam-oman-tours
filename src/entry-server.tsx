@@ -24,3 +24,4 @@ export function render(route: Route) {
 }
 
 export { BASE, allRoutes, pathFor, config, locales, tourSlugs, isIndexable };
+export { guides, guideSlugs, guideLocales } from './content/guides';
