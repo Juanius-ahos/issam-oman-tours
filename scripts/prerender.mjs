@@ -55,7 +55,9 @@ for (const route of allRoutes()) {
 
 const site = config.siteUrl;
 const indexable = locales.filter((l) => isIndexable(messages[l.code]));
-const pathFor = (code, slug) => (slug ? `${BASE}${code}/tours/${slug}/` : `${BASE}${code}/`);
+// slug null = home, HUB = the tours hub page (/xx/tours/), else a tour.
+const HUB = '__tours__';
+const pathFor = (code, slug) => (slug === HUB ? `${BASE}${code}/tours/` : slug ? `${BASE}${code}/tours/${slug}/` : `${BASE}${code}/`);
 
 // Root: the full English home page (so the domain itself is a real, indexable page
 // with content, headings and favicons, not a redirect stub). Its canonical points to
@@ -79,20 +81,20 @@ writeFileSync(
 // Sitemap with hreflang alternates, indexable locales only.
 const urls = [];
 const today = new Date().toISOString().slice(0, 10);
-for (const slug of [null, ...tourSlugs]) {
+for (const slug of [null, HUB, ...tourSlugs]) {
   for (const l of indexable) {
     const alts = indexable
       .map((a) => `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${site}${pathFor(a.code, slug)}"/>`)
       .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${site}${pathFor('en', slug)}"/>`)
       .join('\n');
-    const img = `${site}${BASE}og/${slug ? `tour-${slug}` : 'home'}.jpg`;
+    const img = `${site}${BASE}og/${slug && slug !== HUB ? `tour-${slug}` : 'home'}.jpg`;
     urls.push(`  <url>
     <loc>${site}${pathFor(l.code, slug)}</loc>
     <lastmod>${today}</lastmod>
 ${alts}
     <image:image><image:loc>${img}</image:loc></image:image>
     <changefreq>monthly</changefreq>
-    <priority>${slug ? '0.8' : '1.0'}</priority>
+    <priority>${!slug ? '1.0' : slug === HUB ? '0.9' : '0.8'}</priority>
   </url>`);
   }
 }
@@ -111,7 +113,8 @@ const en = messages.en;
 const tourLines = tourSlugs
   .map((s) => `- [${en.tours.items[s].seoTitle}](${site}${pathFor('en', s)}): ${en.tours.items[s].seoDescription}`)
   .join('\n');
-const faqLines = en.faq.items.map((f) => `- ${f.q} ${f.a}`).join('\n');
+const faqLines = [...en.toursPage.faq, ...en.faq.items].map((f) => `- ${f.q} ${f.a}`).join('\n');
+const langLines = indexable.map((l) => `- ${l.english}: ${site}${pathFor(l.code, null)} (tours: ${site}${pathFor(l.code, HUB)})`).join('\n');
 writeFileSync(
   join(outDir, 'llms.txt'),
   `# ${en.meta.siteName}
@@ -127,7 +130,12 @@ ${tourLines}
 ## Key pages
 
 - [Home](${site}${BASE}en/): overview, tours, reviews, FAQ and booking.
+- [Private tours in Oman](${site}${pathFor('en', HUB)}): all tours, prices, why book privately, FAQ.
 - [Sitemap](${site}${BASE}sitemap.xml)
+
+## The site in each guiding language
+
+${langLines}
 
 ## FAQ
 

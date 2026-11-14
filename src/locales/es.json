@@ -24,7 +24,7 @@
   },
   "hero": {
     "eyebrow": "Guía privado en Omán",
-    "title": "Tu guía privado en Omán, en tu idioma",
+    "title": "Tours privados por Omán, en tu idioma",
     "tagline": "The Languages Ninja",
     "lead": "Días a tu medida por Mascate, Nizwa, el desierto de Wahiba y Wadi Shab, guiados en el idioma en el que piensas.",
     "ctaWhatsapp": "Habla por WhatsApp",
@@ -647,5 +647,60 @@
     "altGuests": "Issam con viajeros en un tour por Omán",
     "altIssam": "Issam en un tour por Omán",
     "altPlace": "En un tour por Omán"
+  },
+  "toursPage": {
+    "seoTitle": "Tours privados por Omán en español | Oman with Issam",
+    "seoDescription": "Tours privados por Omán con Issam: Mascate, Nizwa, el desierto de Wahiba, Wadi Shab, Al Hamra y viajes de varios días, en español y 11 idiomas más. Desde 200 USD.",
+    "crumb": "Tours",
+    "eyebrow": "Tours privados",
+    "title": "Tours privados por Omán, guiados en tu idioma",
+    "intro": [
+      "Issam Albalushi guía a viajeros por Omán desde 2016. Cada tour es privado: solo tu grupo, de 1 a 45 personas, con recogida donde te alojes y guiado en el idioma en el que piensas.",
+      "Elige un día en Mascate, en la antigua capital Nizwa, en el desierto de Wahiba o en Wadi Shab, una tarde-noche en Mascate o Nizwa, el pueblo de adobe de Al Hamra, o une varios en un viaje circular de unos días. Los precios empiezan en 200 USD y dependen del tour, el vehículo y el idioma."
+    ],
+    "rating": "{score} en Tripadvisor · {count} opiniones",
+    "listTitle": "Todos los tours",
+    "whyTitle": "Por qué viajar con Issam",
+    "why": [
+      {
+        "t": "Solo tu grupo",
+        "d": "Tours privados de 1 a 45 viajeros, en coche o en autobús."
+      },
+      {
+        "t": "Doce idiomas",
+        "d": "Árabe, inglés, alemán, ruso, español, italiano, francés, portugués, catalán, chino, hindi y baluchi, y dos en un mismo tour."
+      },
+      {
+        "t": "Recogida donde te alojes",
+        "d": "Hotel, apartamento o puerto de cruceros: el día empieza en tu puerta."
+      },
+      {
+        "t": "Pensado para ti",
+        "d": "Las paradas, el ritmo y la duración se acuerdan contigo, y los tours se pueden unir en varios días, con ayuda para reservar hoteles."
+      },
+      {
+        "t": "Valorado por los viajeros",
+        "d": "{score} de 5 en Tripadvisor con {count} opiniones."
+      }
+    ],
+    "faqTitle": "Tours por Omán: preguntas frecuentes",
+    "faq": [
+      {
+        "q": "¿Cuáles son los mejores tours por Omán?",
+        "a": "La mayoría de los primeros viajes combinan Mascate (la Gran Mezquita del Sultán Qabús y Mutrah), Nizwa y su fuerte, un día en el desierto de Wahiba y las pozas de Wadi Shab. Issam hace los cuatro como tours privados de un día, además de noches en Mascate y Nizwa, Al Hamra y viajes de varios días."
+      },
+      {
+        "q": "¿Cuánto cuesta un tour privado por Omán?",
+        "a": "Los tours con Issam empiezan en 200 USD. El precio final depende del tour, de si necesitas coche o autobús y del idioma."
+      },
+      {
+        "q": "¿Cuántos días hacen falta en Omán?",
+        "a": "Mascate ocupa un día entero. Con Nizwa, el desierto y Wadi Shab, cuatro o cinco días permiten ver los lugares clásicos sin prisas. Issam planifica los días contigo y ayuda a reservar hoteles."
+      },
+      {
+        "q": "¿Cuándo es la mejor época para hacer tours en Omán?",
+        "a": "De septiembre a mayo es lo más agradable para Mascate, el desierto y los wadis. Nizwa se puede visitar todo el año."
+      }
+    ]
   }
 }

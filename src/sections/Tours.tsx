@@ -5,7 +5,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { tourSlugs, type TourSlug } from '../config';
 import { useI18n } from '../i18n';
-import { tourPath } from '../routes';
+import { tourPath, toursPath } from '../routes';
 import { tourMedia } from '../data/tours';
 import { gsap, refreshSoon } from '../motion/gsap';
 import { isMobile, prefersReducedMotion } from '../lib/viewport';
@@ -35,7 +35,7 @@ export function TourCard({ slug, className = '' }: { slug: TourSlug; className?:
 }
 
 export function Tours() {
-  const { m, dir } = useI18n();
+  const { m, dir, locale } = useI18n();
   const section = useRef<HTMLElement>(null);
   const track = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState<TourSlug | null>(null);
@@ -95,9 +95,12 @@ export function Tours() {
               <p className="eyebrow !text-white/80">{m.tours.eyebrow}</p>
               <h2 className="section-title mt-3">{m.tours.title}</h2>
               <p className="section-lead mt-3 !text-white/85">{m.tours.lead}</p>
-              <p className="label-xs mt-4 flex items-center gap-2 text-accent-light">
-                <Icon name="route" size={14} />
-                {m.tours.mapHint}
+              <p className="label-xs mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-accent-light">
+                <span className="flex items-center gap-2">
+                  <Icon name="route" size={14} />
+                  {m.tours.mapHint}
+                </span>
+                <a href={toursPath(locale)} className="text-white underline underline-offset-4 hover:text-accent-light">{m.nav.allTours}</a>
               </p>
             </header>
             <div className="-me-[var(--gutter)] overflow-hidden">
@@ -119,6 +122,7 @@ export function Tours() {
             <p className="eyebrow">{m.tours.eyebrow}</p>
             <h2 className="section-title">{m.tours.title}</h2>
             <p className="section-lead">{m.tours.lead}</p>
+            <a href={toursPath(locale)} className="label-xs text-accent-deep underline underline-offset-4">{m.nav.allTours}</a>
           </header>
           <figure className="mb-8 overflow-hidden rounded-[var(--radius)] border border-ink/10">
             <SatelliteRouteMap className="aspect-[1000/739] w-full" />

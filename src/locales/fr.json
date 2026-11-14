@@ -24,7 +24,7 @@
   },
   "hero": {
     "eyebrow": "Guide privé à Oman",
-    "title": "Votre guide privé à Oman, dans votre langue",
+    "title": "Circuits privés à Oman, dans votre langue",
     "tagline": "The Languages Ninja",
     "lead": "Des journées sur mesure entre Mascate, Nizwa, le désert de Wahiba et Wadi Shab, guidées dans la langue dans laquelle vous pensez.",
     "ctaWhatsapp": "Écrire sur WhatsApp",
@@ -647,5 +647,60 @@
     "altGuests": "Issam avec des voyageurs lors d’un circuit à Oman",
     "altIssam": "Issam lors d’un circuit à Oman",
     "altPlace": "Lors d’un circuit à Oman"
+  },
+  "toursPage": {
+    "seoTitle": "Circuits privés à Oman en français | Oman with Issam",
+    "seoDescription": "Circuits privés à Oman avec Issam : Mascate, Nizwa, le désert de Wahiba, Wadi Shab, Al Hamra et voyages de plusieurs jours, en français et 11 autres langues. Dès 200 USD.",
+    "crumb": "Circuits",
+    "eyebrow": "Circuits privés",
+    "title": "Circuits privés à Oman, guidés dans votre langue",
+    "intro": [
+      "Issam Albalushi guide les voyageurs à Oman depuis 2016. Chaque circuit est privé : seulement votre groupe, de 1 à 45 personnes, pris en charge à votre hébergement et guidé dans la langue dans laquelle vous pensez.",
+      "Choisissez une journée à Mascate, dans l’ancienne capitale Nizwa, dans le désert de Wahiba ou à Wadi Shab, une soirée à Mascate ou à Nizwa, le village en terre d’Al Hamra, ou réunissez-en plusieurs en un circuit de quelques jours. Les prix commencent à 200 USD et dépendent du circuit, du véhicule et de la langue."
+    ],
+    "rating": "{score} sur Tripadvisor · {count} avis",
+    "listTitle": "Tous les circuits",
+    "whyTitle": "Pourquoi voyager avec Issam",
+    "why": [
+      {
+        "t": "Seulement votre groupe",
+        "d": "Circuits privés de 1 à 45 voyageurs, en voiture ou en bus."
+      },
+      {
+        "t": "Douze langues",
+        "d": "Arabe, anglais, allemand, russe, espagnol, italien, français, portugais, catalan, chinois, hindi et baloutchi, et deux dans un même circuit."
+      },
+      {
+        "t": "Prise en charge à votre hébergement",
+        "d": "Hôtel, appartement ou port de croisière : la journée commence à votre porte."
+      },
+      {
+        "t": "Pensé pour vous",
+        "d": "Les étapes, le rythme et la durée se décident avec vous, et les circuits peuvent se combiner sur plusieurs jours, avec de l’aide pour réserver les hôtels."
+      },
+      {
+        "t": "Noté par les voyageurs",
+        "d": "{score} sur 5 sur Tripadvisor d’après {count} avis."
+      }
+    ],
+    "faqTitle": "Circuits à Oman : questions fréquentes",
+    "faq": [
+      {
+        "q": "Quels sont les meilleurs circuits à Oman ?",
+        "a": "La plupart des premiers voyages réunissent Mascate (la Grande Mosquée du Sultan Qabous et Mutrah), Nizwa et son fort, une journée dans le désert de Wahiba et les bassins de Wadi Shab. Issam propose les quatre en circuits privés d’une journée, ainsi que des soirées à Mascate et Nizwa, Al Hamra et des voyages de plusieurs jours."
+      },
+      {
+        "q": "Combien coûte un circuit privé à Oman ?",
+        "a": "Les circuits avec Issam commencent à 200 USD. Le prix final dépend du circuit, de la voiture ou du bus et de la langue."
+      },
+      {
+        "q": "Combien de jours faut-il à Oman ?",
+        "a": "Mascate seule occupe une journée. Avec Nizwa, le désert et Wadi Shab, quatre à cinq jours permettent de voir les lieux classiques sans se presser. Issam planifie les jours avec vous et aide à réserver les hôtels."
+      },
+      {
+        "q": "Quelle est la meilleure période pour les circuits à Oman ?",
+        "a": "De septembre à mai, c’est le plus agréable pour Mascate, le désert et les wadis. Nizwa se visite toute l’année."
+      }
+    ]
   }
 }

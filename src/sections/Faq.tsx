@@ -32,16 +32,17 @@ function toggle(e: MouseEvent<HTMLElement>) {
   }
 }
 
-export function Faq() {
+/** The home FAQ by default; pages can pass their own questions and heading. */
+export function Faq({ items: own, eyebrow, title, id = 'faq' }: { items?: { q: string; a: string }[]; eyebrow?: string; title?: string; id?: string } = {}) {
   const { m } = useI18n();
-  const items = m.faq.items;
+  const items = own ?? m.faq.items;
   const half = Math.ceil(items.length / 2);
   return (
-    <section id="faq" className="section">
+    <section id={id} className="section">
       <header className="section-head">
-        <p className="eyebrow">{m.faq.eyebrow}</p>
+        <p className="eyebrow">{eyebrow ?? m.faq.eyebrow}</p>
         <StarDivider />
-        <h2 className="section-title">{m.faq.title}</h2>
+        <h2 className="section-title">{title ?? m.faq.title}</h2>
       </header>
       <div className="grid max-w-[1240px] items-start gap-x-[clamp(32px,4.5vw,72px)] md:grid-cols-2">
         {[items.slice(0, half), items.slice(half)].map((col, c) => (

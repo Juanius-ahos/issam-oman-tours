@@ -3,7 +3,7 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { config, tourSlugs, whatsappUrl } from '../config';
 import { useI18n } from '../i18n';
-import { homePath, tourPath, type Route } from '../routes';
+import { homePath, tourPath, toursPath, type Route } from '../routes';
 import { Smooth } from '../motion/gsap';
 import { Icon, type IconName } from './Icon';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -256,6 +256,9 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
           <nav aria-label={m.tours.eyebrow}>
             <h2 className="footer-title">{m.tours.eyebrow}</h2>
             <ul className="footer-links">
+              <li>
+                <a href={toursPath(locale)}><strong>{m.toursPage.title}</strong></a>
+              </li>
               {tourSlugs.map((slug) => (
                 <li key={slug}>
                   <a href={tourPath(locale, slug)}>{m.tours.items[slug].name}</a>

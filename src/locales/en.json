@@ -24,7 +24,7 @@
   },
   "hero": {
     "eyebrow": "Private tour guide in Oman",
-    "title": "Your private guide to Oman, in your language",
+    "title": "Private tours in Oman, in your language",
     "tagline": "The Languages Ninja",
     "lead": "Customizable days across Muscat, Nizwa, the Wahiba Sands and Wadi Shab, guided in the language you think in.",
     "ctaWhatsapp": "Chat on WhatsApp",
@@ -647,5 +647,60 @@
     "altGuests": "Issam with guests on a tour in Oman",
     "altIssam": "Issam on a tour in Oman",
     "altPlace": "On a tour in Oman"
+  },
+  "toursPage": {
+    "seoTitle": "Private Tours in Oman, in Your Language | Oman with Issam",
+    "seoDescription": "Private tours in Oman with Issam: Muscat, Nizwa, the Wahiba Sands, Wadi Shab, Al Hamra and multi-day trips, guided in 12 languages. From USD 200.",
+    "crumb": "Tours",
+    "eyebrow": "Private tours",
+    "title": "Private tours in Oman, guided in your language",
+    "intro": [
+      "Issam Albalushi has guided travelers through Oman since 2016. Every tour is private: only your group, from 1 to 45 people, picked up wherever you stay and guided in the language you think in.",
+      "Choose a day in Muscat, the old capital Nizwa, the Wahiba Sands or Wadi Shab, an evening in Muscat or Nizwa, the mud-brick village of Al Hamra, or join several into a round trip of a few days. Prices start at USD 200 and depend on the tour, the vehicle and the language."
+    ],
+    "rating": "{score} on Tripadvisor · {count} reviews",
+    "listTitle": "All tours",
+    "whyTitle": "Why travel with Issam",
+    "why": [
+      {
+        "t": "Only your group",
+        "d": "Private tours for 1 to 45 travelers, by car or by bus."
+      },
+      {
+        "t": "Twelve languages",
+        "d": "Arabic, English, German, Russian, Spanish, Italian, French, Portuguese, Catalan, Chinese, Hindi and Balochi, and two on one tour."
+      },
+      {
+        "t": "Pickup wherever you stay",
+        "d": "Hotel, apartment or cruise port: the day starts at your door."
+      },
+      {
+        "t": "Planned around you",
+        "d": "Stops, pace and length are agreed with you, and tours can be joined into several days, with help booking hotels."
+      },
+      {
+        "t": "Rated by guests",
+        "d": "{score} out of 5 on Tripadvisor from {count} reviews."
+      }
+    ],
+    "faqTitle": "Tours in Oman: common questions",
+    "faq": [
+      {
+        "q": "What are the best tours in Oman?",
+        "a": "Most first visits combine Muscat (the Sultan Qaboos Grand Mosque and Mutrah), Nizwa and its fort, a day in the Wahiba Sands and the pools of Wadi Shab. Issam runs all four as private day tours, plus evenings in Muscat and Nizwa, Al Hamra and multi-day round trips."
+      },
+      {
+        "q": "How much does a private tour in Oman cost?",
+        "a": "Tours with Issam start at USD 200. The final price depends on the tour, whether you need a car or a bus, and the language."
+      },
+      {
+        "q": "How many days do I need in Oman?",
+        "a": "Muscat alone is a full day. With Nizwa, the desert and Wadi Shab, four or five days let you see the classic places without rushing. Issam can plan the days with you and help book hotels."
+      },
+      {
+        "q": "When is the best time for tours in Oman?",
+        "a": "September to May is the most comfortable time for Muscat, the desert and the wadis. Nizwa can be visited all year."
+      }
+    ]
   }
 }

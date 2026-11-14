@@ -24,7 +24,7 @@
   },
   "hero": {
     "eyebrow": "Privater Reiseführer im Oman",
-    "title": "Ihr privater Reiseführer im Oman, in Ihrer Sprache",
+    "title": "Private Touren im Oman, in Ihrer Sprache",
     "tagline": "The Languages Ninja",
     "lead": "Individuelle Tage in Maskat, Nizwa, der Wahiba-Wüste und im Wadi Shab, geführt in der Sprache, in der Sie denken.",
     "ctaWhatsapp": "WhatsApp schreiben",
@@ -647,5 +647,60 @@
     "altGuests": "Issam mit Gästen auf einer Tour im Oman",
     "altIssam": "Issam auf einer Tour im Oman",
     "altPlace": "Auf einer Tour im Oman"
+  },
+  "toursPage": {
+    "seoTitle": "Private Touren im Oman auf Deutsch | Oman with Issam",
+    "seoDescription": "Private Touren im Oman mit Issam: Maskat, Nizwa, Wahiba-Wüste, Wadi Shab, Al Hamra und Rundreisen, auf Deutsch und in 11 weiteren Sprachen. Ab 200 USD.",
+    "crumb": "Touren",
+    "eyebrow": "Private Touren",
+    "title": "Private Touren im Oman, geführt in Ihrer Sprache",
+    "intro": [
+      "Issam Albalushi führt seit 2016 Reisende durch den Oman. Jede Tour ist privat: nur Ihre Gruppe, 1 bis 45 Personen, abgeholt an Ihrer Unterkunft und geführt in der Sprache, in der Sie denken.",
+      "Wählen Sie einen Tag in Maskat, in der alten Hauptstadt Nizwa, in der Wahiba-Wüste oder im Wadi Shab, einen Abend in Maskat oder Nizwa, das Lehmziegeldorf Al Hamra, oder verbinden Sie mehrere Touren zu einer Rundreise über einige Tage. Die Preise beginnen bei 200 USD und hängen von Tour, Fahrzeug und Sprache ab."
+    ],
+    "rating": "{score} auf Tripadvisor · {count} Bewertungen",
+    "listTitle": "Alle Touren",
+    "whyTitle": "Warum mit Issam reisen",
+    "why": [
+      {
+        "t": "Nur Ihre Gruppe",
+        "d": "Private Touren für 1 bis 45 Reisende, mit dem Auto oder dem Bus."
+      },
+      {
+        "t": "Zwölf Sprachen",
+        "d": "Arabisch, Englisch, Deutsch, Russisch, Spanisch, Italienisch, Französisch, Portugiesisch, Katalanisch, Chinesisch, Hindi und Belutschi, auch zwei in einer Tour."
+      },
+      {
+        "t": "Abholung an Ihrer Unterkunft",
+        "d": "Hotel, Wohnung oder Kreuzfahrthafen: Der Tag beginnt vor Ihrer Tür."
+      },
+      {
+        "t": "Auf Sie zugeschnitten",
+        "d": "Stopps, Tempo und Dauer stimmen Sie mit Issam ab, und Touren lassen sich zu mehreren Tagen verbinden, mit Hilfe bei der Hotelbuchung."
+      },
+      {
+        "t": "Von Gästen bewertet",
+        "d": "{score} von 5 auf Tripadvisor aus {count} Bewertungen."
+      }
+    ],
+    "faqTitle": "Touren im Oman: häufige Fragen",
+    "faq": [
+      {
+        "q": "Welche Touren im Oman lohnen sich am meisten?",
+        "a": "Die meisten ersten Reisen verbinden Maskat (Sultan-Qabus-Moschee und Mutrah), Nizwa mit seinem Fort, einen Tag in der Wahiba-Wüste und die Becken im Wadi Shab. Issam bietet alle vier als private Tagestouren an, dazu Abende in Maskat und Nizwa, Al Hamra und Rundreisen über mehrere Tage."
+      },
+      {
+        "q": "Was kostet eine private Tour im Oman?",
+        "a": "Touren mit Issam beginnen bei 200 USD. Der Endpreis hängt von der Tour, von Auto oder Bus und von der Sprache ab."
+      },
+      {
+        "q": "Wie viele Tage braucht man im Oman?",
+        "a": "Maskat allein füllt einen Tag. Mit Nizwa, der Wüste und dem Wadi Shab reichen vier bis fünf Tage für die klassischen Orte ohne Eile. Issam plant die Tage mit Ihnen und hilft bei der Hotelbuchung."
+      },
+      {
+        "q": "Wann ist die beste Zeit für Touren im Oman?",
+        "a": "Von September bis Mai ist es in Maskat, in der Wüste und in den Wadis am angenehmsten. Nizwa lässt sich das ganze Jahr besuchen."
+      }
+    ]
   }
 }

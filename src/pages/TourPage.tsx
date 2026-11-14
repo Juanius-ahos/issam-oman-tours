@@ -4,7 +4,7 @@
 import { useEffect, useRef } from 'react';
 import { config, tourSlugs, type TourSlug } from '../config';
 import { useI18n } from '../i18n';
-import { homePath } from '../routes';
+import { toursPath } from '../routes';
 import { tourMedia } from '../data/tours';
 import { gsap } from '../motion/gsap';
 import { prefersReducedMotion } from '../lib/viewport';
@@ -58,7 +58,7 @@ export function TourPage({ slug }: { slug: TourSlug }) {
         <LazyVideo src={tourMedia[slug]} poster={tourMedia[slug].poster} label={t.name} className="!absolute inset-0 -z-10 h-full w-full" />
         <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
         <nav aria-label="Breadcrumb" data-rise>
-          <a href={`${homePath(locale)}#tours`} className="label-xs inline-flex items-center gap-1.5 text-white/75 hover:text-white">
+          <a href={toursPath(locale)} className="label-xs inline-flex items-center gap-1.5 text-white/75 hover:text-white">
             <Icon name="arrowRight" size={13} className="-scale-x-100 rtl:scale-x-100" />
             {p.back}
           </a>

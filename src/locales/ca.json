@@ -24,7 +24,7 @@
   },
   "hero": {
     "eyebrow": "Guia privat a Oman",
-    "title": "El teu guia privat a Oman, en el teu idioma",
+    "title": "Tours privats per Oman, en el teu idioma",
     "tagline": "The Languages Ninja",
     "lead": "Dies a mida per Mascat, Nizwa, el desert de Wahiba i Wadi Shab, guiats en l'idioma en què penses.",
     "ctaWhatsapp": "Parla per WhatsApp",
@@ -647,5 +647,60 @@
     "altGuests": "Issam amb viatgers en un tour per Oman",
     "altIssam": "Issam en un tour per Oman",
     "altPlace": "En un tour per Oman"
+  },
+  "toursPage": {
+    "seoTitle": "Tours privats per Oman en català | Oman with Issam",
+    "seoDescription": "Tours privats per Oman amb Issam: Mascat, Nizwa, el desert de Wahiba, Wadi Shab, Al Hamra i viatges de diversos dies, en català i 11 idiomes més. Des de 200 USD.",
+    "crumb": "Tours",
+    "eyebrow": "Tours privats",
+    "title": "Tours privats per Oman, guiats en el teu idioma",
+    "intro": [
+      "Issam Albalushi guia viatgers per Oman des del 2016. Cada tour és privat: només el teu grup, d’1 a 45 persones, amb recollida allà on t’allotgis i guiat en l’idioma en què penses.",
+      "Tria un dia a Mascat, a l’antiga capital Nizwa, al desert de Wahiba o a Wadi Shab, un vespre a Mascat o Nizwa, el poble de tova d’Al Hamra, o uneix-ne uns quants en un viatge circular de pocs dies. Els preus comencen a 200 USD i depenen del tour, del vehicle i de l’idioma."
+    ],
+    "rating": "{score} a Tripadvisor · {count} opinions",
+    "listTitle": "Tots els tours",
+    "whyTitle": "Per què viatjar amb l’Issam",
+    "why": [
+      {
+        "t": "Només el teu grup",
+        "d": "Tours privats d’1 a 45 viatgers, en cotxe o en autobús."
+      },
+      {
+        "t": "Dotze idiomes",
+        "d": "Àrab, anglès, alemany, rus, castellà, italià, francès, portuguès, català, xinès, hindi i balutxi, i dos en un mateix tour."
+      },
+      {
+        "t": "Recollida allà on t’allotgis",
+        "d": "Hotel, apartament o port de creuers: el dia comença a la teva porta."
+      },
+      {
+        "t": "Pensat per a tu",
+        "d": "Les parades, el ritme i la durada s’acorden amb tu, i els tours es poden unir en diversos dies, amb ajuda per reservar hotels."
+      },
+      {
+        "t": "Valorat pels viatgers",
+        "d": "{score} de 5 a Tripadvisor amb {count} opinions."
+      }
+    ],
+    "faqTitle": "Tours per Oman: preguntes freqüents",
+    "faq": [
+      {
+        "q": "Quins són els millors tours per Oman?",
+        "a": "La majoria dels primers viatges combinen Mascat (la Gran Mesquita del Soldà Qabús i Mutrah), Nizwa i el seu fort, un dia al desert de Wahiba i els gorgs de Wadi Shab. L’Issam fa tots quatre com a tours privats d’un dia, a més de vespres a Mascat i Nizwa, Al Hamra i viatges de diversos dies."
+      },
+      {
+        "q": "Quant costa un tour privat per Oman?",
+        "a": "Els tours amb l’Issam comencen a 200 USD. El preu final depèn del tour, de si cal cotxe o autobús i de l’idioma."
+      },
+      {
+        "q": "Quants dies calen a Oman?",
+        "a": "Mascat ocupa un dia sencer. Amb Nizwa, el desert i Wadi Shab, quatre o cinc dies permeten veure els llocs clàssics sense presses. L’Issam planifica els dies amb tu i ajuda a reservar hotels."
+      },
+      {
+        "q": "Quan és la millor època per fer tours a Oman?",
+        "a": "De setembre a maig és el més agradable per a Mascat, el desert i els wadis. Nizwa es pot visitar tot l’any."
+      }
+    ]
   }
 }

@@ -3,7 +3,7 @@
    Runs at build time only (scripts/prerender.mjs via entry-server). */
 import { config, locales, tourSlugs, type Locale } from '../config';
 import type { Messages } from '../i18n';
-import { BASE, pathFor, swapLocale, homePath, tourPath, type Route } from '../routes';
+import { BASE, pathFor, swapLocale, homePath, tourPath, toursPath, type Route } from '../routes';
 import { tourGeo } from '../data/tours';
 
 type AllMessages = Record<Locale, Messages>;
@@ -23,6 +23,7 @@ export function pageMeta(route: Route, m: Messages) {
   if (route.page === 'home') {
     return { title: m.meta.homeTitle, description: m.meta.homeDescription };
   }
+  if (route.page === 'tours') return { title: m.toursPage.seoTitle, description: m.toursPage.seoDescription };
   const t = m.tours.items[route.slug];
   // Keep titles inside what Google shows (about 60 characters): add the brand only when it fits.
   const branded = `${t.seoTitle} | ${config.brand.business}`;
@@ -190,6 +191,44 @@ function jsonLd(route: Route, m: Messages): object[] {
       },
     ];
   }
+  if (route.page === 'tours') {
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'CollectionPage',
+            '@id': abs(pathFor(route)) + '#page',
+            url: abs(pathFor(route)),
+            name: m.toursPage.title,
+            description: m.toursPage.seoDescription,
+            inLanguage: route.locale,
+            about: { '@id': abs(BASE + '#business') },
+            mainEntity: {
+              '@type': 'ItemList',
+              itemListElement: tourSlugs.map((slug, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                url: abs(tourPath(route.locale, slug)),
+                name: m.tours.items[slug].name,
+              })),
+            },
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: m.toursPage.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: m.nav.home, item: abs(homePath(route.locale)) },
+              { '@type': 'ListItem', position: 2, name: m.toursPage.crumb, item: abs(pathFor(route)) },
+            ],
+          },
+        ],
+      },
+    ];
+  }
   return [
     {
       '@context': 'https://schema.org',
@@ -199,7 +238,8 @@ function jsonLd(route: Route, m: Messages): object[] {
           '@type': 'BreadcrumbList',
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: m.nav.home, item: abs(homePath(route.locale)) },
-            { '@type': 'ListItem', position: 2, name: m.tours.items[route.slug].name, item: abs(pathFor(route)) },
+            { '@type': 'ListItem', position: 2, name: m.toursPage.crumb, item: abs(toursPath(route.locale)) },
+            { '@type': 'ListItem', position: 3, name: m.tours.items[route.slug].name, item: abs(pathFor(route)) },
           ],
         },
       ],
