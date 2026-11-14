@@ -4,8 +4,8 @@
    Every claim here comes from Issam's answers (docs/issam-answers-2026-11.md). */
 import { config, tourSlugs } from '../config';
 import { useI18n } from '../i18n';
-import { homePath, guidePath } from '../routes';
-import { guides, guideSlugs, guideUi, hasGuide } from '../content/guides';
+import { homePath } from '../routes';
+import { Guides } from '../sections/Guides';
 import { TourCard } from '../sections/Tours';
 import { Faq } from '../sections/Faq';
 import { Plan } from '../sections/Plan';
@@ -73,21 +73,7 @@ export function ToursPage() {
 
       <Faq items={p.faq} eyebrow={m.faq.eyebrow} title={p.faqTitle} id="hub-faq" />
 
-      {guideUi[locale] && (
-        <section className="section pt-0" aria-labelledby="hub-guides">
-          <h2 id="hub-guides" className="section-title mb-6">{guideUi[locale]!.footer}</h2>
-          <ul className="grid gap-3 md:grid-cols-3">
-            {guideSlugs.filter((g) => hasGuide(g, locale)).map((g) => (
-              <li key={g}>
-                <a href={guidePath(locale, g)} className="block h-full rounded-[var(--radius)] border border-ink/12 bg-white/60 p-6 transition-colors hover:border-accent hover:bg-white">
-                  <span className="block text-[19px] font-extrabold leading-snug tracking-[-0.02em]">{guides[g][locale]!.title}</span>
-                  <span className="mt-2 block text-[14px] text-ink/70">{guides[g][locale]!.seoDescription}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      <Guides id="hub-guides" />
       <Plan />
     </div>
   );

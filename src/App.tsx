@@ -14,6 +14,7 @@ import { Follow } from './sections/Follow';
 import { Reviews } from './sections/Reviews';
 import { Gallery } from './sections/Gallery';
 import { Faq } from './sections/Faq';
+import { Guides } from './sections/Guides';
 import { Plan } from './sections/Plan';
 import { Also } from './sections/Also';
 import { TourPage } from './pages/TourPage';
@@ -35,6 +36,7 @@ function HomePage() {
         <Reviews />
         <Gallery />
         <Faq />
+        <Guides />
         <Plan />
         <Also />
       </div>

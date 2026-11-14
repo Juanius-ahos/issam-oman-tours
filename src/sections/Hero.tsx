@@ -36,13 +36,31 @@ export function Hero() {
       ScrollTrigger.sort();
       ScrollTrigger.refresh();
     };
-    // Fonts first: a late swap would move every measured box.
+    // Fonts first: a late swap would move every measured box. If the fonts arrive
+    // after the timeout build, measure again (only while still at the top).
     const ready = document.fonts?.ready ?? Promise.resolve();
-    Promise.race([ready, new Promise((r) => setTimeout(r, 1200))]).then(build);
+    let fontsDone = false;
+    ready.then(() => {
+      if (!fontsDone) return; // the first build is still waiting for them
+      if (window.scrollY < 40) build();
+    });
+    Promise.race([ready.then(() => 'fonts'), new Promise((r) => setTimeout(() => r('timeout'), 1200))]).then((why) => {
+      build();
+      fontsDone = why === 'timeout';
+    });
+    // Rebuild when the window size changes: width always; height too on desktop
+    // (a taller or shorter window resizes the wordmark), but not for the mobile
+    // URL bar, and not while the reader is far down the page.
     let lastW = window.innerWidth;
+    let lastH = window.innerHeight;
+    const coarse = window.matchMedia('(pointer: coarse)').matches;
     const onResize = () => {
-      if (window.innerWidth === lastW) return; // ignore mobile URL bar height jitter
-      lastW = window.innerWidth;
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      if (w === lastW && (coarse || Math.abs(h - lastH) < 2)) return;
+      if (w === lastW && window.scrollY > h * 1.5) return;
+      lastW = w;
+      lastH = h;
       clearTimeout(timer);
       timer = window.setTimeout(build, 200);
     };
