@@ -1,99 +1,83 @@
-/* Traveler reviews as a fanned hand of cards (desktop) that rises into place
-   on scroll and tilts toward the pointer; a swipe deck on mobile. */
-import { useEffect, useRef, type PointerEvent } from 'react';
+/* Traveler reviews: a clean grid of light cards next to the Tripadvisor rating.
+   Each card leads with the review in the reader's own language; the guest's
+   original words sit behind a small "Reviewed in ..." toggle. Phones: a swipe strip.
+   The reviews are real, published with the guests' permission (docs/issam-answers-2026-11.md). */
+import { useEffect, useRef } from 'react';
 import { useI18n } from '../i18n';
 import { gsap } from '../motion/gsap';
-import { isMobile, prefersReducedMotion } from '../lib/viewport';
+import { prefersReducedMotion } from '../lib/viewport';
 import { StarDivider, StarPattern } from '../oman/Ornament';
 import { Icon } from '../components/Icon';
 import { config } from '../config';
 
-/** Position in the fanned hand for card i of n: tilted and lowered toward the edges. */
-function fan(i: number, n: number) {
-  const t = n > 1 ? (i / (n - 1)) * 2 - 1 : 0; // -1 at the left edge, 1 at the right
-  return { rot: +(t * 9).toFixed(1), lift: `${Math.round(t * t * 26)}px`, z: Math.round((1 - Math.abs(t)) * 3) + 1 };
-}
-
 export function Reviews() {
   const { m, locale } = useI18n();
-  const hand = useRef<HTMLUListElement>(null);
+  const list = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    if (prefersReducedMotion() || isMobile()) return;
+    if (prefersReducedMotion()) return;
     const ctx = gsap.context(() => {
-      gsap.from('.quote', {
-        y: 160,
+      gsap.from('.review', {
+        y: 40,
         opacity: 0,
-        duration: 1,
-        stagger: 0.08,
+        duration: 0.8,
+        stagger: 0.07,
         ease: 'power3.out',
-        scrollTrigger: { trigger: hand.current, start: 'top 80%' },
+        scrollTrigger: { trigger: list.current, start: 'top 85%', once: true },
         clearProps: 'transform,opacity',
       });
-    }, hand);
+    }, list);
     return () => ctx.revert();
   }, []);
 
-  // Subtle 3D tilt toward the pointer (CSS perspective, no WebGL).
-  const tilt = (e: PointerEvent<HTMLElement>) => {
-    if (e.pointerType !== 'mouse') return;
-    const el = e.currentTarget;
-    const r = el.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - 0.5;
-    const y = (e.clientY - r.top) / r.height - 0.5;
-    el.style.transform = `perspective(900px) rotateX(${y * -8}deg) rotateY(${x * 10}deg)`;
-  };
-  const reset = (e: PointerEvent<HTMLElement>) => {
-    e.currentTarget.style.transform = '';
-  };
+  const count = m.reviews.taCount.replace('{count}', String(config.tripadvisorRating.count));
 
   return (
     <section id="reviews" className="section isolate overflow-hidden">
       <StarPattern tone="sand" className="edge-geo edge-geo-top" />
-      <header className="section-head">
-        <p className="eyebrow">{m.reviews.eyebrow}</p>
-        <StarDivider />
-        <h2 className="section-title">{m.reviews.title}</h2>
-        <p className="section-lead">{m.reviews.note}</p>
-        <a href={config.tripadvisor} target="_blank" rel="noopener" className="ta-badge">
-          <span className="ta-score">{config.tripadvisorRating.score}</span>
-          <span className="ta-stars" aria-hidden="true">★★★★★</span>
-          <span className="ta-text">
-            {m.reviews.taCount.replace('{count}', String(config.tripadvisorRating.count))}
-            <span className="ta-more">
-              {m.reviews.tripadvisor}
-              <Icon name="arrow" size={13} />
-            </span>
+      <div className="reviews-head">
+        <header className="section-head !mb-0">
+          <p className="eyebrow">{m.reviews.eyebrow}</p>
+          <StarDivider />
+          <h2 className="section-title">{m.reviews.title}</h2>
+          <p className="section-lead">{m.reviews.note}</p>
+        </header>
+        <a href={config.tripadvisor} target="_blank" rel="noopener" className="rating-panel">
+          <span className="rating-score">{config.tripadvisorRating.score}</span>
+          <span className="rating-stars" aria-hidden="true">★★★★★</span>
+          <span className="rating-count">{count}</span>
+          <span className="rating-link">
+            {m.reviews.tripadvisor}
+            <Icon name="arrow" size={13} />
           </span>
         </a>
-      </header>
-      <ul ref={hand} className="hand" style={{ ['--n' as string]: m.reviews.items.length }}>
-        {m.reviews.items.map((r, i, all) => {
-          const f = fan(i, all.length);
+      </div>
+
+      <ul ref={list} className="reviews-grid">
+        {m.reviews.items.map((r, i) => {
+          const own = r.lang === locale;
           return (
-          <li
-            key={i}
-            className="hand-card transition-transform duration-200 ease-out"
-            style={{ ['--rot' as string]: `${f.rot}deg`, ['--lift' as string]: f.lift, ['--z' as string]: f.z, ['--overlap' as string]: i ? 'var(--fan-gap)' : '0' }}
-            onPointerMove={tilt}
-            onPointerLeave={reset}
-          >
-            <figure className="quote glass-ink">
-              <div>
-                <blockquote lang={r.lang} className="text-[14.5px] leading-relaxed tracking-[-0.01em]">“{r.quote}”</blockquote>
-                {r.lang !== locale && (
-                  <p className="mt-3 text-[12.5px] leading-snug text-white/75">
-                    <span className="sr-only">{m.reviews.translation}: </span>
-                    {r.translation}
-                  </p>
+            <li key={i} className="review">
+              <figure className="flex h-full flex-col">
+                <span className="review-mark" aria-hidden="true">“</span>
+                <blockquote lang={own ? r.lang : locale} className="review-text">
+                  {own ? r.quote : r.translation}
+                </blockquote>
+                {!own && (
+                  <details className="review-original">
+                    <summary>{r.meta}</summary>
+                    <p lang={r.lang}>“{r.quote}”</p>
+                  </details>
                 )}
-              </div>
-              <figcaption>
-                <strong className="block text-[14px] font-extrabold">{r.name}</strong>
-                <span className="label-xs text-white/75">{r.meta}</span>
-              </figcaption>
-            </figure>
-          </li>
+                <figcaption className="review-by">
+                  <span className="review-avatar" aria-hidden="true">{[...r.name][0]}</span>
+                  <span>
+                    <strong>{r.name}</strong>
+                    {own && <span className="label-xs block text-ink/55">{r.meta}</span>}
+                  </span>
+                </figcaption>
+              </figure>
+            </li>
           );
         })}
       </ul>
