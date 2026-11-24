@@ -90,6 +90,7 @@ domain and takes the site offline. `build:pages` (base `/issam-oman-tours/`) is 
 - `src/sections/*`: one file per home section. `src/pages/TourPage.tsx`: tour template.
 - `src/map/SatelliteRouteMap.tsx` (map, camera, routes, pins, required credit), `src/map/geo.ts` (projection; the image is exported for exactly `mapBounds`).
 - `src/data/tours.ts`: real route coordinates and empty video slots per tour.
+- `src/content/guides.ts` + `src/content/guides/{en,de,fr,ru,es,it}.ts`: travel guides, one file per language. `guideLangs` lists which languages each guide exists in (the server build fails if it disagrees with the files). The browser loads only the visitor's language (`loadGuides` in entry-client), so guide text never sits in the main bundle.
 - `vite.config.ts` `manualChunks`: `react` and `motion` (gsap + lenis).
 
 ## Gotchas learned the hard way

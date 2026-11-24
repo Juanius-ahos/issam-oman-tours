@@ -3,6 +3,7 @@ import './styles/index.css';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import { App } from './App';
 import { loadMessages, localeInfo } from './i18n';
+import { loadGuides } from './content/guides';
 import { parsePath } from './routes';
 import { pageMeta } from './lib/seo';
 import { initAnalytics } from './lib/analytics';
@@ -12,7 +13,7 @@ const route = parsePath(location.pathname);
 
 async function start() {
   if (route.locale === 'ar' || route.locale === 'bal') await import('./styles/arabic.css');
-  const messages = await loadMessages(route.locale);
+  const [messages] = await Promise.all([loadMessages(route.locale), loadGuides(route.locale)]);
   const root = document.getElementById('root')!;
 
   if (root.hasChildNodes()) {

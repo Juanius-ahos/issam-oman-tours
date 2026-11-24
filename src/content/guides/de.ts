@@ -1,0 +1,179 @@
+/* German guides, translated from en.ts (same facts). Titles target German searches
+   such as "Beste Reisezeit Oman", "Oman Rundreise" and "Maskat Sehenswürdigkeiten". */
+import type { GuideSet } from '../guides';
+
+const de: GuideSet = {
+  'best-time-to-visit-oman': {
+    title: 'Die beste Reisezeit für den Oman, Monat für Monat',
+    seoTitle: 'Beste Reisezeit Oman: Klima und Wetter Monat für Monat',
+    seoDescription: 'Wann in den Oman reisen? Oktober bis April ist die angenehmste Zeit, der Sommer in Maskat und in der Wüste ist sehr heiß, und Salalah wird im Monsun grün. Monat für Monat, von einem einheimischen Guide.',
+    updated: '2026-11-24',
+    lead: 'Für die meisten Reisenden ist die beste Reisezeit für den Oman von Oktober bis April: Dann ist es in Maskat warm statt heiß, und Wüste und Wadis lassen sich angenehm erkunden. Hier steht, wie sich jede Jahreszeit anfühlt und welche Touren am besten dazu passen.',
+    sections: [
+      {
+        h: 'Oktober bis April: die Hauptsaison',
+        p: [
+          'Das sind die angenehmsten Monate im Norden des Omans. In Maskat liegen die Tagestemperaturen meist zwischen knapp 30 und gut 30 °C, das Meer ist warm, und die Abende an der Corniche von Mutrah sind herrlich. Dezember bis Februar sind die mildesten Monate.',
+          'Es ist auch die beste Zeit für die Wahiba-Wüste und für Wadis wie das Wadi Shab. Issam bietet seine Touren in Maskat und in die Wahiba von September bis Mai an, Wadi Shab von September bis April.',
+        ],
+      },
+      {
+        h: 'Kühle Winternächte in Wüste und Gebirge',
+        p: [
+          'Die Tage im Winter sind mild, doch die Nächte in der Wüste und oben im Hadschar-Gebirge können überraschend kalt werden. Wer zwischen Dezember und Februar einen Sonnenuntergang in der Wahiba oder einen Tag rund um Nizwa und die Berge plant, sollte für den Abend eine warme Schicht einpacken.',
+        ],
+      },
+      {
+        h: 'Mai und September: heiße Übergangsmonate',
+        p: [
+          'Im Mai steigen die Temperaturen und bleiben bis in den September hoch. Frühe Morgen und Abende eignen sich trotzdem gut für Ausflüge, und es ist ruhiger. Starten Sie früh, legen Sie Museen und andere Innenbesuche in die Mittagszeit und heben Sie sich die Wüste für den späten Nachmittag auf.',
+        ],
+      },
+      {
+        h: 'Juni bis August: Sommer im Norden, grüne Saison im Süden',
+        p: [
+          'Der Sommer in Maskat und im Landesinneren ist sehr heiß, oft über 40 °C, und an der Küste schwül. Ausflüge im Freien sollten dann kurz sein und früh beginnen.',
+          'Die Ausnahme ist der äußerste Süden. Rund um Salalah in Dhofar bringt der Khareef-Monsun etwa von Juni bis September Nebel, Nieselregen und grüne Hügel, und dort ist dann Hochsaison.',
+        ],
+      },
+      {
+        h: 'Nizwa: das ganze Jahr über',
+        p: [
+          'Nizwa mit Festung und Souq lässt sich in jedem Monat besuchen. Im Sommer fährt man am besten früh morgens oder abends: Issam bietet auch Nizwa bei Nacht an, wenn die Festung beleuchtet ist und der Souq lange geöffnet hat.',
+        ],
+      },
+      {
+        h: 'Ramadan und Feiertage',
+        p: [
+          'Der Ramadan verschiebt sich jedes Jahr um etwa 11 Tage nach vorn. In dieser Zeit ist Essen und Trinken in der Öffentlichkeit tagsüber nicht erlaubt, viele Restaurants öffnen erst nach Sonnenuntergang, und die Öffnungszeiten sind kürzer. Die Touren finden trotzdem statt, und die Abende sind lebendig. An den beiden Eid-Festen reisen viele Einheimische, deshalb früh buchen.',
+        ],
+      },
+      {
+        h: 'Regen und Wadis',
+        p: [
+          'Regen ist selten, kann aber heftig sein, und Wadis können schnell überfluten. Bei Regenvorhersage sollte niemand ein Wadi betreten. Wenn das Wetter eine Route unmöglich macht, bietet Issam eine Alternative an oder erstattet den Preis, falls es keine gibt.',
+        ],
+      },
+    ],
+    tours: ['muscat-city', 'wahiba-desert', 'wadi-shab-coast', 'nizwa-mountains'],
+    faq: [
+      { q: 'Welcher Monat ist der beste für eine Reise in den Oman?', a: 'Dezember bis Februar sind die mildesten Monate. Insgesamt ist Oktober bis April die beste Zeit für Maskat, die Wüste und die Wadis.' },
+      { q: 'Ist es im Oman im Sommer zu heiß?', a: 'Juni bis August ist es in Maskat und im Landesinneren sehr heiß, oft über 40 °C. Touren sind früh morgens und abends trotzdem möglich, und Salalah im Süden ist in der Monsunzeit grün und kühler.' },
+      { q: 'Kann man im Ramadan in den Oman reisen?', a: 'Ja. Die Touren laufen wie gewohnt, aber tagsüber ist Essen und Trinken in der Öffentlichkeit nicht erlaubt, und viele Orte haben kürzere Öffnungszeiten. Die Abende nach Sonnenuntergang sind lebendig.' },
+    ],
+  },
+  'oman-itinerary': {
+    title: 'Oman Rundreise: Routen für 3, 5 und 7 Tage',
+    seoTitle: 'Oman Rundreise: Route für 3, 5 und 7 Tage ab Maskat',
+    seoDescription: 'So verbringen Sie 3, 5 oder 7 Tage im Oman ab Maskat: Große Moschee und Mutrah, Nizwa, Wahiba-Wüste, Wadi Shab und Al Hamra, mit Fahrstrecken und Tipps vom einheimischen Guide.',
+    updated: '2026-11-24',
+    lead: 'Eine Reise in den Oman lässt sich gut von Maskat aus planen: Die meisten Klassiker sind ein Tagesausflug entfernt. Diese Routen folgen echten Fahrstrecken und den privaten Touren, die Issam anbietet, und jeder Tag lässt sich nach Ihren Wünschen ändern.',
+    sections: [
+      {
+        h: '3 Tage: das Wichtigste',
+        p: ['Drei Tage reichen für die Hauptstadt, das historische Herz des Landes und die Wüste.'],
+        list: [
+          'Tag 1, Maskat: morgens die Sultan-Qabus-Moschee, dann das Königliche Opernhaus, die Corniche und der Souq von Mutrah und Alt-Maskat mit dem Al-Alam-Palast (etwa 50 km).',
+          'Tag 2, Nizwa: Festung und Souq der alten Hauptstadt am Fuß des Hadschar-Gebirges (etwa 300 km hin und zurück).',
+          'Tag 3, die Wahiba-Wüste: Dünen im Geländewagen und Sonnenuntergang in der Wüste (etwa 300 km hin und zurück).',
+        ],
+      },
+      {
+        h: '5 Tage: dazu Küste und ein Abend',
+        p: ['Mit fünf Tagen kommen ein Wadi und Maskat bei Nacht dazu.'],
+        list: [
+          'Tag 1 bis 3 wie oben.',
+          'Tag 4, Wadi Shab: früh los entlang der Küste südlich von Maskat, kurze Bootsfahrt, Wanderung durch die Schlucht und Naturbecken (etwa 200 km hin und zurück).',
+          'Tag 5, ein ruhiger Vormittag, dann Maskat bei Nacht: das beleuchtete Opernhaus, die Corniche und der Souq am Abend.',
+        ],
+      },
+      {
+        h: '7 Tage: eine echte Rundreise',
+        p: ['Mit einer Woche müssen Sie nicht jeden Tag nach Maskat zurück. Issam verbindet die Touren zu einer Rundreise über mehrere Tage und hilft bei der Buchung der Hotels unterwegs.'],
+        list: [
+          'Tag 1, Maskat.',
+          'Tag 2, Nizwa, mit Übernachtung in der Gegend.',
+          'Tag 3, das alte Dorf Al Hamra, auf Wunsch mit Misfat Al Abriyeen.',
+          'Tag 4, hinüber in die Wahiba-Wüste zum Sonnenuntergang.',
+          'Tag 5, die Küste: Wadi Shab, auf Wunsch mit Sur.',
+          'Tag 6, zurück nach Maskat, Maskat bei Nacht.',
+          'Tag 7, frei, oder ein zweiter Tag an dem Ort, der Ihnen am besten gefallen hat.',
+        ],
+      },
+      {
+        h: 'Unterwegs im Oman',
+        p: [
+          'Die Entfernungen sind überschaubar und die Straßen gut, doch Tage außerhalb von Maskat sind lang: Nizwa und die Wahiba-Wüste liegen jeweils etwa 300 km hin und zurück entfernt. Mit privatem Guide und Fahrer können Sie zwischen den Stopps ausruhen und den Plan unterwegs ändern. Die Touren sind privat für 1 bis 45 Reisende, im Auto oder im Bus, mit Abholung dort, wo Sie wohnen.',
+        ],
+      },
+      {
+        h: 'Wann reisen',
+        p: ['Oktober bis April ist die angenehmste Zeit für diese Route. In den Sommermonaten sollten Sie Ausflüge im Freien auf frühe Morgen und Abende legen. Details finden Sie im Ratgeber zur besten Reisezeit.'],
+      },
+    ],
+    tours: ['muscat-city', 'nizwa-mountains', 'wahiba-desert', 'wadi-shab-coast', 'multi-day'],
+    faq: [
+      { q: 'Wie viele Tage braucht man für den Oman?', a: 'Drei Tage reichen für Maskat, Nizwa und die Wüste. Fünf Tage bringen ein Wadi und einen Abend in Maskat dazu. Mit einer Woche wird es eine entspannte Rundreise mit Übernachtungen außerhalb von Maskat.' },
+      { q: 'Kann man Tagesausflüge von Maskat machen?', a: 'Ja. Nizwa, die Wahiba-Wüste und das Wadi Shab sind alle als Tagesausflug ab Maskat möglich, mit Abholung am Hotel.' },
+      { q: 'Braucht man im Oman ein Auto?', a: 'Nicht mit einer privaten Tour: Abholung und Rückfahrt sind inklusive, und Issam kann mehrere Tage planen und bei den Hotels helfen.' },
+    ],
+  },
+  'things-to-do-in-muscat': {
+    title: 'Maskat: Sehenswürdigkeiten und Tipps',
+    seoTitle: 'Maskat Sehenswürdigkeiten: Tipps vom einheimischen Guide',
+    seoDescription: 'Die schönsten Sehenswürdigkeiten in Maskat, Oman: Sultan-Qabus-Moschee, Corniche und Souq von Mutrah, Alt-Maskat, das Königliche Opernhaus und Maskat bei Nacht, mit Tipps zur Kleiderordnung.',
+    updated: '2026-11-24',
+    lead: 'Maskat zieht sich entlang der Küste zwischen Bergen und Meer, und die schönsten Orte lassen sich gut an einem Tag verbinden. Hier sind die Orte, für die die meisten Reisenden kommen, und wie man sie am besten sieht.',
+    sections: [
+      {
+        h: 'Sultan-Qabus-Moschee',
+        p: [
+          'Die große Moschee des Landes, mit ihrem riesigen Gebetssaal, dem Kronleuchter und dem handgeknüpften Teppich. Für nichtmuslimische Besucher ist sie an Werktagen vormittags geöffnet, deshalb ist sie meist der erste Stopp des Tages.',
+          'Kleiderordnung: Frauen bedecken das Haar, und alle tragen lange Ärmel und lange Hosen oder einen langen Rock.',
+        ],
+      },
+      {
+        h: 'Corniche und Souq von Mutrah',
+        p: [
+          'Die Uferpromenade am alten Hafen und dahinter einer der ältesten Souqs der Region: Weihrauch, Silber, Stoffe und Karak-Tee. Am schönsten ist es am späten Nachmittag und am Abend.',
+        ],
+      },
+      {
+        h: 'Alt-Maskat und der Al-Alam-Palast',
+        p: [
+          'Der Zeremonienpalast mit seiner blau-goldenen Fassade, zwischen den Festungen Al Jalali und Al Mirani über der Bucht. Palast und Festungen sieht man von außen, und das Viertel ist klein genug für einen Spaziergang.',
+        ],
+      },
+      {
+        h: 'Königliches Opernhaus Maskat',
+        p: ['Ein Opernhaus aus weißem Stein in Shati Al Qurum, sehenswert am Tag und beleuchtet bei Nacht. Wer eine Vorstellung besuchen möchte, sollte das Programm prüfen.'],
+      },
+      {
+        h: 'Maskat bei Nacht',
+        p: ['Wenn die Hitze nachlässt, erwacht Maskat: das beleuchtete Opernhaus, die Corniche voller Familien und der Souq am Abend. Issam bietet das als private Abendtour an.'],
+      },
+      {
+        h: 'Tagesausflüge ab Maskat',
+        p: ['Die Hauptstadt ist auch der Ausgangspunkt für Tagesausflüge: Nizwa mit seiner Festung, die Wahiba-Wüste, das Wadi Shab an der Küste mit dem Bimmah Sinkhole auf dem Weg und das Lehmdorf Al Hamra.'],
+      },
+      {
+        h: 'Tipps',
+        p: [],
+        list: [
+          'Früh starten: Die Morgen sind kühler, und die Große Moschee ist vormittags für Besucher geöffnet.',
+          'In der Altstadt und in den Souqs dezent kleiden: Schultern und Knie bedeckt.',
+          'Karten werden fast überall akzeptiert, für Taxis und kleine Läden etwas Bargeld dabeihaben.',
+          'Eine Halbtagestour (8 bis 12 Uhr) deckt die Hauptsehenswürdigkeiten ab, ein ganzer Tag (8 bis 15 Uhr) lässt Zeit für die versteckten Ecken.',
+        ],
+      },
+    ],
+    tours: ['muscat-city', 'muscat-night', 'wadi-shab-coast', 'nizwa-mountains'],
+    faq: [
+      { q: 'Wie viele Tage braucht man für Maskat?', a: 'Ein ganzer Tag reicht für die Große Moschee, Mutrah und Alt-Maskat. Dazu ein Abend für Maskat bei Nacht, und Maskat als Ausgangspunkt für Tagesausflüge.' },
+      { q: 'Was zieht man in der Sultan-Qabus-Moschee an?', a: 'Frauen bedecken das Haar, und alle tragen lange Ärmel und lange Hosen oder einen langen Rock.' },
+      { q: 'Kann man Maskat zu Fuß erkunden?', a: 'Die einzelnen Viertel wie Mutrah oder Alt-Maskat lassen sich gut zu Fuß erkunden, aber die Stadt ist lang gezogen, deshalb braucht man zwischen ihnen ein Fahrzeug.' },
+    ],
+  },
+};
+
+export default de;
