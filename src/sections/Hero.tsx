@@ -3,6 +3,7 @@ import { config } from '../config';
 import { useI18n } from '../i18n';
 import { createGhost } from '../motion/ghost';
 import { ScrollTrigger } from '../motion/gsap';
+import { isMobile } from '../lib/viewport';
 import { BASE } from '../routes';
 import { GreetingBubble } from '../oman/Bits';
 import { photoSrc, photoSrcSet } from '../data/photos';
@@ -27,6 +28,16 @@ export function Hero() {
     };
     fitMark();
     const build = () => {
+      // Phones have no hero collapse: just set the classes. Skipping the jump to the
+      // top and the full re-measure of every scroll animation saves real work at load
+      // (ScrollTrigger re-measures by itself on load and on resize).
+      if (isMobile()) {
+        cleanup();
+        fitMark();
+        cleanup = createGhost(hero.current!);
+        html.classList.remove('pre-ghost');
+        return;
+      }
       cleanup();
       window.scrollTo(0, 0);
       fitMark();

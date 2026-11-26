@@ -131,7 +131,7 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
 
       {/* Mobile top bar */}
       <header className="fixed inset-x-0 top-0 z-[80] flex h-[68px] items-center justify-between border-b border-ink/10 bg-sand/90 px-5 backdrop-blur-md desk:hidden">
-        <a href={homePath(locale)} className="flex items-center gap-2.5" aria-label={config.brand.business}>
+        <a href={homePath(locale)} className="flex items-center gap-2.5">
           <span className="wordmark rounded-[10px] bg-accent px-3 py-2 text-[22px] text-white">{config.brand.wordmark}</span>
           <span className="top-name text-[13px] font-black leading-[1.05] tracking-[-0.01em] text-ink" lang="en">
             Oman with

@@ -38,7 +38,7 @@ export function HelloChips() {
               className="hello-chip"
               lang={l.hreflang}
               dir={l.dir}
-              aria-label={`WhatsApp, ${l.english}`}
+              aria-label={`${l.name}, WhatsApp`}
             >
               {l.name}
             </WaLink>

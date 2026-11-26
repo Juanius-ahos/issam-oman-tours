@@ -75,7 +75,7 @@ export function Reviews() {
                   <span className="review-avatar" aria-hidden="true">{[...r.name][0]}</span>
                   <span>
                     <strong>{r.name}</strong>
-                    {own && <span className="label-xs block text-ink/55">{r.meta}</span>}
+                    {own && <span className="label-xs block text-ink/70">{r.meta}</span>}
                   </span>
                 </figcaption>
               </figure>
@@ -96,7 +96,7 @@ export function Reviews() {
                   <span className="review-avatar" aria-hidden="true">{[...q.name][0]}</span>
                   <span className="min-w-0 flex-1">
                     <strong>{q.name}</strong>
-                    <span className="label-xs block text-ink/55">
+                    <span className="label-xs block text-ink/70">
                       {[q.place, month.format(new Date(`${q.month}-15`))].filter(Boolean).join(' · ')}
                     </span>
                   </span>

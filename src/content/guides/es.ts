@@ -6,7 +6,7 @@ const es: GuideSet = {
   'best-time-to-visit-oman': {
     title: 'La mejor época para viajar a Omán, mes a mes',
     seoTitle: 'Mejor época para viajar a Omán: clima mes a mes',
-    seoDescription: 'Cuándo viajar a Omán: de octubre a abril es lo más agradable, el verano es muy caluroso en Mascate y en el desierto, y Salalah se vuelve verde con el monzón. Mes a mes, de un guía local.',
+    seoDescription: 'Cuándo viajar a Omán: de octubre a abril es lo más agradable, el verano es muy caluroso en Mascate y en el desierto, y Salalah se vuelve verde con el monzón.',
     updated: '2026-11-24',
     lead: 'Para la mayoría de los viajeros, la mejor época para visitar Omán es de octubre a abril: en Mascate hace calor sin agobiar, y el desierto y los wadis se recorren con comodidad. Así es cada parte del año y estos son los tours que mejor encajan.',
     sections: [
@@ -65,7 +65,7 @@ const es: GuideSet = {
   'oman-itinerary': {
     title: 'Ruta por Omán: 3, 5 y 7 días',
     seoTitle: 'Ruta por Omán: itinerario de 3, 5 y 7 días desde Mascate',
-    seoDescription: 'Cómo pasar 3, 5 o 7 días en Omán desde Mascate: la Gran Mezquita y Mutrah, Nizwa, el desierto de Wahiba, Wadi Shab y Al Hamra, con distancias y consejos de un guía local.',
+    seoDescription: 'Cómo pasar 3, 5 o 7 días en Omán desde Mascate: la Gran Mezquita y Mutrah, Nizwa, el desierto de Wahiba, Wadi Shab y Al Hamra.',
     updated: '2026-11-24',
     lead: 'Omán se organiza fácil desde Mascate: la mayoría de los lugares imprescindibles están a una excursión de un día. Estas rutas siguen las distancias reales y los tours privados de Issam, y cada día se puede cambiar a tu gusto.',
     sections: [
@@ -121,7 +121,7 @@ const es: GuideSet = {
   'things-to-do-in-muscat': {
     title: 'Qué ver en Mascate',
     seoTitle: 'Qué ver en Mascate: consejos de un guía local',
-    seoDescription: 'Qué ver en Mascate, Omán: la Gran Mezquita del Sultán Qaboos, la Corniche y el zoco de Mutrah, el viejo Mascate, la Ópera Real y Mascate de noche, con consejos sobre la ropa.',
+    seoDescription: 'Qué ver en Mascate, Omán: la Gran Mezquita del Sultán Qaboos, la Corniche y el zoco de Mutrah, el viejo Mascate, la Ópera Real y Mascate de noche.',
     updated: '2026-11-24',
     lead: 'Mascate se extiende por la costa entre las montañas y el mar, y sus mejores lugares se combinan fácilmente en un día. Estos son los sitios por los que viene la mayoría de los viajeros, y cómo verlos.',
     sections: [

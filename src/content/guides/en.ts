@@ -5,7 +5,7 @@ const en: GuideSet = {
   'best-time-to-visit-oman': {
     title: 'The best time to visit Oman, month by month',
     seoTitle: 'Best Time to Visit Oman: Month by Month Guide',
-    seoDescription: 'When to visit Oman: October to April is the most pleasant, summer is very hot in Muscat and the desert, and Salalah turns green in the monsoon. Month by month, from a local guide.',
+    seoDescription: 'When to visit Oman: October to April is the most pleasant, summer is very hot in Muscat and the desert, and Salalah turns green in the monsoon.',
     updated: '2026-11-14',
     lead: 'For most travelers the best time to visit Oman is from October to April, when days in Muscat are warm rather than hot and the desert and the wadis are comfortable to explore. Here is what each part of the year is like, and which tours fit it best.',
     sections: [
@@ -64,7 +64,7 @@ const en: GuideSet = {
   'oman-itinerary': {
     title: 'Oman itinerary: 3, 5 and 7 days',
     seoTitle: 'Oman Itinerary: 3, 5 and 7 Days from Muscat',
-    seoDescription: 'How to spend 3, 5 or 7 days in Oman from Muscat: the Grand Mosque and Mutrah, Nizwa, the Wahiba Sands, Wadi Shab and Al Hamra, with driving distances and tips from a local guide.',
+    seoDescription: 'How to spend 3, 5 or 7 days in Oman from Muscat: the Grand Mosque and Mutrah, Nizwa, the Wahiba Sands, Wadi Shab and Al Hamra.',
     updated: '2026-11-14',
     lead: 'Oman is easy to plan around Muscat: most of the classic places are a day trip away. These itineraries follow real driving distances and the private tours Issam runs, and every day can be changed to suit you.',
     sections: [
@@ -120,7 +120,7 @@ const en: GuideSet = {
   'things-to-do-in-muscat': {
     title: 'Things to do in Muscat',
     seoTitle: 'Things to Do in Muscat: A Local Guide’s List',
-    seoDescription: 'The best things to do in Muscat, Oman: the Sultan Qaboos Grand Mosque, Mutrah Corniche and Souq, Old Muscat, the Royal Opera House and Muscat by night, with dress code tips.',
+    seoDescription: 'The best things to do in Muscat, Oman: the Sultan Qaboos Grand Mosque, Mutrah Corniche and Souq, Old Muscat, the Royal Opera House and Muscat by night.',
     updated: '2026-11-14',
     lead: 'Muscat is spread along the coast between the mountains and the sea, and its best places are easy to combine in one day. Here are the places most travelers come for, and how to see them.',
     sections: [

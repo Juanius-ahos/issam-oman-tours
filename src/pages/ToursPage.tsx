@@ -24,7 +24,7 @@ export function ToursPage() {
     <div className="desk:ps-[var(--nav-w)]">
       <section data-own-cta className="section isolate overflow-clip pt-[clamp(110px,16vh,170px)]">
         <StarPattern tone="sand" className="edge-geo" />
-        <nav aria-label="Breadcrumb" className="label-xs mb-6 flex items-center gap-2 text-ink/60">
+        <nav aria-label="Breadcrumb" className="label-xs mb-6 flex items-center gap-2 text-ink/70">
           <a href={homePath(locale)} className="hover:text-ink">{m.nav.home}</a>
           <span aria-hidden="true">/</span>
           <span aria-current="page">{p.crumb}</span>

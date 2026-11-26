@@ -20,7 +20,7 @@ export function GuidePage({ slug }: { slug: GuideSlug }) {
       <article>
         <header className="section isolate overflow-clip pb-0 pt-[clamp(110px,16vh,170px)]">
           <StarPattern tone="sand" className="edge-geo" />
-          <nav aria-label="Breadcrumb" className="label-xs mb-6 flex items-center gap-2 text-ink/60">
+          <nav aria-label="Breadcrumb" className="label-xs mb-6 flex items-center gap-2 text-ink/70">
             <a href={homePath(locale)} className="hover:text-ink">{m.nav.home}</a>
             <span aria-hidden="true">/</span>
             <span>{ui.crumb}</span>
@@ -28,7 +28,7 @@ export function GuidePage({ slug }: { slug: GuideSlug }) {
           <p className="eyebrow">{ui.kicker}</p>
           <StarDivider className="mt-3" />
           <h1 className="mt-4 max-w-[18ch] text-[clamp(38px,5.6vw,80px)] font-black leading-[0.97] tracking-[var(--track-tight)] [text-wrap:balance]">{g.title}</h1>
-          <p className="label-xs mt-5 text-ink/60">
+          <p className="label-xs mt-5 text-ink/70">
             {ui.updated} <time dateTime={g.updated}>{date}</time>
           </p>
           <p className="mt-6 max-w-[62ch] text-[clamp(17px,1.45vw,21px)] leading-relaxed text-ink/80">{g.lead}</p>

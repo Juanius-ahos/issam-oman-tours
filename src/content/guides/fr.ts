@@ -5,8 +5,8 @@ import type { GuideSet } from '../guides';
 const fr: GuideSet = {
   'best-time-to-visit-oman': {
     title: 'Quand partir à Oman ? La meilleure période, mois par mois',
-    seoTitle: 'Quand partir à Oman : meilleure période et climat mois par mois',
-    seoDescription: "Quand partir à Oman : d'octobre à avril c'est la période la plus agréable, l'été est très chaud à Mascate et dans le désert, et Salalah verdit pendant la mousson. Mois par mois, par un guide local.",
+    seoTitle: 'Quand partir à Oman : meilleure période mois par mois',
+    seoDescription: "Quand partir à Oman : d'octobre à avril c'est la période la plus agréable, l'été est très chaud à Mascate et dans le désert.",
     updated: '2026-11-24',
     lead: "Pour la plupart des voyageurs, la meilleure période pour visiter Oman va d'octobre à avril : il fait chaud à Mascate sans être étouffant, et le désert comme les wadis se découvrent confortablement. Voici à quoi ressemble chaque moment de l'année, et les circuits qui s'y prêtent le mieux.",
     sections: [
@@ -65,7 +65,7 @@ const fr: GuideSet = {
   'oman-itinerary': {
     title: 'Itinéraire à Oman : 3, 5 et 7 jours',
     seoTitle: 'Itinéraire Oman : circuit de 3, 5 ou 7 jours depuis Mascate',
-    seoDescription: "Comment passer 3, 5 ou 7 jours à Oman depuis Mascate : la Grande Mosquée et Mutrah, Nizwa, le désert de Wahiba, Wadi Shab et Al Hamra, avec les distances et les conseils d'un guide local.",
+    seoDescription: "Comment passer 3, 5 ou 7 jours à Oman depuis Mascate : la Grande Mosquée et Mutrah, Nizwa, le désert de Wahiba, Wadi Shab et Al Hamra.",
     updated: '2026-11-24',
     lead: "Oman se prépare facilement autour de Mascate : la plupart des lieux incontournables sont à une journée d'excursion. Ces itinéraires suivent les vraies distances de route et les circuits privés d'Issam, et chaque journée peut être adaptée à vos envies.",
     sections: [
@@ -121,7 +121,7 @@ const fr: GuideSet = {
   'things-to-do-in-muscat': {
     title: 'Que faire à Mascate',
     seoTitle: "Que faire à Mascate : les incontournables d'un guide local",
-    seoDescription: "Que faire à Mascate, Oman : la Grande Mosquée Sultan Qaboos, la corniche et le souk de Mutrah, le vieux Mascate, l'Opéra royal et Mascate la nuit, avec les conseils de tenue.",
+    seoDescription: "Que faire à Mascate, Oman : la Grande Mosquée Sultan Qaboos, la corniche et le souk de Mutrah, le vieux Mascate, l'Opéra royal et Mascate la nuit.",
     updated: '2026-11-24',
     lead: "Mascate s'étire le long de la côte, entre montagnes et mer, et ses plus beaux lieux se combinent facilement en une journée. Voici ceux pour lesquels la plupart des voyageurs viennent, et comment les voir.",
     sections: [

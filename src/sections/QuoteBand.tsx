@@ -4,7 +4,7 @@ import { Fragment, useEffect, useRef } from 'react';
 import { config } from '../config';
 import { useI18n } from '../i18n';
 import { gsap } from '../motion/gsap';
-import { prefersReducedMotion } from '../lib/viewport';
+import { isMobile, prefersReducedMotion } from '../lib/viewport';
 import { Avatar } from '../components/Bits';
 import { Frieze, Rosette, StarDivider, StarPattern } from '../oman/Ornament';
 
@@ -17,7 +17,7 @@ export function QuoteBand() {
   const text = m.story.cards[2].quote;
 
   useEffect(() => {
-    if (prefersReducedMotion()) return;
+    if (prefersReducedMotion() || isMobile()) return;
     const ctx = gsap.context(() => {
       const st = () => ({ trigger: root.current, start: 'top bottom', end: 'bottom top', scrub: 1 });
       gsap.fromTo('.rosette-a', { rotate: -40 }, { rotate: 50, ease: 'none', scrollTrigger: st() });

@@ -6,7 +6,7 @@ const de: GuideSet = {
   'best-time-to-visit-oman': {
     title: 'Die beste Reisezeit für den Oman, Monat für Monat',
     seoTitle: 'Beste Reisezeit Oman: Klima und Wetter Monat für Monat',
-    seoDescription: 'Wann in den Oman reisen? Oktober bis April ist die angenehmste Zeit, der Sommer in Maskat und in der Wüste ist sehr heiß, und Salalah wird im Monsun grün. Monat für Monat, von einem einheimischen Guide.',
+    seoDescription: 'Wann in den Oman reisen? Oktober bis April ist die angenehmste Zeit, der Sommer in Maskat und in der Wüste ist sehr heiß, und Salalah wird im Monsun grün.',
     updated: '2026-11-24',
     lead: 'Für die meisten Reisenden ist die beste Reisezeit für den Oman von Oktober bis April: Dann ist es in Maskat warm statt heiß, und Wüste und Wadis lassen sich angenehm erkunden. Hier steht, wie sich jede Jahreszeit anfühlt und welche Touren am besten dazu passen.',
     sections: [
@@ -65,7 +65,7 @@ const de: GuideSet = {
   'oman-itinerary': {
     title: 'Oman Rundreise: Routen für 3, 5 und 7 Tage',
     seoTitle: 'Oman Rundreise: Route für 3, 5 und 7 Tage ab Maskat',
-    seoDescription: 'So verbringen Sie 3, 5 oder 7 Tage im Oman ab Maskat: Große Moschee und Mutrah, Nizwa, Wahiba-Wüste, Wadi Shab und Al Hamra, mit Fahrstrecken und Tipps vom einheimischen Guide.',
+    seoDescription: 'So verbringen Sie 3, 5 oder 7 Tage im Oman ab Maskat: Große Moschee und Mutrah, Nizwa, Wahiba-Wüste, Wadi Shab und Al Hamra.',
     updated: '2026-11-24',
     lead: 'Eine Reise in den Oman lässt sich gut von Maskat aus planen: Die meisten Klassiker sind ein Tagesausflug entfernt. Diese Routen folgen echten Fahrstrecken und den privaten Touren, die Issam anbietet, und jeder Tag lässt sich nach Ihren Wünschen ändern.',
     sections: [
@@ -121,7 +121,7 @@ const de: GuideSet = {
   'things-to-do-in-muscat': {
     title: 'Maskat: Sehenswürdigkeiten und Tipps',
     seoTitle: 'Maskat Sehenswürdigkeiten: Tipps vom einheimischen Guide',
-    seoDescription: 'Die schönsten Sehenswürdigkeiten in Maskat, Oman: Sultan-Qabus-Moschee, Corniche und Souq von Mutrah, Alt-Maskat, das Königliche Opernhaus und Maskat bei Nacht, mit Tipps zur Kleiderordnung.',
+    seoDescription: 'Die schönsten Sehenswürdigkeiten in Maskat, Oman: Sultan-Qabus-Moschee, Corniche und Souq von Mutrah, Alt-Maskat.',
     updated: '2026-11-24',
     lead: 'Maskat zieht sich entlang der Küste zwischen Bergen und Meer, und die schönsten Orte lassen sich gut an einem Tag verbinden. Hier sind die Orte, für die die meisten Reisenden kommen, und wie man sie am besten sieht.',
     sections: [

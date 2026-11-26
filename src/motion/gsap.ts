@@ -7,6 +7,10 @@ import { isMobile, prefersReducedMotion, isBrowser } from '../lib/viewport';
 
 if (isBrowser) {
   gsap.registerPlugin(ScrollTrigger);
+  // Phones: no re-measure of every trigger when the last image loads (all images have
+  // fixed width and height, so nothing moves). That re-measure forced a full-page layout
+  // of several hundred ms on a mid-range phone. Resize and orientation still refresh.
+  if (isMobile()) ScrollTrigger.config({ autoRefreshEvents: 'visibilitychange,DOMContentLoaded,resize' });
   if (import.meta.env.DEV || new URLSearchParams(location.search).has('debug')) Object.assign(window, { gsap, ScrollTrigger });
 }
 

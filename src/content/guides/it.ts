@@ -6,7 +6,7 @@ const it: GuideSet = {
   'best-time-to-visit-oman': {
     title: 'Il periodo migliore per visitare l’Oman, mese per mese',
     seoTitle: 'Quando andare in Oman: il periodo migliore mese per mese',
-    seoDescription: 'Quando andare in Oman: da ottobre ad aprile è il periodo più piacevole, l’estate è molto calda a Mascate e nel deserto, e Salalah diventa verde con il monsone. Mese per mese, da una guida locale.',
+    seoDescription: 'Quando andare in Oman: da ottobre ad aprile è il periodo più piacevole, l’estate è molto calda a Mascate e nel deserto.',
     updated: '2026-11-24',
     lead: 'Per la maggior parte dei viaggiatori il periodo migliore per visitare l’Oman va da ottobre ad aprile: a Mascate fa caldo ma non troppo, e il deserto e i wadi si esplorano comodamente. Ecco com’è ogni momento dell’anno e quali tour si adattano meglio.',
     sections: [
@@ -65,7 +65,7 @@ const it: GuideSet = {
   'oman-itinerary': {
     title: 'Itinerario in Oman: 3, 5 e 7 giorni',
     seoTitle: 'Itinerario Oman: 3, 5 e 7 giorni da Mascate',
-    seoDescription: 'Come passare 3, 5 o 7 giorni in Oman partendo da Mascate: la Grande Moschea e Mutrah, Nizwa, il deserto di Wahiba, Wadi Shab e Al Hamra, con distanze e consigli di una guida locale.',
+    seoDescription: 'Come passare 3, 5 o 7 giorni in Oman partendo da Mascate: la Grande Moschea e Mutrah, Nizwa, il deserto di Wahiba, Wadi Shab e Al Hamra.',
     updated: '2026-11-24',
     lead: 'L’Oman si organizza facilmente intorno a Mascate: quasi tutti i luoghi classici sono a una gita di un giorno. Questi itinerari seguono le distanze reali e i tour privati di Issam, e ogni giorno si può cambiare come preferisci.',
     sections: [
@@ -121,7 +121,7 @@ const it: GuideSet = {
   'things-to-do-in-muscat': {
     title: 'Cosa vedere a Mascate',
     seoTitle: 'Cosa vedere a Mascate: i consigli di una guida locale',
-    seoDescription: 'Cosa vedere a Mascate, Oman: la Grande Moschea del Sultano Qaboos, la Corniche e il souq di Mutrah, la vecchia Mascate, la Royal Opera House e Mascate di notte, con consigli sull’abbigliamento.',
+    seoDescription: 'Cosa vedere a Mascate, Oman: la Grande Moschea del Sultano Qaboos, la Corniche e il souq di Mutrah, la vecchia Mascate.',
     updated: '2026-11-24',
     lead: 'Mascate si allunga sulla costa tra le montagne e il mare, e i suoi luoghi migliori si combinano facilmente in un giorno. Ecco quelli per cui viene la maggior parte dei viaggiatori, e come vederli.',
     sections: [

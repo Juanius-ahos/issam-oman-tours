@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { useI18n } from '../i18n';
 import { gsap, Smooth } from '../motion/gsap';
-import { prefersReducedMotion } from '../lib/viewport';
+import { isMobile, prefersReducedMotion } from '../lib/viewport';
 import { BASE } from '../routes';
 
 // Confirmed by Issam (docs/issam-answers-2026-11.md). Logos are allowed: when the
@@ -29,6 +29,8 @@ export function Press() {
       // The track already holds 4 copies; loop over exactly half of it.
       const sign = dir === 'rtl' ? 1 : -1;
       const tween = gsap.fromTo(el, { xPercent: 0 }, { xPercent: 50 * sign, duration: 28, ease: 'none', repeat: -1 });
+      // Phones: a plain loop. The per-frame scroll-speed coupling below is desktop only.
+      if (isMobile()) return;
       const skew = gsap.quickTo(el, 'skewX', { duration: 0.4, ease: 'power3.out' });
       let smooth = 0;
       let raw = 0;

@@ -8,6 +8,7 @@ import { Press } from './sections/Press';
 import { OmanDay } from './sections/OmanDay';
 import { QuoteBand } from './sections/QuoteBand';
 import { initTitleReveals, initPatternMotion } from './motion/reveals';
+import { isMobile } from './lib/viewport';
 import { Story } from './sections/Story';
 import { Tours } from './sections/Tours';
 import { Extras } from './sections/Extras';
@@ -48,8 +49,10 @@ function HomePage() {
 
 export function App({ route, messages }: { route: Route; messages: Messages }) {
   const dir = localeInfo(route.locale).dir;
-  useEffect(() => initTitleReveals(), []);
-  useEffect(() => initPatternMotion(), []);
+  // Decorative only, so phones skip them: splitting every heading into words and
+  // moving the star lattices cost seconds of main-thread work on a mid-range phone.
+  useEffect(() => (isMobile() ? undefined : initTitleReveals()), []);
+  useEffect(() => (isMobile() ? undefined : initPatternMotion()), []);
   return (
     <I18nContext.Provider value={{ locale: route.locale, m: messages, dir }}>
       <Layout route={route}>{route.page === 'home' ? <HomePage /> : route.page === 'tours' ? <ToursPage /> : route.page === 'guide' ? <GuidePage slug={route.slug} /> : <TourPage slug={route.slug} />}</Layout>
