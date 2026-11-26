@@ -125,7 +125,7 @@ export const tourGeo: Record<TourSlug, TourGeo> = {
 export const tourMedia: Record<TourSlug, { webm?: string; mp4?: string; poster?: string }> = {
   'muscat-city': { poster: photoSrc('muscat-grand-mosque') },
   'nizwa-mountains': { poster: photoSrc('nizwa-fort') },
-  'wahiba-desert': { poster: own('desert-sunset') },
+  'wahiba-desert': { poster: own('desert-camp') },
   'wadi-shab-coast': { poster: photoSrc('wadi-shab') },
   'muscat-night': { poster: photoSrc('muscat-corniche-night') },
   'nizwa-night': { poster: photoSrc('nizwa-night') },

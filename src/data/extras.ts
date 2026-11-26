@@ -19,7 +19,7 @@ export const extraPhotos: Record<ExtraSlug, { src: string; srcSet: string; pos?:
   foodie: { ...own('guests-karak'), pos: '50% 38%' },
   ramadan: { ...own('issam-night'), pos: '50% 30%' },
   'self-drive': { ...own('desert-landcruiser'), pos: '50% 58%' },
-  'desert-transfer': { ...own('desert-camp'), pos: '62% 60%' },
+  'desert-transfer': { ...own('guests-dunes'), pos: '50% 70%' },
   'airport-transfer': { src: photoSrc('muscat-airport'), srcSet: photoSrcSet('muscat-airport') },
 };
 
