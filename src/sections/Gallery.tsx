@@ -1,5 +1,5 @@
 /* "Moments from Issam's tours": his own photos from real tours (sent by him,
-   2026-11-11), the strongest eight only. No captions or places are claimed.
+   2026-11-11), the strongest nine (the red jacket in the Hajar added 2026-11-26). No captions or places are claimed.
    Guests' children with visible faces are left out on purpose.
    Desktop: one large feature plus a mosaic. Phones: a swipe strip. */
 import { BASE } from '../routes';
@@ -17,6 +17,7 @@ const shots: { name: string; kind: Kind; shape: Shape; pos?: string }[] = [
   { name: 'desert-landcruiser', kind: 'guests', shape: 'wide', pos: '50% 58%' },
   { name: 'guests-dunes-view', kind: 'guests', shape: 'wide' },
   { name: 'guests-karak', kind: 'guests', shape: 'wide', pos: '50% 38%' },
+  { name: 'issam-jacket', kind: 'issam', shape: 'tall', pos: '50% 40%' },
 ];
 
 export function Gallery() {

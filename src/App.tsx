@@ -10,6 +10,7 @@ import { QuoteBand } from './sections/QuoteBand';
 import { initTitleReveals, initPatternMotion } from './motion/reveals';
 import { Story } from './sections/Story';
 import { Tours } from './sections/Tours';
+import { Extras } from './sections/Extras';
 import { Follow } from './sections/Follow';
 import { Reviews } from './sections/Reviews';
 import { Gallery } from './sections/Gallery';
@@ -32,6 +33,7 @@ function HomePage() {
         <OmanDay />
         <Story />
         <Tours />
+        <Extras />
         <Follow />
         <Reviews />
         <Gallery />

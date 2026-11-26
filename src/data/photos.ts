@@ -15,6 +15,7 @@ export const photos = [
   { slug: "nizwa-night", name: "Nizwa Fort by night", author: "Ekrem Canli", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", source: "https://commons.wikimedia.org/wiki/File:Nizwa_Fort_by_night_2019.jpg" },
   { slug: "muscat-corniche-night", name: "Mutrah Corniche at night, Muscat", author: "Omar AV", license: "CC BY 3.0", licenseUrl: "https://creativecommons.org/licenses/by/3.0", source: "https://commons.wikimedia.org/wiki/File:Fishing_at_night_time,_Mutrah,_Muscat_-_panoramio.jpg" },
   { slug: "al-hamra", name: "Al Hamra and the Hajar mountains", author: "Christoph Strässler", license: "CC BY-SA 2.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0", source: "https://commons.wikimedia.org/wiki/File:Al_Hamra,_Oman.jpg" },
+  { slug: "muscat-airport", name: "Muscat International Airport", author: "Arne Müseler", license: "CC BY-SA 3.0 DE", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en", source: "https://commons.wikimedia.org/wiki/File:Airport_muscat_terminal_2_2016_1.jpg" },
 ] as const;
 
 export type PhotoSlug = (typeof photos)[number]['slug'];

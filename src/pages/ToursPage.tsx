@@ -6,6 +6,7 @@ import { config, tourSlugs } from '../config';
 import { useI18n } from '../i18n';
 import { homePath } from '../routes';
 import { Guides } from '../sections/Guides';
+import { Extras } from '../sections/Extras';
 import { TourCard } from '../sections/Tours';
 import { Faq } from '../sections/Faq';
 import { Plan } from '../sections/Plan';
@@ -73,6 +74,7 @@ export function ToursPage() {
 
       <Faq items={p.faq} eyebrow={m.faq.eyebrow} title={p.faqTitle} id="hub-faq" />
 
+      <Extras id="hub-extras" />
       <Guides id="hub-guides" />
       <Plan />
     </div>

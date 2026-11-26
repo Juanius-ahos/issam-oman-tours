@@ -461,6 +461,36 @@
       }
     }
   },
+  "extras": {
+    "eyebrow": "Mehr mit Issam",
+    "title": "Erlebnisse und Transfers",
+    "lead": "Mehr als Touren: omanisches Essen, Abende im Ramadan, ein eigenes Auto und Fahrten zum Flughafen oder zu Ihrem Wüstencamp. Zeiten und Preise auf WhatsApp anfragen.",
+    "seasonal": "Saisonal: im Ramadan",
+    "cta": "Auf WhatsApp anfragen",
+    "waIntro": "Hallo Issam, ich möchte nachfragen zu:",
+    "items": {
+      "foodie": {
+        "name": "Kulinarische Tour",
+        "text": "Den Oman schmecken mit Issam: omanische Gerichte, Karak-Tee und die einheimischen Lokale, die er liebt, abgestimmt auf das, was Sie gern essen."
+      },
+      "ramadan": {
+        "name": "Ramadan erleben mit Issam",
+        "text": "Die Abende des heiligen Monats: das Fastenbrechen bei Sonnenuntergang, Souqs voller Leben nach Einbruch der Dunkelheit und die Traditionen in Ihrer Sprache erklärt."
+      },
+      "self-drive": {
+        "name": "Oman auf eigene Faust",
+        "text": "Mieten Sie über Issam ein Auto und erkunden Sie den Oman selbst, in Ihrem Tempo, auf einer Route, die er mit Ihnen plant."
+      },
+      "desert-transfer": {
+        "name": "Transfer in die Wüste und zum Camp",
+        "text": "Eine Fahrt in die Wahiba-Wüste oder zu Ihrem Wüstencamp und zurück, im Toyota-Geländewagen."
+      },
+      "airport-transfer": {
+        "name": "Flughafentransfer",
+        "text": "Abholung am Flughafen Maskat oder die Fahrt zurück zu Ihrem Flug, mit Begrüßung in Ihrer Sprache."
+      }
+    }
+  },
   "follow": {
     "eyebrow": "Folgen",
     "title": "Oman, jeden Tag",
@@ -522,7 +552,10 @@
       }
     ],
     "tripadvisor": "Auf Tripadvisor lesen",
-    "taCount": "{count} Bewertungen auf Tripadvisor"
+    "taCount": "{count} Bewertungen auf Tripadvisor",
+    "taQuotesTitle": "Von Tripadvisor",
+    "taRead": "Auf Tripadvisor lesen",
+    "taNote": "Kurze Auszüge, wie auf Tripadvisor angezeigt; einige wurden dort aus der Sprache des Gastes übersetzt."
   },
   "faq": {
     "eyebrow": "Fragen",

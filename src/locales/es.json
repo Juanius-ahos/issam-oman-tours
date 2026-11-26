@@ -461,6 +461,36 @@
       }
     }
   },
+  "extras": {
+    "eyebrow": "Más con Issam",
+    "title": "Experiencias y traslados",
+    "lead": "Más allá de los tours: comida omaní, noches de Ramadán, un coche para ti y traslados al aeropuerto o a tu campamento en el desierto. Pregunta horarios y precios por WhatsApp.",
+    "seasonal": "De temporada: durante el Ramadán",
+    "cta": "Preguntar por WhatsApp",
+    "waIntro": "Hola Issam, quería preguntar por:",
+    "items": {
+      "foodie": {
+        "name": "Tour gastronómico",
+        "text": "Saborea Omán con Issam: platos omaníes, té karak y los sitios locales que le encantan, según lo que te guste comer."
+      },
+      "ramadan": {
+        "name": "Vive el Ramadán con Issam",
+        "text": "Las noches del mes sagrado: la ruptura del ayuno al atardecer, zocos llenos de vida al anochecer y las tradiciones explicadas en tu idioma."
+      },
+      "self-drive": {
+        "name": "Omán por libre en coche",
+        "text": "Alquila un coche a través de Issam y recorre Omán por tu cuenta, a tu ritmo, con una ruta que él prepara contigo."
+      },
+      "desert-transfer": {
+        "name": "Traslado al desierto y al campamento",
+        "text": "Un trayecto de ida o vuelta al desierto de Wahiba o a tu campamento, en 4x4 Toyota."
+      },
+      "airport-transfer": {
+        "name": "Traslado al aeropuerto",
+        "text": "Recogida en el aeropuerto internacional de Mascate, o el trayecto de vuelta para tu vuelo, con bienvenida en tu idioma."
+      }
+    }
+  },
   "follow": {
     "eyebrow": "Sígueme",
     "title": "Omán, cada día",
@@ -522,7 +552,10 @@
       }
     ],
     "tripadvisor": "Léelas en Tripadvisor",
-    "taCount": "{count} opiniones en Tripadvisor"
+    "taCount": "{count} opiniones en Tripadvisor",
+    "taQuotesTitle": "En Tripadvisor",
+    "taRead": "Leer en Tripadvisor",
+    "taNote": "Fragmentos breves tal como aparecen en Tripadvisor; algunos se tradujeron allí del idioma del viajero."
   },
   "faq": {
     "eyebrow": "Preguntas",

@@ -461,6 +461,36 @@
       }
     }
   },
+  "extras": {
+    "eyebrow": "与 Issam 一起的更多体验",
+    "title": "特色体验与接送",
+    "lead": "不只是行程：阿曼美食、斋月之夜、自驾租车，以及往返机场或沙漠营地的接送。时间和价格请在 WhatsApp 上咨询。",
+    "seasonal": "季节性：仅限斋月期间",
+    "cta": "在 WhatsApp 上咨询",
+    "waIntro": "您好 Issam，我想咨询：",
+    "items": {
+      "foodie": {
+        "name": "美食之旅",
+        "text": "跟着 Issam 品尝阿曼：阿曼菜肴、卡拉克奶茶和他喜爱的本地小馆，按您的口味安排。"
+      },
+      "ramadan": {
+        "name": "与 Issam 一起体验斋月",
+        "text": "圣月的夜晚：日落时分开斋、入夜后热闹的集市，以及用您的语言讲解的传统。"
+      },
+      "self-drive": {
+        "name": "阿曼自驾游",
+        "text": "通过 Issam 租一辆车，按自己的节奏自驾游阿曼，路线由他和您一起规划。"
+      },
+      "desert-transfer": {
+        "name": "沙漠和营地接送",
+        "text": "乘丰田四驱车往返瓦希巴沙漠或您的沙漠营地。"
+      },
+      "airport-transfer": {
+        "name": "机场接送",
+        "text": "在马斯喀特国际机场接机，或送您赶航班，用您的语言迎接您。"
+      }
+    }
+  },
   "follow": {
     "eyebrow": "关注",
     "title": "每天的阿曼",
@@ -522,7 +552,10 @@
       }
     ],
     "tripadvisor": "去 Tripadvisor 查看",
-    "taCount": "Tripadvisor 上 {count} 条评价"
+    "taCount": "Tripadvisor 上 {count} 条评价",
+    "taQuotesTitle": "来自 Tripadvisor",
+    "taRead": "在 Tripadvisor 上阅读",
+    "taNote": "以下为 Tripadvisor 上显示的简短摘录，部分由 Tripadvisor 从客人的语言翻译而来。"
   },
   "faq": {
     "eyebrow": "常见问题",

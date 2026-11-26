@@ -461,6 +461,36 @@
       }
     }
   },
+  "extras": {
+    "eyebrow": "Més amb l’Issam",
+    "title": "Experiències i trasllats",
+    "lead": "Més enllà dels tours: menjar omanita, vespres de Ramadà, un cotxe per a tu i trajectes a l’aeroport o al teu campament al desert. Pregunta horaris i preus per WhatsApp.",
+    "seasonal": "De temporada: durant el Ramadà",
+    "cta": "Pregunta per WhatsApp",
+    "waIntro": "Hola Issam, voldria preguntar per:",
+    "items": {
+      "foodie": {
+        "name": "Tour gastronòmic",
+        "text": "Tasta Oman amb l’Issam: plats omanites, te karak i els llocs locals que li agraden, segons el que t’agradi menjar."
+      },
+      "ramadan": {
+        "name": "Viu el Ramadà amb l’Issam",
+        "text": "Els vespres del mes sagrat: el trencament del dejuni a la posta de sol, soucs plens de vida quan es fa fosc i les tradicions explicades en el teu idioma."
+      },
+      "self-drive": {
+        "name": "Oman pel teu compte",
+        "text": "Lloga un cotxe a través de l’Issam i recorre Oman pel teu compte, al teu ritme, amb una ruta que prepara amb tu."
+      },
+      "desert-transfer": {
+        "name": "Trasllat al desert i al campament",
+        "text": "Un trajecte d’anada o tornada al desert de Wahiba o al teu campament, en 4x4 Toyota."
+      },
+      "airport-transfer": {
+        "name": "Trasllat a l’aeroport",
+        "text": "Recollida a l’aeroport internacional de Mascat, o el trajecte de tornada per al teu vol, amb la benvinguda en el teu idioma."
+      }
+    }
+  },
   "follow": {
     "eyebrow": "Segueix-me",
     "title": "Oman, cada dia",
@@ -522,7 +552,10 @@
       }
     ],
     "tripadvisor": "Llegeix-les a Tripadvisor",
-    "taCount": "{count} opinions a Tripadvisor"
+    "taCount": "{count} opinions a Tripadvisor",
+    "taQuotesTitle": "A Tripadvisor",
+    "taRead": "Llegeix-ho a Tripadvisor",
+    "taNote": "Fragments breus tal com apareixen a Tripadvisor; alguns s’hi van traduir de l’idioma del viatger."
   },
   "faq": {
     "eyebrow": "Preguntes",

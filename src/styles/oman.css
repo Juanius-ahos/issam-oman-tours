@@ -318,3 +318,26 @@
   .rating-count { font-size: 14px; }
   .rating-link { margin-top: 0; }
 }
+
+/* Experiences and transfers */
+.extras-grid { display: grid; gap: 14px; }
+.extras-grid > li > .extra-card { height: 100%; min-height: 300px; }
+@media (min-width: 700px) {
+  .extras-grid { grid-template-columns: repeat(6, 1fr); }
+  .extras-grid > li { grid-column: span 2; }
+  .extras-grid > li.extra-wide { grid-column: span 3; }
+  .extras-grid > li.extra-wide > .extra-card { min-height: 380px; }
+}
+@media (min-width: 700px) and (max-width: 1099px) {
+  .extras-grid > li:last-child { grid-column: span 6; }
+  .extras-grid > li:nth-last-child(2), .extras-grid > li:nth-last-child(3) { grid-column: span 3; }
+}
+.extra-badge { position: absolute; inset-inline-start: 18px; top: 18px; z-index: 1; padding: 6px 12px; border-radius: 999px; background: rgb(var(--amber)); color: rgb(var(--ink)); font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: var(--upper); }
+
+/* Tripadvisor excerpts under the guests' own reviews */
+.ta-quotes { margin-top: clamp(40px, 6vh, 64px); }
+.ta-quotes-title { margin-bottom: 16px; font-size: clamp(20px, 1.8vw, 26px); font-weight: 900; letter-spacing: -.02em; }
+.review-ta .review-text { font-size: 15.5px; }
+.ta-quote-link { flex: none; display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 800; color: rgb(var(--accent-deep)); text-decoration: underline; text-underline-offset: 3px; }
+.ta-quote-link:hover { color: rgb(var(--ink)); }
+.ta-quotes-note { margin-top: 12px; font-size: 12px; color: rgb(var(--ink) / .6); }

@@ -8,6 +8,7 @@ import { gsap } from '../motion/gsap';
 import { prefersReducedMotion } from '../lib/viewport';
 import { StarDivider, StarPattern } from '../oman/Ornament';
 import { Icon } from '../components/Icon';
+import { tripadvisorQuotes } from '../data/tripadvisorQuotes';
 import { config } from '../config';
 
 export function Reviews() {
@@ -31,6 +32,7 @@ export function Reviews() {
   }, []);
 
   const count = m.reviews.taCount.replace('{count}', String(config.tripadvisorRating.count));
+  const month = new Intl.DateTimeFormat(locale, { month: 'short', year: 'numeric' });
 
   return (
     <section id="reviews" className="section isolate overflow-hidden">
@@ -81,6 +83,34 @@ export function Reviews() {
           );
         })}
       </ul>
+
+      <div className="ta-quotes">
+        <h3 className="ta-quotes-title">{m.reviews.taQuotesTitle}</h3>
+        <ul className="reviews-grid">
+          {tripadvisorQuotes.map((q) => (
+            <li key={q.url} className="review review-ta">
+              <figure className="flex h-full flex-col">
+                <span className="review-mark" aria-hidden="true">“</span>
+                <blockquote lang="en" cite={q.url} className="review-text">{q.text}</blockquote>
+                <figcaption className="review-by">
+                  <span className="review-avatar" aria-hidden="true">{[...q.name][0]}</span>
+                  <span className="min-w-0 flex-1">
+                    <strong>{q.name}</strong>
+                    <span className="label-xs block text-ink/55">
+                      {[q.place, month.format(new Date(`${q.month}-15`))].filter(Boolean).join(' · ')}
+                    </span>
+                  </span>
+                  <a href={q.url} target="_blank" rel="noopener" className="ta-quote-link">
+                    {m.reviews.taRead}
+                    <Icon name="arrow" size={12} />
+                  </a>
+                </figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
+        <p className="ta-quotes-note">{m.reviews.taNote}</p>
+      </div>
     </section>
   );
 }

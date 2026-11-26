@@ -461,6 +461,36 @@
       }
     }
   },
+  "extras": {
+    "eyebrow": "Di più con Issam",
+    "title": "Esperienze e trasferimenti",
+    "lead": "Oltre ai tour: cucina omanita, serate di Ramadan, un’auto tutta tua e corse verso l’aeroporto o il tuo campo nel deserto. Chiedi orari e prezzi su WhatsApp.",
+    "seasonal": "Stagionale: durante il Ramadan",
+    "cta": "Chiedi su WhatsApp",
+    "waIntro": "Ciao Issam, vorrei informazioni su:",
+    "items": {
+      "foodie": {
+        "name": "Tour gastronomico",
+        "text": "Assaggia l’Oman con Issam: piatti omaniti, tè karak e i locali che ama, scelti in base a ciò che ti piace mangiare."
+      },
+      "ramadan": {
+        "name": "Vivi il Ramadan con Issam",
+        "text": "Le serate del mese sacro: la rottura del digiuno al tramonto, souq pieni di vita dopo il buio e le tradizioni spiegate nella tua lingua."
+      },
+      "self-drive": {
+        "name": "Oman fai da te in auto",
+        "text": "Noleggia un’auto tramite Issam e guida l’Oman da solo, al tuo ritmo, su un percorso che organizza con te."
+      },
+      "desert-transfer": {
+        "name": "Trasferimento nel deserto e al campo",
+        "text": "Un passaggio di andata o ritorno verso il deserto di Wahiba o il tuo campo, in 4x4 Toyota."
+      },
+      "airport-transfer": {
+        "name": "Trasferimento aeroporto",
+        "text": "Accoglienza all’aeroporto internazionale di Mascate, o il passaggio per il tuo volo, nella tua lingua."
+      }
+    }
+  },
   "follow": {
     "eyebrow": "Seguimi",
     "title": "L'Oman, ogni giorno",
@@ -522,7 +552,10 @@
       }
     ],
     "tripadvisor": "Leggile su Tripadvisor",
-    "taCount": "{count} recensioni su Tripadvisor"
+    "taCount": "{count} recensioni su Tripadvisor",
+    "taQuotesTitle": "Da Tripadvisor",
+    "taRead": "Leggi su Tripadvisor",
+    "taNote": "Brevi estratti come appaiono su Tripadvisor; alcuni sono stati tradotti lì dalla lingua dell’ospite."
   },
   "faq": {
     "eyebrow": "Domande",

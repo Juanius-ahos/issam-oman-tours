@@ -461,6 +461,36 @@
       }
     }
   },
+  "extras": {
+    "eyebrow": "More with Issam",
+    "title": "Experiences and transfers",
+    "lead": "Beyond the tours: Omani food, Ramadan evenings, a car of your own, and rides to the airport or your desert camp. Ask on WhatsApp for times and prices.",
+    "seasonal": "Seasonal: during Ramadan",
+    "cta": "Ask on WhatsApp",
+    "waIntro": "Hello Issam, I would like to ask about:",
+    "items": {
+      "foodie": {
+        "name": "Foodie tour",
+        "text": "Taste Oman with Issam: Omani dishes, karak tea and the local places he loves, planned around what you like to eat."
+      },
+      "ramadan": {
+        "name": "Experience Ramadan with Issam",
+        "text": "The evenings of the holy month: breaking the fast at sunset, souqs alive after dark and the traditions explained in your language."
+      },
+      "self-drive": {
+        "name": "Self-drive Oman",
+        "text": "Rent a car through Issam and drive Oman yourself, at your own pace, on a route he plans with you."
+      },
+      "desert-transfer": {
+        "name": "Desert and camp transfer",
+        "text": "A ride to or from the Wahiba Sands or your desert camp, by Toyota 4x4."
+      },
+      "airport-transfer": {
+        "name": "Airport transfer",
+        "text": "Pickup at Muscat International Airport, or a ride back for your flight, welcomed in your language."
+      }
+    }
+  },
   "follow": {
     "eyebrow": "Follow along",
     "title": "Oman, every day",
@@ -522,7 +552,10 @@
       }
     ],
     "tripadvisor": "Read them on Tripadvisor",
-    "taCount": "{count} reviews on Tripadvisor"
+    "taCount": "{count} reviews on Tripadvisor",
+    "taQuotesTitle": "From Tripadvisor",
+    "taRead": "Read on Tripadvisor",
+    "taNote": "Short excerpts as shown on Tripadvisor; some were translated there from the guest’s language."
   },
   "faq": {
     "eyebrow": "Questions",
